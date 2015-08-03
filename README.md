@@ -1,13 +1,11 @@
 # Dating
 ------
-SPA
+* SPA
 
-红岩 约 项目
+* 红岩 约 项目
 
-前端Repo
+* 前端Repo
 
-avalon(MVVM) + mmState
+* avalon(MVVM) + mmState
 
-前后端分离
-
-Ling. & sunshine123 & smelrain
+* 前后端分离
