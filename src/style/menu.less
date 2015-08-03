@@ -1,0 +1,71 @@
+@import "var";
+
+//左侧抽屉
+.menu-overlay{
+  .menu-flow{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 4rem;
+    width: 500%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background ease-in-out 400ms;
+  }
+  position: fixed;
+  top: 0;
+  left: -4rem;
+  width: 4rem;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  z-index: 10;
+  transition: transform ease-in-out 400ms;
+  &.active{
+    transform: translate3d(4rem, 0, 0);
+    .menu-flow {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  padding-top: 140rem / @psdWidth;
+
+  .line{
+    height: 120rem / @psdWidth;
+    line-height: 120rem / @psdWidth;
+    a{
+      color: #444;
+      text-indent: 48rem / @psdWidth;
+      &.ms-click-active{
+        background-color: red;
+        color: #FFF;
+      }
+      .rfz(14px);
+      width: 100%;//->
+      float: left;//为了创建块级元素, 有足够大的点击区域
+    }
+  }
+
+  .menu-avatar{
+    padding: 40rem/@psdWidth;
+    padding-right: 0;
+    height: 260rem/@psdWidth;
+    position: relative;
+    background: url('../imgs/bg.jpg');
+    img{
+      width: 180rem/@psdWidth;
+      height: 180rem/@psdWidth;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+    }
+    .menu-name{
+      position: absolute;
+      bottom: 40rem/@psdWidth;
+      color: #FFF;
+      font-weight: bolder;
+      text-shadow: 0 0 3px #262626;
+    }
+    border-bottom: 1px solid #ddd;
+  }
+
+
+}

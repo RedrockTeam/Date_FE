@@ -1,0 +1,91 @@
+.login-wrapper {
+  text-align: center;
+}
+.login-wrapper .logo {
+  margin-top: 1.99074074rem;
+  width: 1.69444444rem;
+}
+.login-wrapper ::-moz-placeholder {
+  color: #9a9a9a;
+}
+.login-wrapper ::-webkit-input-placeholder {
+  color: #9a9a9a;
+}
+.login-wrapper :-ms-input-placeholder {
+  color: #9a9a9a;
+}
+.login-wrapper .form {
+  width: 90.74074074%;
+  margin: 0.92592593rem auto 0;
+}
+.login-wrapper .form button {
+  width: 100%;
+  border-radius: 5px;
+  height: 1.38888889rem;
+  background-color: #ff3d3d;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-size: 22px;
+  margin-top: 0.44444444rem;
+}
+[data-dpr="2"] .login-wrapper .form button {
+  font-size: 44px;
+}
+[data-dpr="3"] .login-wrapper .form button {
+  font-size: 66px;
+}
+.login-wrapper .form input {
+  width: 94%;
+  height: 1.2962963rem;
+  outline: none;
+  border: #cccccc 1px solid;
+  padding-left: 0.46296296rem;
+  font-size: 18px;
+  display: block;
+  margin: 0 auto;
+}
+[data-dpr="2"] .login-wrapper .form input {
+  font-size: 36px;
+}
+[data-dpr="3"] .login-wrapper .form input {
+  font-size: 54px;
+}
+.login-wrapper .form .stuId {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.login-wrapper .form .password {
+  border-color: #f9f8f8 #cccccc #cccccc #cccccc ;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px ;
+}
+.login-wrapper .trouble {
+  color: #9a9a9a;
+  float: right;
+  font-size: 18px;
+  margin-top: 0.25925926rem;
+  letter-spacing: 2px;
+}
+[data-dpr="2"] .login-wrapper .trouble {
+  font-size: 36px;
+}
+[data-dpr="3"] .login-wrapper .trouble {
+  font-size: 54px;
+}
+.login-wrapper .creator {
+  position: fixed;
+  bottom: 0.18518519rem;
+  color: #333;
+  font-size: 18px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+[data-dpr="2"] .login-wrapper .creator {
+  font-size: 36px;
+}
+[data-dpr="3"] .login-wrapper .creator {
+  font-size: 54px;
+}

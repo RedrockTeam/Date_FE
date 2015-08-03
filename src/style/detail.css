@@ -1,0 +1,246 @@
+.detail-wrapper {
+  margin-bottom: 1.34259259rem;
+  width: 100%;
+  font-size: 18px;
+}
+.detail-wrapper ul {
+  margin: 0;
+  padding: 0;
+}
+[data-dpr="2"] .detail-wrapper {
+  font-size: 36px;
+}
+[data-dpr="3"] .detail-wrapper {
+  font-size: 54px;
+}
+.detail-wrapper p {
+  margin: 0;
+  padding: 0;
+}
+.detail-wrapper .person-wrapper {
+  width: 100%;
+  height: 2.40740741rem;
+  background-color: #fff;
+  border-bottom: 1px solid #dddddd;
+}
+.detail-wrapper .person-wrapper .person {
+  width: 100%;
+  height: 2.40740741rem;
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+}
+.detail-wrapper .person-wrapper .person .center-wrapper {
+  margin-left: 2.22222222rem;
+}
+.detail-wrapper .person-wrapper .person .motto {
+  color: #666666;
+  font-size: 14px;
+  margin-top: 0.11574074rem;
+}
+[data-dpr="2"] .detail-wrapper .person-wrapper .person .motto {
+  font-size: 28px;
+}
+[data-dpr="3"] .detail-wrapper .person-wrapper .person .motto {
+  font-size: 42px;
+}
+.detail-wrapper .person-wrapper .person .logo-wrapper {
+  position: absolute;
+  top: 50%;
+  border: 1px solid #dddddd;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 1.57407407rem;
+  height: 1.57407407rem;
+  border-radius: 50%;
+  margin-left: 0.46296296rem;
+  overflow: hidden;
+}
+.detail-wrapper .person-wrapper .person .logo-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.detail-wrapper .content,
+.detail-wrapper .requirement,
+.detail-wrapper .ul-wrapper {
+  margin: 0 0.37037037rem;
+  padding: 0.37037037rem 0;
+}
+.detail-wrapper .content .detail,
+.detail-wrapper .requirement .detail,
+.detail-wrapper .ul-wrapper .detail {
+  color: #9a9a9a;
+  font-size: 14px;
+}
+[data-dpr="2"] .detail-wrapper .content .detail,
+[data-dpr="2"] .detail-wrapper .requirement .detail,
+[data-dpr="2"] .detail-wrapper .ul-wrapper .detail {
+  font-size: 28px;
+}
+[data-dpr="3"] .detail-wrapper .content .detail,
+[data-dpr="3"] .detail-wrapper .requirement .detail,
+[data-dpr="3"] .detail-wrapper .ul-wrapper .detail {
+  font-size: 42px;
+}
+.detail-wrapper .content,
+.detail-wrapper .ul-wrapper {
+  border-bottom: 1px solid #dddddd;
+}
+.detail-wrapper .user-wrapper {
+  overflow: hidden;
+  margin: 0.18518519rem 0 1.85185185rem 0;
+  border: 1px solid #dddddd;
+  background-color: #fff;
+}
+.detail-wrapper .user-wrapper .apply {
+  font-size: 18px;
+  margin: 0.18518519rem 0.46296296rem;
+  color: #333333;
+}
+[data-dpr="2"] .detail-wrapper .user-wrapper .apply {
+  font-size: 36px;
+}
+[data-dpr="3"] .detail-wrapper .user-wrapper .apply {
+  font-size: 54px;
+}
+.detail-wrapper .user-wrapper .user-face-group {
+  overflow: hidden;
+  margin: 0.18518519rem 0.46296296rem;
+}
+.detail-wrapper .user-wrapper .user-face-group .someone-sign-up {
+  text-align: center;
+  color: #333;
+  font-size: 16px;
+}
+[data-dpr="2"] .detail-wrapper .user-wrapper .user-face-group .someone-sign-up {
+  font-size: 32px;
+}
+[data-dpr="3"] .detail-wrapper .user-wrapper .user-face-group .someone-sign-up {
+  font-size: 48px;
+}
+.detail-wrapper .user-wrapper .user-face {
+  float: left;
+  width: 20%;
+  margin-bottom: 0.18518519rem;
+  text-align: center;
+  overflow: hidden;
+}
+.detail-wrapper .user-wrapper .logo-wrapper {
+  border: 1px solid #dddddd;
+  width: 1.57407407rem;
+  height: 1.57407407rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.detail-wrapper .user-wrapper .nickname {
+  font-size: 13px;
+}
+[data-dpr="2"] .detail-wrapper .user-wrapper .nickname {
+  font-size: 26px;
+}
+[data-dpr="3"] .detail-wrapper .user-wrapper .nickname {
+  font-size: 39px;
+}
+.detail-wrapper .divWrapper {
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  padding: 35 rem / 108;
+  overflow: hidden;
+}
+.detail-wrapper .divWrapper .ul-wrapper li,
+.detail-wrapper .divWrapper .requirement li {
+  color: #666666;
+  line-height: 0.74074074rem;
+  height: 0.74074074rem;
+  font-size: 14px;
+}
+[data-dpr="2"] .detail-wrapper .divWrapper .ul-wrapper li,
+[data-dpr="2"] .detail-wrapper .divWrapper .requirement li {
+  font-size: 28px;
+}
+[data-dpr="3"] .detail-wrapper .divWrapper .ul-wrapper li,
+[data-dpr="3"] .detail-wrapper .divWrapper .requirement li {
+  font-size: 42px;
+}
+.detail-wrapper .divWrapper .ul-wrapper i,
+.detail-wrapper .divWrapper .requirement i {
+  font-size: 18px;
+  margin-right: 0.09259259rem;
+}
+[data-dpr="2"] .detail-wrapper .divWrapper .ul-wrapper i,
+[data-dpr="2"] .detail-wrapper .divWrapper .requirement i {
+  font-size: 36px;
+}
+[data-dpr="3"] .detail-wrapper .divWrapper .ul-wrapper i,
+[data-dpr="3"] .detail-wrapper .divWrapper .requirement i {
+  font-size: 54px;
+}
+.detail-wrapper .divWrapper .ul-wrapper .location i,
+.detail-wrapper .divWrapper .requirement .location i {
+  color: #4ea1ff;
+}
+.detail-wrapper .divWrapper .ul-wrapper .time i,
+.detail-wrapper .divWrapper .requirement .time i {
+  color: #44d48b;
+}
+.detail-wrapper .divWrapper .ul-wrapper .cost i,
+.detail-wrapper .divWrapper .requirement .cost i {
+  color: #ff7660;
+}
+.detail-wrapper .title {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 0.22222222rem;
+}
+[data-dpr="2"] .detail-wrapper .title {
+  font-size: 40px;
+}
+[data-dpr="3"] .detail-wrapper .title {
+  font-size: 60px;
+}
+.detail-wrapper .fixed-footer {
+  position: fixed;
+  bottom: 0;
+  height: 1.34259259rem;
+  background-color: #fff;
+  width: 100%;
+  border-top: 1px solid #dddddd;
+}
+.detail-wrapper .fixed-footer .ms-click-active {
+  background-color: #f2f2f2;
+}
+.detail-wrapper .fixed-footer a {
+  color: #000000;
+  width: 50%;
+}
+.detail-wrapper .fixed-footer button {
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #404040;
+  width: 50%;
+  height: 1.34259259rem;
+  line-height: 1.34259259rem;
+  float: left;
+  text-align: center;
+  font-size: 18px;
+}
+[data-dpr="2"] .detail-wrapper .fixed-footer button {
+  font-size: 36px;
+}
+[data-dpr="3"] .detail-wrapper .fixed-footer button {
+  font-size: 54px;
+}
+[data-dpr="2"] .detail-wrapper .fixed-footer button {
+  font-size: 36px;
+}
+[data-dpr="3"] .detail-wrapper .fixed-footer button {
+  font-size: 54px;
+}
+.detail-wrapper .fixed-footer .special {
+  color: #ff7d63;
+  border-left: 1px solid #ddd;
+}

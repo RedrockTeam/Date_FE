@@ -1,0 +1,49 @@
+@psdWidth: 108; //设计稿宽度, 用作rem结果的被除数
+
+//mixin dpr font-size
+
+
+
+.rfz(@px){
+  font-size: @px;
+  [data-dpr="2"] &{
+    font-size: @px * 2;
+  }
+  [data-dpr="3"] &{
+    font-size: @px * 3;
+  }
+}
+
+@navBgc: rgb(255, 63, 71);
+@navColor: #FFF;
+@navBorder: #ff9470;
+@navHoverBgc: #dc002c;
+
+@sliderCurrentDot: #db3528;
+@sliderDot: #FFF;
+
+@filterBtnColor: #333;
+@filterBtnTriColor: #666;
+@filterLineColor: #999;
+
+@publishBtnColor: #FFF;
+@publishBtnBgc: #f33617;
+
+
+@bodyColor: #efefef;
+@bolderColor:#333333;
+@lightColor:#666666;
+
+@sexBgMale: #758fff;
+@sexBgFemale: #ff29c2;
+
+@border: 1px solid #dddddd;
+
+
+@detailLocationColor: #4ea1ff;
+@detailTimeColor: #44d48b;
+@detailCostColor: #ff7660;
+
+
+@default-input-placeholder-color:#999;
+

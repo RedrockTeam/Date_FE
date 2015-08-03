@@ -1,0 +1,79 @@
+@import "var";
+//namespace
+nav{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140rem / @psdWidth;
+  line-height: 140rem / @psdWidth;
+  background-color: @navBgc;
+  color: @navColor;
+  position: fixed;
+  z-index: 11;
+
+  .nav-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 11;
+    .clearfix();
+  }
+
+  .menu, .back{ //菜单和返回都是靠左的
+    position: absolute;
+    left: 0;
+    padding: 0 48rem / @psdWidth;
+    .rfz(24px);
+    color: #FFF;
+    text-decoration: none;
+    outline: none;
+    &.ms-click-active{
+      color: #aa9b9c;
+    }
+  }
+
+  .menu{
+    transition: transform ease-in-out 400ms;
+    &.active{
+      transform: rotate(90deg);
+    }
+    &.ms-click-active{
+      color: #aa9b9c;
+    }
+  }
+
+  .title{//居中的标题
+    .rfz(24px);
+    color: #FFF;
+    text-decoration: none;
+    outline: none;
+    &.ms-click-active{
+      color: #aa9b9c;
+    }
+  }
+
+  .plus{//只有这玩意儿是靠右的
+    position: absolute;
+    right: 0;
+    padding: 0 48rem / @psdWidth;
+    .rfz(24px);
+    color: #FFF;
+    text-decoration: none;
+    outline: none;
+    &.ms-click-active{
+      color: #aa9b9c;
+    }
+  }
+
+  .rightMenu{
+    position: absolute;
+    right: 0;
+    padding: 0 43rem / @psdWidth;
+    .rfz(18px);
+    &.ms-click-active{
+      color: #aa9b9c;
+    }
+  }
+}

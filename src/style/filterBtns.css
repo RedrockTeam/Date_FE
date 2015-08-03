@@ -1,0 +1,125 @@
+.fliter-btns {
+  position: relative;
+  height: 1.33333333rem;
+  line-height: 1.18518519rem;
+  background-color: #FFF;
+  color: #333333;
+  border-bottom: 1px solid #DDD;
+}
+.fliter-btns .ms-click-active {
+  background-color: #F2F2F2;
+}
+.fliter-btns .iconfont {
+  color: #666666;
+}
+.fliter-btns .line {
+  width: 1px;
+  height: 0.44444444rem;
+  float: left;
+  background-color: #999999;
+  position: relative;
+  top: 0.44444444rem;
+}
+.fliter-btns a {
+  font-size: 18px;
+  height: 100%;
+  line-height: 1.33333333rem;
+  color: #333333;
+  float: left;
+  box-sizing: border-box;
+  width: 50%;
+  text-align: center;
+}
+[data-dpr="2"] .fliter-btns a {
+  font-size: 36px;
+}
+[data-dpr="3"] .fliter-btns a {
+  font-size: 54px;
+}
+.fliter-btns a:active,
+.fliter-btns a:visited,
+.fliter-btns a:hover {
+  color: #333333;
+}
+.fliter-btns a .iconfont {
+  font-size: 15px;
+}
+[data-dpr="2"] .fliter-btns a .iconfont {
+  font-size: 30px;
+}
+[data-dpr="3"] .fliter-btns a .iconfont {
+  font-size: 45px;
+}
+.fliter-btns .btn-overlay,
+.fliter-btns .classify {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: background ease-in-out 400ms;
+          transition: background ease-in-out 400ms;
+}
+.fliter-btns .btn-overlay.show,
+.fliter-btns .classify.show {
+  background: rgba(0, 0, 0, 0.3);
+}
+.fliter-btns .options-content {
+  width: 80%;
+  line-height: 1.06481481rem;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 0.0462963rem;
+  overflow: hidden;
+  position: absolute;
+  z-index: 2;
+}
+.fliter-btns .options-content .left {
+  font-size: 18px;
+}
+[data-dpr="2"] .fliter-btns .options-content .left {
+  font-size: 36px;
+}
+[data-dpr="3"] .fliter-btns .options-content .left {
+  font-size: 54px;
+}
+.fliter-btns .options-content .right {
+  text-align: right;
+  float: right;
+  margin-right: 0.44444444rem;
+  font-size: 18px;
+  color: #ce6e7a;
+}
+[data-dpr="2"] .fliter-btns .options-content .right {
+  font-size: 36px;
+}
+[data-dpr="3"] .fliter-btns .options-content .right {
+  font-size: 54px;
+}
+.fliter-btns .options-content .gray {
+  background-color: #ededed;
+  font-size: 16px;
+}
+[data-dpr="2"] .fliter-btns .options-content .gray {
+  font-size: 32px;
+}
+[data-dpr="3"] .fliter-btns .options-content .gray {
+  font-size: 48px;
+}
+.fliter-btns .options-content .gray.active {
+  background-color: #dddddd;
+}
+.fliter-btns .options {
+  border-top: 1px solid #e0e0e0;
+  color: #666;
+  padding: 0 0 0 0.44444444rem;
+}

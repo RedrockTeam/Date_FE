@@ -1,0 +1,72 @@
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: -4rem;
+  width: 4rem;
+  height: 100%;
+  background: #ffffff;
+  z-index: 10;
+  -webkit-transition: -webkit-transform ease-in-out 400ms;
+          transition: transform ease-in-out 400ms;
+  padding-top: 1.2962963rem;
+}
+.menu-overlay .menu-flow {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 4rem;
+  width: 500%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: background ease-in-out 400ms;
+          transition: background ease-in-out 400ms;
+}
+.menu-overlay.active {
+  -webkit-transform: translate3d(4rem, 0, 0);
+          transform: translate3d(4rem, 0, 0);
+}
+.menu-overlay.active .menu-flow {
+  background: rgba(0, 0, 0, 0.3);
+}
+.menu-overlay .line {
+  height: 1.11111111rem;
+  line-height: 1.11111111rem;
+}
+.menu-overlay .line a {
+  color: #444;
+  text-indent: 0.44444444rem;
+  font-size: 14px;
+  width: 100%;
+  float: left;
+}
+.menu-overlay .line a.ms-click-active {
+  background-color: red;
+  color: #FFF;
+}
+[data-dpr="2"] .menu-overlay .line a {
+  font-size: 28px;
+}
+[data-dpr="3"] .menu-overlay .line a {
+  font-size: 42px;
+}
+.menu-overlay .menu-avatar {
+  padding: 0.37037037rem;
+  padding-right: 0;
+  height: 2.40740741rem;
+  position: relative;
+  background: url('../imgs/bg.jpg');
+  border-bottom: 1px solid #ddd;
+}
+.menu-overlay .menu-avatar img {
+  width: 1.66666667rem;
+  height: 1.66666667rem;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+.menu-overlay .menu-avatar .menu-name {
+  position: absolute;
+  bottom: 0.37037037rem;
+  color: #FFF;
+  font-weight: bolder;
+  text-shadow: 0 0 3px #262626;
+}

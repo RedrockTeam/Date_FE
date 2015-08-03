@@ -1,0 +1,58 @@
+.litterLetter {
+  overflow: hidden;
+  background-color: #fff;
+}
+.litterLetter .list-wrapper {
+  width: 100%;
+  height: 1.99074074rem;
+  border-bottom: 1px solid #dddddd;
+}
+.litterLetter .list {
+  width: 100%;
+  position: relative;
+  height: 1.99074074rem;
+  line-height: 1.99074074rem;
+  vertical-align: middle;
+  background-color: #fff;
+}
+.litterLetter .list .username {
+  color: #49a3f6;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-left: 2.22222222rem;
+}
+.litterLetter .list .content {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 100%;
+  text-overflow: ellipsis;
+  color: #666666;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 1.99074074rem;
+}
+[data-dpr="2"] .litterLetter .list .content {
+  font-size: 32px;
+}
+[data-dpr="3"] .litterLetter .list .content {
+  font-size: 48px;
+}
+.litterLetter .list .logo-wrapper {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 1.57407407rem;
+  height: 1.57407407rem;
+  border-radius: 100%;
+  margin-left: 0.46296296rem;
+  overflow: hidden;
+}
+.litterLetter .list .logo-wrapper img {
+  width: 100%;
+  height: 100%;
+}

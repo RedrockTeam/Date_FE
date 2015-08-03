@@ -1,0 +1,168 @@
+.pbl-dating {
+  background-color: #efefef;
+  overflow: hidden;
+}
+.pbl-dating .row-group {
+  margin: 0.46296296rem 0;
+  border-bottom: 1px solid #DDD;
+}
+.pbl-dating .row {
+  position: relative;
+  overflow: hidden;
+  height: 1.33333333rem;
+  line-height: 1.33333333rem;
+  font-size: 16px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+  padding: 0 0.44444444rem;
+}
+[data-dpr="2"] .pbl-dating .row {
+  font-size: 32px;
+}
+[data-dpr="3"] .pbl-dating .row {
+  font-size: 48px;
+}
+.pbl-dating .row.active {
+  background-color: #f7f7f7;
+}
+.pbl-dating .row input,
+.pbl-dating .row select {
+  background-color: #f7f7f7;
+  border: none;
+  outline: none;
+  color: #757575;
+}
+.pbl-dating .row #yTitle,
+.pbl-dating .row #yLocation,
+.pbl-dating .row #yPeople,
+.pbl-dating .row #ySpend,
+.pbl-dating .row #yType,
+.pbl-dating .row #ySex,
+.pbl-dating .row #yGrade,
+.pbl-dating .row #yCollege {
+  width: 100%;
+  float: right;
+  text-align: right;
+  line-height: 100%;
+  height: 100%;
+  top: 0;
+}
+.pbl-dating .row #yTitle {
+  width: 7.94444444rem;
+}
+.pbl-dating .row #yLocation {
+  width: 50%;
+}
+.pbl-dating .row #yPeople {
+  width: 5.55555556rem;
+  right: 0.46296296rem;
+  position: absolute;
+}
+.pbl-dating .row .choose {
+  float: right;
+  text-align: right;
+  line-height: 100%;
+  height: 100%;
+  right: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+}
+.pbl-dating .row #yTime {
+  /* width: 1px; */
+  float: right;
+  text-align: right;
+  line-height: 100%;
+  height: 100%;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+}
+.pbl-dating .row .right {
+  text-align: right;
+}
+.pbl-dating .dating-type {
+  color: #ff863d;
+}
+.pbl-dating i {
+  font-size: 18px;
+  margin-right: 0.0462963rem;
+}
+[data-dpr="2"] .pbl-dating i {
+  font-size: 36px;
+}
+[data-dpr="3"] .pbl-dating i {
+  font-size: 54px;
+}
+.pbl-dating span {
+  color: #212121;
+}
+.pbl-dating a.right,
+.pbl-dating a.right:active,
+.pbl-dating a.right:hover,
+.pbl-dating a.right:visited {
+  color: #757575;
+  text-decoration: none;
+}
+.pbl-dating .right {
+  position: absolute;
+  right: 0.46296296rem;
+  left: 2rem;
+}
+.pbl-dating .right2 {
+  color: #757575;
+  position: absolute;
+  right: 0.46296296rem;
+  left: 3.08333333rem;
+  text-align: right;
+}
+.pbl-dating .time {
+  color: #44d48b;
+}
+.pbl-dating .location {
+  color: #4ea1ff;
+}
+.pbl-dating .people {
+  color: #ffc12b;
+}
+.pbl-dating .dollar {
+  color: #ff7660;
+}
+.pbl-dating .light-grey .subtitle {
+  color: #444;
+}
+.pbl-dating .mb0 {
+  margin-bottom: 0;
+}
+.pbl-dating .publish {
+  text-align: right;
+}
+.pbl-dating .publish button {
+  width: 2.77777778rem;
+  height: 0.92592593rem;
+  background-color: #FF9933;
+  border: none;
+  border-radius: 0.05555556rem;
+  margin: 0.44444444rem;
+  color: #FFF;
+  font-size: 18px;
+}
+[data-dpr="2"] .pbl-dating .publish button {
+  font-size: 36px;
+}
+[data-dpr="3"] .pbl-dating .publish button {
+  font-size: 54px;
+}
+.pbl-dating #yContent {
+  resize: none;
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 0.2962963rem 0;
+  box-sizing: border-box;
+  outline: none;
+  background: none;
+}
+.pbl-dating .row-content {
+  height: 2rem;
+}
