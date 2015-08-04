@@ -1,11 +1,11 @@
-//主页
+//活动
 define(['avalon', 'mmState', 'vms/main'], function(avalon){
-    avalon.state('home', {
+    avalon.state('activity', {
         controller: "main",
-        url: "/",
-        templateUrl: "tpl/home/yield.html",
+        url: "/activity",
+        templateUrl: "tpl/activity/yield.html",
         onEnter: function(){
-            log('/');
+            log('/activity');
             avalon.scan();
         }
     });

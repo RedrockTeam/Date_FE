@@ -1,11 +1,11 @@
-//主页
+//约会详细页
 define(['avalon', 'mmState', 'vms/main'], function(avalon){
-    avalon.state('home', {
+    avalon.state('user', {
         controller: "main",
-        url: "/",
-        templateUrl: "tpl/home/yield.html",
+        url: "/user/{id:[^.]*}",
+        templateUrl: "tpl/user/yield.html",
         onEnter: function(){
-            log('/');
+            log('/user');
             avalon.scan();
         }
     });

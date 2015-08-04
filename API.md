@@ -424,7 +424,7 @@
 ### 8. 获取约会记录
 `约会的记录`
 
-  - uel: /user/record
+  - uel: /user/recorded
   - post: 
 
 		{

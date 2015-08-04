@@ -35,13 +35,18 @@ require([
     'mmState',
 
     //状态页面
-    'states/home',       //主页
-    'states/date',       //约会列表
-    'states/date.detail', //约会详细页
-    'states/activity',    //活动列表
-    'states/activity.detail', //活动详细页
-    'states/user',            //个人信息
-
+    'states/home',//主页
+    'states/collect',//收藏
+    'states/history', //历史记录
+    'states/litterLetter', //私信列表
+    'states/letters',//私信详情
+    'states/userInfo', //用户中心
+    'states/userInfoPublic', //公共用户界面
+    'states/userInfoEdit', //个人中心修改
+    'states/login', //登陆
+    'states/publishDating', //发布界面
+    'states/detail', //详情
+    'states/about',//关于页面
 
 ], function(avalon) {
     avalon.history.start({

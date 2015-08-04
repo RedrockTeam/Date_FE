@@ -1,11 +1,11 @@
-//主页
+//约会详细页
 define(['avalon', 'mmState', 'vms/main'], function(avalon){
-    avalon.state('home', {
+    avalon.state('date', {
         controller: "main",
-        url: "/",
-        templateUrl: "tpl/home/yield.html",
+        url: "/date",
+        templateUrl: "tpl/date/yield.html",
         onEnter: function(){
-            log('/');
+            log('/date');
             avalon.scan();
         }
     });

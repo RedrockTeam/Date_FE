@@ -6,6 +6,7 @@
   url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
+
 html, body{
   height: 100%; //防止高度小于viewpoint
   -webkit-font-smoothing: antialiased;
@@ -21,11 +22,28 @@ ul,li{list-style: none;} //全局局部reset list-style
 body{position: relative;} //使得body下面的绝对定位元素有父级定位元素
 
 .wrapper{
-  //padding-top: 310rem / @psdWidth;
+  padding-top: 140rem / @psdWidth;
 }
 
-//import
-@import "var";
+@import "navBar";
+@import "slider";
+@import "filterBtns";
+@import "scrollBox";
+@import "detail";
+@import "userInfo";
+@import "publishBtn";
+@import "publishDating";
+@import "jquery.datetimepicker.less";
+@import "letters";
+@import "litterLetter";
+@import "history";
+@import "login";
+@import "dialog";
+@import "userInfoPublic";
+@import "userInfoEdit";
+@import "jq.score.less";
+@import "menu";
+@import "about";
 
 .loading:after{
   content: " ";
