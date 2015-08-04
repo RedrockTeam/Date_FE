@@ -1,12 +1,13 @@
-//约会详细页
+//搜索
 define(['avalon', 'mmState', 'vms/main'], function(avalon){
-    avalon.state('user', {
+    avalon.state('search', {
         controller: "main",
-        url: "/user/{id:[^.]*}",
-        templateUrl: "tpl/user/yield.html",
+        url: "/search",
+        templateUrl: "tpl/search/yield.html",
         onEnter: function(){
-            log('/user');
+            log('/search');
             avalon.scan();
         }
     });
 });
+

@@ -222,8 +222,10 @@
         	"info": "成功"
 		}
 
-### 3.查看收藏
-  - url: /user/collection
+### 3.查看收藏&参与的约会
+`收藏和参与的约会的数据格式一样`
+
+  - url: /user/collection （收藏）         /user/recorded （参与的约会）   
   - post: 
 
 		{
@@ -421,66 +423,7 @@
 			"info": "成功"
 		}
 
-### 8. 获取约会记录
-`约会的记录`
-
-  - uel: /user/recorded
-  - post: 
-
-		{
-			"uid": "",	
-			"token": ""
-		}
-  - res:
-
-		{
-			"data":[{
-                "date_id": "3",                //约会 item id
-                "head": "xxxxxxxxxx",          //头像
-                "uid": "1",				       //用户id	
-                "created_at": "1429446315",    //创建时间     时间戳
-                "date_time": "1429456315",     //约的具体时间  时间戳    
-                "place": "重邮宾馆",            //地点
-                "title": "来约炮!",             //标题
-                "gender_limit": "1",           //性别限制
-                "academy_limit": [],           //学院限制
-                "grade_limit": [],             //年极限制
-                "signature": "今天晚上我请客!",  //个性签名
-				"date_status": 1,              //约的状态 默认显示一个报名的按钮 , 1 已结束, 2 成功, 3 受理中 4 已拒绝
-				"erolled": 20,                 //多少人已报名
-				"commented": 20,               //多少人已评论
-				"praised": 20,                  //多少人已点赞
-				"tag": "吃饭",                   //标签
-				"gender": 1，                    //性别 "1" 男性  "2"女性
-				"cost_model": "1",              //1AA, 2我请客, 3求请客
-				"nickname": "segrdh"            //昵称
-            },
-            {
-                "date_id": "3",                //约会 item id
-                "head": "xxxxxxxxxx",          //头像
-                "uid": "1",				       //用户id	
-                "created_at": "1429446315",    //创建时间     时间戳
-                "date_time": "1429456315",     //约的具体时间  时间戳    
-                "place": "重邮宾馆",            //地点
-                "title": "来约炮!",             //标题
-                "gender_limit": "1",           //性别限制
-                "academy_limit": [],           //学院限制
-                "grade_limit": [],             //年极限制
-                "signature": "今天晚上我请客!",  //个性签名
-				"date_status": 1,              //约的状态 默认显示一个报名的按钮 , 1 已结束, 2 成功, 3 受理中 4 已拒绝
-				"erolled": 20,                 //多少人已报名
-				"commented": 20,               //多少人已评论
-				"praised": 20,                  //多少人已点赞
-				"tag": "吃饭",                   //标签
-				"gender": 1，                    //性别 "1" 男性  "2"女性
-				"cost_model": "1",              //1AA, 2我请客, 3求请客
-				"nickname": "segrdh"            //昵称
-            }],
-			"status": 200,
-			"info": "成功！！！！"
-		}
-
-### 9. 查看我发起的约会
+### 8. 查看我发起的约会
   - url: /user/launched
   - post:
   
@@ -538,7 +481,7 @@
 			"info": "成功！！！！"
 		}
 
-### 10. 关注他人
+### 9. 关注他人
   - url: /user/follow
   - post:
 
@@ -762,7 +705,8 @@
 ### 1. 活动列表页
 `由于活动版块是由后台运营`
 
-  - url: /activity/list
+  - url: /
+  - /list
   - post: 
   
 		{
