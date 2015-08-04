@@ -1,0 +1,29 @@
+/*topBar*/
+@import "var";
+//namespace
+.top-container{
+  padding:0 50rem / @psdWidth;
+  p,menu{
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    float: left;
+    line-height: @topHei1;
+    color: #444444;
+    font-size: 60rem /@psdWidth;
+    font-family: @fm-base;
+  }
+  menu {
+    float: right;
+    li{
+      float: left;
+      line-height: @topHei1;
+      margin-left: 68rem / @psdWidth;
+    }
+    //解决iconfont没有加粗
+    li:last-child{
+      font-weight: bold;
+    }
+  }
+}

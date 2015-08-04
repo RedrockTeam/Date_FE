@@ -1,8 +1,7 @@
-define([ 'avalon', 'mmState'], function($){
-    var av = avalon.vmodels;
-    var vm = avalon.define({
-        $id: "main",
-        state: "",
+define('vms/slider', ['avalon'], function(avalon){
+    return avalon.define({
+        $id: "slider",
+        items: [],
         sliderCb: function(){
             /**
              * 这个函数是slider的template载入之后的回调, 生成首页banner-slider

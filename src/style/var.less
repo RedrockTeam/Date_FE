@@ -2,11 +2,17 @@
 
 //mixin dpr font-size
 
+//topBar
+@topBgc1: #f3f3f3;
+@topHei1:144rem / @psdWidth;
+
+
 //nav
-@navBgc: rgb(255, 63, 71);
+@navBgc: rgb(51, 51, 51);
 @navColor: #FFF;
 @navBorder: #ff9470;
 @navHoverBgc: #dc002c;
+@navHei:144rem / @psdWidth;
 
 //slider
 @sliderCurrentDot: #db3528;
@@ -47,4 +53,33 @@
   [data-dpr="3"] &{
     font-size: @px * 3;
   }
+}
+
+.clearfix:after{
+  content: "";
+  display: block;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.render-box{
+  box-sizing: border-box;
+}
+
+//test
+.test-bor-grey{
+  border: 1px solid #ccc;
+}
+
+.test-bor-blue{
+  border: 1px solid blue;
+}
+
+.test-bor-red{
+  border: 1px solid red;
+}
+
+.test-bor-green{
+  border: 1px solid green;
 }

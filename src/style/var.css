@@ -1,0 +1,22 @@
+.clearfix:after {
+  content: "";
+  display: block;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.render-box {
+  box-sizing: border-box;
+}
+.test-bor-grey {
+  border: 1px solid #ccc;
+}
+.test-bor-blue {
+  border: 1px solid blue;
+}
+.test-bor-red {
+  border: 1px solid red;
+}
+.test-bor-green {
+  border: 1px solid green;
+}

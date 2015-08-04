@@ -13,6 +13,13 @@ html, body{
   font-family: 'iconfont', 'Microsoft YaHei', "WenQuanYi MicroHei", sans-serif;
 }
 
+//将body定在中间， 最大宽度为 10rem
+body{
+  max-width: 10rem;
+  margin: auto;
+  overflow: hidden;
+}
+
 a, a:hover, a:active, a:visited{
   text-decoration: none;
   outline: none;
@@ -25,7 +32,9 @@ body{position: relative;} //使得body下面的绝对定位元素有父级定位
 }
 
 //import
-@import "var";
+@import "layout";
+@import "navBar";
+@import "topBar";
 
 .loading:after{
   content: " ";

@@ -459,6 +459,11 @@ body {
   background-color: #efefef;
   font-family: 'iconfont', 'Microsoft YaHei', "WenQuanYi MicroHei", sans-serif;
 }
+body {
+  max-width: 10rem;
+  margin: auto;
+  overflow: hidden;
+}
 a,
 a:hover,
 a:active,
@@ -472,6 +477,126 @@ li {
 }
 body {
   position: relative;
+}
+/*layout 整体布局*/
+.clearfix:after {
+  content: "";
+  display: block;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.render-box {
+  box-sizing: border-box;
+}
+.test-bor-grey {
+  border: 1px solid #ccc;
+}
+.test-bor-blue {
+  border: 1px solid blue;
+}
+.test-bor-red {
+  border: 1px solid red;
+}
+.test-bor-green {
+  border: 1px solid green;
+}
+.top-layout-1 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 1.33333333rem;
+  background: #f3f3f3;
+}
+.top-layout-2 {
+  box-sizing: border-box;
+}
+.nav-layout {
+  box-sizing: border-box;
+  width: 100%;
+  height: 1.33333333rem;
+  background: #333333;
+  margin-bottom: 0.22222222rem;
+  box-shadow: 0 0.03703704rem 0.0462963rem rgba(0, 0, 0, 0.4);
+}
+.slider-layout {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3.7962963rem;
+  margin-bottom: 0.24074074rem;
+}
+.module-layout {
+  box-sizing: border-box;
+  width: 100%;
+}
+/*navBar*/
+.nav-container,
+.nav-container p {
+  margin: 0;
+  padding: 0;
+}
+.nav-container li {
+  float: left;
+  box-sizing: border-box;
+  width: 25%;
+  height: 1.33333333rem;
+  padding: 0 0.44444444rem;
+  position: relative;
+}
+.nav-container p {
+  text-align: center;
+  line-height: 1.33333333rem;
+  color: #999999;
+  font-size: 0.44444444rem;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+.nav-container .z-active p {
+  color: #ffd35c;
+  box-shadow: inset 0 -0.07407407rem 0 #ffd35c;
+}
+.nav-container .i-split {
+  width: 1px;
+  height: 0.40740741rem;
+  background: #555555;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -0.2037037rem;
+}
+.nav-container .i-message {
+  width: 0.22222222rem;
+  height: 0.22222222rem;
+  border-radius: 0.11111111rem;
+  background: #ff3c3c;
+  position: absolute;
+  right: 0.75925926rem;
+  top: 0.36111111rem;
+}
+/*topBar*/
+.top-container {
+  padding: 0 0.46296296rem;
+}
+.top-container p,
+.top-container menu {
+  margin: 0;
+  padding: 0;
+}
+.top-container p {
+  float: left;
+  line-height: 1.33333333rem;
+  color: #444444;
+  font-size: 0.55555556rem;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+.top-container menu {
+  float: right;
+}
+.top-container menu li {
+  float: left;
+  line-height: 1.33333333rem;
+  margin-left: 0.62962963rem;
+}
+.top-container menu li:last-child {
+  font-weight: bold;
 }
 .loading:after {
   content: " ";

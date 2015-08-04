@@ -1,0 +1,50 @@
+/*layout 整体布局*/
+.clearfix:after {
+  content: "";
+  display: block;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.render-box {
+  box-sizing: border-box;
+}
+.test-bor-grey {
+  border: 1px solid #ccc;
+}
+.test-bor-blue {
+  border: 1px solid blue;
+}
+.test-bor-red {
+  border: 1px solid red;
+}
+.test-bor-green {
+  border: 1px solid green;
+}
+.top-layout-1 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 1.33333333rem;
+  background: #f3f3f3;
+}
+.top-layout-2 {
+  box-sizing: border-box;
+}
+.nav-layout {
+  box-sizing: border-box;
+  width: 100%;
+  height: 1.33333333rem;
+  background: #333333;
+  margin-bottom: 0.22222222rem;
+  box-shadow: 0 0.03703704rem 0.0462963rem rgba(0, 0, 0, 0.4);
+}
+.slider-layout {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3.7962963rem;
+  margin-bottom: 0.24074074rem;
+}
+.module-layout {
+  box-sizing: border-box;
+  width: 100%;
+}
