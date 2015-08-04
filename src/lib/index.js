@@ -51,6 +51,7 @@ require([
     'states/user.alter',        //修改个人信息
     'states/date.create',        //发布约会
     'states/search',            //搜索
+    'states/message',            //消息页
 
 
 

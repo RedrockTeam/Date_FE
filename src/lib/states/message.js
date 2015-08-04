@@ -6,7 +6,7 @@ define(['avalon', 'mmState', 'vms/main'], function(avalon){
         url: "/message",
         templateUrl: "tpl/message/yield.html",
         onEnter: function(){
-            log('/user/recoded');
+            log('/message');
             avalon.scan();
         }
     });
