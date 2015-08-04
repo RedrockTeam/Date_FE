@@ -16,14 +16,17 @@
   }
   menu {
     float: right;
-    li{
+    li {
       float: left;
       line-height: @topHei1;
       margin-left: 68rem / @psdWidth;
-    }
-    //解决iconfont没有加粗
-    li:last-child{
-      font-weight: bold;
+      //解决iconfont没有加粗
+      &:last-child {
+        font-weight: bold;
+      }
+      &,a {
+        color: #444444;
+      }
     }
   }
 }

@@ -17,6 +17,7 @@
 //slider
 @sliderCurrentDot: #db3528;
 @sliderDot: #FFF;
+@sliderHei: 410rem / @psdWidth;
 
 //发布约
 @publishBtnColor: #FFF;
@@ -55,6 +56,7 @@
   }
 }
 
+//清除浮动
 .clearfix:after{
   content: "";
   display: block;
@@ -63,8 +65,24 @@
   clear: both;
 }
 
+//渲染为 border-box
 .render-box{
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+//修复图片, 前提是背景图片
+//图片大于容器
+.fix-img-over{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+//图片小于容器
+.fix-img-small{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 //test

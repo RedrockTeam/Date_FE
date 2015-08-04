@@ -8,6 +8,17 @@
 }
 .render-box {
   box-sizing: border-box;
+  overflow: hidden;
+}
+.fix-img-over {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.fix-img-small {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .test-bor-grey {
   border: 1px solid #ccc;

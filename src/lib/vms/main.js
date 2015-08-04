@@ -1,31 +1,11 @@
-define([ 'avalon', 'mmState'], function($){
+define([ 'avalon', 'vms/slider','mmState'], function($, vmSlider){
     var av = avalon.vmodels;
     var vm = avalon.define({
         $id: "main",
         state: "",
         sliderCb: function(){
-            /**
-             * 这个函数是slider的template载入之后的回调, 生成首页banner-slider
-             *
-             * 这里这样处理是因为
-             * 如果从别的页面进入主页
-             * 虽然slider的模板已经载入了, 但是数据还在ajax传输中
-             * 所以要等slider的VM里面有了数据才能生成slider
-             * @author Ling.
-             */
-            (function(){
-                if(avalon.vmodels['slider'] && avalon.vmodels['slider']['items'].length > 0){
-                    avalon.vmodels['main']['state'] = 'ok';
-                    return new Swiper('.swiper-container',{
-                        pagination: '.pagination',
-                        loop: true,
-                        grabCursor: true,
-                        paginationClickable: true,
-                        autoplay: 4000
-                    });
-                }
-                setTimeout(arguments.callee, 50); //扫描 50ms
-            })();
+            //测试
+            vmSlider['slider']();
         },
         userInfoSlider: function(){ //初始化userInfo模板里面的左右Slider
             var tabsSwiper = new Swiper('#tab-container',{

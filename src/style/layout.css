@@ -8,6 +8,17 @@
 }
 .render-box {
   box-sizing: border-box;
+  overflow: hidden;
+}
+.fix-img-over {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.fix-img-small {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -23,15 +34,18 @@
 }
 .top-layout-1 {
   box-sizing: border-box;
+  overflow: hidden;
   width: 100%;
   height: 1.33333333rem;
   background: #f3f3f3;
 }
 .top-layout-2 {
   box-sizing: border-box;
+  overflow: hidden;
 }
 .nav-layout {
   box-sizing: border-box;
+  overflow: hidden;
   width: 100%;
   height: 1.33333333rem;
   background: #333333;
@@ -40,11 +54,13 @@
 }
 .slider-layout {
   box-sizing: border-box;
+  overflow: hidden;
   width: 100%;
   height: 3.7962963rem;
   margin-bottom: 0.24074074rem;
 }
 .module-layout {
   box-sizing: border-box;
+  overflow: hidden;
   width: 100%;
 }
