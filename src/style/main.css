@@ -463,6 +463,7 @@ body {
   max-width: 10rem;
   margin: auto;
   overflow-x: hidden;
+  height: auto;
 }
 a,
 a:hover,
@@ -642,6 +643,30 @@ body {
 }
 .top-container menu .iconfont {
   font-size: 0.64814815rem !important;
+}
+.menuBar {
+  height: 1.55555556rem;
+  border-bottom: 1px solid #cccccc;
+  background: #f3f3f3;
+  padding: 0 0.32407407rem;
+}
+.menuBar p {
+  margin: 0;
+  padding: 0;
+}
+.menuBar .tip {
+  float: left;
+  font-size: 0.55555556rem;
+  color: #444444;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  line-height: 1.55555556rem;
+}
+.menuBar .do {
+  float: right;
+  color: #8dda5e;
+  font-size: 0.44444444rem;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  line-height: 1.55555556rem;
 }
 .swiper-container {
   margin: 0 auto;
@@ -1167,6 +1192,108 @@ body {
   color: #444444;
   font-size: 0.44444444rem;
   margin-left: 0.22222222rem;
+}
+.user-complete p,
+.user-complete ul,
+.user-complete h4,
+.user-complete h5 {
+  margin: 0;
+  padding: 0;
+}
+.user-complete .upload {
+  padding: 0.35185185rem 0.44444444rem;
+  background: #ffffff;
+  margin-top: 0.21296296rem;
+}
+.user-complete .upload .preview {
+  width: 8.2037037rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.user-complete .upload .preview .item {
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.user-complete .upload .btn {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.40740741rem;
+  color: #999999;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+.user-complete .inputs {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  margin-top: 0.22222222rem;
+}
+.user-complete .inputs li {
+  border-bottom: 1px solid #cccccc;
+}
+.user-complete .inputs li input {
+  width: 100%;
+  padding: 0.46296296rem;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-size: 0.44444444rem;
+  color: #999999;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+.user-complete .tab-tip {
+  color: #ff6633;
+  font-size: 0.44444444rem;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  font-style: normal;
+  margin-bottom: 0.18518519rem;
+}
+.user-complete .tags {
+  padding: 0.27777778rem 0.43518519rem;
+}
+.user-complete .tags .item {
+  float: left;
+  background: #ffffff;
+  padding: 0.25rem 0.50925926rem;
+  margin-right: 0.22222222rem;
+  border-radius: 0.09259259rem;
+  border: 1px solid #cccccc;
+  color: #444444;
+  font-size: 0.44444444rem;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+.user-complete .authen {
+  padding: 0.27777778rem 0.43518519rem;
+}
+.user-complete .authen h5 {
+  margin: 0.18518519rem 0;
+  color: #444444;
+  font-size: 0.44444444rem;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+.user-complete .authen .file-wrapper {
+  position: relative;
+  width: 2.65740741rem;
+  background: #8dda5e;
+  border-radius: 0.09259259rem;
+  height: 0.90740741rem;
+  line-height: 0.90740741rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.44444444rem;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+.user-complete .authen input[type=file] {
+  width: 2.65740741rem;
+  height: 0.90740741rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid red;
+  opacity: 0;
 }
 .loading:after {
   content: " ";

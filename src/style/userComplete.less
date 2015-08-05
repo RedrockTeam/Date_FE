@@ -1,0 +1,108 @@
+@import "var";
+.user-complete{
+  p,ul,h4,h5{
+    margin: 0;
+    padding: 0;
+  }
+
+  .upload {
+    padding: 38rem / @psdWidth 48rem / @psdWidth;
+    background: #ffffff;
+    margin-top: 23rem / @psdWidth;
+    .preview {
+      width: 886rem / @psdWidth;
+      display: inline-block;
+      //overflow-x: scroll;
+      vertical-align: middle;
+      .item {
+        width: 144rem / @psdWidth;
+        height: 144rem / @psdWidth;
+        border: 1px solid #cccccc;
+        border-radius: 2px;
+        .fix-img-small;
+      }
+    }
+    .btn {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 44rem / @psdWidth;
+      color: #999999;
+      font-family: @fm-base;
+    }
+  }
+
+  .inputs {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    margin-top: 24rem / @psdWidth;
+
+    li{
+      border-bottom: 1px solid #cccccc;
+      input{
+        width: 100%;
+        padding: 50rem / @psdWidth;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        font-size: 48rem / @psdWidth;
+        color: #999999;
+        font-family: @fm-base;
+      }
+    }
+  }
+
+  .tab-tip{
+    color: #ff6633;
+    font-size: 48rem / @psdWidth;
+    font-family: @fm-base;
+    font-style: normal;
+    margin-bottom: 20rem / @psdWidth;
+  }
+  .tags{
+    padding:30rem / @psdWidth  47rem / @psdWidth;
+
+    .item {
+      float: left;
+      background: #ffffff;
+      padding: 27rem / @psdWidth 55rem / @psdWidth;
+      margin-right: 24rem / @psdWidth;
+      border-radius: 10rem / @psdWidth;
+      border: 1px solid #cccccc;
+      color: #444444;
+      font-size: 48rem / @psdWidth;
+      font-family: @fm-base;
+    }
+  }
+
+  .authen{
+    padding:30rem / @psdWidth  47rem / @psdWidth;
+    h5 {
+      margin: 20rem / @psdWidth 0;
+      color: #444444;
+      font-size: 48rem / @psdWidth;
+      font-family: @fm-base;
+    }
+
+    .file-wrapper {
+      position: relative;
+      width: 287rem / @psdWidth;
+      background: #8dda5e;
+      border-radius: 10rem / @psdWidth;
+      height: 98rem / @psdWidth;
+      line-height: 98rem / @psdWidth;
+      text-align: center;
+      color: #ffffff;
+      font-size: 48rem / @psdWidth;
+      font-family: @fm-base;
+    }
+    input[type=file]{
+      width: 287rem / @psdWidth;
+      height: 98rem / @psdWidth;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid red;
+      opacity: 0;
+    }
+  }
+}
