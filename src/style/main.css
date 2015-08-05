@@ -462,7 +462,7 @@ body {
 body {
   max-width: 10rem;
   margin: auto;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 a,
 a:hover,
@@ -700,6 +700,7 @@ body {
 }
 .swiper-container {
   width: 100%;
+  height: 10000px;
 }
 .swiper-container .show {
   display: block;
@@ -781,12 +782,12 @@ body {
 }
 .date-list main {
   position: relative;
-  padding: 0.24074074rem 0 0.50925926rem;
 }
 .date-list .content {
   color: #000000;
   font-size: 0.44444444rem;
   font-family: "hiraginosansgb w3", "microsoft yahei";
+  padding: 0.24074074rem 0 0.37037037rem;
 }
 .date-list .box-time span,
 .date-list .box-location span,
@@ -822,6 +823,7 @@ body {
   color: #666666;
 }
 .date-list footer {
+  margin-top: 0.50925926rem;
   padding-bottom: 0.23148148rem;
 }
 .date-list footer a {

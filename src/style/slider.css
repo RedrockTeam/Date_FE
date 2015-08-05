@@ -107,6 +107,7 @@
 }
 .swiper-container {
   width: 100%;
+  height: 10000px;
 }
 .swiper-container .show {
   display: block;
