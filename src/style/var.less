@@ -44,6 +44,28 @@
 
 @default-input-placeholder-color:#999;
 
+//图标
+.box-icon{
+  .icon{
+    .iconfont {
+      display: inline-block;
+      font-size: 46rem / @psdWidth !important;
+      vertical-align: middle;
+    }
+  }
+  .box-time .iconfont{
+    color: #44d48b;
+  }
+
+  .box-location .iconfont{
+    color: #4ea1ff;
+  }
+
+  .box-cost .iconfont{
+    color: #ff7660;
+  }
+}
+
 
 //功能
 .rfz(@px){
@@ -83,6 +105,13 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+//单行文本溢出
+.text-over {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 //test

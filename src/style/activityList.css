@@ -50,128 +50,88 @@
 .test-bor-green {
   border: 1px solid green;
 }
-.date-list {
-  font-family: "hiraginosansgb w3", "microsoft yahei";
-}
-.date-list,
-.date-list p {
+.activity-list,
+.activity-list p,
+.activity-list h2 {
   margin: 0;
   padding: 0;
 }
-.date-list i {
-  font-style: normal;
-}
-.date-list .item {
-  padding: 0.44444444rem 0.44444444rem 0.23148148rem;
+.activity-list .item {
+  padding: 0.15740741rem 0.27777778rem 0.2962963rem;
   background: #ffffff;
   margin-bottom: 0.23148148rem;
   border: 1px solid #cccccc;
 }
-.date-list header {
-  padding-bottom: 0.18518519rem;
-  border-bottom: 1px solid #cccccc;
-}
-.date-list .person {
-  float: left;
-}
-.date-list .side-tag {
-  float: right;
-}
-.date-list i.head {
-  width: 1.35185185rem;
-  height: 1.35185185rem;
-  border-radius: 0.67592593rem;
+.activity-list .show {
   display: inline-block;
+  width: 3.68518519rem;
+  height: 2.59259259rem;
   border: 1px solid #cccccc;
-  vertical-align: middle;
-  margin-right: 0.23148148rem;
+  vertical-align: top;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
-.date-list .detail {
+.activity-list .detail {
   display: inline-block;
-  vertical-align: middle;
-  width: 4.2962963rem;
+  width: 5.33333333rem;
   overflow: hidden;
+  margin-left: 0.23148148rem;
+  position: relative;
 }
-.date-list .detail span {
-  display: inline-block;
-  color: #000000;
+.activity-list .detail h2 {
   font-size: 0.44444444rem;
+  color: #333333;
   font-family: "hiraginosansgb w3", "microsoft yahei";
-  vertical-align: middle;
-}
-.date-list .detail .gender {
-  color: #ff607a;
-  display: inline-block;
-  font-size: 0.44444444rem;
-  vertical-align: middle;
-  margin-left: 0.18518519rem;
-}
-.date-list .detail .signature {
-  font-size: 0.33333333rem;
-  color: #666666;
-  font-family: "hiraginosansgb w3", "microsoft yahei";
+  padding: 0.09259259rem 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.date-list .side-tag {
-  background: #c4c4c4;
+.activity-list .detail .signature {
   color: #ffffff;
-  border-radius: 0.27777778rem;
-  font-family: "hiraginosansgb w3", "microsoft yahei";
-  padding: 0.06481481rem 0.11111111rem;
-}
-.date-list main {
-  position: relative;
-}
-.date-list .content {
-  color: #000000;
-  font-size: 0.44444444rem;
-  font-family: "hiraginosansgb w3", "microsoft yahei";
-  padding: 0.24074074rem 0 0.37037037rem;
-}
-.date-list .icon {
-  margin-bottom: 0.18518519rem;
-}
-.date-list .icon span {
-  display: inline-block;
-  margin-left: 0.24074074rem;
+  background: #c3c3c3;
+  padding: 0.0462963rem 0.09259259rem;
+  border-radius: 0.07407407rem;
   font-size: 0.33333333rem;
+  letter-spacing: 0.07407407rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.activity-list .detail .icon {
+  margin-top: 0.13888889rem;
+}
+.activity-list .detail .icon span {
   color: #666666;
-  font-family: "hiraginosansgb w3", "microsoft yahei";
+  font-size: 0.33333333rem;
   vertical-align: middle;
 }
-.date-list .icon:last-child {
-  margin: 0;
-}
-.date-list .icon .iconfont {
+.activity-list .detail .icon .iconfont {
   display: inline-block;
   font-size: 0.42592593rem !important;
   vertical-align: middle;
 }
-.date-list .box-time .iconfont {
+.activity-list .detail .box-time .iconfont {
   color: #44d48b;
 }
-.date-list .box-location .iconfont {
+.activity-list .detail .box-location .iconfont {
   color: #4ea1ff;
 }
-.date-list .box-cost .iconfont {
+.activity-list .detail .box-cost .iconfont {
   color: #ff7660;
 }
-.date-list .create-time {
+.activity-list .detail .create-time {
   position: absolute;
   right: 0;
   bottom: 0;
   font-size: 0.33333333rem;
   color: #666666;
 }
-.date-list footer {
+.activity-list footer {
   margin-top: 0.50925926rem;
 }
-.date-list footer a {
+.activity-list footer a {
   display: inline-block;
   color: #999999;
   width: 2.90740741rem;
@@ -179,6 +139,6 @@
   font-size: 0.33333333rem;
   border-right: 1px solid #cccccc;
 }
-.date-list footer a:last-child {
+.activity-list footer a:last-child {
   border: none;
 }

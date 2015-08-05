@@ -479,6 +479,20 @@ body {
   position: relative;
 }
 /*layout 整体布局*/
+.box-icon .icon .iconfont {
+  display: inline-block;
+  font-size: 0.42592593rem !important;
+  vertical-align: middle;
+}
+.box-icon .box-time .iconfont {
+  color: #44d48b;
+}
+.box-icon .box-location .iconfont {
+  color: #4ea1ff;
+}
+.box-icon .box-cost .iconfont {
+  color: #ff7660;
+}
 .clearfix:after {
   content: "";
   display: block;
@@ -499,6 +513,11 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+.text-over {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -725,9 +744,10 @@ body {
   font-style: normal;
 }
 .date-list .item {
-  padding: 0.44444444rem 0.44444444rem 0;
+  padding: 0.44444444rem 0.44444444rem 0.23148148rem;
   background: #ffffff;
   margin-bottom: 0.23148148rem;
+  border: 1px solid #cccccc;
 }
 .date-list header {
   padding-bottom: 0.18518519rem;
@@ -747,6 +767,9 @@ body {
   border: 1px solid #cccccc;
   vertical-align: middle;
   margin-right: 0.23148148rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .date-list .detail {
   display: inline-block;
@@ -772,6 +795,9 @@ body {
   font-size: 0.33333333rem;
   color: #666666;
   font-family: "hiraginosansgb w3", "microsoft yahei";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .date-list .side-tag {
   background: #c4c4c4;
@@ -789,9 +815,10 @@ body {
   font-family: "hiraginosansgb w3", "microsoft yahei";
   padding: 0.24074074rem 0 0.37037037rem;
 }
-.date-list .box-time span,
-.date-list .box-location span,
-.date-list .box-cost span {
+.date-list .icon {
+  margin-bottom: 0.18518519rem;
+}
+.date-list .icon span {
   display: inline-block;
   margin-left: 0.24074074rem;
   font-size: 0.33333333rem;
@@ -799,9 +826,10 @@ body {
   font-family: "hiraginosansgb w3", "microsoft yahei";
   vertical-align: middle;
 }
-.date-list .box-time .iconfont,
-.date-list .box-location .iconfont,
-.date-list .box-cost .iconfont {
+.date-list .icon:last-child {
+  margin: 0;
+}
+.date-list .icon .iconfont {
   display: inline-block;
   font-size: 0.42592593rem !important;
   vertical-align: middle;
@@ -824,7 +852,6 @@ body {
 }
 .date-list footer {
   margin-top: 0.50925926rem;
-  padding-bottom: 0.23148148rem;
 }
 .date-list footer a {
   display: inline-block;
@@ -835,6 +862,98 @@ body {
   border-right: 1px solid #cccccc;
 }
 .date-list footer a:last-child {
+  border: none;
+}
+.activity-list,
+.activity-list p,
+.activity-list h2 {
+  margin: 0;
+  padding: 0;
+}
+.activity-list .item {
+  padding: 0.15740741rem 0.27777778rem 0.2962963rem;
+  background: #ffffff;
+  margin-bottom: 0.23148148rem;
+  border: 1px solid #cccccc;
+}
+.activity-list .show {
+  display: inline-block;
+  width: 3.68518519rem;
+  height: 2.59259259rem;
+  border: 1px solid #cccccc;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.activity-list .detail {
+  display: inline-block;
+  width: 5.33333333rem;
+  overflow: hidden;
+  margin-left: 0.23148148rem;
+  position: relative;
+}
+.activity-list .detail h2 {
+  font-size: 0.44444444rem;
+  color: #333333;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  padding: 0.09259259rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.activity-list .detail .signature {
+  color: #ffffff;
+  background: #c3c3c3;
+  padding: 0.0462963rem 0.09259259rem;
+  border-radius: 0.07407407rem;
+  font-size: 0.33333333rem;
+  letter-spacing: 0.07407407rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.activity-list .detail .icon {
+  margin-top: 0.13888889rem;
+}
+.activity-list .detail .icon span {
+  color: #666666;
+  font-size: 0.33333333rem;
+  vertical-align: middle;
+}
+.activity-list .detail .icon .iconfont {
+  display: inline-block;
+  font-size: 0.42592593rem !important;
+  vertical-align: middle;
+}
+.activity-list .detail .box-time .iconfont {
+  color: #44d48b;
+}
+.activity-list .detail .box-location .iconfont {
+  color: #4ea1ff;
+}
+.activity-list .detail .box-cost .iconfont {
+  color: #ff7660;
+}
+.activity-list .detail .create-time {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 0.33333333rem;
+  color: #666666;
+}
+.activity-list footer {
+  margin-top: 0.50925926rem;
+}
+.activity-list footer a {
+  display: inline-block;
+  color: #999999;
+  width: 2.90740741rem;
+  text-align: center;
+  font-size: 0.33333333rem;
+  border-right: 1px solid #cccccc;
+}
+.activity-list footer a:last-child {
   border: none;
 }
 .loading:after {

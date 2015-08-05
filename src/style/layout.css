@@ -1,4 +1,18 @@
 /*layout 整体布局*/
+.box-icon .icon .iconfont {
+  display: inline-block;
+  font-size: 0.42592593rem !important;
+  vertical-align: middle;
+}
+.box-icon .box-time .iconfont {
+  color: #44d48b;
+}
+.box-icon .box-location .iconfont {
+  color: #4ea1ff;
+}
+.box-icon .box-cost .iconfont {
+  color: #ff7660;
+}
 .clearfix:after {
   content: "";
   display: block;
@@ -19,6 +33,11 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+.text-over {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .test-bor-grey {
   border: 1px solid #ccc;

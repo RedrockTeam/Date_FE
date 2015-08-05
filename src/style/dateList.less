@@ -11,9 +11,10 @@
     font-style: normal;
   }
   .item{
-    padding: 48rem / @psdWidth 48rem / @psdWidth 0;
+    padding: 48rem / @psdWidth 48rem / @psdWidth 25rem / @psdWidth;
     background: #ffffff;
     margin-bottom: 25rem / @psdWidth;
+    border: 1px solid #cccccc;
   }
   header {
     padding-bottom: 20rem / @psdWidth;
@@ -36,6 +37,7 @@
     border: 1px solid #cccccc;
     vertical-align: middle;
     margin-right: 25rem / @psdWidth;
+    .fix-img-small;
   }
 
   //头部信息
@@ -59,9 +61,10 @@
       margin-left: 20rem / @psdWidth;
     }
     .signature {
-      font-size:36rem / @psdWidth;
+      font-size: 36rem / @psdWidth;
       color: #666666;
       font-family: @fm-base;
+      .text-over;
     }
   }
 
@@ -85,8 +88,9 @@
    padding: 26rem / @psdWidth 0 40rem / @psdWidth;
  }
 
-  .box-time,.box-location, .box-cost{
-    span{
+  .icon {
+    margin-bottom: 20rem / @psdWidth;
+    span {
       display: inline-block;
       margin-left: 26rem / @psdWidth;
       font-size: 36rem / @psdWidth;
@@ -94,23 +98,11 @@
       font-family: @fm-base;
       vertical-align: middle;
     }
-    .iconfont {
-      display: inline-block;
-      font-size: 46rem / @psdWidth !important;
-      vertical-align: middle;
-    }
   }
-  .box-time .iconfont{
-    color: #44d48b;
+  .icon:last-child{
+    margin: 0;
   }
-
-  .box-location .iconfont{
-    color: #4ea1ff;
-  }
-
-  .box-cost .iconfont{
-    color: #ff7660;
-  }
+  .box-icon;
 
   .create-time{
     position: absolute;
@@ -133,6 +125,6 @@
     a:last-child{
       border: none;
     }
-    padding-bottom: 25rem / @psdWidth;
+    //padding-bottom: ;
   }
 }
