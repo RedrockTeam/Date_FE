@@ -107,7 +107,6 @@
 }
 .swiper-container {
   width: 100%;
-  height: 3.75rem;
 }
 .swiper-container .show {
   display: block;
@@ -116,4 +115,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+.slider-layout .swiper-container {
+  height: 3.7962963rem;
 }

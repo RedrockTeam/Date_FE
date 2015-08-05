@@ -62,3 +62,6 @@
 .top-container menu li a {
   color: #444444;
 }
+.top-container menu .iconfont {
+  font-size: 0.64814815rem !important;
+}

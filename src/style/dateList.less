@@ -1,0 +1,137 @@
+@import "var";
+
+//namespace
+.date-list{
+  font-family: @fm-base;
+  &, p{
+    margin: 0;
+    padding: 0;
+  }
+  i{
+    font-style: normal;
+  }
+  .item{
+    padding: 48rem / @psdWidth 48rem / @psdWidth 0;
+    background: #ffffff;
+    margin-bottom: 25rem / @psdWidth;
+  }
+  header {
+    padding-bottom: 20rem / @psdWidth;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .person{
+    float: left;
+  }
+  .side-tag{
+    float: right;
+  }
+
+
+  i.head {
+    width: 146rem / @psdWidth;
+    height: 146rem / @psdWidth;
+    border-radius: 73rem / @psdWidth;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    vertical-align: middle;
+    margin-right: 25rem / @psdWidth;
+  }
+
+  //头部信息
+  .detail{
+    display: inline-block;
+    vertical-align: middle;
+    width: 464rem / @psdWidth;
+    overflow: hidden;
+    span{
+      display: inline-block;
+      color: #000000;
+      font-size: 48rem / @psdWidth;
+      font-family: @fm-base;
+      vertical-align: middle;
+    }
+    .gender{
+      color: #ff607a;
+      display: inline-block;
+      font-size: 48rem / @psdWidth;
+      vertical-align: middle;
+      margin-left: 20rem / @psdWidth;
+    }
+    .signature {
+      font-size:36rem / @psdWidth;
+      color: #666666;
+      font-family: @fm-base;
+    }
+  }
+
+  .side-tag{
+    background: #c4c4c4;
+    color: #ffffff;
+    border-radius: 30rem / @psdWidth;
+    font-family: @fm-base;
+    padding: 7rem / @psdWidth 12rem / @psdWidth;
+  }
+
+  main{
+    position: relative;
+    padding: 26rem / @psdWidth 0 55rem / @psdWidth;
+  }
+
+  //内容
+ .content{
+   color: #000000;
+   font-size: 48rem / @psdWidth;
+   font-family: @fm-base;
+ }
+
+  .box-time,.box-location, .box-cost{
+    span{
+      display: inline-block;
+      margin-left: 26rem / @psdWidth;
+      font-size: 36rem / @psdWidth;
+      color: #666666;
+      font-family: @fm-base;
+      vertical-align: middle;
+    }
+    .iconfont {
+      display: inline-block;
+      font-size: 46rem / @psdWidth !important;
+      vertical-align: middle;
+    }
+  }
+  .box-time .iconfont{
+    color: #44d48b;
+  }
+
+  .box-location .iconfont{
+    color: #4ea1ff;
+  }
+
+  .box-cost .iconfont{
+    color: #ff7660;
+  }
+
+  .create-time{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 36rem / @psdWidth;
+    color: #666666;
+  }
+
+  footer{
+    a{
+      display: inline-block;
+      color: #999999;
+      width: 314rem / @psdWidth;
+      text-align: center;
+      font-size: 36rem / @psdWidth;
+      border-right: 1px solid #cccccc;
+    }
+    a:last-child{
+      border: none;
+    }
+    padding-bottom: 25rem / @psdWidth;
+  }
+}

@@ -15,6 +15,7 @@ define('vms/slider', ['avalon', 'jquery','swiper'], function(avalon, $){
         moduleSlider: function(){     //测试
             var tabsSwiper = new Swiper('#tab-container',{
                 speed: 500,
+                height: 'auto',
                 onTouchEnd: function(){
                     $(".tab .z-active").removeClass('z-active');
                     $(".tab li").eq(tabsSwiper.activeIndex).addClass('z-active');

@@ -1,0 +1,156 @@
+.clearfix:after {
+  content: "";
+  display: block;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.render-box {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.fix-img-over {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.fix-img-small {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.test-bor-grey {
+  border: 1px solid #ccc;
+}
+.test-bor-blue {
+  border: 1px solid blue;
+}
+.test-bor-red {
+  border: 1px solid red;
+}
+.test-bor-green {
+  border: 1px solid green;
+}
+.date-list {
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+.date-list,
+.date-list p {
+  margin: 0;
+  padding: 0;
+}
+.date-list i {
+  font-style: normal;
+}
+.date-list .item {
+  padding: 0.44444444rem 0.44444444rem 0;
+  background: #ffffff;
+  margin-bottom: 0.23148148rem;
+}
+.date-list header {
+  padding-bottom: 0.18518519rem;
+  border-bottom: 1px solid #cccccc;
+}
+.date-list .person {
+  float: left;
+}
+.date-list .side-tag {
+  float: right;
+}
+.date-list i.head {
+  width: 1.35185185rem;
+  height: 1.35185185rem;
+  border-radius: 0.67592593rem;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  vertical-align: middle;
+  margin-right: 0.23148148rem;
+}
+.date-list .detail {
+  display: inline-block;
+  vertical-align: middle;
+  width: 4.2962963rem;
+  overflow: hidden;
+}
+.date-list .detail span {
+  display: inline-block;
+  color: #000000;
+  font-size: 0.44444444rem;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  vertical-align: middle;
+}
+.date-list .detail .gender {
+  color: #ff607a;
+  display: inline-block;
+  font-size: 0.44444444rem;
+  vertical-align: middle;
+  margin-left: 0.18518519rem;
+}
+.date-list .detail .signature {
+  font-size: 0.33333333rem;
+  color: #666666;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+.date-list .side-tag {
+  background: #c4c4c4;
+  color: #ffffff;
+  border-radius: 0.27777778rem;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  padding: 0.06481481rem 0.11111111rem;
+}
+.date-list main {
+  position: relative;
+  padding: 0.24074074rem 0 0.50925926rem;
+}
+.date-list .content {
+  color: #000000;
+  font-size: 0.44444444rem;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+.date-list .box-time span,
+.date-list .box-location span,
+.date-list .box-cost span {
+  display: inline-block;
+  margin-left: 0.24074074rem;
+  font-size: 0.33333333rem;
+  color: #666666;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  vertical-align: middle;
+}
+.date-list .box-time .iconfont,
+.date-list .box-location .iconfont,
+.date-list .box-cost .iconfont {
+  display: inline-block;
+  font-size: 0.42592593rem !important;
+  vertical-align: middle;
+}
+.date-list .box-time .iconfont {
+  color: #44d48b;
+}
+.date-list .box-location .iconfont {
+  color: #4ea1ff;
+}
+.date-list .box-cost .iconfont {
+  color: #ff7660;
+}
+.date-list .create-time {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 0.33333333rem;
+  color: #666666;
+}
+.date-list footer {
+  padding-bottom: 0.23148148rem;
+}
+.date-list footer a {
+  display: inline-block;
+  color: #999999;
+  width: 2.90740741rem;
+  text-align: center;
+  font-size: 0.33333333rem;
+  border-right: 1px solid #cccccc;
+}
+.date-list footer a:last-child {
+  border: none;
+}
