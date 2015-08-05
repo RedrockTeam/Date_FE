@@ -3,26 +3,18 @@ define([ 'avalon', 'vms/slider','mmState'], function($, vmSlider){
     var vm = avalon.define({
         $id: "main",
         state: "",
+        loadCout: 0,
         sliderCb: function(){
             //测试
             vmSlider['slider']();
         },
-        userInfoSlider: function(){ //初始化userInfo模板里面的左右Slider
-            var tabsSwiper = new Swiper('#tab-container',{
-                speed: 500,
-                onSlideChangeStart: function(){
-                    $(".tab .selected").removeClass('selected');
-                    $(".tab li").eq(tabsSwiper.activeIndex).addClass('selected');
-                }
-            });
-            $(".tab li").on('touchstart mousedown',function(e){
-                e.preventDefault()
-                $(".tab .selected").removeClass('selected');
-                $(this).addClass('selected');
-                tabsSwiper.swipeTo( $(this).index() );
-            }).click(function(e){
-                e.preventDefault();
-            });
+        moduleLoadCb: function(){    //测试
+            vm.loadCout++;
+            if( vm.loadCout == 4 ){   //
+                log('modlues 加载完毕!!!');
+                console.log( vm.loadCout );
+                vmSlider['moduleSlider']();
+            }
         }
     });
 });

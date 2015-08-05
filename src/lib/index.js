@@ -55,7 +55,6 @@ require([
 
 
 
-
 ], function(avalon) {
     avalon.history.start({
         basepath: "/"

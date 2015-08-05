@@ -1,5 +1,5 @@
 //主页
-define(['avalon', 'mmState', 'vms/main'], function(avalon){
+define(['avalon', 'vms/main', 'vms/slider','mmState'], function(avalon, vmMain, vmSlider){
     avalon.state('home', {
         controller: "main",
         url: "/",
