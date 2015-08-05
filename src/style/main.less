@@ -7,7 +7,7 @@
   url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 html, body{
-  height: 100%; //防止高度小于viewpoint
+  min-height: 100%; //防止高度小于viewpoint
   -webkit-font-smoothing: antialiased;
   background-color: @bodyColor;
   font-family: 'iconfont', 'Microsoft YaHei', "WenQuanYi MicroHei", sans-serif;
@@ -17,7 +17,7 @@ html, body{
 body{
   max-width: 10rem;
   margin: auto;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a, a:hover, a:active, a:visited{
@@ -37,6 +37,7 @@ body{position: relative;} //使得body下面的绝对定位元素有父级定位
 @import "topBar";
 @import "slider";
 @import "search";
+@import "dateList";
 
 .loading:after{
   content: " ";
