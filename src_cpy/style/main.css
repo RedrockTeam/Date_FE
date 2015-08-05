@@ -26,7 +26,6 @@ input,
 select,
 textarea {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  *font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 /**
      * Address margins handled incorrectly in IE 6/7.
@@ -127,7 +126,6 @@ kbd,
 pre,
 samp {
   font-family: Monaco, Consolas, monospace;
-  *font-family: Monaco, Consolas, monospace;
   font-size: 1em;
 }
 /**
