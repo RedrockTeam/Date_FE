@@ -85,6 +85,7 @@
 			nickname: "sa", //用户名
 			info: "成功",     
 			token: "235sdgsgwr4ewfvf",    //给用户的token
+			head: "",                //获取用户的头像
 			uid: "2523",       //分配给用户的uid
 			completed: 0       //是否已经完善了必填的信息, 用于分配给用户功能， `0` 未完善，   `1` 已经完善
 		}

@@ -1592,13 +1592,13 @@ body {
   font-size: 48px;
 }
 .user-check .more .icon {
-  font-size: 16px;
+  font-size: 20px;
 }
 [data-dpr="2"] .user-check .more .icon {
-  font-size: 24px;
+  font-size: 30px;
 }
 [data-dpr="3"] .user-check .more .icon {
-  font-size: 48px;
+  font-size: 60px;
 }
 .message .message-list {
   padding: 5%;
