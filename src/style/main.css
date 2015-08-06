@@ -1626,13 +1626,13 @@ body {
 .message .message-list .right {
   margin-left: 1.48148148rem;
   line-height: 1.2962963rem;
-  font-size: 6px;
+  font-size: 15.33333333px;
 }
 [data-dpr="2"] .message .message-list .right {
-  font-size: 9px;
+  font-size: 23px;
 }
 [data-dpr="3"] .message .message-list .right {
-  font-size: 18px;
+  font-size: 46px;
 }
 .user-complete p,
 .user-complete ul,
@@ -2074,15 +2074,15 @@ body {
   margin-bottom: 0.37037037rem;
 }
 .hot-peo .hot-title {
-  font-size: 6px;
+  font-size: 15.33333333px;
   color: #8dda5e;
   margin: 0.23148148rem 0;
 }
 [data-dpr="2"] .hot-peo .hot-title {
-  font-size: 9px;
+  font-size: 23px;
 }
 [data-dpr="3"] .hot-peo .hot-title {
-  font-size: 18px;
+  font-size: 46px;
 }
 .hot-peo .img-wrapper {
   float: left;
@@ -2100,47 +2100,47 @@ body {
   color: white;
 }
 .hot-peo .peo-nickname {
-  font-size: 6px;
+  font-size: 15.33333333px;
   line-height: 0.64814815rem;
 }
 [data-dpr="2"] .hot-peo .peo-nickname {
-  font-size: 9px;
+  font-size: 23px;
 }
 [data-dpr="3"] .hot-peo .peo-nickname {
-  font-size: 18px;
+  font-size: 46px;
 }
 .hot-peo .peo-nickname span {
   display: inline-block;
   background-color: #ff6b5c;
   color: white;
   border-radius: 20px;
-  font-size: 5.33333333px;
+  font-size: 15.33333333px;
 }
 [data-dpr="2"] .hot-peo .peo-nickname span {
-  font-size: 8px;
+  font-size: 23px;
 }
 [data-dpr="3"] .hot-peo .peo-nickname span {
-  font-size: 16px;
+  font-size: 46px;
 }
 .hot-peo .peo-nickname span i {
-  font-size: 6.2px;
+  font-size: 18px;
 }
 [data-dpr="2"] .hot-peo .peo-nickname span i {
-  font-size: 9.3px;
+  font-size: 27px;
 }
 [data-dpr="3"] .hot-peo .peo-nickname span i {
-  font-size: 18.6px;
+  font-size: 54px;
 }
 .hot-peo .signature {
-  font-size: 4.66666667px;
+  font-size: 14px;
   line-height: 0.37037037rem;
   margin-top: 0.09259259rem;
 }
 [data-dpr="2"] .hot-peo .signature {
-  font-size: 7px;
+  font-size: 21px;
 }
 [data-dpr="3"] .hot-peo .signature {
-  font-size: 14px;
+  font-size: 42px;
 }
 .hot-peo .peo-lists {
   border-bottom: 1px solid #999999;
@@ -2330,13 +2330,16 @@ body {
   background: #ffffff;
   position: fixed;
   width: 5rem;
-  height: 100%;
+  min-height: 100%;
   right: 0;
   top: 1.33333333rem;
   z-index: 2;
   border: 1px solid #cccccc;
 }
-.filter-container h5 {
+.filter-container h5,
+.filter-container dl,
+.filter-container dt,
+.filter-container dd {
   margin: 0;
   padding: 0;
   font-weight: normal;
@@ -2353,6 +2356,32 @@ body {
 }
 [data-dpr="3"] .filter-container menu li {
   font-size: 36px;
+}
+.filter-container dl dt,
+.filter-container dl dd {
+  padding: 0.27777778rem 0;
+  color: #000000;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  font-size: 16px;
+  border-top: 1px solid #cccccc;
+}
+[data-dpr="2"] .filter-container dl dt,
+[data-dpr="2"] .filter-container dl dd {
+  font-size: 24px;
+}
+[data-dpr="3"] .filter-container dl dt,
+[data-dpr="3"] .filter-container dl dd {
+  font-size: 48px;
+}
+.filter-container dl dt span,
+.filter-container dl dd span {
+  padding-left: 0.41666667rem;
+}
+.filter-container dl dt {
+  background: #ffffff;
+}
+.filter-container dl dd {
+  background: #eeeeee;
 }
 .loading:after {
   content: " ";

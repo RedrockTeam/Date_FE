@@ -2,7 +2,7 @@
 
 //namespace
 .filter-container {
-  h5{
+  h5, dl,dt,dd{
     margin: 0;
     padding: 0;
     font-weight: normal;
@@ -10,7 +10,7 @@
   background: #ffffff;
   position: fixed;
   width: 540rem / @psdWidth;
-  height: 100%;
+  min-height: 100%;
   right: 0;
   top: 144rem /@psdWidth;
   z-index: 2;
@@ -23,6 +23,27 @@
       .font-36;
       color: #666666;
       font-family: @fm-base;
+    }
+  }
+
+  dl {
+    dt,dd {
+      padding: 30rem / @psdWidth 0;
+      color: #000000;
+      font-family: @fm-base;
+      .font-48;
+      border-top: 1px solid #cccccc;
+
+      span{
+        padding-left: 45rem / @psdWidth;
+      }
+    }
+    dt{
+      background: #ffffff;
+    }
+    dd{
+      background: #eeeeee;
+      //display: none;
     }
   }
 }

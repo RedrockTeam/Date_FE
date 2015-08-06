@@ -75,15 +75,15 @@
   margin-bottom: 0.37037037rem;
 }
 .hot-peo .hot-title {
-  font-size: 6px;
+  font-size: 15.33333333px;
   color: #8dda5e;
   margin: 0.23148148rem 0;
 }
 [data-dpr="2"] .hot-peo .hot-title {
-  font-size: 9px;
+  font-size: 23px;
 }
 [data-dpr="3"] .hot-peo .hot-title {
-  font-size: 18px;
+  font-size: 46px;
 }
 .hot-peo .img-wrapper {
   float: left;
@@ -101,47 +101,47 @@
   color: white;
 }
 .hot-peo .peo-nickname {
-  font-size: 6px;
+  font-size: 15.33333333px;
   line-height: 0.64814815rem;
 }
 [data-dpr="2"] .hot-peo .peo-nickname {
-  font-size: 9px;
+  font-size: 23px;
 }
 [data-dpr="3"] .hot-peo .peo-nickname {
-  font-size: 18px;
+  font-size: 46px;
 }
 .hot-peo .peo-nickname span {
   display: inline-block;
   background-color: #ff6b5c;
   color: white;
   border-radius: 20px;
-  font-size: 5.33333333px;
+  font-size: 15.33333333px;
 }
 [data-dpr="2"] .hot-peo .peo-nickname span {
-  font-size: 8px;
+  font-size: 23px;
 }
 [data-dpr="3"] .hot-peo .peo-nickname span {
-  font-size: 16px;
+  font-size: 46px;
 }
 .hot-peo .peo-nickname span i {
-  font-size: 6.2px;
+  font-size: 18px;
 }
 [data-dpr="2"] .hot-peo .peo-nickname span i {
-  font-size: 9.3px;
+  font-size: 27px;
 }
 [data-dpr="3"] .hot-peo .peo-nickname span i {
-  font-size: 18.6px;
+  font-size: 54px;
 }
 .hot-peo .signature {
-  font-size: 4.66666667px;
+  font-size: 14px;
   line-height: 0.37037037rem;
   margin-top: 0.09259259rem;
 }
 [data-dpr="2"] .hot-peo .signature {
-  font-size: 7px;
+  font-size: 21px;
 }
 [data-dpr="3"] .hot-peo .signature {
-  font-size: 14px;
+  font-size: 42px;
 }
 .hot-peo .peo-lists {
   border-bottom: 1px solid #999999;
