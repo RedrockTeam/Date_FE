@@ -1295,6 +1295,49 @@ body {
   border: 1px solid red;
   opacity: 0;
 }
+.login-container form {
+  margin-top: 0.43518519rem;
+}
+.login-container .input-item {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+.login-container .input-item:first-child {
+  border-bottom: 1px solid #ccc;
+}
+.login-container input {
+  background: #ffffff;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.48148148rem 0 0.48148148rem 0.2962963rem;
+  font-size: 0.44444444rem;
+  color: #000000;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  border: none;
+  outline: none;
+}
+.login-container .btn {
+  background: #8dda5e;
+  font-size: 0.44444444rem;
+  color: #ffffff;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  border: none;
+  outline: none;
+}
+.login-container .veri_btn {
+  padding: 0.46296296rem 0.60185185rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.login-container .sub_btn {
+  padding: 0.33333333rem 1.2037037rem;
+  margin-top: 0.61111111rem;
+  border: 1px solid #cccccc;
+  float: right;
+  box-shadow: 0 0 0.00925926rem #cccccc;
+}
 .loading:after {
   content: " ";
   width: 100%;
