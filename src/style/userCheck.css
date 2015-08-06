@@ -1,0 +1,134 @@
+.box-icon .icon .iconfont {
+  display: inline-block;
+  font-size: 0.42592593rem !important;
+  vertical-align: middle;
+}
+.box-icon .box-time .iconfont {
+  color: #44d48b;
+}
+.box-icon .box-location .iconfont {
+  color: #4ea1ff;
+}
+.box-icon .box-cost .iconfont {
+  color: #ff7660;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.render-box {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.fix-img-over {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.fix-img-small {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.text-over {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.test-bor-grey {
+  border: 1px solid #ccc;
+}
+.test-bor-blue {
+  border: 1px solid blue;
+}
+.test-bor-red {
+  border: 1px solid red;
+}
+.test-bor-green {
+  border: 1px solid green;
+}
+.user-check ul,
+.user-check p {
+  margin: 0;
+  padding: 0;
+}
+.user-check header {
+  padding: 0.46296296rem 0.46296296rem 0.27777778rem;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+}
+.user-check header .head {
+  display: inline-block;
+  width: 1.68518519rem;
+  height: 1.68518519rem;
+  border: 1px solid #dddddd;
+}
+.user-check header .detail {
+  display: inline-block;
+  margin-left: 0.22222222rem;
+  width: 7.03703704rem;
+  vertical-align: top;
+}
+.user-check header .username span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #444444;
+  font-size: 0.55555556rem;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+.user-check header .username .gender {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.55555556rem;
+  color: #37b1ea;
+}
+.user-check header .signature {
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  font-size: 0.33333333rem;
+  color: #666666;
+}
+.user-check header footer {
+  margin-top: 0.50925926rem;
+}
+.user-check header footer a {
+  display: inline-block;
+  color: #666666;
+  width: 2.90740741rem;
+  text-align: center;
+  font-size: 0.37037037rem;
+  border-right: 1px solid #cccccc;
+}
+.user-check header footer a:last-child {
+  border: none;
+}
+.user-check .info {
+  margin-top: 0.2037037rem;
+  border-top: 1px solid #cccccc;
+}
+.user-check .info li {
+  padding: 0.44444444rem;
+  font-size: 0.44444444rem;
+  color: #444444;
+  border-bottom: 2px solid #cccccc;
+  background: #fff;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+.user-check .more {
+  padding: 0 0.44444444rem;
+  background: #ffffff;
+  margin-top: 0.21296296rem;
+  border: 1px solid #cccccc;
+}
+.user-check .more a {
+  display: block;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.41666667rem 0;
+}
+.user-check .more span {
+  color: #444444;
+  font-size: 0.44444444rem;
+  margin-left: 0.22222222rem;
+}

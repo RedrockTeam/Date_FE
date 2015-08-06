@@ -14,11 +14,12 @@ html, body{
 }
 
 //将body定在中间， 最大宽度为 10rem
-body{
-  max-width: 10rem;
-  margin: auto;
-  overflow-x: hidden;
-}
+//body{
+//  max-width: 10rem;
+//  margin: auto;
+//  overflow-x: hidden;
+//  height: auto;
+//}
 
 a, a:hover, a:active, a:visited{
   text-decoration: none;
@@ -35,10 +36,20 @@ body{position: relative;} //使得body下面的绝对定位元素有父级定位
 @import "layout";
 @import "navBar";
 @import "topBar";
+@import "menuBar";
 @import "slider";
 @import "search";
 @import "dateList";
+<<<<<<< HEAD
 @import "detail";
+=======
+@import "activityList";
+@import "userCheck";
+@import "messageList";
+@import "userComplete";
+@import "register";
+@import "activityDetail";
+>>>>>>> d0ff420e23eed6c667850f2f633fefdacb25d21f
 
 .loading:after{
   content: " ";

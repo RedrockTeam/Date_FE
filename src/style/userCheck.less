@@ -1,0 +1,94 @@
+@import "var";
+
+//namespace
+.user-check {
+  ul, p {
+    margin: 0;
+    padding: 0;
+  }
+  header{
+    padding: 50rem / @psdWidth 50rem / @psdWidth 30rem / @psdWidth;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    .head {
+      display: inline-block;
+      width: 182rem / @psdWidth;
+      height: 182rem / @psdWidth;
+      border: 1px solid #dddddd;
+    }
+    .detail {
+      display: inline-block;
+      margin-left: 24rem / @psdWidth;
+      width: 760rem / @psdWidth;
+      vertical-align: top;
+    }
+
+    .username{
+      span{
+        display: inline-block;
+        vertical-align: middle;
+        color: #444444;
+        font-size: 60rem / @psdWidth;
+        font-family: @fm-base;
+      }
+      .gender{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 60rem / @psdWidth;
+        color: #37b1ea;
+      }
+    }
+
+    .signature{
+      font-family: @fm-base;
+      font-size: 36rem / @psdWidth;
+      color: #666666;
+    }
+
+    footer{
+      margin-top: 55rem / @psdWidth;
+      a{
+        display: inline-block;
+        color: #666666;
+        width: 314rem / @psdWidth;
+        text-align: center;
+        font-size: 40rem / @psdWidth;
+        border-right: 1px solid #cccccc;
+      }
+      a:last-child{
+        border: none;
+      }
+      //padding-bottom: ;
+    }
+  }
+
+  .info{
+    margin-top: 22rem / @psdWidth;
+    border-top: 1px solid #cccccc;
+    li {
+      padding: 48rem / @psdWidth;
+      font-size: 48rem / @psdWidth;
+      color: #444444;
+      border-bottom: 2px solid #cccccc;
+      background: #fff;
+      font-family: @fm-base;
+    }
+  }
+
+  .more{
+    padding: 0 48rem / @psdWidth;
+    background: #ffffff;
+    margin-top: 23rem / @psdWidth;
+    border: 1px solid #cccccc;
+    a {
+      display: block;
+      border-bottom: 1px solid #cccccc;
+      padding: 45rem / @psdWidth 0;
+    }
+    span {
+      color: #444444;
+      font-size: 48rem / @psdWidth;
+      margin-left: 24rem / @psdWidth;
+    }
+  }
+}
