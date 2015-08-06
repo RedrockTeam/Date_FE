@@ -170,11 +170,12 @@
 }
 .date-list footer {
   margin-top: 0.50925926rem;
+  width: 100%;
 }
 .date-list footer a {
   display: inline-block;
   color: #999999;
-  width: 2.90740741rem;
+  width: 33%;
   text-align: center;
   font-size: 0.33333333rem;
   border-right: 1px solid #cccccc;
