@@ -161,6 +161,11 @@
 .search-container .right {
   margin-left: 1.62037037rem;
 }
+.search-container .sex {
+  font-style: normal;
+  background-color: #ff6b5c;
+  color: white;
+}
 .search-container .peo-nickname {
   font-size: 18px;
   line-height: 0.64814815rem;
@@ -170,6 +175,27 @@
 }
 [data-dpr="3"] .search-container .peo-nickname {
   font-size: 54px;
+}
+.search-container .peo-nickname span {
+  display: inline-block;
+  background-color: #ff6b5c;
+  color: white;
+  font-size: 5.33333333px;
+}
+[data-dpr="2"] .search-container .peo-nickname span {
+  font-size: 8px;
+}
+[data-dpr="3"] .search-container .peo-nickname span {
+  font-size: 16px;
+}
+.search-container .peo-nickname span i {
+  font-size: 6.2px;
+}
+[data-dpr="2"] .search-container .peo-nickname span i {
+  font-size: 9.3px;
+}
+[data-dpr="3"] .search-container .peo-nickname span i {
+  font-size: 18.6px;
 }
 .search-container .signature {
   font-size: 14px;

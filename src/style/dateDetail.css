@@ -73,6 +73,7 @@
 }
 .detail-wrapper .detail-info {
   margin-top: 0.37037037rem;
+  background: white;
 }
 .detail-wrapper .detail-info .initiator-info {
   padding: 0 5%;
@@ -216,6 +217,7 @@
 }
 .detail-wrapper .participant {
   margin: 0.23148148rem 0;
+  background: white;
 }
 .detail-wrapper .participant .part-title {
   line-height: 0.92592593rem;
@@ -238,6 +240,9 @@
   margin: 0.23148148rem;
   border: 1px solid #999999;
 }
+.detail-wrapper .comment {
+  background: white;
+}
 .detail-wrapper .comment .com-title {
   line-height: 0.92592593rem;
   background-color: #f5f5f5;
@@ -252,6 +257,7 @@
   font-size: 46px;
 }
 .detail-wrapper .footer {
+  background: white;
   line-height: 0.32407407rem;
   position: fixed;
   bottom: 0;
