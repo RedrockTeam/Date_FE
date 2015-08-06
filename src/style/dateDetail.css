@@ -38,6 +38,24 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.font-36 {
+  font-size: 12px;
+}
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
+.font-48 {
+  font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
+}
 .test-bor-grey {
   border: 1px solid #ccc;
 }
@@ -76,14 +94,14 @@
   vertical-align: middle;
 }
 .detail-wrapper .detail-info .initiator {
-  font-size: 18px;
+  font-size: 15.33333333px;
   margin-left: 0.37037037rem;
 }
 [data-dpr="2"] .detail-wrapper .detail-info .initiator {
-  font-size: 36px;
+  font-size: 23px;
 }
 [data-dpr="3"] .detail-wrapper .detail-info .initiator {
-  font-size: 54px;
+  font-size: 46px;
 }
 .detail-wrapper .detail-info .button {
   padding: 0 0.46296296rem;
@@ -93,7 +111,7 @@
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  font-size: 18px;
+  font-size: 15.33333333px;
   line-height: 0.92592593rem;
   background: #8dda5e;
   color: white;
@@ -102,10 +120,10 @@
   vertical-align: middle;
 }
 [data-dpr="2"] .detail-wrapper .detail-info .button {
-  font-size: 36px;
+  font-size: 23px;
 }
 [data-dpr="3"] .detail-wrapper .detail-info .button {
-  font-size: 54px;
+  font-size: 46px;
 }
 .detail-wrapper .date-title,
 .detail-wrapper .date-info {
@@ -127,7 +145,7 @@
 [data-dpr="2"] .detail-wrapper .date-title ul li,
 [data-dpr="2"] .detail-wrapper .date-info ul li,
 [data-dpr="2"] .detail-wrapper .date-demand ul li {
-  font-size: 28px;
+  font-size: 21px;
 }
 [data-dpr="3"] .detail-wrapper .date-title ul li,
 [data-dpr="3"] .detail-wrapper .date-info ul li,
@@ -144,7 +162,7 @@
   color: #404040;
 }
 [data-dpr="2"] .detail-wrapper .date-title .title {
-  font-size: 44px;
+  font-size: 33px;
 }
 [data-dpr="3"] .detail-wrapper .date-title .title {
   font-size: 66px;
@@ -156,7 +174,7 @@
   line-height: 0.55555556rem;
 }
 [data-dpr="2"] .detail-wrapper .date-title .content {
-  font-size: 28px;
+  font-size: 21px;
 }
 [data-dpr="3"] .detail-wrapper .date-title .content {
   font-size: 42px;
@@ -167,26 +185,26 @@
   padding: 0;
 }
 .detail-wrapper .demand {
-  font-size: 18px;
+  font-size: 15.33333333px;
   margin-top: 0.27777778rem;
   color: #404040;
 }
 [data-dpr="2"] .detail-wrapper .demand {
-  font-size: 36px;
+  font-size: 23px;
 }
 [data-dpr="3"] .detail-wrapper .demand {
-  font-size: 54px;
+  font-size: 46px;
 }
 .detail-wrapper .detail-info i {
-  font-size: 18px;
+  font-size: 15.33333333px;
   font-style: normal;
   margin-right: 0.18518519rem;
 }
 [data-dpr="2"] .detail-wrapper .detail-info i {
-  font-size: 36px;
+  font-size: 23px;
 }
 [data-dpr="3"] .detail-wrapper .detail-info i {
-  font-size: 54px;
+  font-size: 46px;
 }
 .detail-wrapper .detail-info .place {
   color: #4ea1ff;
@@ -206,13 +224,13 @@
   background-color: #f5f5f5;
   padding: 0 5%;
   color: #404040;
-  font-size: 18px;
+  font-size: 15.33333333px;
 }
 [data-dpr="2"] .detail-wrapper .participant .part-title {
-  font-size: 36px;
+  font-size: 23px;
 }
 [data-dpr="3"] .detail-wrapper .participant .part-title {
-  font-size: 54px;
+  font-size: 46px;
 }
 .detail-wrapper .logo-wrapper {
   border-radius: 100%;
@@ -230,13 +248,13 @@
   background-color: #f5f5f5;
   padding: 0 5%;
   color: #404040;
-  font-size: 18px;
+  font-size: 15.33333333px;
 }
 [data-dpr="2"] .detail-wrapper .comment .com-title {
-  font-size: 36px;
+  font-size: 23px;
 }
 [data-dpr="3"] .detail-wrapper .comment .com-title {
-  font-size: 54px;
+  font-size: 46px;
 }
 .detail-wrapper .footer {
   background: white;
@@ -245,16 +263,16 @@
   bottom: 0;
   width: 100%;
   color: #404040;
-  font-size: 18px;
+  font-size: 15.33333333px;
   padding: 0.60185185rem;
   border-top: 1px solid #999;
   box-sizing: border-box;
 }
 [data-dpr="2"] .detail-wrapper .footer {
-  font-size: 36px;
+  font-size: 23px;
 }
 [data-dpr="3"] .detail-wrapper .footer {
-  font-size: 54px;
+  font-size: 46px;
 }
 .detail-wrapper .footer div {
   width: 33.33%;

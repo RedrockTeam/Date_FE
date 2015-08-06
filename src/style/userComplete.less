@@ -3,14 +3,18 @@
   p,ul,h4,h5{
     margin: 0;
     padding: 0;
+    font-weight: normal;
   }
 
   .upload {
+    width: 100%;
     padding: 38rem / @psdWidth 48rem / @psdWidth;
     background: #ffffff;
-    margin-top: 23rem / @psdWidth;
+    margin-top: 25rem / @psdWidth;
+    position: relative;
+    box-sizing: border-box;
     .preview {
-      width: 886rem / @psdWidth;
+      width: 100%;
       display: inline-block;
       //overflow-x: scroll;
       vertical-align: middle;
@@ -23,9 +27,13 @@
       }
     }
     .btn {
+      position: absolute;
+      line-height: 220rem / @psdWidth;
+      right: 0;
+      top: 0;
       display: inline-block;
       vertical-align: middle;
-      font-size: 44rem / @psdWidth;
+      .font-48;
       color: #999999;
       font-family: @fm-base;
     }
@@ -44,7 +52,7 @@
         box-sizing: border-box;
         outline: none;
         border: none;
-        font-size: 48rem / @psdWidth;
+        .font-48;
         color: #999999;
         font-family: @fm-base;
       }
@@ -53,7 +61,7 @@
 
   .tab-tip{
     color: #ff6633;
-    font-size: 48rem / @psdWidth;
+    .font-48;
     font-family: @fm-base;
     font-style: normal;
     margin-bottom: 20rem / @psdWidth;
@@ -69,7 +77,7 @@
       border-radius: 10rem / @psdWidth;
       border: 1px solid #cccccc;
       color: #444444;
-      font-size: 48rem / @psdWidth;
+      .font-48;
       font-family: @fm-base;
     }
   }
@@ -79,7 +87,7 @@
     h5 {
       margin: 20rem / @psdWidth 0;
       color: #444444;
-      font-size: 48rem / @psdWidth;
+      .font-48;
       font-family: @fm-base;
     }
 
@@ -92,7 +100,7 @@
       line-height: 98rem / @psdWidth;
       text-align: center;
       color: #ffffff;
-      font-size: 48rem / @psdWidth;
+      .font-48;
       font-family: @fm-base;
     }
     input[type=file]{

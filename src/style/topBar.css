@@ -39,6 +39,24 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.font-36 {
+  font-size: 12px;
+}
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
+.font-48 {
+  font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
+}
 .test-bor-grey {
   border: 1px solid #ccc;
 }
@@ -63,8 +81,14 @@
   float: left;
   line-height: 1.33333333rem;
   color: #444444;
-  font-size: 0.55555556rem;
+  font-size: 20px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+[data-dpr="2"] .top-container p {
+  font-size: 30px;
+}
+[data-dpr="3"] .top-container p {
+  font-size: 60px;
 }
 .top-container menu {
   float: right;
@@ -82,5 +106,11 @@
   color: #444444;
 }
 .top-container menu .iconfont {
-  font-size: 0.64814815rem !important;
+  font-size: 20px !important;
+}
+[data-dpr="2"] .top-container menu .iconfont {
+  font-size: 30px !important;
+}
+[data-dpr="3"] .top-container menu .iconfont {
+  font-size: 60px !important;
 }
