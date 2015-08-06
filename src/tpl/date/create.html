@@ -1,1 +1,92 @@
-<div>发布约会</div>
+<!--发布约会-->
+<section class="pbl-dating" >
+    <div ms-include-src="'tpl/widget/menuBar.html'"></div>
+    <div class="row-group">
+        <div class="row">
+            <span class="dating-type">约什么</span>
+            <select id="yType" class="choose">
+                <option value="">seg</option>
+                <option value="">seg</option>
+                <option >哈哈</option>
+            </select>
+            <a class="right">点击更改</a>
+        </div>
+    </div>
+
+    <div class="row-group light-grey">
+        <div class="row"  >
+            <span class="title">标题</span>
+            <input type="text"  id="yTitle" class="w50"  />
+            <a class="right" >请输入</a>
+        </div>
+        <div class="row row-content"  >
+            <textarea id="yContent"  placeholder="内容" ></textarea>
+        </div>
+
+    </div>
+
+    <div class="row-group light-grey">
+
+        <div class="row">
+            <i class="iconfont time">&#xe611;</i>
+            <span class="subtitle">约会时间</span>
+            <input type="text" id="yTime" data-view="Popup"  data-field="datetime" readonly />
+            <a class="right"></a>
+        </div>
+        <div class="row"  >
+            <i class="iconfont location">&#xe612;</i>
+            <span class="subtitle">约会地点</span>
+            <input type="text"  id="yLocation" class="w50"  />
+            <a class="right2" >请输入</a>
+        </div>
+        <div class="row"  >
+            <i class="iconfont people">&#xe610;</i>
+            <span class="subtitle">约会人数</span>
+            <input type="tel"  id="yPeople" class="w50"  />
+            <a class="right2" >请选择</a>
+        </div>
+        <div class="row"  >
+            <i class="iconfont dollar">&#xe60f;</i>
+            <span class="subtitle">花费</span>
+            <select id="ySpend" class="choose"  >
+                <option value=""></option>
+                <option value="AA制">AA制</option>
+                <option value="我请客">我请客</option>
+                <option value="求请客">求请客</option>
+            </select>
+            <a class="right">请选择</a>
+        </div>
+    </div>
+
+    <div class="row-group light-grey mb0">
+        <div class="row"  >
+            <span class="subtitle">性别要求</span>
+            <select id="ySex" class="choose"  >
+                <option value="不限">不限</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+            <a class="right">{{ySex ? ySex : "不限"}}</a>
+        </div>
+        <div class="row"  >
+            <span class="subtitle">年级要求</span>
+            <select id="yGrade" class="choose"  >
+                <option value="不限">不限</option>
+                <option>d</option>
+                <option>d</option>
+            </select>
+            <a class="right">不限</a>
+        </div>
+        <!--<div class="row"  >-->
+        <!--<span class="subtitle">学院要求</span>-->
+        <!--<select id="yCollege" class="choose"  >-->
+        <!--<option  >{{aca.name}}</option>-->
+        <!--</select>-->
+        <!--<a class="right">{{yCollege ? yCollege : "不限"}}</a>-->
+        <!--</div>-->
+    </div>
+    <div class="widget"></div> <!-- 别删 -->
+    <!--<div class="publish">-->
+    <!--<button >发布</button>-->
+    <!--</div>-->
+</section>
