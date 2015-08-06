@@ -844,6 +844,11 @@ body {
 .search-container .right {
   margin-left: 1.62037037rem;
 }
+.search-container .sex {
+  font-style: normal;
+  background-color: #ff6b5c;
+  color: white;
+}
 .search-container .peo-nickname {
   font-size: 18px;
   line-height: 0.64814815rem;
@@ -853,6 +858,27 @@ body {
 }
 [data-dpr="3"] .search-container .peo-nickname {
   font-size: 54px;
+}
+.search-container .peo-nickname span {
+  display: inline-block;
+  background-color: #ff6b5c;
+  color: white;
+  font-size: 16px;
+}
+[data-dpr="2"] .search-container .peo-nickname span {
+  font-size: 32px;
+}
+[data-dpr="3"] .search-container .peo-nickname span {
+  font-size: 48px;
+}
+.search-container .peo-nickname span i {
+  font-size: 18.6px;
+}
+[data-dpr="2"] .search-container .peo-nickname span i {
+  font-size: 37.2px;
+}
+[data-dpr="3"] .search-container .peo-nickname span i {
+  font-size: 55.8px;
 }
 .search-container .signature {
   font-size: 14px;
@@ -1014,12 +1040,12 @@ body {
 .date-list footer a:last-child {
   border: none;
 }
-<<<<<<< HEAD
 .detail-wrapper > div {
   background: white;
 }
 .detail-wrapper .detail-info {
   margin-top: 0.37037037rem;
+  background: white;
 }
 .detail-wrapper .detail-info .initiator-info {
   padding: 0 5%;
@@ -1163,6 +1189,7 @@ body {
 }
 .detail-wrapper .participant {
   margin: 0.23148148rem 0;
+  background: white;
 }
 .detail-wrapper .participant .part-title {
   line-height: 0.92592593rem;
@@ -1185,6 +1212,9 @@ body {
   margin: 0.23148148rem;
   border: 1px solid #999999;
 }
+.detail-wrapper .comment {
+  background: white;
+}
 .detail-wrapper .comment .com-title {
   line-height: 0.92592593rem;
   background-color: #f5f5f5;
@@ -1199,6 +1229,7 @@ body {
   font-size: 54px;
 }
 .detail-wrapper .footer {
+  background: white;
   line-height: 0.32407407rem;
   position: fixed;
   bottom: 0;
@@ -1226,7 +1257,7 @@ body {
 .detail-wrapper .footer .special {
   color: #ff633f;
   border: none;
-=======
+}
 .activity-list,
 .activity-list p,
 .activity-list h2 {
@@ -1401,6 +1432,40 @@ body {
   color: #444444;
   font-size: 0.44444444rem;
   margin-left: 0.22222222rem;
+}
+.message .message-list {
+  padding: 5%;
+  background-color: #fff;
+  *zoom: 1;
+}
+.message .message-list:before,
+.message .message-list:after {
+  display: table;
+  content: "";
+}
+.message .message-list:after {
+  clear: both;
+}
+.message .message-list .img-wrapper {
+  width: 1.2962963rem;
+  height: 1.2962963rem;
+  border-radius: 100%;
+  float: left;
+  border: 1px solid #999999;
+}
+.message .message-list .peo-name {
+  color: #49a3f6;
+}
+.message .message-list .right {
+  margin-left: 1.48148148rem;
+  line-height: 1.2962963rem;
+  font-size: 18px;
+}
+[data-dpr="2"] .message .message-list .right {
+  font-size: 36px;
+}
+[data-dpr="3"] .message .message-list .right {
+  font-size: 54px;
 }
 .user-complete p,
 .user-complete ul,
@@ -1717,7 +1782,97 @@ body {
 .activity-detail .top-menu a:last-child {
   border: none;
   color: #8dda5e;
->>>>>>> d0ff420e23eed6c667850f2f633fefdacb25d21f
+}
+.hot-peo {
+  padding: 0 5%;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 0.37037037rem;
+}
+.hot-peo .hot-title {
+  font-size: 18px;
+  color: #8dda5e;
+  margin: 0.23148148rem 0;
+}
+[data-dpr="2"] .hot-peo .hot-title {
+  font-size: 36px;
+}
+[data-dpr="3"] .hot-peo .hot-title {
+  font-size: 54px;
+}
+.hot-peo .img-wrapper {
+  float: left;
+  width: 1.34259259rem;
+  height: 1.34259259rem;
+  border-radius: 15px;
+  border: 1px solid #999999;
+}
+.hot-peo .right {
+  margin-left: 1.62037037rem;
+}
+.hot-peo .sex {
+  font-style: normal;
+  background-color: #ff6b5c;
+  color: white;
+}
+.hot-peo .peo-nickname {
+  font-size: 18px;
+  line-height: 0.64814815rem;
+}
+[data-dpr="2"] .hot-peo .peo-nickname {
+  font-size: 36px;
+}
+[data-dpr="3"] .hot-peo .peo-nickname {
+  font-size: 54px;
+}
+.hot-peo .peo-nickname span {
+  display: inline-block;
+  background-color: #ff6b5c;
+  color: white;
+  border-radius: 20px;
+  font-size: 16px;
+}
+[data-dpr="2"] .hot-peo .peo-nickname span {
+  font-size: 32px;
+}
+[data-dpr="3"] .hot-peo .peo-nickname span {
+  font-size: 48px;
+}
+.hot-peo .peo-nickname span i {
+  font-size: 18.6px;
+}
+[data-dpr="2"] .hot-peo .peo-nickname span i {
+  font-size: 37.2px;
+}
+[data-dpr="3"] .hot-peo .peo-nickname span i {
+  font-size: 55.8px;
+}
+.hot-peo .signature {
+  font-size: 14px;
+  line-height: 0.37037037rem;
+  margin-top: 0.09259259rem;
+}
+[data-dpr="2"] .hot-peo .signature {
+  font-size: 28px;
+}
+[data-dpr="3"] .hot-peo .signature {
+  font-size: 42px;
+}
+.hot-peo .peo-lists {
+  border-bottom: 1px solid #999999;
+  padding: 0.23148148rem 0;
+  *zoom: 1;
+}
+.hot-peo .peo-lists:before,
+.hot-peo .peo-lists:after {
+  display: table;
+  content: "";
+}
+.hot-peo .peo-lists:after {
+  clear: both;
+}
+.hot-peo .peo-lists p {
+  margin: 0;
 }
 .loading:after {
   content: " ";

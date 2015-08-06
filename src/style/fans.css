@@ -1,0 +1,143 @@
+.box-icon .icon .iconfont {
+  display: inline-block;
+  font-size: 0.42592593rem !important;
+  vertical-align: middle;
+}
+.box-icon .box-time .iconfont {
+  color: #44d48b;
+}
+.box-icon .box-location .iconfont {
+  color: #4ea1ff;
+}
+.box-icon .box-cost .iconfont {
+  color: #ff7660;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.render-box {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.fix-img-over {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.fix-img-small {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.text-over {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.test-bor-grey {
+  border: 1px solid #ccc;
+}
+.test-bor-blue {
+  border: 1px solid blue;
+}
+.test-bor-red {
+  border: 1px solid red;
+}
+.test-bor-green {
+  border: 1px solid green;
+}
+.hot-peo {
+  padding: 0 5%;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 0.37037037rem;
+}
+.hot-peo .hot-title {
+  font-size: 18px;
+  color: #8dda5e;
+  margin: 0.23148148rem 0;
+}
+[data-dpr="2"] .hot-peo .hot-title {
+  font-size: 36px;
+}
+[data-dpr="3"] .hot-peo .hot-title {
+  font-size: 54px;
+}
+.hot-peo .img-wrapper {
+  float: left;
+  width: 1.34259259rem;
+  height: 1.34259259rem;
+  border-radius: 15px;
+  border: 1px solid #999999;
+}
+.hot-peo .right {
+  margin-left: 1.62037037rem;
+}
+.hot-peo .sex {
+  font-style: normal;
+  background-color: #ff6b5c;
+  color: white;
+}
+.hot-peo .peo-nickname {
+  font-size: 18px;
+  line-height: 0.64814815rem;
+}
+[data-dpr="2"] .hot-peo .peo-nickname {
+  font-size: 36px;
+}
+[data-dpr="3"] .hot-peo .peo-nickname {
+  font-size: 54px;
+}
+.hot-peo .peo-nickname span {
+  display: inline-block;
+  background-color: #ff6b5c;
+  color: white;
+  border-radius: 20px;
+  font-size: 16px;
+}
+[data-dpr="2"] .hot-peo .peo-nickname span {
+  font-size: 32px;
+}
+[data-dpr="3"] .hot-peo .peo-nickname span {
+  font-size: 48px;
+}
+.hot-peo .peo-nickname span i {
+  font-size: 18.6px;
+}
+[data-dpr="2"] .hot-peo .peo-nickname span i {
+  font-size: 37.2px;
+}
+[data-dpr="3"] .hot-peo .peo-nickname span i {
+  font-size: 55.8px;
+}
+.hot-peo .signature {
+  font-size: 14px;
+  line-height: 0.37037037rem;
+  margin-top: 0.09259259rem;
+}
+[data-dpr="2"] .hot-peo .signature {
+  font-size: 28px;
+}
+[data-dpr="3"] .hot-peo .signature {
+  font-size: 42px;
+}
+.hot-peo .peo-lists {
+  border-bottom: 1px solid #999999;
+  padding: 0.23148148rem 0;
+  *zoom: 1;
+}
+.hot-peo .peo-lists:before,
+.hot-peo .peo-lists:after {
+  display: table;
+  content: "";
+}
+.hot-peo .peo-lists:after {
+  clear: both;
+}
+.hot-peo .peo-lists p {
+  margin: 0;
+}

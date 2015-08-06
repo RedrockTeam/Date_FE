@@ -4,7 +4,7 @@ define(['avalon', 'mmState', 'vms/main'], function(avalon){
     avalon.state('message', {
         controller: "main",
         url: "/message",
-        templateUrl: "tpl/message/yield.html",
+        templateUrl: "tpl/message/list.html",
         onEnter: function(){
             log('/message');
             avalon.scan();
