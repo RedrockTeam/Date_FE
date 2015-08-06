@@ -1295,17 +1295,17 @@ body {
   border: 1px solid red;
   opacity: 0;
 }
-.login-container form {
+.register-container form {
   margin-top: 0.43518519rem;
 }
-.login-container .input-item {
+.register-container .input-item {
   position: relative;
   border-bottom: 1px solid #ccc;
 }
-.login-container .input-item:first-child {
+.register-container .input-item:first-child {
   border-bottom: 1px solid #ccc;
 }
-.login-container input {
+.register-container input {
   background: #ffffff;
   display: block;
   width: 100%;
@@ -1317,7 +1317,7 @@ body {
   border: none;
   outline: none;
 }
-.login-container .btn {
+.register-container .btn {
   background: #8dda5e;
   font-size: 0.44444444rem;
   color: #ffffff;
@@ -1325,13 +1325,13 @@ body {
   border: none;
   outline: none;
 }
-.login-container .veri_btn {
+.register-container .veri_btn {
   padding: 0.46296296rem 0.60185185rem;
   position: absolute;
   right: 0;
   top: 0;
 }
-.login-container .sub_btn {
+.register-container .sub_btn {
   padding: 0.33333333rem 1.2037037rem;
   margin-top: 0.61111111rem;
   border: 1px solid #cccccc;
