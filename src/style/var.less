@@ -69,12 +69,12 @@
 
 //功能
 .rfz(@px){
-  font-size: @px;
+  font-size: @px / 3;
   [data-dpr="2"] &{
-    font-size: @px * 2;
+    font-size: @px / 2;
   }
   [data-dpr="3"] &{
-    font-size: @px * 3;
+    font-size: @px;
   }
 }
 
@@ -112,6 +112,16 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+//36号
+.font-36{
+  .rfz(36px);
+}
+
+//48号
+.font-48{
+  .rfz(48px);
 }
 
 //test

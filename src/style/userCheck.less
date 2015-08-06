@@ -28,34 +28,35 @@
         display: inline-block;
         vertical-align: middle;
         color: #444444;
-        font-size: 60rem / @psdWidth;
+        .rfz(60px);
         font-family: @fm-base;
       }
       .gender{
         display: inline-block;
         vertical-align: middle;
-        font-size: 60rem / @psdWidth;
+        .rfz(60px);
         color: #37b1ea;
       }
     }
 
     .signature{
       font-family: @fm-base;
-      font-size: 36rem / @psdWidth;
+      .font-36;
       color: #666666;
     }
 
-    footer{
+    footer {
       margin-top: 55rem / @psdWidth;
-      a{
+      width: 100%;
+      a {
         display: inline-block;
         color: #666666;
-        width: 314rem / @psdWidth;
+        width: 33%;
         text-align: center;
-        font-size: 40rem / @psdWidth;
+        .rfz(40px);
         border-right: 1px solid #cccccc;
       }
-      a:last-child{
+      a:last-child {
         border: none;
       }
       //padding-bottom: ;
@@ -67,9 +68,9 @@
     border-top: 1px solid #cccccc;
     li {
       padding: 48rem / @psdWidth;
-      font-size: 48rem / @psdWidth;
+      .font-48;
       color: #444444;
-      border-bottom: 2px solid #cccccc;
+      border-bottom: 1px solid #cccccc;
       background: #fff;
       font-family: @fm-base;
     }
@@ -87,8 +88,11 @@
     }
     span {
       color: #444444;
-      font-size: 48rem / @psdWidth;
+      .font-48;
       margin-left: 24rem / @psdWidth;
+    }
+    .icon{
+      .font-48;
     }
   }
 }
