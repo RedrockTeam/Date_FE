@@ -1,0 +1,282 @@
+.box-icon .icon .iconfont {
+  display: inline-block;
+  font-size: 0.42592593rem !important;
+  vertical-align: middle;
+}
+.box-icon .box-time .iconfont {
+  color: #44d48b;
+}
+.box-icon .box-location .iconfont {
+  color: #4ea1ff;
+}
+.box-icon .box-cost .iconfont {
+  color: #ff7660;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.render-box {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.fix-img-over {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.fix-img-small {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.text-over {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.font-36 {
+  font-size: 12px;
+}
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
+.font-48 {
+  font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
+}
+.test-bor-grey {
+  border: 1px solid #ccc;
+}
+.test-bor-blue {
+  border: 1px solid blue;
+}
+.test-bor-red {
+  border: 1px solid red;
+}
+.test-bor-green {
+  border: 1px solid green;
+}
+.detail-wrapper > div {
+  background: white;
+}
+.detail-wrapper .detail-info {
+  margin-top: 0.37037037rem;
+}
+.detail-wrapper .detail-info .initiator-info {
+  padding: 0 5%;
+  line-height: 2.40740741rem;
+  border-bottom: 1px solid #999999;
+  position: relative;
+}
+.detail-wrapper .detail-info .sex {
+  background: white ;
+  color: #ff607a;
+}
+.detail-wrapper .detail-info .logo-wrapper {
+  border-radius: 100%;
+  width: 1.43518519rem;
+  height: 1.43518519rem;
+  border: 1px solid #999999;
+  display: inline-block;
+  vertical-align: middle;
+}
+.detail-wrapper .detail-info .initiator {
+  font-size: 15.33333333px;
+  margin-left: 0.37037037rem;
+}
+[data-dpr="2"] .detail-wrapper .detail-info .initiator {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .detail-info .initiator {
+  font-size: 46px;
+}
+.detail-wrapper .detail-info .button {
+  padding: 0 0.46296296rem;
+  position: absolute;
+  top: 50%;
+  right: 0.37037037rem;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-size: 15.33333333px;
+  line-height: 0.92592593rem;
+  background: #8dda5e;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  vertical-align: middle;
+}
+[data-dpr="2"] .detail-wrapper .detail-info .button {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .detail-info .button {
+  font-size: 46px;
+}
+.detail-wrapper .date-title,
+.detail-wrapper .date-info {
+  border-bottom: 1px solid #999999;
+}
+.detail-wrapper .date-title,
+.detail-wrapper .date-info,
+.detail-wrapper .date-demand {
+  margin: 0 auto;
+  width: 90%;
+}
+.detail-wrapper .date-title ul li,
+.detail-wrapper .date-info ul li,
+.detail-wrapper .date-demand ul li {
+  line-height: 0.64814815rem;
+  color: #999999;
+  font-size: 14px;
+}
+[data-dpr="2"] .detail-wrapper .date-title ul li,
+[data-dpr="2"] .detail-wrapper .date-info ul li,
+[data-dpr="2"] .detail-wrapper .date-demand ul li {
+  font-size: 21px;
+}
+[data-dpr="3"] .detail-wrapper .date-title ul li,
+[data-dpr="3"] .detail-wrapper .date-info ul li,
+[data-dpr="3"] .detail-wrapper .date-demand ul li {
+  font-size: 42px;
+}
+.detail-wrapper .date-title {
+  border-bottom: 1px solid #999999;
+}
+.detail-wrapper .date-title .title {
+  font-size: 22px;
+  line-height: 0.92592593rem;
+  margin-top: 0.09259259rem;
+  color: #404040;
+}
+[data-dpr="2"] .detail-wrapper .date-title .title {
+  font-size: 33px;
+}
+[data-dpr="3"] .detail-wrapper .date-title .title {
+  font-size: 66px;
+}
+.detail-wrapper .date-title .content {
+  font-size: 14px;
+  color: #999999;
+  margin-bottom: 0.18518519rem;
+  line-height: 0.55555556rem;
+}
+[data-dpr="2"] .detail-wrapper .date-title .content {
+  font-size: 21px;
+}
+[data-dpr="3"] .detail-wrapper .date-title .content {
+  font-size: 42px;
+}
+.detail-wrapper p,
+.detail-wrapper ul {
+  margin: 0;
+  padding: 0;
+}
+.detail-wrapper .demand {
+  font-size: 15.33333333px;
+  margin-top: 0.27777778rem;
+  color: #404040;
+}
+[data-dpr="2"] .detail-wrapper .demand {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .demand {
+  font-size: 46px;
+}
+.detail-wrapper .detail-info i {
+  font-size: 15.33333333px;
+  font-style: normal;
+  margin-right: 0.18518519rem;
+}
+[data-dpr="2"] .detail-wrapper .detail-info i {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .detail-info i {
+  font-size: 46px;
+}
+.detail-wrapper .detail-info .place {
+  color: #4ea1ff;
+}
+.detail-wrapper .detail-info .time {
+  color: #44d48b;
+}
+.detail-wrapper .detail-info .guest {
+  color: #ff7660;
+}
+.detail-wrapper .participant {
+  margin: 0.23148148rem 0;
+}
+.detail-wrapper .participant .part-title {
+  line-height: 0.92592593rem;
+  background-color: #f5f5f5;
+  padding: 0 5%;
+  color: #404040;
+  font-size: 15.33333333px;
+}
+[data-dpr="2"] .detail-wrapper .participant .part-title {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .participant .part-title {
+  font-size: 46px;
+}
+.detail-wrapper .logo-wrapper {
+  border-radius: 100%;
+  height: 1.34259259rem;
+  width: 1.34259259rem;
+  display: inline-block;
+  margin: 0.23148148rem;
+  border: 1px solid #999999;
+}
+.detail-wrapper .comment .com-title {
+  line-height: 0.92592593rem;
+  background-color: #f5f5f5;
+  padding: 0 5%;
+  color: #404040;
+  font-size: 15.33333333px;
+}
+[data-dpr="2"] .detail-wrapper .comment .com-title {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .comment .com-title {
+  font-size: 46px;
+}
+.detail-wrapper .footer {
+  line-height: 0.32407407rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #404040;
+  font-size: 15.33333333px;
+  padding: 0.60185185rem;
+  border-top: 1px solid #999;
+  box-sizing: border-box;
+}
+[data-dpr="2"] .detail-wrapper .footer {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .footer {
+  font-size: 46px;
+}
+.detail-wrapper .footer div {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  box-sizing: border-box;
+  border-right: 1px solid #999;
+  background: white;
+}
+.detail-wrapper .footer .special {
+  color: #ff633f;
+  border: none;
+}
