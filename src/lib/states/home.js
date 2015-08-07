@@ -6,10 +6,7 @@ define(['avalon', 'vms/main', 'vms/slider', 'userCenter', 'request','mmState'], 
         templateUrl: "tpl/home/yield.html",
         onEnter: function(){
             vmMain['state'] = 'loading';
-
-            userCenter.logout();
             var user = userCenter.info();
-            console.log( user.state );
             if(!user.state){
                 setTimeout(function(){avalon.router.navigate('/user/login')}, 0);
                 return;

@@ -127,7 +127,7 @@ define('userCenter', ['request', 'jquery', 'avalon'], function(request, $, avalo
      * userCenter
      */
     var isLogin = false; //closure
-    var uid, name, token, head;
+    var uid, name, token, head, completed = false;
 
     /**
      * 登陆 回调写法
@@ -138,18 +138,20 @@ define('userCenter', ['request', 'jquery', 'avalon'], function(request, $, avalo
         if(isLogin) return cb && cb(null, info());
         request('login', {username: username, password: password})
             .done(function(res){
+                data = res.data;
                 isLogin = true;
-                uid = res.uid;
-                token = res.token;
-                name = res.nickname;
-                head = res.head;
+                uid = data.uid;
+                token = data.token;
+                name = data.nickname;
+                head = data.head;
+                completed = data.completed;
                 _storage.set({
                     uid: uid,
                     token: token,
                     name: name,
-                    head: head
+                    head: head,
+                    completed : completed
                 });
-                console.log(cb);
                 cb && cb(null, info());
             })
             .fail(function(res){
@@ -180,7 +182,8 @@ define('userCenter', ['request', 'jquery', 'avalon'], function(request, $, avalo
             name: name,
             uid: uid,
             token: token,
-            head: head
+            head: head,
+            completed: completed
         }
     }
 
@@ -243,6 +246,7 @@ define('userCenter', ['request', 'jquery', 'avalon'], function(request, $, avalo
             token = user.token;
             head = user.head;
             isLogin = true;
+            completed = user.completed;
         }
     })(_storage);
 
