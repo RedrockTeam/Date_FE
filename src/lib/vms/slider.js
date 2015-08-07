@@ -1,4 +1,4 @@
-define('vms/slider', ['avalon', 'jquery','swiper'], function(avalon, $){
+define('vms/slider', ['avalon', 'jquery' , 'vms/navBar', 'swiper'], function(avalon, $, vmNav){
     return avalon.define({
         $id: "slider",
         //测试
@@ -15,9 +15,11 @@ define('vms/slider', ['avalon', 'jquery','swiper'], function(avalon, $){
         moduleSlider: function(){     //测试
             var tabsSwiper = new Swiper('#tab-container',{
                 speed: 500,
+                initialSlide : 0,
                 height: 'auto',
-                onTouchEnd: function(){
+                onSlideChangeEnd: function(){
                     $(".tab .z-active").removeClass('z-active');
+                    vmNav['cState'] = vmNav['states'][tabsSwiper.activeIndex];
                     $(".tab li").eq(tabsSwiper.activeIndex).addClass('z-active');
                 }
             });

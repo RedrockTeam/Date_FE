@@ -1,15 +1,15 @@
-<div class="login-container">
+<div class="login-container" ms-controller="login">
     <div ms-include-src="'tpl/widget/menuBar.html'"></div>
 
-    <form action="" class="clearfix">
+    <div class="clearfix">
         <div class="input-item">
-            <input type="text" placeholder="账号"/>
+            <input type="text" ms-duplex="username" placeholder="账号"/>
         </div>
 
         <div class="input-item">
-            <input type="password" placeholder="密码"/>
+            <input type="password" ms-duplex="password" placeholder="密码"/>
         </div>
 
-        <button class="btn">登录</button>
-    </form>
+        <button class="btn" ms-on-tap="login">登录</button>
+    </div>
 </div>

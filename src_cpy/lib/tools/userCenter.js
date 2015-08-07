@@ -133,7 +133,7 @@ define('userCenter', ['request', 'jquery', 'avalon'], function(request, $, avalo
      * 登陆 回调写法
      * @param username 用户名
      * @param password 密码
-     */
+    */
     function login(username, password, cb){
         if(isLogin) return cb && cb(null, info());
         request('login', {username: username, password: password})
