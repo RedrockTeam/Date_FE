@@ -176,7 +176,7 @@
 				"uid": 1,           //uid
                 "nickname": "sb",   //昵称
 				"realname": "aegsg"， //真实姓名
-                "head": "http://xxxxxxx/",    //头像
+                "head": "http://xxxxxxx/",   //头像
    				"signature": "safsh",     //签名 (约会宣言)
 				"school": "cqupt",       //学校
 				"academy": "qwr",        //学院
@@ -187,10 +187,10 @@
 				"followers": 25426,     //关注量 (主动关注)
 				"charm": 5325           //魅力值
 				"contact": {            //联系方式 固定
-						{"weixin": "3454"},   //微信号
-						{"tel": 2352525},   //手机号
-						{"qq": 3235235253}, //qq
-						{"weibo": ""ewr23}   //微博
+						"weixin": "3454",   //微信号
+						"tel": 2352525,   //手机号
+						"qq": 3235235253, //qq
+						"weibo": "weygyed"   //微博
 					}
 			},
 			status: 200,
