@@ -708,8 +708,7 @@
 ### 1. 活动列表页
 `由于活动版块是由后台运营`
 
-  - url: /
-  - /list
+  - url: /activity/list
   - post: 
   
 		{
