@@ -5,12 +5,14 @@ define(['avalon', 'vms/main', 'vms/slider', 'userCenter', 'request','mmState'], 
         url: "/",
         templateUrl: "tpl/home/yield.html",
         onEnter: function(){
-            vmMain['state'] = 'loading';
-            var user = userCenter.info();
-            if(!user.state){
-                setTimeout(function(){avalon.router.navigate('/user/login')}, 0);
-                return;
-            }//认证处理
+            //vmMain['state'] = 'loading';
+            //var user = userCenter.info();
+            //if(!user.state){
+            //    setTimeout(function(){avalon.router.navigate('/user/login')}, 0);
+            //    return;
+            //}//认证处理
+
+            avalon.scan();
 
 
             //请求

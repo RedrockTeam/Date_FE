@@ -1,6 +1,7 @@
 define('vms/slider', ['avalon', 'jquery' , 'vms/navBar', 'swiper'], function(avalon, $, vmNav){
     return avalon.define({
         $id: "slider",
+        show: true,
         //测试
         items: [{'href': 'http://www.baidu.com', 'img': 'imgs/slider_1.jpg'}, {'href': 'http://www.baidu.com', 'img': 'imgs/slider_2.jpg'}, {'href': 'http://www.baidu.com', 'img': 'imgs/slider_3.jpg'}],
         slider: function(){

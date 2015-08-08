@@ -544,12 +544,19 @@ body {
 .test-bor-green {
   border: 1px solid green;
 }
+.wrapper {
+  padding-top: 2.88888889rem;
+}
 .top-layout-1 {
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
   height: 1.33333333rem;
   background: #f3f3f3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
 }
 .top-layout-2 {
   box-sizing: border-box;
@@ -563,6 +570,10 @@ body {
   background: #333333;
   margin-bottom: 0.22222222rem;
   box-shadow: 0 0.03703704rem 0.0462963rem rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  top: 1.34259259rem;
+  z-index: 100;
 }
 .slider-layout {
   box-sizing: border-box;
@@ -743,13 +754,13 @@ body {
   color: #444444;
 }
 .top-container menu .iconfont {
-  font-size: 20px !important;
+  font-size: 23.33333333px !important;
 }
 [data-dpr="2"] .top-container menu .iconfont {
-  font-size: 30px !important;
+  font-size: 35px !important;
 }
 [data-dpr="3"] .top-container menu .iconfont {
-  font-size: 60px !important;
+  font-size: 70px !important;
 }
 .tipBar {
   height: 1.55555556rem;
@@ -1922,6 +1933,7 @@ body {
 }
 .login-container .input-item {
   border-bottom: 1px solid #cccccc;
+  width: 100%;
 }
 .login-container .input-item input {
   display: block;
@@ -1929,7 +1941,8 @@ body {
   border: none;
   outline: none;
   background: #ffffff;
-  padding: 0.46296296rem;
+  text-indent: 0.46296296rem;
+  padding: 0.46296296rem 0;
   color: #000000;
   font-size: 16px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
@@ -2456,16 +2469,21 @@ body {
   min-height: 100%;
   right: 0;
   top: 1.33333333rem;
-  z-index: 2;
   border: 1px solid #cccccc;
+  z-index: 1000;
 }
 .filter-container h5,
 .filter-container dl,
 .filter-container dt,
-.filter-container dd {
+.filter-container dd,
+.filter-container menu {
   margin: 0;
   padding: 0;
   font-weight: normal;
+}
+.filter-container menu {
+  background: #ffffff;
+  padding: 1em 0;
 }
 .filter-container menu li {
   float: right;
@@ -2505,6 +2523,15 @@ body {
 }
 .filter-container dl dd {
   background: #eeeeee;
+}
+.filter-container .filetr_overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.5);
 }
 .loading:after {
   content: " ";

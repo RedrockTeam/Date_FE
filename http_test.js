@@ -20,11 +20,15 @@ var datas = {
         "info": "登录成功"
     },
 
+    "/date/list": {
+
+    },
+
     "error": {
         "status": 0,
         "info": "失败"
-    }}
-;
+    }
+};
 
 function handle(req, res){
     var path = url.parse(req.url).pathname, resd;

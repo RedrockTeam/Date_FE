@@ -14,7 +14,6 @@ define(['avalon', 'userCenter', 'vms/main', 'jquery', 'dialog', '../mmState'], f
             if(!_password){return $.Dialog.fail("请输入密码");}
 
             userCenter.login(_username, _password, function(err, user){
-                console.log(user);
                 if(err) {
                     $.Dialog.fail("登陆失败! 请检查用户名和密码");
                     return;
@@ -23,8 +22,9 @@ define(['avalon', 'userCenter', 'vms/main', 'jquery', 'dialog', '../mmState'], f
             });
         },
         rendered: function(){
-            console.log('rendered');
-            vmMain['state'] = '';
+            alert('sge');
+            //console.log('rendered');
+            //vmMain['state'] = '';
         }
     });
 });

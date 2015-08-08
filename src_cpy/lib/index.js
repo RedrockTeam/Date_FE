@@ -49,8 +49,10 @@ require([
     'states/about',//关于页面
 
 ], function(avalon) {
-    avalon.history.start({
-        basepath: "/"
+    avalon.ready(function(){
+        avalon.history.start({
+            basepath: "/"
+        });
+        avalon.router.navigate(avalon.history.fragment);
     });
-    avalon.router.navigate(avalon.history.fragment);
 });

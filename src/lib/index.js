@@ -1,9 +1,3 @@
-/**
- * 红岩网校 约.
- * @Author Ling.
- * @Contact 363130901
- * @email i@zeroling.com
- */
 require.config({
     baseUrl: "lib",
     paths: {
@@ -51,7 +45,7 @@ require([
     'states/user.alter',        //修改个人信息
     'states/date.create',        //发布约会
     'states/search',            //搜索
-    'states/message',            //消息页
+    'states/message'            //消息页
 
 
 

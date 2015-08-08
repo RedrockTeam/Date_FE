@@ -69,12 +69,19 @@
 .test-bor-green {
   border: 1px solid green;
 }
+.wrapper {
+  padding-top: 2.88888889rem;
+}
 .top-layout-1 {
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
   height: 1.33333333rem;
   background: #f3f3f3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
 }
 .top-layout-2 {
   box-sizing: border-box;
@@ -88,6 +95,10 @@
   background: #333333;
   margin-bottom: 0.22222222rem;
   box-shadow: 0 0.03703704rem 0.0462963rem rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  top: 1.34259259rem;
+  z-index: 100;
 }
 .slider-layout {
   box-sizing: border-box;

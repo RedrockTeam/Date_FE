@@ -1,8 +1,9 @@
-<div class="top-container clearfix">
+<div class="top-container clearfix" ms-controller="topBar">
     <p class="title">一起约</p>
     <menu>
         <li><a class="iconfont" href="#!/date/create">&#xe646;</a></li>
         <li><a class="iconfont" href="#!/search">&#xe650;</a></li>
-        <li class="iconfont">&#xe630;</li>
+        <li><a class="iconfont" href="#!/user/alter" ms-if="userAlter">修改</a></li>
+        <li class="iconfont" ms-on-tap="toggleOpenFilter" ms-if="filter">&#xe630;</li>
     </menu>
 </div>

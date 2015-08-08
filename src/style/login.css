@@ -73,6 +73,7 @@
 }
 .login-container .input-item {
   border-bottom: 1px solid #cccccc;
+  width: 100%;
 }
 .login-container .input-item input {
   display: block;
@@ -80,7 +81,8 @@
   border: none;
   outline: none;
   background: #ffffff;
-  padding: 0.46296296rem;
+  text-indent: 0.46296296rem;
+  padding: 0.46296296rem 0;
   color: #000000;
   font-size: 16px;
   font-family: "hiraginosansgb w3", "microsoft yahei";

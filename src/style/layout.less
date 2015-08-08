@@ -1,11 +1,20 @@
 /*layout 整体布局*/
 @import "var";
+
+.wrapper{
+  padding-top: 312rem / @psdWidth;
+}
+
 //顶部 类型 1
 .top-layout-1{
   .render-box;
   width: 100%;
   height: @topHei1;
   background: @topBgc1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
 }
 
 //顶部 类型 2
@@ -21,6 +30,10 @@
   background: @navBgc;
   margin-bottom: 24rem / @psdWidth;
   box-shadow: 0 4rem / @psdWidth 5rem / @psdWidth rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  top: 145rem / @psdWidth;
+  z-index: 100;
 }
 
 //轮播

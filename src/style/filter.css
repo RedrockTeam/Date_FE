@@ -75,16 +75,21 @@
   min-height: 100%;
   right: 0;
   top: 1.33333333rem;
-  z-index: 2;
   border: 1px solid #cccccc;
+  z-index: 1000;
 }
 .filter-container h5,
 .filter-container dl,
 .filter-container dt,
-.filter-container dd {
+.filter-container dd,
+.filter-container menu {
   margin: 0;
   padding: 0;
   font-weight: normal;
+}
+.filter-container menu {
+  background: #ffffff;
+  padding: 1em 0;
 }
 .filter-container menu li {
   float: right;
@@ -124,4 +129,13 @@
 }
 .filter-container dl dd {
   background: #eeeeee;
+}
+.filter-container .filetr_overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.5);
 }
