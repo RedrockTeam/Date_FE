@@ -2464,7 +2464,7 @@ body {
 }
 .filter-container {
   background: #ffffff;
-  position: fixed;
+  position: absolute;
   width: 5rem;
   min-height: 100%;
   right: 0;
@@ -2473,7 +2473,7 @@ body {
   z-index: 1000;
 }
 .filter-container h5,
-.filter-container dl,
+.filter-container .expand,
 .filter-container dt,
 .filter-container dd,
 .filter-container menu {
@@ -2498,31 +2498,38 @@ body {
 [data-dpr="3"] .filter-container menu li {
   font-size: 36px;
 }
-.filter-container dl dt,
-.filter-container dl dd {
+.filter-container .expand .tip,
+.filter-container .expand .item {
   padding: 0.27777778rem 0;
   color: #000000;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   font-size: 16px;
   border-top: 1px solid #cccccc;
 }
-[data-dpr="2"] .filter-container dl dt,
-[data-dpr="2"] .filter-container dl dd {
+[data-dpr="2"] .filter-container .expand .tip,
+[data-dpr="2"] .filter-container .expand .item {
   font-size: 24px;
 }
-[data-dpr="3"] .filter-container dl dt,
-[data-dpr="3"] .filter-container dl dd {
+[data-dpr="3"] .filter-container .expand .tip,
+[data-dpr="3"] .filter-container .expand .item {
   font-size: 48px;
 }
-.filter-container dl dt span,
-.filter-container dl dd span {
+.filter-container .expand .tip span,
+.filter-container .expand .item span {
   padding-left: 0.41666667rem;
 }
-.filter-container dl dt {
+.filter-container .expand .tip {
   background: #ffffff;
 }
-.filter-container dl dd {
+.filter-container .expand .item {
   background: #eeeeee;
+}
+.filter-container .expand .item .icon {
+  float: right;
+  display: none;
+}
+.filter-container .expand .item.select .icon {
+  display: block;
 }
 .filter-container .filetr_overlay {
   position: fixed;

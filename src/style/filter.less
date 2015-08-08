@@ -2,13 +2,13 @@
 
 //namespace
 .filter-container {
-  h5, dl,dt,dd,menu{
+  h5, .expand,dt,dd,menu{
     margin: 0;
     padding: 0;
     font-weight: normal;
   }
   background: #ffffff;
-  position: fixed;
+  position: absolute;
   width: 540rem / @psdWidth;
   min-height: 100%;
   right: 0;
@@ -27,8 +27,8 @@
     }
   }
 
-  dl {
-    dt,dd {
+  .expand {
+    .tip,.item {
       padding: 30rem / @psdWidth 0;
       color: #000000;
       font-family: @fm-base;
@@ -39,12 +39,21 @@
         padding-left: 45rem / @psdWidth;
       }
     }
-    dt{
+    .tip{
       background: #ffffff;
     }
-    dd{
+    .item{
       background: #eeeeee;
-      //display: none;
+      .icon{
+        float: right;
+        display: none;
+      }
+    }
+
+    .item.select{
+      .icon{
+        display: block;
+      }
     }
   }
 

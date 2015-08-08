@@ -93,7 +93,8 @@ var datas = {
                 "erolled": 20,                  //多少人已报名
                 "commented": 20,                //多少人已评论
                 "praised": 20                  //多少人已点赞
-            }],
+            }
+        ],
         "status": 200,
         "info": "获取成功"
     },
@@ -122,6 +123,30 @@ var datas = {
         },
          status: 200,
          info: "成功"
+    },
+
+    "/user/message/recieve": {
+        data: {
+            "notice": [                             //通知部分 活动审核通知， 活动时间通知等
+                {
+                    "head":    "sg",             //来源用户头像
+                    "content":  "拒绝了你的请求", //内容
+                    "nickname": "shsh",  //来源用户昵称
+                    "mid": "",            //来源约会的 date_id/ 活动的 activity_id
+                    "type": 1           //通知内容的类型， 1.约会相关; 2. 活动相关
+                }
+            ],
+            "news": [                            //别人发来的消息
+                {
+                    "head": "sg",               //来源用户头像
+                    "content": "你好",            //内容
+                    "nickname": "shsh",         //来源用户昵称
+                    "uid": ""                   //来源用户uid
+                }
+            ]
+        },
+        status: 200,
+        info: "成功"
     },
 
     "error": {
