@@ -17,7 +17,7 @@
         <div ms-repeat="options['activity']" class="expand">
             <div class="tip" ms-on-tap="toggleExpand('activity',$key)"><span>{{$val['title']}}</span> <i class="icon iconfont"></i></div>
             <div ms-if="$val['expand']">
-                <div class="item" ms-repeat="$val['val']" ms-on-tap="toggleSelect('type',$index)" ms-class="select: selected['type'] == $index"><span>{{el}}</span><i class="icon iconfont">ok</i></div>
+                <div class="item" ms-repeat="$val['val']" ms-on-tap="toggleSelect($key, $index)" ms-class="select: selected[$key] == $index"><span>{{el}}</span><i class="icon iconfont">ok</i></div>
             </div>
         </div>
     </div>
