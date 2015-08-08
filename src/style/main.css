@@ -751,41 +751,46 @@ body {
 [data-dpr="3"] .top-container menu .iconfont {
   font-size: 60px !important;
 }
-.menuBar {
+.tipBar {
   height: 1.55555556rem;
   border-bottom: 1px solid #cccccc;
   background: #f3f3f3;
   padding: 0 0.32407407rem;
 }
-.menuBar p {
+.tipBar p {
   margin: 0;
   padding: 0;
 }
-.menuBar .tip {
+.tipBar .tip {
   float: left;
   font-size: 20px;
   color: #444444;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   line-height: 1.55555556rem;
 }
-[data-dpr="2"] .menuBar .tip {
+[data-dpr="2"] .tipBar .tip {
   font-size: 30px;
 }
-[data-dpr="3"] .menuBar .tip {
+[data-dpr="3"] .tipBar .tip {
   font-size: 60px;
 }
-.menuBar .do {
+.tipBar .do {
   float: right;
   color: #8dda5e;
   font-size: 16px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   line-height: 1.55555556rem;
 }
-[data-dpr="2"] .menuBar .do {
+[data-dpr="2"] .tipBar .do {
   font-size: 24px;
 }
-[data-dpr="3"] .menuBar .do {
+[data-dpr="3"] .tipBar .do {
   font-size: 48px;
+}
+.tipBar .share {
+  float: right;
+  font-style: normal;
+  line-height: 1.55555556rem;
 }
 .swiper-container {
   margin: 0 auto;

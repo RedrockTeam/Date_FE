@@ -3,9 +3,9 @@ define(['avalon', 'userCenter', 'vms/main', 'jquery', 'dialog', '../mmState'], f
         $id: "login",
         username: "",
         password: "",
+        state: "",
         login: function(e){ //点击登陆
             e.preventDefault();
-            vmMain['state'] = 'loading';
             userCenter.clear();
             var _username = avalon.vmodels.login.username;
             var _password = avalon.vmodels.login.password;
@@ -21,6 +21,10 @@ define(['avalon', 'userCenter', 'vms/main', 'jquery', 'dialog', '../mmState'], f
                 }
                 return (user.completed ? setTimeout(avalon.router.navigate.bind(avalon.router, ''), 0) : setTimeout(avalon.router.navigate.bind(avalon.router, '/user/complete'), 0));
             });
+        },
+        rendered: function(){
+            console.log('rendered');
+            vmMain['state'] = '';
         }
     });
 });

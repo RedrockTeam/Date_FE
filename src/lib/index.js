@@ -20,7 +20,7 @@ require.config({
         DateTimePicker: "tools/DateTimePicker",
         moment: "tools/moment",
         score: "tools/jq.score",
-        navState: "tools/navState",
+        navState: "tools/tipState",
         request: "tools/request"
     }
 });
@@ -42,7 +42,7 @@ require([
     'states/activity.detail', //活动详细页
     'states/user.check',          //个人信息
     'states/user.collection',     //个人收藏
-    'states/user.fans',         //个人粉丝
+    'states/user.fans',           //个人粉丝
     'states/user.launched',      //个人发起约会查看
     'states/user.recorded',      //个人约会记录查看
     'states/user.login',        //个人登录
