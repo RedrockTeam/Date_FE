@@ -15,7 +15,7 @@ define(['avalon', 'vms/main', 'vms/slider', 'userCenter', 'request','mmState'], 
             avalon.scan();
 
 
-            //请求
+            请求
             //$.when(
             //    request('slider'),
             //    request('category'),
@@ -34,6 +34,12 @@ define(['avalon', 'vms/main', 'vms/slider', 'userCenter', 'request','mmState'], 
             //        avalon.scan();
             //        vmMain['state'] = 'ok';
             //    });
+
+
+            $.when(
+                request('slider'),
+
+            ).done();
         }
     });
 });

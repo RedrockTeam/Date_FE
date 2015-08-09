@@ -72,12 +72,10 @@ define(['avalon', 'vms/navBar'], function(avalon, vmNavBar){
             vm['options'][ct][tt]['expand'] = !vm['options'][ct][tt]['expand'];
         },
         toggleSelect: function(ct, index){   //选择
-            console.log(ct);
-            console.log(index);
             vm['selected'][ct] = index;
         },
         finishFilter: function(){
-            console.log(vm['selected']);
+            //request();
         },
         toggleOpen: function(){
             vm['opened'] = !vm['opened'];

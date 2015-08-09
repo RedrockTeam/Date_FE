@@ -8,7 +8,7 @@
         <div ms-repeat="options['date']" class="expand">
             <div class="tip" ms-on-tap="toggleExpand('date',$key)"><span>{{$val['title']}}</span> <i class="icon iconfont"></i></div>
             <div ms-if="$val['expand']">
-                <div class="item" ms-repeat="$val['val']" ms-on-tap="toggleSelect('type',$index)" ms-class="select: selected['type'] == $index"><span>{{el}}</span><i class="icon iconfont">ok</i></div>
+                <div class="item" ms-repeat="$val['val']" ms-on-tap="toggleSelect($key,$index)" ms-class="select: selected[$key] == $index"><span>{{el}}</span><i class="icon iconfont">ok</i></div>
             </div>
         </div>
     </div>
@@ -22,30 +22,5 @@
         </div>
     </div>
 
-
-    <!--<div>-->
-        <!--<div class="tip" ms-on-tap="toggleExpand(0)"><span>{{options['title'][ct]}}</span> <i class="icon iconfont"></i></div>-->
-        <!--<div ms-if="expand[0]">-->
-            <!--<div ms-repeat="options[ct]['type']" ms-on-tap="toggleSelect('type',$index)" ms-class="select: selected['type'] == $index"><span>{{el}}</span><i class="icon iconfont">ok</i></div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div>-->
-        <!--<div class="tip" ms-on-tap="toggleExpand(1)"><span>排序方式</span> <i class="icon iconfont"></i></div>-->
-        <!--<div ms-if="expand[1]">-->
-            <!--<div ms-repeat="options[ct]['order']" ms-on-tap="toggleSelect('order',$index)" ms-class="select: selected['type'] == $index"><span>{{el}}</span><i class="icon iconfont">ok</i></div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div>-->
-        <!--<div class="tip" ms-on-tap="toggleExpand(2)"><span>性别</span> <i class="icon iconfont"></i></div>-->
-        <!--<div ms-if="expand[2]">-->
-            <!--<div ms-repeat="options[ct]['gender']" ms-on-tap="toggleSelect('gender',$index)" ms-class="select: selected['type'] == $index"><span>{{el}}</span><i class="icon iconfont">ok</i></div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div>-->
-        <!--<div class="tip"><span>消费</span> <i class="icon iconfont"></i></div>-->
-    <!--</div>-->
-    <!--<div>-->
-        <!--<div class="tip"><span>时间</span> <i class="icon iconfont"></i></div>-->
-    <!--</div>-->
     <div class="filetr_overlay" ms-on-tap="toggleOpen"></div>
 </div>

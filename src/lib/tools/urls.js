@@ -5,9 +5,8 @@ define('urls', function(){
     var urls = {
         //"login": "../mock.php?type=login",
         "login": "http://127.0.0.1:8080/user/login",
-        "nav": ['/date/list', '/activity/list', '/user/message', '/user/check'],
         //"slider": "../mock.php?type=pics",
-        "slider": "http://lich2013.com/date/index.php/api/public/banner",
+        "slider": "http://127.0.0.1:8080/banner",
         "publish": "http://lich2013.com/date/index.php/api/date/createdate",
         "showBox": "http://lich2013.com/date/index.php/api/date/datelist",
         //"showBox": "../mock.php?type=list",

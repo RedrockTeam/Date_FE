@@ -30,6 +30,24 @@
 				status: "401",
 				info: "权限不够"
 			}
+			
+			
+## 获取banner 图片
+  - url: /banner
+  - post: 
+        
+        {
+            "uid": "",
+            "token": ""
+        }
+             
+  - res: 
+               
+         {
+            "data": ["imgs/1.jpg", ....],       //图片路径
+            "status": 200,
+            "info": "获取成功"
+         }
 
 ## 注册
 
