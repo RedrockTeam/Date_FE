@@ -1,4 +1,4 @@
-define(['avalon', 'jquery','vms/slider', 'vms/topBar','dialog', 'mmState'], function(avalon,$, vmSlider, vmTopBar){
+define(['avalon', 'jquery','vms/slider', 'vms/topBar','dialog', 'avaFilters','mmState'], function(avalon,$, vmSlider, vmTopBar){
     var vm = avalon.define({
         $id: "main",
         state: "",

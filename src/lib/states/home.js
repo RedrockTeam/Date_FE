@@ -52,7 +52,7 @@ define(
                         log(um);
                         vmUS['items'] = um.data;
                         log(uc);
-                        vmUC['items'] = uc.data;
+                        vmUC['data'] = uc.data;
 
                         avalon.scan();
                         vmMain['state'] = 'ok';

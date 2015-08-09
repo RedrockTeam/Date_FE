@@ -763,7 +763,7 @@
                 "head": "xxxxxxxxxx",          //头像
                 "group_id": "1",			   //group id	
                 "created_at": "1429446315",    //创建时间     时间戳
-                "date_time": "1429456315",     //约的具体时间  时间戳    
+                "activity_time": "1429456315",     //约的具体时间  时间戳    
                 "place": "重邮宾馆",            //地点
                 "title": "来约炮!",             //标题
                 "signature": "前十名用户免费参与!!",//副标题 

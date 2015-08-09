@@ -15,16 +15,16 @@ var datas = {
             {
                 "date_id": "3",                //约会 item id
                 "head": "imgs/1.jpg",          //用户头像
-                "nickname": "smelrain",            //用户昵称
+                "nickname": "lijinxin",            //用户昵称
                 "authened": 1,                  //该用户是否认证过 `1`已认证 `2`未认证
                 "uid": "1",                    //用户id
-                "created_at": "1429446315",    //创建时间     时间戳
+                "created_at": "1439094919536",    //创建时间     时间戳
                 "date_time": "1429456315",     //约的具体时间  时间戳
                 "place": "重邮宾馆",            //地点
                 "title": "来约炮!",             //标题
                 "date_type": "1",              // type
                 "category_id": "1",            //
-                "signature": "今天晚上我请客!",  //个性签名
+                "signature": "今天晚上我请客shdjygkyfrjyfsgrbhftjytjrtjjjjjjjjjj!",  //个性签名
                 "erolled": 20,                  //多少人已报名
                 "commented": 20,                //多少人已评论
                 "praised": 20,                  //多少人已点赞
@@ -36,10 +36,10 @@ var datas = {
             {
                 "date_id": "4",                //约会 item id
                 "head": "imgs/1.jpg",          //用户头像
-                "nickname": "lijinxin",         //用户昵称
+                "nickname": "libaohua",         //用户昵称
                 "authened": 0,                  //该用户是否认证过 `1`已认证 `2`未认证
                 "uid": "1",                    //用户id
-                "created_at": "1429446315",    //创建时间     时间戳
+                "created_at": "1439094919536",    //创建时间     时间戳
                 "date_time": "1429456315",     //约的具体时间  时间戳
                 "place": "重邮宾馆",            //地点
                 "title": "来约炮!",             //标题
@@ -67,7 +67,7 @@ var datas = {
             "created_at": "1429446315",    //创建时间     时间戳
             "activity_time": "1429456315", //约的具体时间  时间戳
             "place": "重邮宾馆",            //地点
-            "title": "来约炮!",             //标题
+            "title": "约你妹!",             //标题
             "signature": "",                //副标题
             "erolled": 20,                  //多少人已报名
             "commented": 20,                //多少人已评论
@@ -78,7 +78,7 @@ var datas = {
                 "head": "imgs/test.png",          //头像
                 "group_id": "1",               //group id
                 "created_at": "1429446315",    //创建时间     时间戳
-                "date_time": "1429456315",     //约的具体时间  时间戳
+                "activity_time": "1429456315",     //约的具体时间  时间戳
                 "place": "重邮宾馆",            //地点
                 "title": "来约炮!",             //标题
                 "signature": "前十名用户免费参与!!",//副标题
@@ -96,7 +96,7 @@ var datas = {
             "uid": 1,           //uid
             "nickname": "sb",   //昵称
             "realname": "aegsg", //真实姓名
-            "head": "http://xxxxxxx/",    //头像
+            "head": "imgs/1.jpg",    //头像
             "signature": "safsh",     //签名 (约会宣言)
             "school": "cqupt",       //学校
             "academy": "qwr",        //学院

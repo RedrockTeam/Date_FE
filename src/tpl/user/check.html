@@ -1,21 +1,24 @@
-<div class="user-check">
+<div class="user-check" ms-controller="userCheck">
     <header>
         <div class="person clearfix">
-            <i class="head" style="background-image: url('imgs/1.jpg')"></i>
+            <i class="head" ms-css-background-image="'url('+data.head+')'"></i>
             <aside class="detail">
-                <p class="username"><span>贾樟柯</span> <i class="gender iconfont">&#xe61b;</i></p>
-                <p class="signature">生命不息， 折腾不止</p>
+                <p class="username"><span>{{data.nickname}}</span> <i class="gender iconfont">&#xe61b;</i></p>
+                <p class="signature">{{data.signature}}</p>
             </aside>
         </div>
         <footer>
-            <a href="">报名：10</a><a href="">评论：2</a><a href="">点赞：17</a>
+            <a href="">关注：{{data.followers}}</a><a href="">粉丝：{{data.fans}}</a><a href="">魅力值：{{data.charm}}</a>
         </footer>
     </header>
     <ul class="info">
-        <li>年龄: 45</li>
-        <li>职业: 演员</li>
-        <li>QQ: 12345578</li>
-        <li>爱好: 拍电影</li>
+        <li ms-if="data.realname">真实姓名: {{data.realname}}</li>
+        <li ms-if="data.school">学校: {{data.school}}</li>
+        <li ms-if="data.academy">学院: {{data.academy}}</li>
+        <li ms-if="data.contact.weixin">微信号: {{data.contact.weixin}}</li>
+        <li ms-if="data.contact.tel">电话: {{data.contact.tel}}</li>
+        <li ms-if="data.contact.qq">QQ: {{data.contact.qq}}</li>
+        <li>兴趣：{{data.hobbies}}</li>
     </ul>
     <footer class="more">
         <a href=""><i class="icon iconfont">&#xe61b;</i><span>我收藏的</span></a>
