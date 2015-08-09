@@ -110,7 +110,6 @@
 .module-layout {
   box-sizing: border-box;
   overflow: hidden;
-  width: 100%;
 }
 .module-layout .swiper-slide {
   width: 100%;

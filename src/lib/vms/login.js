@@ -1,4 +1,4 @@
-define(['avalon', 'userCenter', 'vms/main', 'jquery', 'dialog', '../mmState'], function (avalon, userCenter, vmMain, $) {
+define(['avalon', 'userCenter', 'vms/main', 'jquery', 'dialog', 'mmState'], function (avalon, userCenter, vmMain, $) {
     return avalon.define({
         $id: "login",
         username: "",

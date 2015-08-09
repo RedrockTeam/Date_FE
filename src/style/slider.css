@@ -142,10 +142,6 @@
 .swiper-active-switch {
   background: #ff7f4c;
 }
-.swiper-container {
-  width: 100%;
-  height: 10000px;
-}
 .swiper-container .show {
   display: block;
   width: 100%;
