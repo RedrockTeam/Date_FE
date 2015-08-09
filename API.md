@@ -628,11 +628,13 @@
                      {
                          "uid": "",      //该用户uid
                          "head": "",     //头像
+                         "nickname": "", //昵称
                          "content": "",    //评论内容
                          "time": 2524532     //评论时间  时间戳
                      },
                      {
                          "uid": "",            //该用户uid
+                         "nickname": "srh",    //昵称
                          "head": "",           //头像
                          "content": "",        //评论内容
                          "time": 2524532     //评论时间  时间戳
@@ -806,11 +808,13 @@
           	    "enrolled": [                //已报名人详情, 会把报了名的人列出来， 详情见设计图 
 					  {
 						"uid": 23 ，           //报了名的uid
+						"nickname": "sdg",     //昵称
 						"head":     ，         //报了名的头像
 						"token": "ewgsg"       //token
 					  },
 					  {
 						"uid": 23 ，           //报了名的uid
+						"nickname": "sdg",     //昵称
 						"head":     ，         //头像
 						"token": "ewgsg"       //token
 					  }			
