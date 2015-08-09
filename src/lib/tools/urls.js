@@ -15,7 +15,7 @@ define('urls', function(){
         "userInfo": "http://lich2013.com/date/index.php/api/person/userinfo",
         "historyCreate": "http://lich2013.com/date/index.php/api/person/create",
         "historyJoin": "http://lich2013.com/date/index.php/api/person/join",
-        "dateList": "http://lich2013.com/date/index.php/api/date/datelist",
+        "dateList": "http://127.0.0.1:8080/date/list",
         //"dateList": "../mock.php?type=list",
 
         "detaildate": "http://lich2013.com/date/index.php/api/date/detaildate",

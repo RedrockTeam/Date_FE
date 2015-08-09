@@ -82,5 +82,27 @@ define(['avalon', 'vms/navBar'], function(avalon, vmNavBar){
         }
     });
 
+    //获取参数
+    function getParams(){
+        var ret = null, selData = vm['selected'];
+        if(selData['ct'] == 'date'){
+            ret = {
+                date_type: selData['type'],
+                page: 0,
+                order: selData['order'],
+                date_gender: selData['gender'],
+                cost_mode: selData['cost_mode'],
+                date_time: ['time']
+            }
+        }else{
+            ret = {
+                activity_type: selData['type'],
+                page: 0,
+                order: selData['order'],
+
+            }
+        }
+    }
+
     return vm;
 });

@@ -6,7 +6,7 @@ define(['avalon', 'vms/main', 'vms/slider', 'userCenter', 'request','mmState'], 
         templateUrl: "tpl/home/yield.html",
         onEnter: function(){
             //vmMain['state'] = 'loading';
-            //var user = userCenter.info();
+            var user = userCenter.info();
             //if(!user.state){
             //    setTimeout(function(){avalon.router.navigate('/user/login')}, 0);
             //    return;
@@ -15,7 +15,7 @@ define(['avalon', 'vms/main', 'vms/slider', 'userCenter', 'request','mmState'], 
             avalon.scan();
 
 
-            请求
+            //请求
             //$.when(
             //    request('slider'),
             //    request('category'),
@@ -36,9 +36,9 @@ define(['avalon', 'vms/main', 'vms/slider', 'userCenter', 'request','mmState'], 
             //    });
 
 
-            $.when(
+            $.when(     //首屏一次性加载完 所需要的数据
                 request('slider'),
-
+                request('dateList', {uid: user.uid, token: user.token, date_type: 0, page: 0, size: 10, order: 1})
             ).done();
         }
     });

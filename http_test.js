@@ -11,10 +11,10 @@ var server = http.createServer(function(req, res){
 
 function handle(req, res){
     var path = url.parse(req.url).pathname, resd;
-    resd = datas[path == '/' ? 'error' : path];
+    resd = urls[path == '/' ? 'error' : path];
     res.end( JSON.stringify(resd) );
 }
 
 server.listen(8080, function(){
-    console.log("success listened at 5000 !!!!");
+    console.log("success listened at 8080 !!!!");
 });
