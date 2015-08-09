@@ -1,8 +1,7 @@
-//约会详情 vm
+//活动详情 vm
 define(['avalon'], function(avalon){
     var vm = avalon.define({
-        $id: 'dateDetail',
-        state: {},
+        $id: 'activityDetail',
         data: {}
     });
 

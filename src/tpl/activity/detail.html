@@ -1,49 +1,45 @@
-<div class="activity-detail">
+<div class="activity-detail" ms-controller="activityDetail">
     <div ms-include-src="'tpl/widget/tipBar.html'"></div>
 
     <div class="detail">
         <header class="title">
-            重庆“乐堡音乐节”特别活动邀请你一起来参加<span class="tag">娱乐</span>
+            {{data.title}}<span class="tag">{{data.signature}}</span>
         </header>
 
         <p class="content">
-            本次乐堡音乐节特别邀请了好妹妹乐队、郝云、宋冬野等知民谣歌手来为大家倾情献唱，希望大家踊跃报名。
+            {{data.content}}
         </p>
         <footer class="other">
-            <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>6:00</span></div>
-            <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>老校门口</span></div>
-            <div class="icon box-cost"><i class="iconfont">&#xe60f</i><span>5000元</span></div>
+            <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>{{data.activity_time}}</span></div>
+            <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>{{data.place}}</span></div>
+            <div class="icon box-cost"><i class="iconfont">&#xe60f</i><span>{{data.money}}</span></div>
         </footer>
     </div>
     <div class="album">
         <h3>活动相册</h3>
         <ul class="clearfix">
-            <li style="background-image: url('imgs/slider_1.jpg')"></li>
-            <li style="background-image: url('imgs/slider_1.jpg')"></li>
+            <li ms-css-background-image="'url('+el+')'" ms-repeat="data.activity_album"></li>
         </ul>
     </div>
     <div class="enrolled">
-        <h3 class="tab-tip">报名</h3>
-        <a href="" class="item" style="background-image: url('imgs/slider_1.jpg')"></a>
-        <a href="" class="item" style="background-image: url('imgs/slider_1.jpg')"></a>
-        <a href="" class="item" style="background-image: url('imgs/slider_1.jpg')"></a>
-        <a href="" class="item" style="background-image: url('imgs/slider_1.jpg')"></a>
-        <a href="" class="item" style="background-image: url('imgs/slider_1.jpg')"></a>
+        <h3 class="tab-tip">报名 {{data.enrolled.length}}</h3>
+        <a href="" class="item" ms-repeat="data.enrolled" ms-css-background-image="'url('+el.head+')'"></a>
     </div>
     <div class="commented">
         <h3 class="tab-tip">评论:5</h3>
         <ul>
-            <li class="item">
-                <i style="background-image: url('imgs/slider_1.jpg')"></i>
+            <li class="item" ms-repeat="data.commented">
+                <i ms-css-background-image="'url('+el.head+')'"></i>
                 <aside>
-                    <header class="clearfix"><span class="username">黄晓明</span> <span class="time">2015.04.03</span></header>
+                    <header class="clearfix"><span class="username">{{el.nickname}}</span> <span class="time">{{el.time}}</span></header>
                     <p class="comment">
-                        回家跪键盘吧
+                        {{el.content}}
                     </p>
                 </aside>
             </li>
         </ul>
     </div>
+
 
     <div class="top-menu">
         <a href="">评论</a>

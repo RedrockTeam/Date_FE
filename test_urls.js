@@ -169,25 +169,75 @@ var datas = {
             "enrolled": [                //已报名人详情, 会把报了名的人列出来， 详情见设计图
                 {
                     "uid": 23,           //该用户uid
-                    "head": ""         //头像
+                    "head": "imgs/1.jpg"         //头像
                 },
                 {
                     "uid": 23,          //该用户uid
-                    "head": ""         //头像
+                    "head": "imgs/test.png"         //头像
                 }
             ],
             commented: [
                 {
-                    "uid": "",      //该用户uid
-                    "head": "",     //头像
-                    "content": "",    //评论内容
+                    "uid": "435",      //该用户uid
+                    nickname: "sh",   //昵称
+                    "head": "imgs/1.jpg",     //头像
+                    "content": "sghdj",    //评论内容
                     "time": 2524532     //评论时间  时间戳
                 },
                 {
-                    "uid": "",            //该用户uid
-                    "head": "",           //头像
-                    "content": "",        //评论内容
+                    "uid": "423",            //该用户uid
+                    "head": "imgs/1.jpg",           //头像
+                    "content": "sgsh",        //评论内容
                     "time": 2524532     //评论时间  时间戳
+                }
+            ]
+        },
+        status: 200,
+        info: "成功"
+    },
+
+    "/activity/detail":{
+        "data": {
+            "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg", //头像路径
+            "activity_id": "1",                                      //activity id
+            "activity_type": 1,                                 //活动项目 0: 不限； 1: 娱乐； 2：运动； 3： 旅游； 4： 聚会； 5： 交流； 6： 学习；7：其他
+            "created_at": "1429446317",                         //创建时间    时间戳
+            "activity_time": "1529456317",                   //时间    时间戳
+            "place": "重庆大剧院",                             //地点
+            "title": "重庆音乐 '月堡音乐节'",                  //标题
+            "signature": "前十名用户免费参与!!",              //副标题
+            "content": "约炮要不要",                       // 约会详细内容
+            "money": "2534",                                      //消费金额   以人民币计
+            "activity_status":"1",                            //活动状态 默认显示一个报名的按钮 , 1 已结束, 2 成功, 3 受理中 4 已拒绝
+            "activity_album": [                               //活动相册展示
+                "imgs/1.jpg"
+            ],
+            "enrolled": [                //已报名人详情, 会把报了名的人列出来， 详情见设计图
+                {
+                    "uid": 23 ,           //报了名的uid
+                    "head":   "imgs/test.png"  ,         //报了名的头像
+                    "token": "ewgsg"       //token
+                },
+                {
+                    "uid": 23 ,           //报了名的uid
+                    "head":    "imgs/1.jpg",         //头像
+                    "token": "ewgsg"       //token
+                }
+            ],
+            commented: [
+                {
+                    "uid": "346",      //报了名的uid
+                    "nickname": "smegsran", //昵称
+                    "head": "imgs/1.jpg",     //头像
+                    "content": "edrtrh",    //评论内容
+                    "time":   2524532     //评论时间  时间戳
+                },
+                {
+                    "uid": "shrddjf",            //报了名的uid
+                    "nickname": "ryht",        //昵称
+                    "head": "imgs/1.jpg",           //头像
+                    "content": "dgdfjfyjdjtesht",        //评论内容
+                    "time":   2524532     //评论时间  时间戳
                 }
             ]
         },

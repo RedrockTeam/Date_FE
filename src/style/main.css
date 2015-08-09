@@ -1226,6 +1226,11 @@ body {
 .detail-wrapper > div {
   background: white;
 }
+.detail-wrapper .logo-wrapper {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 .detail-wrapper .detail-info {
   margin-top: 0.37037037rem;
   background: white;
@@ -1233,23 +1238,20 @@ body {
 .detail-wrapper .detail-info .initiator-info {
   padding: 0 5%;
   line-height: 2.40740741rem;
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #ccc;
   position: relative;
 }
 .detail-wrapper .detail-info .sex {
-  background: white ;
+  background: white;
   color: #ff607a;
 }
 .detail-wrapper .detail-info .logo-wrapper {
   border-radius: 100%;
   width: 1.43518519rem;
   height: 1.43518519rem;
-  border: 1px solid #999999;
+  border: 1px solid #ccc;
   display: inline-block;
   vertical-align: middle;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
 }
 .detail-wrapper .detail-info .initiator {
   font-size: 15.33333333px;
@@ -1285,7 +1287,7 @@ body {
 }
 .detail-wrapper .date-title,
 .detail-wrapper .date-info {
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #ccc;
 }
 .detail-wrapper .date-title,
 .detail-wrapper .date-info,
@@ -1297,7 +1299,7 @@ body {
 .detail-wrapper .date-info ul li,
 .detail-wrapper .date-demand ul li {
   line-height: 0.64814815rem;
-  color: #999999;
+  color: #ccc;
   font-size: 14px;
 }
 [data-dpr="2"] .detail-wrapper .date-title ul li,
@@ -1311,7 +1313,7 @@ body {
   font-size: 42px;
 }
 .detail-wrapper .date-title {
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #ccc;
 }
 .detail-wrapper .date-title .title {
   font-size: 22px;
@@ -1327,7 +1329,7 @@ body {
 }
 .detail-wrapper .date-title .content {
   font-size: 14px;
-  color: #999999;
+  color: #ccc;
   margin-bottom: 0.18518519rem;
   line-height: 0.55555556rem;
 }
@@ -1396,7 +1398,7 @@ body {
   width: 1.34259259rem;
   display: inline-block;
   margin: 0.23148148rem;
-  border: 1px solid #999999;
+  border: 1px solid #ccc;
 }
 .detail-wrapper .comment {
   background: white;
@@ -2138,6 +2140,9 @@ body {
   width: 0.92592593rem;
   height: 0.92592593rem;
   border-radius: 0.46296296rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .activity-detail .commented .item aside {
   display: inline-block;
@@ -2186,6 +2191,7 @@ body {
   width: 100%;
   background: #ffffff;
   border-top: 1px solid #cccccc;
+  display: none;
 }
 .activity-detail .top-menu a {
   display: inline-block;

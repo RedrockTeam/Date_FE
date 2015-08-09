@@ -232,6 +232,9 @@
   width: 0.92592593rem;
   height: 0.92592593rem;
   border-radius: 0.46296296rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .activity-detail .commented .item aside {
   display: inline-block;
@@ -280,6 +283,7 @@
   width: 100%;
   background: #ffffff;
   border-top: 1px solid #cccccc;
+  display: none;
 }
 .activity-detail .top-menu a {
   display: inline-block;
