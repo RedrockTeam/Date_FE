@@ -1000,52 +1000,43 @@ body {
 [data-dpr="3"] .search-container .peo-nickname {
   font-size: 54px;
 }
-.search-container .peo-nickname span {
-  display: inline-block;
-  background-color: #ff6b5c;
-  color: white;
-  font-size: 5.33333333px;
+.search-container .peo-nickname i {
+  background-color: white;
+  color: #ff6b5c;
+  font-size: 18.53333333px;
+  width: 0.83333333rem;
 }
-[data-dpr="2"] .search-container .peo-nickname span {
-  font-size: 8px;
+[data-dpr="2"] .search-container .peo-nickname i {
+  font-size: 27.8px;
 }
-[data-dpr="3"] .search-container .peo-nickname span {
-  font-size: 16px;
+[data-dpr="3"] .search-container .peo-nickname i {
+  font-size: 55.6px;
 }
-.search-container .peo-nickname span i {
-  font-size: 6.2px;
-}
-[data-dpr="2"] .search-container .peo-nickname span i {
-  font-size: 9.3px;
-}
-[data-dpr="3"] .search-container .peo-nickname span i {
-  font-size: 18.6px;
-}
-.search-container .signature {
+.search-container .peo-nickname .signature {
   font-size: 14px;
   line-height: 0.37037037rem;
   margin-top: 0.09259259rem;
 }
-[data-dpr="2"] .search-container .signature {
+[data-dpr="2"] .search-container .peo-nickname .signature {
   font-size: 21px;
 }
-[data-dpr="3"] .search-container .signature {
+[data-dpr="3"] .search-container .peo-nickname .signature {
   font-size: 42px;
 }
-.search-container .peo-lists {
+.search-container .peo-nickname .peo-lists {
   border-bottom: 1px solid #999999;
   padding: 0.23148148rem 0;
   *zoom: 1;
 }
-.search-container .peo-lists:before,
-.search-container .peo-lists:after {
+.search-container .peo-nickname .peo-lists:before,
+.search-container .peo-nickname .peo-lists:after {
   display: table;
   content: "";
 }
-.search-container .peo-lists:after {
+.search-container .peo-nickname .peo-lists:after {
   clear: both;
 }
-.search-container .peo-lists p {
+.search-container .peo-nickname .peo-lists p {
   margin: 0;
 }
 .date-list {
@@ -2245,27 +2236,17 @@ body {
 [data-dpr="3"] .hot-peo .peo-nickname {
   font-size: 46px;
 }
-.hot-peo .peo-nickname span {
-  display: inline-block;
-  background-color: #ff6b5c;
-  color: white;
-  border-radius: 20px;
-  font-size: 15.33333333px;
+.hot-peo .peo-nickname i {
+  background-color: white;
+  color: #ff6b5c;
+  font-size: 18.53333333px;
+  width: 0.83333333rem;
 }
-[data-dpr="2"] .hot-peo .peo-nickname span {
-  font-size: 23px;
+[data-dpr="2"] .hot-peo .peo-nickname i {
+  font-size: 27.8px;
 }
-[data-dpr="3"] .hot-peo .peo-nickname span {
-  font-size: 46px;
-}
-.hot-peo .peo-nickname span i {
-  font-size: 18px;
-}
-[data-dpr="2"] .hot-peo .peo-nickname span i {
-  font-size: 27px;
-}
-[data-dpr="3"] .hot-peo .peo-nickname span i {
-  font-size: 54px;
+[data-dpr="3"] .hot-peo .peo-nickname i {
+  font-size: 55.6px;
 }
 .hot-peo .signature {
   font-size: 14px;
@@ -2594,7 +2575,6 @@ body {
 .icon-male {
   font-size: 6px;
   background-color: #fff;
-  border-radius: 100%;
   width: 0.46296296rem;
   height: 0.46296296rem;
   line-height: 0.46296296rem;
@@ -2612,7 +2592,6 @@ body {
 .icon-female {
   font-size: 6px;
   background-color: #fff;
-  border-radius: 100%;
   width: 0.46296296rem;
   height: 0.46296296rem;
   line-height: 0.46296296rem;

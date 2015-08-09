@@ -110,27 +110,17 @@
 [data-dpr="3"] .hot-peo .peo-nickname {
   font-size: 46px;
 }
-.hot-peo .peo-nickname span {
-  display: inline-block;
-  background-color: #ff6b5c;
-  color: white;
-  border-radius: 20px;
-  font-size: 15.33333333px;
+.hot-peo .peo-nickname i {
+  background-color: white;
+  color: #ff6b5c;
+  font-size: 18.53333333px;
+  width: 0.83333333rem;
 }
-[data-dpr="2"] .hot-peo .peo-nickname span {
-  font-size: 23px;
+[data-dpr="2"] .hot-peo .peo-nickname i {
+  font-size: 27.8px;
 }
-[data-dpr="3"] .hot-peo .peo-nickname span {
-  font-size: 46px;
-}
-.hot-peo .peo-nickname span i {
-  font-size: 18px;
-}
-[data-dpr="2"] .hot-peo .peo-nickname span i {
-  font-size: 27px;
-}
-[data-dpr="3"] .hot-peo .peo-nickname span i {
-  font-size: 54px;
+[data-dpr="3"] .hot-peo .peo-nickname i {
+  font-size: 55.6px;
 }
 .hot-peo .signature {
   font-size: 14px;
