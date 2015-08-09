@@ -1,27 +1,24 @@
 <section ms-include-src="'tpl/widget/tipBar.html'"></section>
-<section class="detail-wrapper">
+<section class="detail-wrapper" ms-controller="dateDetail">
     <div class="detail-info">
         <div class="initiator-info">
-
-            <div class="logo-wrapper">
-            </div>
-
-            <span class="initiator">Angelababay</span>
+            <div class="logo-wrapper" ms-css-background-image="'url('+data.head+')'"></div>
+            <span class="initiator">{{data.nickname}}</span>
             <i class="icon-font sex">&#xe61b;</i>
-            <button class="button">立即报名</button>
+            <button class="button">{{data.date_status}}</button>
         </div>
 
         <div class="date-title">
-            <p class="title">下午有一起吃饭的吗</p>
-            <p class="content">大家好，我想找人陪我吃饭，小明最近都很忙，都不约我了，你们有空的可以来三里屯优衣库找我</p>
+            <p class="title">{{data.title}}</p>
+            <p class="content">{{data.content}}</p>
         </div>
 
         <div class="date-info">
             
             <ul>
-                <li><i class="icon-font place">&#xe6b6;</i>北京三里屯</li>
-                <li><i class="icon-font time">&#xe61e;</i>6:00</li>
-                <li><i class="icon-font guest">&#xe60f;</i>我请客</li>
+                <li><i class="icon-font place">&#xe6b6;</i>{{data.place}}</li>
+                <li><i class="icon-font time">&#xe61e;</i>{{data.date_time}}</li>
+                <li><i class="icon-font guest">&#xe60f;</i>{{data.cost_mode}}</li>
             </ul>
         </div>
 
