@@ -1,24 +1,24 @@
-<ul class="date-list">
-    <li class="item">
+<ul class="date-list" ms-controller="dateList">
+    <li class="item" ms-repeat="items">
         <header class="clearfix">
             <main class="person clearfix">
-                <i class="head" style="background-image: url('imgs/1.jpg')"></i>
+                <i class="head" ms-css-background-image="'url('+el.head+')'"></i>
                 <div class="detail">
-                    <p><span>郭富城</span><i class="gender iconfont">&#xe61b</i></p>
-                    <p class="signature">生命不息,折腾不止</p>
+                    <p><span>{{el.nickname}}</span><i class="gender iconfont">&#xe61b</i></p>
+                    <p class="signature">{{el.signature}}</p>
                 </div>
             </main>
-            <aside class="side-tag">吃饭</aside>
+            <aside class="side-tag">{{el.tags}}</aside>
         </header>
         <main>
-            <p class="content">下午一起去吃饭，有约的吗?</p>
-            <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>6:00</span></div>
-            <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>老校门口</span></div>
-            <div class="icon box-cost"><i class="iconfont">&#xe60f</i><span>我请客</span></div>
-            <p class="create-time">3分钟前</p>
+            <p class="content">{{el.title}}</p>
+            <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>{{el.date_time}}</span></div>
+            <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>{{el.place}}</span></div>
+            <div class="icon box-cost"><i class="iconfont">&#xe60f</i><span>{{el.cost_mode}}</span></div>
+            <p class="create-time">{{el.created_at}}</p>
         </main>
         <footer>
-            <a href="">报名：10</a><a href="">评论：2</a><a href="">点赞：17</a>
+            <a href="">报名：{{el.erolled}}</a><a href="">评论：{{el.commented}}</a><a href="">点赞：{{el.praised}}</a>
         </footer>
     </li>
 </ul>

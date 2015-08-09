@@ -1,17 +1,17 @@
-<ul class="activity-list">
-    <li class="item">
+<ul class="activity-list" ms-controller="activityList">
+    <li class="item" ms-repeat="items">
         <main>
-            <i class="show" style="background-image: url('imgs/bg.jpg')"></i>
+            <i class="show" ms-css-background-image="'url('+el.head+')'"></i>
             <aside class="detail">
-                <h2>重庆“乐堡啤酒”音乐节盛大开幕</h2>
-                <p class="signature">前十名用户名免费体验!!!!</p>
-                <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>6:00</span></div>
-                <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>老校门口</span></div>
-                <p class="create-time">3分钟前</p>
+                <h2>{{el.title}}</h2>
+                <p class="signature">{{el.signature ? el.signature : "没有优惠信息噢!!!!"}}</p>
+                <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>{{el.activity_time}}</span></div>
+                <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>{{el.place}}</span></div>
+                <p class="create-time">{{el.created_at}}</p>
             </aside>
         </main>
         <footer>
-            <a href="">报名：10</a><a href="">评论：2</a><a href="">点赞：17</a>
+            <a href="">报名：{{el.erolled}}</a><a href="">评论：{{el.commented}}</a><a href="">点赞：{{el.praised}}</a>
         </footer>
     </li>
 </ul>

@@ -33,5 +33,7 @@ define('vms/slider', ['avalon', 'jquery' , 'vms/navBar', 'swiper'], function(ava
                 e.preventDefault();
             });
         }
+
+
     });
 });

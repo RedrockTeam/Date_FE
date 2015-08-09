@@ -1,12 +1,9 @@
 
 define(['avalon'], function(avalon){
     var vm = avalon.define({
-        $id: 'activityList',
+        $id: 'userMessage',
         items: []
     });
 
-    vm.$watch('items', function(data){
-        console.log(data);
-    });
     return vm;
 });

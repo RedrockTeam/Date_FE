@@ -44,7 +44,7 @@
   - res: 
                
          {
-            "data": ["imgs/1.jpg", ....],       //图片路径
+            "data": [{"href": 'http://www.baidu.com', "img": ""}, ...], //href为外链, img为图片路径
             "status": 200,
             "info": "获取成功"
          }
@@ -556,7 +556,8 @@
 				"commented": 20,                //多少人已评论
 				"praised": 20,                  //多少人已点赞
 				"gender": 1，                    //性别 "1" 男性  "2"女性
-				"cost_model": "1",              //1AA, 2我请客, 3求请客
+				"cost_mode": "1",              //1AA, 2我请客, 3求请客
+				"tags": ["吃饭", "睡觉"]       //个人爱好标签
             },
             {
                 "date_id": "3",                //约会 item id
@@ -575,7 +576,8 @@
 				"praised": 20,                  //多少人已点赞
 				"gender": 1，                    //性别 "1" 男性  "2"女性
 				"cost_model": "1",              //1AA, 2我请客, 3求请客
-				"nickname": "segrdh"            //昵称
+				"nickname": "segrdh",            //昵称
+				"tags": ["吃饭", "睡觉"]       //个人爱好标签
             }],
             "status" : 200,
             "info" : "成功"

@@ -2,7 +2,6 @@ define(['avalon', 'vms/navBar'], function(avalon, vmNavBar){
     var vm = avalon.define({
         $id: 'filter',
         opened: false,   //初始状态
-        index: 0,
         showDate: true,
         options: {       //键值为所对应的类型
             date: {
@@ -21,7 +20,7 @@ define(['avalon', 'vms/navBar'], function(avalon, vmNavBar){
                     val: ['不限', '男', '女'],
                     expand: false
                 },
-                cost_mode: {
+                mode: {
                     title: "消费方式",
                     val: ['不限', 'AA制', '我请客', '求包养', '无消费'],
                     expand: false
@@ -43,7 +42,7 @@ define(['avalon', 'vms/navBar'], function(avalon, vmNavBar){
                     val: ['随意','离我最近', '发布最新'],
                     expand: false
                 },
-                cost_mode:{
+                mode:{
                     title: "消费方式",
                     val: ['不限', '<30', '30-50', '50-100', '100-200', '200-300', '300-500', '>500'],
                     expand: false
@@ -55,10 +54,6 @@ define(['avalon', 'vms/navBar'], function(avalon, vmNavBar){
                 }
 
             }
-        },
-
-        getIndex: function(){
-            return vm['index']++;
         },
         selected: {    //最初加载数据
             ct: 'date',
@@ -75,7 +70,7 @@ define(['avalon', 'vms/navBar'], function(avalon, vmNavBar){
             vm['selected'][ct] = index;
         },
         finishFilter: function(){
-            //request();
+            console.log(getParams());
         },
         toggleOpen: function(){
             vm['opened'] = !vm['opened'];
@@ -88,20 +83,21 @@ define(['avalon', 'vms/navBar'], function(avalon, vmNavBar){
         if(selData['ct'] == 'date'){
             ret = {
                 date_type: selData['type'],
-                page: 0,
                 order: selData['order'],
                 date_gender: selData['gender'],
-                cost_mode: selData['cost_mode'],
+                cost_mode: selData['mode'],
                 date_time: ['time']
             }
         }else{
             ret = {
                 activity_type: selData['type'],
-                page: 0,
                 order: selData['order'],
-
+                activity_time: selData['time'],
+                cost_mode: selData['mode']
             }
         }
+
+        return ret;
     }
 
     return vm;

@@ -7,6 +7,10 @@ define('urls', function(){
         "login": "http://127.0.0.1:8080/user/login",
         //"slider": "../mock.php?type=pics",
         "slider": "http://127.0.0.1:8080/banner",
+        "dateList": "http://127.0.0.1:8080/date/list",
+        "activityList": "http://127.0.0.1:8080/activity/list",
+        "userCheck": "http://127.0.0.1:8080/user/check",
+        "userMessage": "http://127.0.0.1:8080/user/message/recieve",
         "publish": "http://lich2013.com/date/index.php/api/date/createdate",
         "showBox": "http://lich2013.com/date/index.php/api/date/datelist",
         //"showBox": "../mock.php?type=list",
@@ -15,7 +19,6 @@ define('urls', function(){
         "userInfo": "http://lich2013.com/date/index.php/api/person/userinfo",
         "historyCreate": "http://lich2013.com/date/index.php/api/person/create",
         "historyJoin": "http://lich2013.com/date/index.php/api/person/join",
-        "dateList": "http://127.0.0.1:8080/date/list",
         //"dateList": "../mock.php?type=list",
 
         "detaildate": "http://lich2013.com/date/index.php/api/date/detaildate",
