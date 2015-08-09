@@ -25,25 +25,20 @@
         <div class="date-demand">
             <p class="demand">要求</p>
             <ul>
-                <li>性别：男女皆宜</li>
-                <li>学校：上海戏剧学院</li>
-                <li>人数：2人</li>
+                <li ms-repeat="data.limit">{{$key}} --- {{$val}}</li>
             </ul>
         </div>
     </div>
 
     <div class="participant">
 
-        <div class="part-title">报名：<span>3</span></div>
-        <div class="logo-wrapper"></div>
-        <div class="logo-wrapper"></div>
-
+        <div class="part-title">报名：<span>{{data.enrolled.length}}</span></div>
+        <div class="logo-wrapper" ms-repeat="data.enrolled" ms-css-background-image="'url('+$val.head+')'"></div>
     </div>
 
     <div class="comment">
-        <div class="com-title">评论：<span>3人</span></div>
-        <div class="logo-wrapper"></div>
-        <div class="logo-wrapper"></div>
+        <div class="com-title">评论：<span>{{data.commented.length}}人</span></div>
+        <div class="logo-wrapper" ms-repeat="data.enrolled" ms-css-background-image="'url('+$val.head+')'">
 
     </div>
 

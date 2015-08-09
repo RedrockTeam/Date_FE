@@ -92,6 +92,9 @@
   border: 1px solid #999999;
   display: inline-block;
   vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .detail-wrapper .detail-info .initiator {
   font-size: 15.33333333px;

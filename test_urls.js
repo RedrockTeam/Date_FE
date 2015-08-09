@@ -149,8 +149,8 @@ var datas = {
 
     "/date/detail": {
         "data": {
-            "nickname": "",                                  //昵称
-            "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg", //头像路径
+            "nickname": "srhdt",                                  //昵称
+            "head": "imgs/test.png", //头像路径
             "gender": "2",        //性别
             "created_at": "1429446317",   //创建时间    时间戳
             "date_time": "1529456317",    //约会时间    时间戳
@@ -164,7 +164,7 @@ var datas = {
                 "number": 142,     //人数, 没有则不限
                 "gender": 1          // 1 男性 2 女性 (没有/0) 则不限
             },
-            "cost_model": 1,            //消费类型
+            "cost_mode": 1,            //消费类型
             "date_status": 1,           //约的状态 默认显示一个报名的按钮 , 1 已结束, 2 成功, 3 受理中 4 已拒绝
             "enrolled": [                //已报名人详情, 会把报了名的人列出来， 详情见设计图
                 {
