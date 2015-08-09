@@ -30,9 +30,11 @@ define('avaFilters', ['avalon'], function(){
     avalon.filters.costModel = function(model) {
         var model = parseInt(model);
         switch(model){
+            case 0: return "无限制";
             case 1: return "AA制";
             case 2: return "我请客";
             case 3: return "求请客";
+            case 4: return "无花费";
         }
         return "未知";
     }

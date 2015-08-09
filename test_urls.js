@@ -29,7 +29,7 @@ var datas = {
                 "commented": 20,                //多少人已评论
                 "praised": 20,                  //多少人已点赞
                 "gender": 1,                   //性别 "1" 男性  "2"女性
-                "cost_mode": "1",              //1AA, 2我请客, 3求请客
+                "cost_mode": "1",              //0无限制 1AA, 2我请客, 3求请客 4无花费
                 "tags": ["吃饭", "睡觉"]        //用户标签
             },
 
@@ -145,6 +145,54 @@ var datas = {
         "data": [{"href": "http://www.baodu.com", "img": "imgs/1.jpg"}, {"href":"http://ww.baidu.com", "img": "imgs/bg.jpg"}, {"href": "http://www.baidu.com", "img":"imgs/test.png"}],
         "status":200,
         info: "ok"
+    },
+
+    "/date/detail": {
+        "data": {
+            "nickname": "",                                  //昵称
+            "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg", //头像路径
+            "gender": "2",        //性别
+            "created_at": "1429446317",   //创建时间    时间戳
+            "date_time": "1529456317",    //约会时间    时间戳
+            "authened": 1,                  //该用户是否认证过 `1`已认证 `2`未认证
+            "date_id": "1",                 //date id
+            "place": "重邮宾馆",           //约会地点
+            "title": "来约炮!",           //标题
+            "content": "约炮要不要",      // 约会详细内容
+            "limit": {                   //要求，固定为学院、性别、人数
+                "academy": "se",    //学院, 没有则不限
+                "number": 142,     //人数, 没有则不限
+                "gender": 1          // 1 男性 2 女性 (没有/0) 则不限
+            },
+            "cost_model": 1,            //消费类型
+            "date_status": 1,           //约的状态 默认显示一个报名的按钮 , 1 已结束, 2 成功, 3 受理中 4 已拒绝
+            "enrolled": [                //已报名人详情, 会把报了名的人列出来， 详情见设计图
+                {
+                    "uid": 23,           //该用户uid
+                    "head": ""         //头像
+                },
+                {
+                    "uid": 23,          //该用户uid
+                    "head": ""         //头像
+                }
+            ],
+            commented: [
+                {
+                    "uid": "",      //该用户uid
+                    "head": "",     //头像
+                    "content": "",    //评论内容
+                    "time": 2524532     //评论时间  时间戳
+                },
+                {
+                    "uid": "",            //该用户uid
+                    "head": "",           //头像
+                    "content": "",        //评论内容
+                    "time": 2524532     //评论时间  时间戳
+                }
+            ]
+        },
+        status: 200,
+        info: "成功"
     },
 
     "error": {
