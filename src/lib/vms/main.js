@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 define(['avalon', 'jquery','vms/slider', 'vms/topBar','dialog', 'avaFilters','mmState'], function(avalon,$, vmSlider, vmTopBar){
     var vm = avalon.define({
         $id: "main",
@@ -8,39 +8,16 @@ define(['avalon', 'jquery','vms/slider', 'vms/topBar','dialog', 'avaFilters','mm
             //测试
             vmSlider['slider']();
         },
-        moduleLoadCb: function(){    //测试
+        moduleLoadCb: function() {    //测试
             vm.loadCout++;
-            if( vm.loadCout == 4 ){   //
+            if (vm.loadCout == 4) {   //
                 log('modlues 加载完毕!!!');
-                console.log( vm.loadCout );
+                console.log(vm.loadCout);
                 vmSlider['moduleSlider']();
                 vm['state'] = '';
-=======
-define(
-    [
-        'avalon', 'jquery', 'vms/slider',
-        'vms/topBar', 'vms/navBar',
-        'vms/filter', 'dialog',
-        'avaFilters', 'mmState'
-    ],
-    function (avalon, $, vmSlider, vmTopBar, vmNavBar, vmFilter) {
-        var vm = avalon.define({
-            $id: "main",
-            state: "",
-            loadCout: 0,
-            sliderCb: function () {
-                //测试
-                vmSlider['slider']();
-            },
-            moduleLoadCb: function () {    //测试
-                if (vm.loadCout > 4) vm.loadCout = 0;
-                vm.loadCout++;
-                if (vm.loadCout == 4) {   //
-                    log('modlues 加载完毕!!!');
-                    vmSlider['moduleSlider']();
-                }
->>>>>>> 815d3028af439d74ef6e60a30edfe60de2fb8454
+
             }
+        }
         });
 
         //滑动依赖
