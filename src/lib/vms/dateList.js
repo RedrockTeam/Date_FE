@@ -1,3 +1,4 @@
+//约会列表
 define(['avalon', 'userCenter', 'vms/cache', 'request'], function(avalon, userCenter, vmCache, request){
     var vm = avalon.define({
         $id: 'dateList',
