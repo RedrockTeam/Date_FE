@@ -1,5 +1,6 @@
 
 //约会详细页
+
 define(['avalon', 'vms/tipBar', 'userCenter', 'vms/main','states/date','mmState', 'dialog'], function(avalon, vmTipBar, userCenter, vmMain){
     avalon.state('dateDetail', {
         controller: "main",
@@ -26,6 +27,7 @@ define(['avalon', 'vms/tipBar', 'userCenter', 'vms/main','states/date','mmState'
                     vmDetail.data = res.data;
                     vmDetail['isCollected'] = res.data.collection_status;
                     vmDetail['isSignedUp'] = res.data.apply_status;
+
                     avalon.scan();
                     vmMain['state'] = 'ok';
                 });

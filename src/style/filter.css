@@ -69,6 +69,7 @@
   border: 1px solid green;
 }
 .filter-container {
+  display: none;
   background: #ffffff;
   position: absolute;
   width: 5rem;

@@ -69,7 +69,7 @@
 .test-bor-green {
   border: 1px solid green;
 }
-.wrapper {
+.home-wrapper {
   padding-top: 2.88888889rem;
 }
 .top-layout-1 {
@@ -110,7 +110,6 @@
 .module-layout {
   box-sizing: border-box;
   overflow: hidden;
-  width: 100%;
 }
 .module-layout .swiper-slide {
   width: 100%;

@@ -4196,10 +4196,13 @@ new function() {
     }
     avalon.ready = function(fn) {
         loaded ? fn(avalon) : fns.push(fn)
-    }
+    };
     avalon.ready(function() {
         avalon.scan(DOC.body)
     })
+    avalon.config({
+        loader: false
+    });
 }
 
 new function() {// jshint ignore:line
