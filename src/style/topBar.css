@@ -40,22 +40,22 @@
   text-overflow: ellipsis;
 }
 .font-36 {
-  font-size: 12px;
-}
-[data-dpr="2"] .font-36 {
-  font-size: 18px;
-}
-[data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="^2"] .font-36 {
+  font-size: 72px;
+}
+[data-dpr="^3"] .font-36 {
+  font-size: 108px;
+}
 .font-48 {
-  font-size: 16px;
-}
-[data-dpr="2"] .font-48 {
-  font-size: 24px;
-}
-[data-dpr="3"] .font-48 {
   font-size: 48px;
+}
+[data-dpr="^2"] .font-48 {
+  font-size: 96px;
+}
+[data-dpr="^3"] .font-48 {
+  font-size: 144px;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -81,14 +81,14 @@
   float: left;
   line-height: 1.33333333rem;
   color: #444444;
-  font-size: 20px;
+  font-size: 60px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
 }
-[data-dpr="2"] .top-container p {
-  font-size: 30px;
+[data-dpr="^2"] .top-container p {
+  font-size: 120px;
 }
-[data-dpr="3"] .top-container p {
-  font-size: 60px;
+[data-dpr="^3"] .top-container p {
+  font-size: 180px;
 }
 .top-container menu {
   float: right;
@@ -106,11 +106,11 @@
   color: #444444;
 }
 .top-container menu .iconfont {
-  font-size: 23.33333333px !important;
-}
-[data-dpr="2"] .top-container menu .iconfont {
-  font-size: 35px !important;
-}
-[data-dpr="3"] .top-container menu .iconfont {
   font-size: 70px !important;
+}
+[data-dpr="^2"] .top-container menu .iconfont {
+  font-size: 140px !important;
+}
+[data-dpr="^3"] .top-container menu .iconfont {
+  font-size: 210px !important;
 }

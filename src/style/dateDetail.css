@@ -39,22 +39,22 @@
   text-overflow: ellipsis;
 }
 .font-36 {
-  font-size: 12px;
-}
-[data-dpr="2"] .font-36 {
-  font-size: 18px;
-}
-[data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="^2"] .font-36 {
+  font-size: 72px;
+}
+[data-dpr="^3"] .font-36 {
+  font-size: 108px;
+}
 .font-48 {
-  font-size: 16px;
-}
-[data-dpr="2"] .font-48 {
-  font-size: 24px;
-}
-[data-dpr="3"] .font-48 {
   font-size: 48px;
+}
+[data-dpr="^2"] .font-48 {
+  font-size: 96px;
+}
+[data-dpr="^3"] .font-48 {
+  font-size: 144px;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -99,14 +99,14 @@
   vertical-align: middle;
 }
 .detail-wrapper .detail-info .initiator {
-  font-size: 15.33333333px;
+  font-size: 46px;
   margin-left: 0.37037037rem;
 }
-[data-dpr="2"] .detail-wrapper .detail-info .initiator {
-  font-size: 23px;
+[data-dpr="^2"] .detail-wrapper .detail-info .initiator {
+  font-size: 92px;
 }
-[data-dpr="3"] .detail-wrapper .detail-info .initiator {
-  font-size: 46px;
+[data-dpr="^3"] .detail-wrapper .detail-info .initiator {
+  font-size: 138px;
 }
 .detail-wrapper .detail-info .button {
   padding: 0 0.46296296rem;
@@ -116,7 +116,7 @@
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  font-size: 15.33333333px;
+  font-size: 46px;
   line-height: 0.92592593rem;
   background: #8dda5e;
   color: white;
@@ -124,11 +124,11 @@
   border-radius: 15px;
   vertical-align: middle;
 }
-[data-dpr="2"] .detail-wrapper .detail-info .button {
-  font-size: 23px;
+[data-dpr="^2"] .detail-wrapper .detail-info .button {
+  font-size: 92px;
 }
-[data-dpr="3"] .detail-wrapper .detail-info .button {
-  font-size: 46px;
+[data-dpr="^3"] .detail-wrapper .detail-info .button {
+  font-size: 138px;
 }
 .detail-wrapper .date-title,
 .detail-wrapper .date-info {
@@ -145,44 +145,44 @@
 .detail-wrapper .date-demand ul li {
   line-height: 0.64814815rem;
   color: #ccc;
-  font-size: 14px;
-}
-[data-dpr="2"] .detail-wrapper .date-title ul li,
-[data-dpr="2"] .detail-wrapper .date-info ul li,
-[data-dpr="2"] .detail-wrapper .date-demand ul li {
-  font-size: 21px;
-}
-[data-dpr="3"] .detail-wrapper .date-title ul li,
-[data-dpr="3"] .detail-wrapper .date-info ul li,
-[data-dpr="3"] .detail-wrapper .date-demand ul li {
   font-size: 42px;
+}
+[data-dpr="^2"] .detail-wrapper .date-title ul li,
+[data-dpr="^2"] .detail-wrapper .date-info ul li,
+[data-dpr="^2"] .detail-wrapper .date-demand ul li {
+  font-size: 84px;
+}
+[data-dpr="^3"] .detail-wrapper .date-title ul li,
+[data-dpr="^3"] .detail-wrapper .date-info ul li,
+[data-dpr="^3"] .detail-wrapper .date-demand ul li {
+  font-size: 126px;
 }
 .detail-wrapper .date-title {
   border-bottom: 1px solid #ccc;
 }
 .detail-wrapper .date-title .title {
-  font-size: 22px;
+  font-size: 66px;
   line-height: 0.92592593rem;
   margin-top: 0.09259259rem;
   color: #404040;
 }
-[data-dpr="2"] .detail-wrapper .date-title .title {
-  font-size: 33px;
+[data-dpr="^2"] .detail-wrapper .date-title .title {
+  font-size: 132px;
 }
-[data-dpr="3"] .detail-wrapper .date-title .title {
-  font-size: 66px;
+[data-dpr="^3"] .detail-wrapper .date-title .title {
+  font-size: 198px;
 }
 .detail-wrapper .date-title .content {
-  font-size: 14px;
+  font-size: 42px;
   color: #ccc;
   margin-bottom: 0.18518519rem;
   line-height: 0.55555556rem;
 }
-[data-dpr="2"] .detail-wrapper .date-title .content {
-  font-size: 21px;
+[data-dpr="^2"] .detail-wrapper .date-title .content {
+  font-size: 84px;
 }
-[data-dpr="3"] .detail-wrapper .date-title .content {
-  font-size: 42px;
+[data-dpr="^3"] .detail-wrapper .date-title .content {
+  font-size: 126px;
 }
 .detail-wrapper p,
 .detail-wrapper ul {
@@ -190,26 +190,26 @@
   padding: 0;
 }
 .detail-wrapper .demand {
-  font-size: 15.33333333px;
+  font-size: 46px;
   margin-top: 0.27777778rem;
   color: #404040;
 }
-[data-dpr="2"] .detail-wrapper .demand {
-  font-size: 23px;
+[data-dpr="^2"] .detail-wrapper .demand {
+  font-size: 92px;
 }
-[data-dpr="3"] .detail-wrapper .demand {
-  font-size: 46px;
+[data-dpr="^3"] .detail-wrapper .demand {
+  font-size: 138px;
 }
 .detail-wrapper .detail-info i {
-  font-size: 15.33333333px;
+  font-size: 46px;
   font-style: normal;
   margin-right: 0.18518519rem;
 }
-[data-dpr="2"] .detail-wrapper .detail-info i {
-  font-size: 23px;
+[data-dpr="^2"] .detail-wrapper .detail-info i {
+  font-size: 92px;
 }
-[data-dpr="3"] .detail-wrapper .detail-info i {
-  font-size: 46px;
+[data-dpr="^3"] .detail-wrapper .detail-info i {
+  font-size: 138px;
 }
 .detail-wrapper .detail-info .place {
   color: #4ea1ff;
@@ -229,13 +229,13 @@
   background-color: #f5f5f5;
   padding: 0 5%;
   color: #404040;
-  font-size: 15.33333333px;
-}
-[data-dpr="2"] .detail-wrapper .participant .part-title {
-  font-size: 23px;
-}
-[data-dpr="3"] .detail-wrapper .participant .part-title {
   font-size: 46px;
+}
+[data-dpr="^2"] .detail-wrapper .participant .part-title {
+  font-size: 92px;
+}
+[data-dpr="^3"] .detail-wrapper .participant .part-title {
+  font-size: 138px;
 }
 .detail-wrapper .logo-wrapper {
   border-radius: 100%;
@@ -253,13 +253,13 @@
   background-color: #f5f5f5;
   padding: 0 5%;
   color: #404040;
-  font-size: 15.33333333px;
-}
-[data-dpr="2"] .detail-wrapper .comment .com-title {
-  font-size: 23px;
-}
-[data-dpr="3"] .detail-wrapper .comment .com-title {
   font-size: 46px;
+}
+[data-dpr="^2"] .detail-wrapper .comment .com-title {
+  font-size: 92px;
+}
+[data-dpr="^3"] .detail-wrapper .comment .com-title {
+  font-size: 138px;
 }
 .detail-wrapper .footer {
   background: white;
@@ -268,16 +268,16 @@
   bottom: 0;
   width: 100%;
   color: #404040;
-  font-size: 15.33333333px;
+  font-size: 46px;
   padding: 0.60185185rem;
   border-top: 1px solid #999;
   box-sizing: border-box;
 }
-[data-dpr="2"] .detail-wrapper .footer {
-  font-size: 23px;
+[data-dpr="^2"] .detail-wrapper .footer {
+  font-size: 92px;
 }
-[data-dpr="3"] .detail-wrapper .footer {
-  font-size: 46px;
+[data-dpr="^3"] .detail-wrapper .footer {
+  font-size: 138px;
 }
 .detail-wrapper .footer div {
   width: 33.33%;

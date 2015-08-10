@@ -39,22 +39,22 @@
   text-overflow: ellipsis;
 }
 .font-36 {
-  font-size: 12px;
-}
-[data-dpr="2"] .font-36 {
-  font-size: 18px;
-}
-[data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="^2"] .font-36 {
+  font-size: 72px;
+}
+[data-dpr="^3"] .font-36 {
+  font-size: 108px;
+}
 .font-48 {
-  font-size: 16px;
-}
-[data-dpr="2"] .font-48 {
-  font-size: 24px;
-}
-[data-dpr="3"] .font-48 {
   font-size: 48px;
+}
+[data-dpr="^2"] .font-48 {
+  font-size: 96px;
+}
+[data-dpr="^3"] .font-48 {
+  font-size: 144px;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -75,15 +75,15 @@
   margin-bottom: 0.37037037rem;
 }
 .hot-peo .hot-title {
-  font-size: 15.33333333px;
+  font-size: 46px;
   color: #8dda5e;
   margin: 0.23148148rem 0;
 }
-[data-dpr="2"] .hot-peo .hot-title {
-  font-size: 23px;
+[data-dpr="^2"] .hot-peo .hot-title {
+  font-size: 92px;
 }
-[data-dpr="3"] .hot-peo .hot-title {
-  font-size: 46px;
+[data-dpr="^3"] .hot-peo .hot-title {
+  font-size: 138px;
 }
 .hot-peo .img-wrapper {
   float: left;
@@ -101,37 +101,37 @@
   color: white;
 }
 .hot-peo .peo-nickname {
-  font-size: 15.33333333px;
+  font-size: 46px;
   line-height: 0.64814815rem;
 }
-[data-dpr="2"] .hot-peo .peo-nickname {
-  font-size: 23px;
+[data-dpr="^2"] .hot-peo .peo-nickname {
+  font-size: 92px;
 }
-[data-dpr="3"] .hot-peo .peo-nickname {
-  font-size: 46px;
+[data-dpr="^3"] .hot-peo .peo-nickname {
+  font-size: 138px;
 }
 .hot-peo .peo-nickname i {
   background-color: white;
   color: #ff6b5c;
-  font-size: 18.53333333px;
+  font-size: 55.6px;
   width: 0.83333333rem;
 }
-[data-dpr="2"] .hot-peo .peo-nickname i {
-  font-size: 27.8px;
+[data-dpr="^2"] .hot-peo .peo-nickname i {
+  font-size: 111.2px;
 }
-[data-dpr="3"] .hot-peo .peo-nickname i {
-  font-size: 55.6px;
+[data-dpr="^3"] .hot-peo .peo-nickname i {
+  font-size: 166.8px;
 }
 .hot-peo .signature {
-  font-size: 14px;
+  font-size: 42px;
   line-height: 0.37037037rem;
   margin-top: 0.09259259rem;
 }
-[data-dpr="2"] .hot-peo .signature {
-  font-size: 21px;
+[data-dpr="^2"] .hot-peo .signature {
+  font-size: 84px;
 }
-[data-dpr="3"] .hot-peo .signature {
-  font-size: 42px;
+[data-dpr="^3"] .hot-peo .signature {
+  font-size: 126px;
 }
 .hot-peo .peo-lists {
   border-bottom: 1px solid #999999;

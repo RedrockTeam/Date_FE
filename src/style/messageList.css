@@ -39,22 +39,22 @@
   text-overflow: ellipsis;
 }
 .font-36 {
-  font-size: 12px;
-}
-[data-dpr="2"] .font-36 {
-  font-size: 18px;
-}
-[data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="^2"] .font-36 {
+  font-size: 72px;
+}
+[data-dpr="^3"] .font-36 {
+  font-size: 108px;
+}
 .font-48 {
-  font-size: 16px;
-}
-[data-dpr="2"] .font-48 {
-  font-size: 24px;
-}
-[data-dpr="3"] .font-48 {
   font-size: 48px;
+}
+[data-dpr="^2"] .font-48 {
+  font-size: 96px;
+}
+[data-dpr="^3"] .font-48 {
+  font-size: 144px;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -94,11 +94,11 @@
 .message .message-list .right {
   margin-left: 1.48148148rem;
   line-height: 1.2962963rem;
-  font-size: 15.33333333px;
-}
-[data-dpr="2"] .message .message-list .right {
-  font-size: 23px;
-}
-[data-dpr="3"] .message .message-list .right {
   font-size: 46px;
+}
+[data-dpr="^2"] .message .message-list .right {
+  font-size: 92px;
+}
+[data-dpr="^3"] .message .message-list .right {
+  font-size: 138px;
 }

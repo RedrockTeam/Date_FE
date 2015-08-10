@@ -3,6 +3,14 @@
 //namespace
 .login-container{
   border-top: 1px solid #cccccc;
+  .logo-wrapper{
+    width:240rem/@psdWidth;
+    height:240rem/@psdWidth;
+    border:1px solid #999;
+    .border-radius(100%);
+    margin: 100rem/@psdWidth auto;
+    box-shadow: 1px 1px 1px #999;
+  }
   .input-item {
     border-bottom: 1px solid #cccccc;
     width: 100%;
@@ -15,21 +23,36 @@
       text-indent:50rem /@psdWidth;
       padding:50rem /@psdWidth 0;
       color: #000000;
-      .font-48;
+      .rfz(18px);
       font-family: @fm-base;
     }
   }
 
   .btn{
-    float: right;
-    margin: 22rem /@psdWidth 30rem /@psdWidth 0 0;
-    padding: 40rem /@psdWidth 130rem / @psdWidth;
+    width:90%;
+    height:145rem/@psdWidth;
+    margin:80rem/@psdWidth 5% 0;
     border: 1px solid #79c24d;
     outline: none;
-    background: #8dda5e;
-    .font-48;
-    color: #ffffff;
+    background: #ff9933;
+    color: white;
     font-family: @fm-base;
     border-radius: 10rem / @psdWidth;
+    .rfz(18px);
+  }
+
+  a{
+    margin-top:40rem/@psdWidth;
+    .rfz(16px);
+    &.left{
+      float:left;
+      margin-left: 5%;
+      color:#4686e5;
+    }
+    &.right{
+      color: #999999;
+      margin-right: 5%;
+      float:right;
+  }
   }
 }

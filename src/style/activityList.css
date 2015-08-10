@@ -39,22 +39,22 @@
   text-overflow: ellipsis;
 }
 .font-36 {
-  font-size: 12px;
-}
-[data-dpr="2"] .font-36 {
-  font-size: 18px;
-}
-[data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="^2"] .font-36 {
+  font-size: 72px;
+}
+[data-dpr="^3"] .font-36 {
+  font-size: 108px;
+}
 .font-48 {
-  font-size: 16px;
-}
-[data-dpr="2"] .font-48 {
-  font-size: 24px;
-}
-[data-dpr="3"] .font-48 {
   font-size: 48px;
+}
+[data-dpr="^2"] .font-48 {
+  font-size: 96px;
+}
+[data-dpr="^3"] .font-48 {
+  font-size: 144px;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -99,7 +99,7 @@
   position: relative;
 }
 .activity-list .detail h2 {
-  font-size: 16px;
+  font-size: 48px;
   color: #333333;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   padding: 0.09259259rem 0;
@@ -107,42 +107,42 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-[data-dpr="2"] .activity-list .detail h2 {
-  font-size: 24px;
+[data-dpr="^2"] .activity-list .detail h2 {
+  font-size: 96px;
 }
-[data-dpr="3"] .activity-list .detail h2 {
-  font-size: 48px;
+[data-dpr="^3"] .activity-list .detail h2 {
+  font-size: 144px;
 }
 .activity-list .detail .signature {
   color: #ffffff;
   background: #c3c3c3;
   padding: 0.0462963rem 0.09259259rem;
   border-radius: 0.09259259rem;
-  font-size: 12px;
+  font-size: 36px;
   letter-spacing: 0.07407407rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-[data-dpr="2"] .activity-list .detail .signature {
-  font-size: 18px;
+[data-dpr="^2"] .activity-list .detail .signature {
+  font-size: 72px;
 }
-[data-dpr="3"] .activity-list .detail .signature {
-  font-size: 36px;
+[data-dpr="^3"] .activity-list .detail .signature {
+  font-size: 108px;
 }
 .activity-list .detail .icon {
   margin-top: 0.13888889rem;
 }
 .activity-list .detail .icon span {
   color: #666666;
-  font-size: 12px;
+  font-size: 36px;
   vertical-align: middle;
 }
-[data-dpr="2"] .activity-list .detail .icon span {
-  font-size: 18px;
+[data-dpr="^2"] .activity-list .detail .icon span {
+  font-size: 72px;
 }
-[data-dpr="3"] .activity-list .detail .icon span {
-  font-size: 36px;
+[data-dpr="^3"] .activity-list .detail .icon span {
+  font-size: 108px;
 }
 .activity-list .detail .icon .iconfont {
   display: inline-block;
@@ -162,14 +162,14 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  font-size: 12px;
+  font-size: 36px;
   color: #666666;
 }
-[data-dpr="2"] .activity-list .detail .create-time {
-  font-size: 18px;
+[data-dpr="^2"] .activity-list .detail .create-time {
+  font-size: 72px;
 }
-[data-dpr="3"] .activity-list .detail .create-time {
-  font-size: 36px;
+[data-dpr="^3"] .activity-list .detail .create-time {
+  font-size: 108px;
 }
 .activity-list footer {
   margin-top: 0.50925926rem;
@@ -180,14 +180,14 @@
   color: #999999;
   width: 33%;
   text-align: center;
-  font-size: 12px;
+  font-size: 36px;
   border-right: 1px solid #cccccc;
 }
-[data-dpr="2"] .activity-list footer a {
-  font-size: 18px;
+[data-dpr="^2"] .activity-list footer a {
+  font-size: 72px;
 }
-[data-dpr="3"] .activity-list footer a {
-  font-size: 36px;
+[data-dpr="^3"] .activity-list footer a {
+  font-size: 108px;
 }
 .activity-list footer a:last-child {
   border: none;
