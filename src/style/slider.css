@@ -153,3 +153,6 @@
 .slider-layout .swiper-container {
   height: 3.7962963rem;
 }
+#tab-container {
+  overflow: visible;
+}

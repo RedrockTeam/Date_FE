@@ -1,15 +1,15 @@
-<div class="home-wrapper">
+<div class="home-wrapper" ms-visible="state=='ok'">
     <section class="top-layout-1" ms-include-src="'tpl/widget/topBar.html'"></section>
     <section class="nav-layout" ms-include-src="'tpl/widget/navBar.html'"></section>
     <section class="filter-layout" ms-include-src="'tpl/widget/filter.html'"></section>
-    <section class="slider-layout" ms-include-src="'tpl/widget/slider.html'" ms-controller="slider" data-include-rendered="sliderCb" ms-if="show"></section>
+    <section class="slider-layout" ms-include-src="'tpl/widget/slider.html'" ms-controller="slider" data-include-rendered="bannerLoadCb" ms-if="show"></section>
 
-    <section id="tab-container" class="swiper-container module-layout">
+    <section id="tab-container" class="swiper-container module-layout" ms-controller="slider">
         <div class="swiper-wrapper clearfix">
-            <section class="tab1 swiper-slide" ms-include-src="'tpl/date/list.html'" data-include-rendered="moduleLoadCb"></section>
-            <section class="tab2 swiper-slide" ms-include-src="'tpl/activity/list.html'" data-include-rendered="moduleLoadCb"></section>
-            <section class="tab3 swiper-slide" ms-include-src="'tpl/message/list.html'" data-include-rendered="moduleLoadCb"></section>
-            <section class="tab4 swiper-slide" ms-include-src="'tpl/user/check.html'" data-include-rendered="moduleLoadCb"></section>
+            <section  class="tab1 swiper-slide" ms-include-src="'tpl/date/list.html'" data-include-rendered="moduleLoadCb"></section>
+            <section  class="tab2 swiper-slide" ms-include-src="'tpl/activity/list.html'" data-include-rendered="moduleLoadCb"></section>
+            <section  class="tab3 swiper-slide" ms-include-src="'tpl/message/list.html'" data-include-rendered="moduleLoadCb"></section>
+            <section  class="tab4 swiper-slide" ms-include-src="'tpl/user/check.html'" data-include-rendered="moduleLoadCb"></section>
         </div>
     </section>
 </div>

@@ -71,7 +71,7 @@
 .date-list {
   font-family: "hiraginosansgb w3", "microsoft yahei";
 }
-.date-list,
+.date-list ul,
 .date-list p {
   margin: 0;
   padding: 0;
@@ -242,4 +242,20 @@
 }
 .date-list footer a:last-child {
   border: none;
+}
+.load-more {
+  height: 1.11111111rem;
+  line-height: 1.11111111rem;
+  background-color: #fff;
+  text-align: center;
+  margin: 0.24074074rem;
+  border-radius: 2px;
+  font-size: 14px;
+  box-shadow: 0 1px 1px rgba(98, 98, 98, 0.3);
+}
+[data-dpr="2"] .load-more {
+  font-size: 21px;
+}
+[data-dpr="3"] .load-more {
+  font-size: 42px;
 }

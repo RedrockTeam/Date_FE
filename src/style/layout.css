@@ -108,8 +108,7 @@
   margin-bottom: 0.24074074rem;
 }
 .module-layout {
-  box-sizing: border-box;
-  overflow: hidden;
+  height: auto;
 }
 .module-layout .swiper-slide {
   width: 100%;

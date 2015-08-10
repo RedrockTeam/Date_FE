@@ -3,9 +3,10 @@ define(
         'avalon', 'vms/navBar', 'request',
         'userCenter',
         'vms/dateList',
-        'vms/activityList'
+        'vms/activityList',
+        'vms/cache'
     ],
-    function(avalon, vmNavBar, request, userCenter, vmDL, vmAL ){
+    function(avalon, vmNavBar, request, userCenter, vmDL, vmAL, vmCache){
         var vm = avalon.define({
             $id: 'filter',
             opened: false,   //初始状态
@@ -61,36 +62,74 @@ define(
                     }
 
                 }
+            },    //数据
+            ct: 'date',    //当前筛选状态
+            dateS: {
+                    type: 0,
+                    order: 1,
+                    gender: 0,
+                    mode: 0,
+                    time: 0
             },
-            selected: {    //最初加载数据
-                ct: 'date',
+            activityS: {
                 type: 0,
                 order: 1,
-                gender: 0,
                 mode: 0,
                 time: 0
             },
             toggleExpand: function(ct, tt){
                 vm['options'][ct][tt]['expand'] = !vm['options'][ct][tt]['expand'];
             },
-            toggleSelect: function(ct, index){   //选择
-                vm['selected'][ct] = index;
+            toggleSelect: function(filed, index){   //选择
+                 if(vm['ct'] == 'date') {
+                     vm['dateS'][filed] = index
+                 } else {
+                     vm['activityS'][filed] = index
+                 }
+            },
+            getParams: function(ct){
+                var ret;
+                if(ct == 'date'){
+                    ret = {
+                        date_type: vm['dateS']['type'],
+                        order: vm['dateS']['order'],
+                        date_gender: vm['dateS']['gender'],
+                        cost_mode: vm['dateS']['mode'],
+                        date_time: vm['dateS']['time']
+                    }
+                }else{
+                    ret = {
+                        date_type: vm['activityS']['type'],
+                        order: vm['activityS']['order'],
+                        cost_mode: vm['activityS']['mode'],
+                        date_time: vm['activityS']['time']
+                    }
+                }
+
+                return ret;
             },
             finishFilter: function(){    //筛选确定
-                var ops = getParams();
                 var info = userCenter.info();
-                var data = avalon.mix(
-                    {
-                        uid: info.uid,
-                        token: info.token,
-                        page: 0,
-                        size: 10
-                    }, ops);
-                if('date_type' in ops){
+                var data = {
+                    uid: info.uid,
+                    token: info.token,
+                    page: 0,
+                    size: 10
+                    };
+                var tmp;
+                if(vm['ct'] == 'date'){
+                    tmp  = vm['getParams']('date');
+                    vmCache['dateS'] = tmp;
+                    avalon.mix( data,  tmp);
+                    log(data);
                     request('dateList', data ).done(function(res){
                         vmDL['items'] = res.data;
                     });
                 }else{
+                    tmp = vm['getParams']('activity');
+                    avalon.mix( data,  tmp);
+                    vmCache['activityS'] = tmp;
+                    log(data);
                     request('activityList', data ).done(function(res){
                         vmAL['items'] = res.data;
                     });
@@ -103,28 +142,6 @@ define(
             }
         });
 
-        //获取参数
-        function getParams(){
-            var ret = null, selData = vm['selected'];
-            if(selData['ct'] == 'date'){
-                ret = {
-                    date_type: selData['type'],
-                    order: selData['order'],
-                    date_gender: selData['gender'],
-                    cost_mode: selData['mode'],
-                    date_time: selData['time']
-                }
-            }else{
-                ret = {
-                    activity_type: selData['type'],
-                    order: selData['order'],
-                    activity_time: selData['time'],
-                    cost_mode: selData['mode']
-                }
-            }
-
-            return ret;
-        }
-
+        console.log(vmCache);
     return vm;
 });
