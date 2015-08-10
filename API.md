@@ -629,22 +629,10 @@
                      }
                  ],
                  commented: [
-                     {
-                         "uid": "",      //该用户uid
-                         "head": "",     //头像
-<<<<<<< HEAD
-=======
-                         "nickname": "", //昵称
->>>>>>> 815d3028af439d74ef6e60a30edfe60de2fb8454
-                         "content": "",    //评论内容
-                         "time": 2524532     //评论时间  时间戳
-                     },
+
                      {
                          "uid": "",            //该用户uid
-<<<<<<< HEAD
-=======
                          "nickname": "srh",    //昵称
->>>>>>> 815d3028af439d74ef6e60a30edfe60de2fb8454
                          "head": "",           //头像
                          "content": "",        //评论内容
                          "time": 2524532     //评论时间  时间戳
