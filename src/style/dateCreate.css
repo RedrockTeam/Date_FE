@@ -47,8 +47,20 @@
 [data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
 .font-48 {
   font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 [data-dpr="2"] .font-48 {
   font-size: 24px;
@@ -85,6 +97,12 @@
   border-top: 1px solid #ddd;
   background-color: #fff;
   padding: 0 0.44444444rem;
+}
+[data-dpr="2"] .pbl-dating .row {
+  font-size: 24px;
+}
+[data-dpr="3"] .pbl-dating .row {
+  font-size: 48px;
 }
 [data-dpr="2"] .pbl-dating .row {
   font-size: 24px;
@@ -164,6 +182,12 @@
 [data-dpr="3"] .pbl-dating i {
   font-size: 48px;
 }
+[data-dpr="2"] .pbl-dating i {
+  font-size: 24px;
+}
+[data-dpr="3"] .pbl-dating i {
+  font-size: 48px;
+}
 .pbl-dating span {
   color: #212121;
 }
@@ -216,6 +240,12 @@
   margin: 0.44444444rem;
   color: #FFF;
   font-size: 18px;
+}
+[data-dpr="2"] .pbl-dating .publish button {
+  font-size: 27px;
+}
+[data-dpr="3"] .pbl-dating .publish button {
+  font-size: 54px;
 }
 [data-dpr="2"] .pbl-dating .publish button {
   font-size: 27px;

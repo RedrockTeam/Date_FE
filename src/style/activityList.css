@@ -47,8 +47,20 @@
 [data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
 .font-48 {
   font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 [data-dpr="2"] .font-48 {
   font-size: 24px;
@@ -113,6 +125,12 @@
 [data-dpr="3"] .activity-list .detail h2 {
   font-size: 48px;
 }
+[data-dpr="2"] .activity-list .detail h2 {
+  font-size: 24px;
+}
+[data-dpr="3"] .activity-list .detail h2 {
+  font-size: 48px;
+}
 .activity-list .detail .signature {
   color: #ffffff;
   background: #c3c3c3;
@@ -130,6 +148,12 @@
 [data-dpr="3"] .activity-list .detail .signature {
   font-size: 36px;
 }
+[data-dpr="2"] .activity-list .detail .signature {
+  font-size: 18px;
+}
+[data-dpr="3"] .activity-list .detail .signature {
+  font-size: 36px;
+}
 .activity-list .detail .icon {
   margin-top: 0.13888889rem;
 }
@@ -137,6 +161,12 @@
   color: #666666;
   font-size: 12px;
   vertical-align: middle;
+}
+[data-dpr="2"] .activity-list .detail .icon span {
+  font-size: 18px;
+}
+[data-dpr="3"] .activity-list .detail .icon span {
+  font-size: 36px;
 }
 [data-dpr="2"] .activity-list .detail .icon span {
   font-size: 18px;
@@ -171,6 +201,12 @@
 [data-dpr="3"] .activity-list .detail .create-time {
   font-size: 36px;
 }
+[data-dpr="2"] .activity-list .detail .create-time {
+  font-size: 18px;
+}
+[data-dpr="3"] .activity-list .detail .create-time {
+  font-size: 36px;
+}
 .activity-list footer {
   margin-top: 0.50925926rem;
   width: 100%;
@@ -182,6 +218,12 @@
   text-align: center;
   font-size: 12px;
   border-right: 1px solid #cccccc;
+}
+[data-dpr="2"] .activity-list footer a {
+  font-size: 18px;
+}
+[data-dpr="3"] .activity-list footer a {
+  font-size: 36px;
 }
 [data-dpr="2"] .activity-list footer a {
   font-size: 18px;

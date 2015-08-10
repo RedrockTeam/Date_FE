@@ -47,8 +47,20 @@
 [data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
 .font-48 {
   font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 [data-dpr="2"] .font-48 {
   font-size: 24px;
@@ -95,6 +107,12 @@
   margin-left: 1.48148148rem;
   line-height: 1.2962963rem;
   font-size: 15.33333333px;
+}
+[data-dpr="2"] .message .message-list .right {
+  font-size: 23px;
+}
+[data-dpr="3"] .message .message-list .right {
+  font-size: 46px;
 }
 [data-dpr="2"] .message .message-list .right {
   font-size: 23px;

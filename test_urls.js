@@ -195,7 +195,6 @@ var datas = {
         status: 200,
         info: "成功"
     },
-
     "/activity/detail":{
         "data": {
             "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg", //头像路径

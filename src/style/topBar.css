@@ -48,8 +48,20 @@
 [data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
 .font-48 {
   font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 [data-dpr="2"] .font-48 {
   font-size: 24px;
@@ -90,6 +102,12 @@
 [data-dpr="3"] .top-container p {
   font-size: 60px;
 }
+[data-dpr="2"] .top-container p {
+  font-size: 30px;
+}
+[data-dpr="3"] .top-container p {
+  font-size: 60px;
+}
 .top-container menu {
   float: right;
 }
@@ -107,6 +125,12 @@
 }
 .top-container menu .iconfont {
   font-size: 23.33333333px !important;
+}
+[data-dpr="2"] .top-container menu .iconfont {
+  font-size: 35px !important;
+}
+[data-dpr="3"] .top-container menu .iconfont {
+  font-size: 70px !important;
 }
 [data-dpr="2"] .top-container menu .iconfont {
   font-size: 35px !important;

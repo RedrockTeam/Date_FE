@@ -47,8 +47,20 @@
 [data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
 .font-48 {
   font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 [data-dpr="2"] .font-48 {
   font-size: 24px;
@@ -103,6 +115,12 @@
 [data-dpr="3"] .user-check header .username span {
   font-size: 60px;
 }
+[data-dpr="2"] .user-check header .username span {
+  font-size: 30px;
+}
+[data-dpr="3"] .user-check header .username span {
+  font-size: 60px;
+}
 .user-check header .username .gender {
   display: inline-block;
   vertical-align: middle;
@@ -115,10 +133,22 @@
 [data-dpr="3"] .user-check header .username .gender {
   font-size: 60px;
 }
+[data-dpr="2"] .user-check header .username .gender {
+  font-size: 30px;
+}
+[data-dpr="3"] .user-check header .username .gender {
+  font-size: 60px;
+}
 .user-check header .signature {
   font-family: "hiraginosansgb w3", "microsoft yahei";
   font-size: 12px;
   color: #666666;
+}
+[data-dpr="2"] .user-check header .signature {
+  font-size: 18px;
+}
+[data-dpr="3"] .user-check header .signature {
+  font-size: 36px;
 }
 [data-dpr="2"] .user-check header .signature {
   font-size: 18px;
@@ -144,6 +174,12 @@
 [data-dpr="3"] .user-check header footer a {
   font-size: 40px;
 }
+[data-dpr="2"] .user-check header footer a {
+  font-size: 20px;
+}
+[data-dpr="3"] .user-check header footer a {
+  font-size: 40px;
+}
 .user-check header footer a:last-child {
   border: none;
 }
@@ -158,6 +194,12 @@
   border-bottom: 1px solid #cccccc;
   background: #fff;
   font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+[data-dpr="2"] .user-check .info li {
+  font-size: 24px;
+}
+[data-dpr="3"] .user-check .info li {
+  font-size: 48px;
 }
 [data-dpr="2"] .user-check .info li {
   font-size: 24px;
@@ -187,8 +229,20 @@
 [data-dpr="3"] .user-check .more span {
   font-size: 48px;
 }
+[data-dpr="2"] .user-check .more span {
+  font-size: 24px;
+}
+[data-dpr="3"] .user-check .more span {
+  font-size: 48px;
+}
 .user-check .more .icon {
   font-size: 20px;
+}
+[data-dpr="2"] .user-check .more .icon {
+  font-size: 30px;
+}
+[data-dpr="3"] .user-check .more .icon {
+  font-size: 60px;
 }
 [data-dpr="2"] .user-check .more .icon {
   font-size: 30px;

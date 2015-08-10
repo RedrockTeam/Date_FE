@@ -47,8 +47,20 @@
 [data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
 .font-48 {
   font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 [data-dpr="2"] .font-48 {
   font-size: 24px;
@@ -71,6 +83,14 @@
 .login-container {
   border-top: 1px solid #cccccc;
 }
+.login-container .logo-wrapper {
+  width: 2.22222222rem;
+  height: 2.22222222rem;
+  border: 1px solid #999;
+  border-radius: 100%;
+  margin: 0.92592593rem auto;
+  box-shadow: 1px 1px 1px #999;
+}
 .login-container .input-item {
   border-bottom: 1px solid #cccccc;
   width: 100%;
@@ -84,30 +104,68 @@
   text-indent: 0.46296296rem;
   padding: 0.46296296rem 0;
   color: #000000;
-  font-size: 16px;
+  font-size: 6px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
 }
 [data-dpr="2"] .login-container .input-item input {
-  font-size: 24px;
+  font-size: 9px;
 }
 [data-dpr="3"] .login-container .input-item input {
-  font-size: 48px;
+  font-size: 18px;
+}
+[data-dpr="2"] .login-container .input-item input {
+  font-size: 9px;
+}
+[data-dpr="3"] .login-container .input-item input {
+  font-size: 18px;
 }
 .login-container .btn {
-  float: right;
-  margin: 0.2037037rem 0.27777778rem 0 0;
-  padding: 0.37037037rem 1.2037037rem;
+  width: 90%;
+  height: 1.34259259rem;
+  margin: 0.74074074rem 5% 0;
   border: 1px solid #79c24d;
   outline: none;
-  background: #8dda5e;
-  font-size: 16px;
-  color: #ffffff;
+  background: #ff9933;
+  color: white;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   border-radius: 0.09259259rem;
+  font-size: 6px;
 }
 [data-dpr="2"] .login-container .btn {
-  font-size: 24px;
+  font-size: 9px;
 }
 [data-dpr="3"] .login-container .btn {
-  font-size: 48px;
+  font-size: 18px;
+}
+[data-dpr="2"] .login-container .btn {
+  font-size: 9px;
+}
+[data-dpr="3"] .login-container .btn {
+  font-size: 18px;
+}
+.login-container a {
+  margin-top: 0.37037037rem;
+  font-size: 5.33333333px;
+}
+[data-dpr="2"] .login-container a {
+  font-size: 8px;
+}
+[data-dpr="3"] .login-container a {
+  font-size: 16px;
+}
+[data-dpr="2"] .login-container a {
+  font-size: 8px;
+}
+[data-dpr="3"] .login-container a {
+  font-size: 16px;
+}
+.login-container a.left {
+  float: left;
+  margin-left: 5%;
+  color: #4686e5;
+}
+.login-container a.right {
+  color: #999999;
+  margin-right: 5%;
+  float: right;
 }

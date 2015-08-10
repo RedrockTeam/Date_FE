@@ -47,8 +47,20 @@
 [data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
 .font-48 {
   font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 [data-dpr="2"] .font-48 {
   font-size: 24px;
@@ -96,6 +108,12 @@
 [data-dpr="3"] .register-container input {
   font-size: 48px;
 }
+[data-dpr="2"] .register-container input {
+  font-size: 24px;
+}
+[data-dpr="3"] .register-container input {
+  font-size: 48px;
+}
 .register-container .btn {
   background: #8dda5e;
   font-size: 16px;
@@ -103,6 +121,12 @@
   font-family: "hiraginosansgb w3", "microsoft yahei";
   border: none;
   outline: none;
+}
+[data-dpr="2"] .register-container .btn {
+  font-size: 24px;
+}
+[data-dpr="3"] .register-container .btn {
+  font-size: 48px;
 }
 [data-dpr="2"] .register-container .btn {
   font-size: 24px;

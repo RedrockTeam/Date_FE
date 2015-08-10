@@ -80,6 +80,17 @@
   }
 }
 
+//功能
+.rfz(@px){
+  font-size: @px / 3;
+  [data-dpr="2"] &{
+    font-size: @px / 2;
+  }
+  [data-dpr="3"] &{
+    font-size: @px;
+  }
+}
+
 //icon-font颜色
 @detailLocationColor: #4ea1ff;
 @detailTimeColor: #44d48b;

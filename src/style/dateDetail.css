@@ -47,8 +47,20 @@
 [data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
 .font-48 {
   font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 [data-dpr="2"] .font-48 {
   font-size: 24px;
@@ -108,6 +120,12 @@
 [data-dpr="3"] .detail-wrapper .detail-info .initiator {
   font-size: 46px;
 }
+[data-dpr="2"] .detail-wrapper .detail-info .initiator {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .detail-info .initiator {
+  font-size: 46px;
+}
 .detail-wrapper .detail-info .button {
   padding: 0 0.46296296rem;
   position: absolute;
@@ -123,6 +141,12 @@
   border: none;
   border-radius: 15px;
   vertical-align: middle;
+}
+[data-dpr="2"] .detail-wrapper .detail-info .button {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .detail-info .button {
+  font-size: 46px;
 }
 [data-dpr="2"] .detail-wrapper .detail-info .button {
   font-size: 23px;
@@ -157,6 +181,16 @@
 [data-dpr="3"] .detail-wrapper .date-demand ul li {
   font-size: 42px;
 }
+[data-dpr="2"] .detail-wrapper .date-title ul li,
+[data-dpr="2"] .detail-wrapper .date-info ul li,
+[data-dpr="2"] .detail-wrapper .date-demand ul li {
+  font-size: 21px;
+}
+[data-dpr="3"] .detail-wrapper .date-title ul li,
+[data-dpr="3"] .detail-wrapper .date-info ul li,
+[data-dpr="3"] .detail-wrapper .date-demand ul li {
+  font-size: 42px;
+}
 .detail-wrapper .date-title {
   border-bottom: 1px solid #ccc;
 }
@@ -172,11 +206,23 @@
 [data-dpr="3"] .detail-wrapper .date-title .title {
   font-size: 66px;
 }
+[data-dpr="2"] .detail-wrapper .date-title .title {
+  font-size: 33px;
+}
+[data-dpr="3"] .detail-wrapper .date-title .title {
+  font-size: 66px;
+}
 .detail-wrapper .date-title .content {
   font-size: 14px;
   color: #ccc;
   margin-bottom: 0.18518519rem;
   line-height: 0.55555556rem;
+}
+[data-dpr="2"] .detail-wrapper .date-title .content {
+  font-size: 21px;
+}
+[data-dpr="3"] .detail-wrapper .date-title .content {
+  font-size: 42px;
 }
 [data-dpr="2"] .detail-wrapper .date-title .content {
   font-size: 21px;
@@ -200,10 +246,22 @@
 [data-dpr="3"] .detail-wrapper .demand {
   font-size: 46px;
 }
+[data-dpr="2"] .detail-wrapper .demand {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .demand {
+  font-size: 46px;
+}
 .detail-wrapper .detail-info i {
   font-size: 15.33333333px;
   font-style: normal;
   margin-right: 0.18518519rem;
+}
+[data-dpr="2"] .detail-wrapper .detail-info i {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .detail-info i {
+  font-size: 46px;
 }
 [data-dpr="2"] .detail-wrapper .detail-info i {
   font-size: 23px;
@@ -237,6 +295,12 @@
 [data-dpr="3"] .detail-wrapper .participant .part-title {
   font-size: 46px;
 }
+[data-dpr="2"] .detail-wrapper .participant .part-title {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .participant .part-title {
+  font-size: 46px;
+}
 .detail-wrapper .logo-wrapper {
   border-radius: 100%;
   height: 1.34259259rem;
@@ -261,6 +325,12 @@
 [data-dpr="3"] .detail-wrapper .comment .com-title {
   font-size: 46px;
 }
+[data-dpr="2"] .detail-wrapper .comment .com-title {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .comment .com-title {
+  font-size: 46px;
+}
 .detail-wrapper .footer {
   background: white;
   line-height: 0.32407407rem;
@@ -272,6 +342,12 @@
   padding: 0.60185185rem;
   border-top: 1px solid #999;
   box-sizing: border-box;
+}
+[data-dpr="2"] .detail-wrapper .footer {
+  font-size: 23px;
+}
+[data-dpr="3"] .detail-wrapper .footer {
+  font-size: 46px;
 }
 [data-dpr="2"] .detail-wrapper .footer {
   font-size: 23px;

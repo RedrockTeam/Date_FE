@@ -47,8 +47,20 @@
 [data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
 .font-48 {
   font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 [data-dpr="2"] .font-48 {
   font-size: 24px;
@@ -126,12 +138,24 @@
 [data-dpr="3"] .date-list .detail span {
   font-size: 48px;
 }
+[data-dpr="2"] .date-list .detail span {
+  font-size: 24px;
+}
+[data-dpr="3"] .date-list .detail span {
+  font-size: 48px;
+}
 .date-list .detail .gender {
   color: #ff607a;
   display: inline-block;
   font-size: 16px;
   vertical-align: middle;
   margin-left: 0.18518519rem;
+}
+[data-dpr="2"] .date-list .detail .gender {
+  font-size: 24px;
+}
+[data-dpr="3"] .date-list .detail .gender {
+  font-size: 48px;
 }
 [data-dpr="2"] .date-list .detail .gender {
   font-size: 24px;
@@ -146,6 +170,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+[data-dpr="2"] .date-list .detail .signature {
+  font-size: 18px;
+}
+[data-dpr="3"] .date-list .detail .signature {
+  font-size: 36px;
 }
 [data-dpr="2"] .date-list .detail .signature {
   font-size: 18px;
@@ -175,6 +205,12 @@
 [data-dpr="3"] .date-list .content {
   font-size: 48px;
 }
+[data-dpr="2"] .date-list .content {
+  font-size: 24px;
+}
+[data-dpr="3"] .date-list .content {
+  font-size: 48px;
+}
 .date-list .icon {
   margin-bottom: 0.18518519rem;
 }
@@ -185,6 +221,12 @@
   color: #666666;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   vertical-align: middle;
+}
+[data-dpr="2"] .date-list .icon span {
+  font-size: 18px;
+}
+[data-dpr="3"] .date-list .icon span {
+  font-size: 36px;
 }
 [data-dpr="2"] .date-list .icon span {
   font-size: 18px;
@@ -222,6 +264,12 @@
 [data-dpr="3"] .date-list .create-time {
   font-size: 36px;
 }
+[data-dpr="2"] .date-list .create-time {
+  font-size: 18px;
+}
+[data-dpr="3"] .date-list .create-time {
+  font-size: 36px;
+}
 .date-list footer {
   margin-top: 0.50925926rem;
   width: 100%;
@@ -233,6 +281,12 @@
   text-align: center;
   font-size: 12px;
   border-right: 1px solid #cccccc;
+}
+[data-dpr="2"] .date-list footer a {
+  font-size: 18px;
+}
+[data-dpr="3"] .date-list footer a {
+  font-size: 36px;
 }
 [data-dpr="2"] .date-list footer a {
   font-size: 18px;
@@ -252,6 +306,12 @@
   border-radius: 2px;
   font-size: 14px;
   box-shadow: 0 1px 1px rgba(98, 98, 98, 0.3);
+}
+[data-dpr="2"] .load-more {
+  font-size: 21px;
+}
+[data-dpr="3"] .load-more {
+  font-size: 42px;
 }
 [data-dpr="2"] .load-more {
   font-size: 21px;

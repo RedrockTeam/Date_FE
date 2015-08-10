@@ -47,8 +47,20 @@
 [data-dpr="3"] .font-36 {
   font-size: 36px;
 }
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
+}
 .font-48 {
   font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 [data-dpr="2"] .font-48 {
   font-size: 24px;
@@ -85,6 +97,12 @@
 [data-dpr="3"] .hot-peo .hot-title {
   font-size: 46px;
 }
+[data-dpr="2"] .hot-peo .hot-title {
+  font-size: 23px;
+}
+[data-dpr="3"] .hot-peo .hot-title {
+  font-size: 46px;
+}
 .hot-peo .img-wrapper {
   float: left;
   width: 1.34259259rem;
@@ -110,32 +128,40 @@
 [data-dpr="3"] .hot-peo .peo-nickname {
   font-size: 46px;
 }
-.hot-peo .peo-nickname span {
-  display: inline-block;
-  background-color: #ff6b5c;
-  color: white;
-  border-radius: 20px;
-  font-size: 15.33333333px;
-}
-[data-dpr="2"] .hot-peo .peo-nickname span {
+[data-dpr="2"] .hot-peo .peo-nickname {
   font-size: 23px;
 }
-[data-dpr="3"] .hot-peo .peo-nickname span {
+[data-dpr="3"] .hot-peo .peo-nickname {
   font-size: 46px;
 }
-.hot-peo .peo-nickname span i {
-  font-size: 18px;
+.hot-peo .peo-nickname i {
+  background-color: white;
+  color: #ff6b5c;
+  font-size: 18.53333333px;
+  width: 0.83333333rem;
 }
-[data-dpr="2"] .hot-peo .peo-nickname span i {
-  font-size: 27px;
+[data-dpr="2"] .hot-peo .peo-nickname i {
+  font-size: 27.8px;
 }
-[data-dpr="3"] .hot-peo .peo-nickname span i {
-  font-size: 54px;
+[data-dpr="3"] .hot-peo .peo-nickname i {
+  font-size: 55.6px;
+}
+[data-dpr="2"] .hot-peo .peo-nickname i {
+  font-size: 27.8px;
+}
+[data-dpr="3"] .hot-peo .peo-nickname i {
+  font-size: 55.6px;
 }
 .hot-peo .signature {
   font-size: 14px;
   line-height: 0.37037037rem;
   margin-top: 0.09259259rem;
+}
+[data-dpr="2"] .hot-peo .signature {
+  font-size: 21px;
+}
+[data-dpr="3"] .hot-peo .signature {
+  font-size: 42px;
 }
 [data-dpr="2"] .hot-peo .signature {
   font-size: 21px;

@@ -1,3 +1,4 @@
+
 //约会详情 vm
 define(['avalon'], function(avalon){
     var vm = avalon.define({

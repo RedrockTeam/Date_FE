@@ -1,3 +1,4 @@
+
 define(
     [
         'avalon', 'jquery', 'vms/slider',
