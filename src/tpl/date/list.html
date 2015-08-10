@@ -12,13 +12,15 @@
         </header>
         <main>
             <p class="content">{{el.title}}</p>
-            <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>{{el.date_time}}</span></div>
+            <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>{{ el.date_time * 1000 | date("MM.dd HH:mm")}}</span></div>
             <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>{{el.place}}</span></div>
-            <div class="icon box-cost"><i class="iconfont">&#xe60f</i><span>{{el.cost_mode}}</span></div>
-            <p class="create-time">{{el.created_at}}</p>
+            <div class="icon box-cost"><i class="iconfont">&#xe60f</i><span>{{el.cost_mode | costModel}}</span></div>
+            <p class="create-time">{{el.created_at | createdTime}}</p>
         </main>
         <footer>
             <a href="">报名：{{el.erolled}}</a><a href="">评论：{{el.commented}}</a><a href="">点赞：{{el.praised}}</a>
         </footer>
     </li>
+
+    <!--<div class="loadMore">加载更多</div>-->
 </ul>

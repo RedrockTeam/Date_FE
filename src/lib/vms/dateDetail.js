@@ -1,11 +1,9 @@
 define(['avalon'], function(avalon){
     var vm = avalon.define({
-        $id: 'dateList',
-        items: [],
-        loadmore: function(){
-
-        }
+        $id: 'dateDetail',
+        state: {}
     });
+
 
     return vm;
 });

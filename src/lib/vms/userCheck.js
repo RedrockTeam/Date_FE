@@ -1,7 +1,7 @@
 define(['avalon'], function(avalon){
     var vm = avalon.define({
         $id: 'userCheck',
-        items: []
+        data: {}
     });
 
     return vm;
