@@ -1658,7 +1658,7 @@ body {
   color: #ff633f;
   border: none;
 }
-.activity-list,
+.activity-list ul,
 .activity-list p,
 .activity-list h2 {
   margin: 0;

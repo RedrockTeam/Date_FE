@@ -80,7 +80,7 @@
 .test-bor-green {
   border: 1px solid green;
 }
-.activity-list,
+.activity-list ul,
 .activity-list p,
 .activity-list h2 {
   margin: 0;
