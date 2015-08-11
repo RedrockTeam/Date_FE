@@ -1,4 +1,4 @@
-define(['avalon', 'jquery', 'userCenter', 'request'], function(avalon, $, userCenter, request){
+define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon, $, userCenter, request, filter$){
     var vm = avalon.define({
         $id: 'userComplete',
         cantprev: false,
@@ -102,20 +102,6 @@ define(['avalon', 'jquery', 'userCenter', 'request'], function(avalon, $, userCe
             });
         }
     });
-
-     //对象复制， 过滤 带$的属性
-    function filter$(temp, data){
-        for(var key in data){
-            if(key[0] != '$'){
-                if(typeof data[key] == 'string'){
-                    temp[key] = data[key]
-                } else{
-                    temp[key] = {};
-                    filter$(temp[key], data[key]);
-                }
-            }
-        }
-    }
 
     vm.$watch('data', function(){
         console.log('data cahnged');

@@ -4,5 +4,8 @@ define(['avalon'], function(avalon){
         data: {}
     });
 
+    vm.$watch('userCheckDataChanged', function(data){
+        vm['data'] = data;
+    });
     return vm;
 });

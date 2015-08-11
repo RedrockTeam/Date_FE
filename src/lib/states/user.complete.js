@@ -1,5 +1,5 @@
 //完善个人信息
-define(['avalon', 'userCenter', 'request', 'vms/userComplete','vms/tipBar','mmState', 'vms/main', 'upImg'], function(avalon, userCenter, request){
+define(['avalon', 'userCenter', 'request', 'vms/userComplete','vms/tipBar','mmState', 'vms/main'], function(avalon, userCenter, request){
     var vmodels = avalon.vmodels,
         vmMain = vmodels['main'],
         vmTipBar = vmodels['tipBar'],
