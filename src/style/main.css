@@ -2139,6 +2139,17 @@ body {
 [data-dpr="3"] .user-complete .inputs li input {
   font-size: 48px;
 }
+.user-complete .gender {
+  position: relative;
+}
+.user-complete .gender select {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
 .user-complete .tab-tip {
   color: #ff6633;
   font-size: 16px;

@@ -55,6 +55,9 @@ define(['avalon', 'jquery', 'userCenter', 'request'], function(avalon, $, userCe
 
             }
         },
+        selectGender: function(){
+
+        },
         finishHeadCb: function(){
 
         },
@@ -77,31 +80,26 @@ define(['avalon', 'jquery', 'userCenter', 'request'], function(avalon, $, userCe
             }
 
             if(!vd['school']){
-                $.Dialog.fail("没填");
+                $.Dialog.fail("没有填学校噢!!!");
                 return;
             }
 
-            if(!vd['school']){
-                $.Dialog.fail("学校");
+            if(!vd['academy']){
+                $.Dialog.fail("没有填学院噢!!!");
                 return;
             }
-
-
-
             var temp = {};
             filter$(temp, vm['data']);
-
-
             var data = avalon.mix({
                 uid: user.uid,
                 token: user.token
             }, temp);
 
 
-            //request('userComplete', data).done(function(res){
-            //    $.Dialog.success("信息完善成功!!, 开始约炮吧!!!!");
-            //    setTimeout(function(){avalon.router.navigate('')}, 2000);
-            //});
+            request('userComplete', data).done(function(res){
+                $.Dialog.success("信息完善成功!!, 开始约炮吧!!!!");
+                setTimeout(function(){avalon.router.navigate('')}, 2000);
+            });
         }
     });
 
@@ -119,7 +117,9 @@ define(['avalon', 'jquery', 'userCenter', 'request'], function(avalon, $, userCe
         }
     }
 
-
+    vm.$watch('data', function(){
+        console.log('data cahnged');
+    });
     //todo 图片上传 待定
 
     return vm;
