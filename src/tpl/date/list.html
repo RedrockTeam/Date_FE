@@ -18,7 +18,7 @@
                 <div class="icon box-cost"><i class="iconfont">&#xe60f</i><span>{{el.cost_mode | costModel}}</span></div>
                 <p class="create-time">{{el.created_at | createdTime}}</p>
             </main>
-            <footer ms-on-tap="getUserDetail(el.date_id)">
+            <footer ms-on-tap="getDateDetail(el.date_id)">
                 <a href="">报名：{{el.erolled}}</a><a href="">评论：{{el.commented}}</a><a href="">点赞：{{el.praised}}</a>
             </footer>
         </li>

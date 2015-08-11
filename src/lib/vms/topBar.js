@@ -1,4 +1,8 @@
-define(['avalon', 'vms/filter', 'vms/navBar', 'vms/slider'], function(avalon, vmFilter, vmNavBar, vmSlider){
+define(['avalon', 'vms/filter', 'vms/navBar', 'vms/slider'], function(avalon){
+    var vmodels = avalon.vmodels,
+        vmNavBar = vmodels['navBar'],
+        vmSlider = vmodels['slider'],
+        vmFilter = vmodels['filter'];
     var vm = avalon.define({
         $id: 'topBar',
         userAlter: false,

@@ -124,7 +124,7 @@
 			"uid": "",               //uid
         	"nickname":"sb",        //昵称      必填
 			"realname": "sdgs",     //真实姓名   必填
-			"scholl": "cqupt",      //学校      必填
+			"school": "cqupt",      //学校      必填
 			"academy": "qwr",        //学院
 			"stu_id": 141352353,    //学号      必填
 			"head": "",             //头像      必填

@@ -1,4 +1,6 @@
-define(['avalon', 'userCenter', 'vms/main', 'jquery', 'dialog', 'mmState'], function (avalon, userCenter, vmMain, $) {
+define(['avalon', 'userCenter', 'vms/main', 'jquery', 'dialog', 'mmState'], function (avalon, userCenter, $) {
+    var vmodels = avalon.vmodels,
+        vmMain = vmodels['main'];
     return avalon.define({
         $id: "login",
         username: "",

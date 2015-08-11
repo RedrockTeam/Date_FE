@@ -1,4 +1,6 @@
-define('vms/slider', ['avalon', 'jquery' , 'vms/navBar', 'swiper'], function(avalon, $, vmNav){
+define('vms/slider', ['avalon', 'jquery' , 'vms/navBar', 'swiper'], function(avalon, $){
+    var vmodels = avalon.vmodels,
+        vmNav = vmodels['navBar'];
     var vm = avalon.define({
         $id: "slider",
         show: true,

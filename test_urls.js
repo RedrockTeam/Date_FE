@@ -98,9 +98,9 @@ var datas = {
             "realname": "aegsg", //真实姓名
             "head": "imgs/1.jpg",    //头像
             "signature": "safsh",     //签名 (约会宣言)
-            "school": "cqupt",       //学校
-            "academy": "qwr",        //学院
-            "hobbies": ["esf", "aefseg"],  //爱好
+            "school": "重庆邮电大学",       //学校
+            "academy": "光电工程学院",        //学院
+            "hobbies": ["保龄球", "足球"],  //爱好
             "gender" : "1",            //性别  `1`男 `2`女
             "authened": 1,          //是否认证过 `1`已认证 `2`未认证
             "fans": 123,            //粉丝量 (被关注)
@@ -108,9 +108,9 @@ var datas = {
             "charm": 5325,        //魅力值
             "contact": {            //联系方式 固定
                 "weixin": "3454",   //微信号
-                "tel": 2352525,   //手机号
+                "tel": 18166387284,   //手机号
                 "qq": 3235235253, //qq
-                "weibo": "sdhgt"   //微博
+                "weibo": "weibo"   //微博
             }
         },
         status: 200,
@@ -242,6 +242,17 @@ var datas = {
         },
         status: 200,
         info: "成功"
+    },
+
+    "/user/tags": {
+        "data": ["游泳", "篮球", "足球", "乒乓球", "保龄球"],
+        "status": 200,
+        info: "获取成功"
+    },
+
+    "/user/complete": {
+        "status": 200,
+        "info": "ok"
     },
 
     "error": {

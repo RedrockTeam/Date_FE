@@ -7,7 +7,13 @@ define(
         'dialog', 'avaFilters',
         'mmState'
     ],
-    function (avalon, $, vmSlider, vmTopBar, vmNavBar, vmFilter, vmCache) {
+    function (avalon, $) {
+        var vmodels = avalon.vmodels,
+            vmSlider = vmodels['slider'],
+            vmTopBar = vmodels['topBar'],
+            vmNavBar = vmodels['navBar'],
+            vmFilter = vmodels['filter'],
+            vmCache = vmodels['cache'];
         var vm = avalon.define({
             $id: "main",
             state: "",

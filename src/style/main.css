@@ -2052,6 +2052,11 @@ body {
   background-position: center center;
   background-size: cover;
 }
+.user-complete .upload .preview .item input[type=file] {
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+  opacity: 0;
+}
 .user-complete .upload .btn {
   position: absolute;
   line-height: 2.03703704rem;
@@ -2083,15 +2088,41 @@ body {
 .user-complete .inputs li {
   border-bottom: 1px solid #cccccc;
 }
-.user-complete .inputs li input {
-  width: 100%;
-  padding: 0.46296296rem;
+.user-complete .inputs li .filed-tip {
   box-sizing: border-box;
+  display: inline-block;
+  width: 40%;
+  padding: 0.46296296rem 0 0.46296296rem 0.46296296rem;
+  font-size: 16px;
+  color: #999999;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  vertical-align: top;
+}
+[data-dpr="2"] .user-complete .inputs li .filed-tip {
+  font-size: 24px;
+}
+[data-dpr="3"] .user-complete .inputs li .filed-tip {
+  font-size: 48px;
+}
+[data-dpr="2"] .user-complete .inputs li .filed-tip {
+  font-size: 24px;
+}
+[data-dpr="3"] .user-complete .inputs li .filed-tip {
+  font-size: 48px;
+}
+.user-complete .inputs li input {
+  box-sizing: border-box;
+  width: 60%;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.46296296rem;
+  padding-left: 0;
   outline: none;
   border: none;
   font-size: 16px;
   color: #999999;
   font-family: "hiraginosansgb w3", "microsoft yahei";
+  background: rgba(255, 255, 255, 0);
 }
 [data-dpr="2"] .user-complete .inputs li input {
   font-size: 24px;
@@ -2132,11 +2163,13 @@ body {
   background: #ffffff;
   padding: 0.25rem 0.50925926rem;
   margin-right: 0.22222222rem;
+  margin-bottom: 0.22222222rem;
   border-radius: 0.09259259rem;
   border: 1px solid #cccccc;
   color: #444444;
   font-size: 16px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
+  position: relative;
 }
 [data-dpr="2"] .user-complete .tags .item {
   font-size: 24px;
@@ -2149,6 +2182,12 @@ body {
 }
 [data-dpr="3"] .user-complete .tags .item {
   font-size: 48px;
+}
+.user-complete .tags .item .selected {
+  position: absolute;
+  right: 0.09259259rem;
+  top: 0.09259259rem;
+  font-style: normal;
 }
 .user-complete .authen {
   padding: 0.27777778rem 0.43518519rem;

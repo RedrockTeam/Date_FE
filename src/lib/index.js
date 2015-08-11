@@ -14,6 +14,7 @@ require.config({
         DateTimePicker: "tools/DateTimePicker",
         moment: "tools/moment",
         score: "tools/jq.score",
+        upImg: "tools/jq.upImg",
         navState: "tools/tipState",
         request: "tools/request"
     }
