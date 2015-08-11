@@ -39,22 +39,34 @@
   text-overflow: ellipsis;
 }
 .font-36 {
+  font-size: 12px;
+}
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
   font-size: 36px;
 }
-[data-dpr="^2"] .font-36 {
-  font-size: 72px;
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
 }
-[data-dpr="^3"] .font-36 {
-  font-size: 108px;
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
 }
 .font-48 {
+  font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
   font-size: 48px;
 }
-[data-dpr="^2"] .font-48 {
-  font-size: 96px;
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
 }
-[data-dpr="^3"] .font-48 {
-  font-size: 144px;
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -81,7 +93,7 @@
   padding: 0.18518519rem;
   box-sizing: border-box;
   border-radius: 10px;
-  font-size: 48px;
+  font-size: 16px;
   outline: none;
   border: none;
   -webkit-appearance: none;
@@ -89,24 +101,36 @@
           appearance: none;
   margin-left: 5%;
 }
-[data-dpr="^2"] .search-container #form-wrapper .search-input {
-  font-size: 96px;
+[data-dpr="2"] .search-container #form-wrapper .search-input {
+  font-size: 24px;
 }
-[data-dpr="^3"] .search-container #form-wrapper .search-input {
-  font-size: 144px;
+[data-dpr="3"] .search-container #form-wrapper .search-input {
+  font-size: 48px;
+}
+[data-dpr="2"] .search-container #form-wrapper .search-input {
+  font-size: 24px;
+}
+[data-dpr="3"] .search-container #form-wrapper .search-input {
+  font-size: 48px;
 }
 .search-container #form-wrapper .icon-search {
   position: absolute;
-  font-size: 60px;
+  font-size: 20px;
   color: #999999;
   margin-left: -0.64814815rem;
   margin-top: -0.01851852rem;
 }
-[data-dpr="^2"] .search-container #form-wrapper .icon-search {
-  font-size: 120px;
+[data-dpr="2"] .search-container #form-wrapper .icon-search {
+  font-size: 30px;
 }
-[data-dpr="^3"] .search-container #form-wrapper .icon-search {
-  font-size: 180px;
+[data-dpr="3"] .search-container #form-wrapper .icon-search {
+  font-size: 60px;
+}
+[data-dpr="2"] .search-container #form-wrapper .icon-search {
+  font-size: 30px;
+}
+[data-dpr="3"] .search-container #form-wrapper .icon-search {
+  font-size: 60px;
 }
 .search-container .hot-act,
 .search-container .hot-peo {
@@ -116,43 +140,61 @@
   margin-bottom: 0.37037037rem;
 }
 .search-container .hot-title {
-  font-size: 46px;
+  font-size: 15.33333333px;
   color: #8dda5e;
   margin: 0.23148148rem 0;
 }
-[data-dpr="^2"] .search-container .hot-title {
-  font-size: 92px;
+[data-dpr="2"] .search-container .hot-title {
+  font-size: 23px;
 }
-[data-dpr="^3"] .search-container .hot-title {
-  font-size: 138px;
+[data-dpr="3"] .search-container .hot-title {
+  font-size: 46px;
+}
+[data-dpr="2"] .search-container .hot-title {
+  font-size: 23px;
+}
+[data-dpr="3"] .search-container .hot-title {
+  font-size: 46px;
 }
 .search-container .act-lists {
   border-bottom: 1px solid #c3c3c3;
 }
 .search-container .act-title {
-  font-size: 54px;
+  font-size: 18px;
   margin: 0.18518519rem 0;
   display: inline-block;
 }
-[data-dpr="^2"] .search-container .act-title {
-  font-size: 108px;
+[data-dpr="2"] .search-container .act-title {
+  font-size: 27px;
 }
-[data-dpr="^3"] .search-container .act-title {
-  font-size: 162px;
+[data-dpr="3"] .search-container .act-title {
+  font-size: 54px;
+}
+[data-dpr="2"] .search-container .act-title {
+  font-size: 27px;
+}
+[data-dpr="3"] .search-container .act-title {
+  font-size: 54px;
 }
 .search-container .act-discount {
-  font-size: 48px;
+  font-size: 16px;
   background: #ffab47;
   border-radius: 15px;
   margin-bottom: 0.18518519rem;
   color: white;
   display: inline-block;
 }
-[data-dpr="^2"] .search-container .act-discount {
-  font-size: 96px;
+[data-dpr="2"] .search-container .act-discount {
+  font-size: 24px;
 }
-[data-dpr="^3"] .search-container .act-discount {
-  font-size: 144px;
+[data-dpr="3"] .search-container .act-discount {
+  font-size: 48px;
+}
+[data-dpr="2"] .search-container .act-discount {
+  font-size: 24px;
+}
+[data-dpr="3"] .search-container .act-discount {
+  font-size: 48px;
 }
 .search-container .img-wrapper {
   float: left;
@@ -170,37 +212,55 @@
   color: white;
 }
 .search-container .peo-nickname {
-  font-size: 54px;
+  font-size: 18px;
   line-height: 0.64814815rem;
 }
-[data-dpr="^2"] .search-container .peo-nickname {
-  font-size: 108px;
+[data-dpr="2"] .search-container .peo-nickname {
+  font-size: 27px;
 }
-[data-dpr="^3"] .search-container .peo-nickname {
-  font-size: 162px;
+[data-dpr="3"] .search-container .peo-nickname {
+  font-size: 54px;
+}
+[data-dpr="2"] .search-container .peo-nickname {
+  font-size: 27px;
+}
+[data-dpr="3"] .search-container .peo-nickname {
+  font-size: 54px;
 }
 .search-container .peo-nickname i {
   background-color: white;
   color: #ff6b5c;
-  font-size: 55.6px;
+  font-size: 18.53333333px;
   width: 0.83333333rem;
 }
-[data-dpr="^2"] .search-container .peo-nickname i {
-  font-size: 111.2px;
+[data-dpr="2"] .search-container .peo-nickname i {
+  font-size: 27.8px;
 }
-[data-dpr="^3"] .search-container .peo-nickname i {
-  font-size: 166.8px;
+[data-dpr="3"] .search-container .peo-nickname i {
+  font-size: 55.6px;
+}
+[data-dpr="2"] .search-container .peo-nickname i {
+  font-size: 27.8px;
+}
+[data-dpr="3"] .search-container .peo-nickname i {
+  font-size: 55.6px;
 }
 .search-container .peo-nickname .signature {
-  font-size: 42px;
+  font-size: 14px;
   line-height: 0.37037037rem;
   margin-top: 0.09259259rem;
 }
-[data-dpr="^2"] .search-container .peo-nickname .signature {
-  font-size: 84px;
+[data-dpr="2"] .search-container .peo-nickname .signature {
+  font-size: 21px;
 }
-[data-dpr="^3"] .search-container .peo-nickname .signature {
-  font-size: 126px;
+[data-dpr="3"] .search-container .peo-nickname .signature {
+  font-size: 42px;
+}
+[data-dpr="2"] .search-container .peo-nickname .signature {
+  font-size: 21px;
+}
+[data-dpr="3"] .search-container .peo-nickname .signature {
+  font-size: 42px;
 }
 .search-container .peo-nickname .peo-lists {
   border-bottom: 1px solid #999999;

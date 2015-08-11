@@ -1,26 +1,27 @@
-<ul class="date-list" ms-controller="dateList">
-    <li class="item" ms-repeat="items">
-        <header class="clearfix">
-            <main class="person clearfix">
-                <i class="head" ms-css-background-image="'url('+el.head+')'"></i>
-                <div class="detail">
-                    <p><span>{{el.nickname}}</span><i class="gender iconfont">&#xe61b</i></p>
-                    <p class="signature">{{el.signature}}</p>
-                </div>
+<div class="date-list" ms-controller="dateList">
+    <ul>
+        <li class="item" ms-repeat="items" data-repeat-rendered="lpRenderedCb">
+            <header class="clearfix" ms-on-tap="getUserDetail(el.uid)">
+                <main class="person clearfix">
+                    <i class="head" ms-css-background-image="'url('+el.head+')'"></i>
+                    <div class="detail">
+                        <p><span>{{el.nickname}}</span><i class="gender iconfont">&#xe61b</i></p>
+                        <p class="signature">{{el.signature}}</p>
+                    </div>
+                </main>
+                <aside class="side-tag">{{el.tags}}</aside>
+            </header>
+            <main ms-on-tap="getDateDetail(el.date_id)">
+                <p class="content">{{el.title}}</p>
+                <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>{{ el.date_time * 1000 | date("MM.dd HH:mm")}}</span></div>
+                <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>{{el.place}}</span></div>
+                <div class="icon box-cost"><i class="iconfont">&#xe60f</i><span>{{el.cost_mode | costModel}}</span></div>
+                <p class="create-time">{{el.created_at | createdTime}}</p>
             </main>
-            <aside class="side-tag">{{el.tags}}</aside>
-        </header>
-        <main>
-            <p class="content">{{el.title}}</p>
-            <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>{{ el.date_time * 1000 | date("MM.dd HH:mm")}}</span></div>
-            <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>{{el.place}}</span></div>
-            <div class="icon box-cost"><i class="iconfont">&#xe60f</i><span>{{el.cost_mode | costModel}}</span></div>
-            <p class="create-time">{{el.created_at | createdTime}}</p>
-        </main>
-        <footer>
-            <a href="">报名：{{el.erolled}}</a><a href="">评论：{{el.commented}}</a><a href="">点赞：{{el.praised}}</a>
-        </footer>
-    </li>
-
-    <!--<div class="loadMore">加载更多</div>-->
-</ul>
+            <footer ms-on-tap="getUserDetail(el.date_id)">
+                <a href="">报名：{{el.erolled}}</a><a href="">评论：{{el.commented}}</a><a href="">点赞：{{el.praised}}</a>
+            </footer>
+        </li>
+    </ul>
+    <div class="load-more" ms-on-tap="loadMore">加载更多</div>
+</div>

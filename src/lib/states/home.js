@@ -1,23 +1,23 @@
 //主页
 define(
     [
-        'avalon', 'vms/main',
-        'vms/slider', 'userCenter',
+        'avalon', 'userCenter',
         'request', 'vms/dateList',
+        'vms/main', 'vms/slider',
         'vms/activityList', 'vms/userMessage',
         'vms/userCheck',
         'mmState'
     ],
 
-    function(avalon, vmMain, vmSlider, userCenter, request, vmDL, vmAL, vmUS, vmUC){
-
+    function(avalon, userCenter, request){
+        var vmodels = avalon.vmodels;
         avalon.state('home', {
             controller: "main",
             url: "/",
             templateUrl: "tpl/home/yield.html",
             onEnter: function(){
-                vmMain['state'] = 'loading';
-                vmMain['loadCout'] = 0;
+                vmodels['main']['state'] = 'loading';
+                vmodels['slider']['modCout'] = 0;
                 var user = userCenter.info();
                 if(!user.state){
                     setTimeout(function(){avalon.router.navigate('/user/login')}, 0);
@@ -43,14 +43,14 @@ define(
                         {'uid': user.uid, 'token': user.token}
                     )
                 ).done(function(slider, dl, al, um, uc){
-                        vmSlider['items'] = slider.data;
-                        vmDL['items'] = dl.data;
-                        vmAL['items'] = al.data;
-                        vmUS['items'] = um.data;
-                        log(uc);
-                        vmUC['data'] = uc.data;
+                        vmodels['slider']['items'] = slider.data;
+                        vmodels['dateList']['items'] = dl.data;
+                        vmodels['activityList']['items'] = al.data;
+                        vmodels['userMessage']['items'] = um.data;
+                        vmodels['userCheck']['data'] = uc.data;
+                        vmodels['slider']['daLoad'] = true;
                         avalon.scan();
-                        vmMain['state'] = 'ok';
+                        vmodels['main']['state'] = 'ok';
                     }
                 );
             }

@@ -39,22 +39,34 @@
   text-overflow: ellipsis;
 }
 .font-36 {
+  font-size: 12px;
+}
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
   font-size: 36px;
 }
-[data-dpr="^2"] .font-36 {
-  font-size: 72px;
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
 }
-[data-dpr="^3"] .font-36 {
-  font-size: 108px;
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
 }
 .font-48 {
+  font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
   font-size: 48px;
 }
-[data-dpr="^2"] .font-48 {
-  font-size: 96px;
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
 }
-[data-dpr="^3"] .font-48 {
-  font-size: 144px;
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -95,31 +107,45 @@
 .filter-container menu li {
   float: right;
   margin-right: 0.55555556rem;
-  font-size: 36px;
+  font-size: 12px;
   color: #666666;
   font-family: "hiraginosansgb w3", "microsoft yahei";
 }
-[data-dpr="^2"] .filter-container menu li {
-  font-size: 72px;
+[data-dpr="2"] .filter-container menu li {
+  font-size: 18px;
 }
-[data-dpr="^3"] .filter-container menu li {
-  font-size: 108px;
+[data-dpr="3"] .filter-container menu li {
+  font-size: 36px;
+}
+[data-dpr="2"] .filter-container menu li {
+  font-size: 18px;
+}
+[data-dpr="3"] .filter-container menu li {
+  font-size: 36px;
 }
 .filter-container .expand .tip,
 .filter-container .expand .item {
   padding: 0.27777778rem 0;
   color: #000000;
   font-family: "hiraginosansgb w3", "microsoft yahei";
-  font-size: 48px;
+  font-size: 16px;
   border-top: 1px solid #cccccc;
 }
-[data-dpr="^2"] .filter-container .expand .tip,
-[data-dpr="^2"] .filter-container .expand .item {
-  font-size: 96px;
+[data-dpr="2"] .filter-container .expand .tip,
+[data-dpr="2"] .filter-container .expand .item {
+  font-size: 24px;
 }
-[data-dpr="^3"] .filter-container .expand .tip,
-[data-dpr="^3"] .filter-container .expand .item {
-  font-size: 144px;
+[data-dpr="3"] .filter-container .expand .tip,
+[data-dpr="3"] .filter-container .expand .item {
+  font-size: 48px;
+}
+[data-dpr="2"] .filter-container .expand .tip,
+[data-dpr="2"] .filter-container .expand .item {
+  font-size: 24px;
+}
+[data-dpr="3"] .filter-container .expand .tip,
+[data-dpr="3"] .filter-container .expand .item {
+  font-size: 48px;
 }
 .filter-container .expand .tip span,
 .filter-container .expand .item span {

@@ -2,6 +2,17 @@
 
 //mixin dpr font-size
 
+//功能
+.rfz(@px){
+  font-size: @px / 3;
+  [data-dpr="2"] &{
+    font-size: @px / 2;
+  }
+  [data-dpr="3"] &{
+    font-size: @px;
+  }
+}
+
 //topBar
 @topBgc1: #f3f3f3;
 @topHei1:144rem / @psdWidth;
@@ -47,7 +58,6 @@
 //主题绿
 @theme-green:#8dda5e;
 
-
 //图标
 .box-icon{
   .icon{
@@ -72,12 +82,12 @@
 
 //功能
 .rfz(@px){
-  font-size: @px;
-  [data-dpr="^2"] &{
-    font-size: @px * 2;
+  font-size: @px / 3;
+  [data-dpr="2"] &{
+    font-size: @px / 2;
   }
-  [data-dpr="^3"] &{
-    font-size: @px * 3;
+  [data-dpr="3"] &{
+    font-size: @px;
   }
 }
 

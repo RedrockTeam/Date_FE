@@ -16,10 +16,10 @@ define(['avalon', 'vms/filter', 'vms/navBar', 'vms/slider'], function(avalon, vm
             vm['filter'] = true;
             if(s == 'dateList'){
                 vmFilter['showDate'] = true;
-                vmFilter['selected']['ct'] = 'date';
+                vmFilter['ct'] = 'date';
             }else{
                 vmFilter['showDate'] = false;
-                vmFilter['selected']['ct'] = 'activity';
+                vmFilter['ct'] = 'activity';
             }
         }else if(s == 'userCheck'){
             vm['userAlter'] = true;

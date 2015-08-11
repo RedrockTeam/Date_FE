@@ -1,17 +1,20 @@
-<ul class="activity-list" ms-controller="activityList">
-    <li class="item" ms-repeat="items">
-        <main>
-            <i class="show" ms-css-background-image="'url('+el.head+')'"></i>
-            <aside class="detail">
-                <h2>{{el.title}}</h2>
-                <p class="signature">{{el.signature ? el.signature : "没有优惠信息噢!!!!"}}</p>
-                <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>{{ el.activity_time * 1000 | date("MM.dd HH:mm")}}</span></div>
-                <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>{{el.place}}</span></div>
-                <p class="create-time">{{el.created_at | createdTime}}</p>
-            </aside>
-        </main>
-        <footer>
-            <a href="">报名：{{el.erolled}}</a><a href="">评论：{{el.commented}}</a><a href="">点赞：{{el.praised}}</a>
-        </footer>
-    </li>
-</ul>
+<div class="activity-list" ms-controller="activityList">
+    <ul>
+        <li class="item" ms-repeat="items" ms-on-tap="getActivityDetail(el.activity_id)">
+            <main>
+                <i class="show" ms-css-background-image="'url('+el.head+')'"></i>
+                <aside class="detail">
+                    <h2>{{el.title}}</h2>
+                    <p class="signature">{{el.signature ? el.signature : "没有优惠信息噢!!!!"}}</p>
+                    <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>{{ el.activity_time * 1000 | date("MM.dd HH:mm")}}</span></div>
+                    <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>{{el.place}}</span></div>
+                    <p class="create-time">{{el.created_at | createdTime}}</p>
+                </aside>
+            </main>
+            <footer>
+                <a href="">报名：{{el.erolled}}</a><a href="">评论：{{el.commented}}</a><a href="">点赞：{{el.praised}}</a>
+            </footer>
+        </li>
+    </ul>
+    <div class="load-more" ms-on-tap="loadMore">加载更多</div>
+</div>

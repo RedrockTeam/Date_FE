@@ -1,93 +1,117 @@
-;(function(win) {
-    var docEl = document.documentElement;
-    var metaEl = document.querySelector('meta[name="viewport"]');
-    var fontEl = document.createElement('style');
-    var dpr;
-    var scale;
-
-    dpr = win.devicePixelRatio || 1;
-    scale = 1 / dpr;
-
-    if(!metaEl) {
-        console.warn('请设置默认viewport为：<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />');
-        return;
+;(function(win, lib) {
+    var doc = win.document;
+    var docEl = doc.documentElement;
+    var metaEl = doc.querySelector('meta[name="viewport"]');
+    var flexibleEl = doc.querySelector('meta[name="flexible"]');
+    var dpr = 0;
+    var scale = 0;
+    var tid;
+    var flexible = lib.flexible || (lib.flexible = {});
+    
+    if (metaEl) {
+        console.warn('将根据已有的meta标签来设置缩放比例');
+        var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
+        if (match) {
+            scale = parseFloat(match[1]);
+            dpr = parseInt(1 / scale);
+        }
+    } else if (flexibleEl) {
+        var content = flexibleEl.getAttribute('content');
+        if (content) {
+            var initialDpr = content.match(/initial\-dpr=([\d\.]+)/);
+            var maximumDpr = content.match(/maximum\-dpr=([\d\.]+)/);
+            if (initialDpr) {
+                dpr = parseFloat(initialDpr[1]);
+                scale = parseFloat((1 / dpr).toFixed(2));    
+            }
+            if (maximumDpr) {
+                dpr = parseFloat(maximumDpr[1]);
+                scale = parseFloat((1 / dpr).toFixed(2));    
+            }
+        }
     }
-    // ios
-    var docWidth = docEl.clientWidth;
-    if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-        //iphone 6 会出现左右可滚动的现象，默认width为375后来为750，先变为980再变为750可解决。
-        if(docWidth === 375) {
-            metaEl.setAttribute('content', 'user-scalable=no');
-        }
-        //Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/600.1.3 (KHTML, like Gecko) Version/8.0 Mobile/12A4345d Safari/600.1.4
-        var versionMatches = navigator.userAgent.match(/iPhone OS (\d+)\_\d+/i);
-        if(versionMatches && (parseInt(versionMatches[1]) < 8 || parseInt(versionMatches[1]) === 9)) {
-            //width=xx 修复ios 6.1.3的问题 因为默认把width=device-width加上会导致ios6的width=320 scale后就变为一半了
-            //修复iOS9 iPhone6 width 980
-            metaEl.setAttribute('content', 'width=' + dpr * docWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
-        } else {
-            metaEl.setAttribute('content', 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
-        }
-    } else {
-        /**
-         * hack 小米2在webview（AppleWebkit/354）下会出现闪屏现象，原因是target-densitydpi=device-dpi导致，会导致先显示整个分辨率的大小，再缩小
-         * 原来的普通的页面是scale=1的，当切换到此0.5方案的页面时354以下的webkit会有缩放的过程。
-         */
-        //android
 
-        var matches = navigator.userAgent.match(/Android[\S\s]+AppleWebkit\/?(\d{3})/i);
-        if(!matches || matches && matches[1] > 534) {
-            //nexus chrome 一些不支持target-densitydpi属性的现代机型，后面的initial-scale=scale依然有效作用
-            //metaEl.setAttribute('content', 'target-densitydpi=device-dpi,user-scalable=no,initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale);
-            metaEl.setAttribute('content', 'target-densitydpi=device-dpi,width=device-width,user-scalable=no,initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale);
+    if (!dpr && !scale) {
+        var isAndroid = win.navigator.appVersion.match(/android/gi);
+        var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+        var devicePixelRatio = win.devicePixelRatio;
+        if (isIPhone) {
+            // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+            if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {                
+                dpr = 3;
+            } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)){
+                dpr = 2;
+            } else {
+                dpr = 1;
+            }
         } else {
-            //其他 类似小米2webview webkit版本是534及以下
+            // 其他设备下，仍旧使用1倍的方案
             dpr = 1;
         }
+        scale = 1 / dpr;
     }
 
-    // alert(navigator.userAgent);
-    // alert(metaEl.getAttribute('content'));
-    // alert(docEl.clientWidth);
-
-    docEl.firstElementChild.appendChild(fontEl);
     docEl.setAttribute('data-dpr', dpr);
-
-    function setUnitA(){
-        var docWidth = docEl.clientWidth;
-        var extraStyle = '}';
-
-        //如果是pc pc上宽度一般是1024以上 ipad的分辨率宽度1024 ipad就让其满屏显示 其余pc上显示640居中
-        if(!navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i) && docWidth > 1024) {
-            docWidth = 640;
-            //仅pc下body为640 且居中
-            extraStyle = ';max-width:'+ docWidth + 'px;margin-right:auto!important;margin-left:auto!important;}';
+    if (!metaEl) {
+        metaEl = doc.createElement('meta');
+        metaEl.setAttribute('name', 'viewport');
+        metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+        if (docEl.firstElementChild) {
+            docEl.firstElementChild.appendChild(metaEl);
+        } else {
+            var wrap = doc.createElement('div');
+            wrap.appendChild(metaEl);
+            doc.write(wrap.innerHTML);
         }
-        win.rem = docWidth / 10;
-
-        //ZTE 中兴 ZTE U930_TD/1.0 Linux/2.6.39/Android/4.0Release/3.5.2012 Browser/AppleWebkit534.30
-        //老机器bug rem计算不是标准=html fontsize
-        if(/ZTE U930_TD/.test(navigator.userAgent)) {
-            win.rem = win.rem * 1.13;
-        }
-
-        fontEl.innerHTML = 'html{font-size:' + win.rem + 'px!important;}body{font-size:' + 12 * (docWidth / 320) + 'px' + extraStyle;
     }
 
-    win.dpr = dpr;
+    function refreshRem(){
+        var width = docEl.getBoundingClientRect().width;
+        if (width / dpr > 540) {
+            width = 540 * dpr;
+        }
+        var rem = width / 10;
+        docEl.style.fontSize = rem + 'px';
+        flexible.rem = win.rem = rem;
+    }
 
     win.addEventListener('resize', function() {
-        //resize时立刻change,pad上刷屏明显
-        setUnitA();
+        clearTimeout(tid);
+        tid = setTimeout(refreshRem, 300);
     }, false);
-
-
     win.addEventListener('pageshow', function(e) {
         if (e.persisted) {
-            setUnitA();
+            clearTimeout(tid);
+            tid = setTimeout(refreshRem, 300);
         }
     }, false);
 
-    setUnitA();
+    if (doc.readyState === 'complete') {
+        doc.body.style.fontSize = 12 * dpr + 'px';
+    } else {
+        doc.addEventListener('DOMContentLoaded', function(e) {
+            doc.body.style.fontSize = 12 * dpr + 'px';
+        }, false);
+    }
+    
 
-})(window);
+    refreshRem();
+
+    flexible.dpr = win.dpr = dpr;
+    flexible.refreshRem = refreshRem;
+    flexible.rem2px = function(d) {
+        var val = parseFloat(d) * this.rem;
+        if (typeof d === 'string' && d.match(/rem$/)) {
+            val += 'px';
+        }
+        return val;
+    }
+    flexible.px2rem = function(d) {
+        var val = parseFloat(d) / this.rem;
+        if (typeof d === 'string' && d.match(/px$/)) {
+            val += 'rem';
+        }
+        return val;
+    }
+
+})(window, window['lib'] || (window['lib'] = {}));

@@ -39,22 +39,34 @@
   text-overflow: ellipsis;
 }
 .font-36 {
+  font-size: 12px;
+}
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
   font-size: 36px;
 }
-[data-dpr="^2"] .font-36 {
-  font-size: 72px;
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
 }
-[data-dpr="^3"] .font-36 {
-  font-size: 108px;
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
 }
 .font-48 {
+  font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
   font-size: 48px;
 }
-[data-dpr="^2"] .font-48 {
-  font-size: 96px;
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
 }
-[data-dpr="^3"] .font-48 {
-  font-size: 144px;
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -84,31 +96,43 @@
   width: 100%;
   box-sizing: border-box;
   padding: 0.48148148rem 0 0.48148148rem 0.2962963rem;
-  font-size: 48px;
+  font-size: 16px;
   color: #000000;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   border: none;
   outline: none;
 }
-[data-dpr="^2"] .register-container input {
-  font-size: 96px;
+[data-dpr="2"] .register-container input {
+  font-size: 24px;
 }
-[data-dpr="^3"] .register-container input {
-  font-size: 144px;
+[data-dpr="3"] .register-container input {
+  font-size: 48px;
+}
+[data-dpr="2"] .register-container input {
+  font-size: 24px;
+}
+[data-dpr="3"] .register-container input {
+  font-size: 48px;
 }
 .register-container .btn {
   background: #8dda5e;
-  font-size: 48px;
+  font-size: 16px;
   color: #ffffff;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   border: none;
   outline: none;
 }
-[data-dpr="^2"] .register-container .btn {
-  font-size: 96px;
+[data-dpr="2"] .register-container .btn {
+  font-size: 24px;
 }
-[data-dpr="^3"] .register-container .btn {
-  font-size: 144px;
+[data-dpr="3"] .register-container .btn {
+  font-size: 48px;
+}
+[data-dpr="2"] .register-container .btn {
+  font-size: 24px;
+}
+[data-dpr="3"] .register-container .btn {
+  font-size: 48px;
 }
 .register-container .veri_btn {
   padding: 0.46296296rem 0.60185185rem;

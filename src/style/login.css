@@ -39,22 +39,34 @@
   text-overflow: ellipsis;
 }
 .font-36 {
+  font-size: 12px;
+}
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
   font-size: 36px;
 }
-[data-dpr="^2"] .font-36 {
-  font-size: 72px;
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
 }
-[data-dpr="^3"] .font-36 {
-  font-size: 108px;
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
 }
 .font-48 {
+  font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
   font-size: 48px;
 }
-[data-dpr="^2"] .font-48 {
-  font-size: 96px;
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
 }
-[data-dpr="^3"] .font-48 {
-  font-size: 144px;
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -92,14 +104,20 @@
   text-indent: 0.46296296rem;
   padding: 0.46296296rem 0;
   color: #000000;
-  font-size: 18px;
+  font-size: 6px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
 }
-[data-dpr="^2"] .login-container .input-item input {
-  font-size: 36px;
+[data-dpr="2"] .login-container .input-item input {
+  font-size: 9px;
 }
-[data-dpr="^3"] .login-container .input-item input {
-  font-size: 54px;
+[data-dpr="3"] .login-container .input-item input {
+  font-size: 18px;
+}
+[data-dpr="2"] .login-container .input-item input {
+  font-size: 9px;
+}
+[data-dpr="3"] .login-container .input-item input {
+  font-size: 18px;
 }
 .login-container .btn {
   width: 90%;
@@ -111,23 +129,35 @@
   color: white;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   border-radius: 0.09259259rem;
+  font-size: 6px;
+}
+[data-dpr="2"] .login-container .btn {
+  font-size: 9px;
+}
+[data-dpr="3"] .login-container .btn {
   font-size: 18px;
 }
-[data-dpr="^2"] .login-container .btn {
-  font-size: 36px;
+[data-dpr="2"] .login-container .btn {
+  font-size: 9px;
 }
-[data-dpr="^3"] .login-container .btn {
-  font-size: 54px;
+[data-dpr="3"] .login-container .btn {
+  font-size: 18px;
 }
 .login-container a {
   margin-top: 0.37037037rem;
+  font-size: 5.33333333px;
+}
+[data-dpr="2"] .login-container a {
+  font-size: 8px;
+}
+[data-dpr="3"] .login-container a {
   font-size: 16px;
 }
-[data-dpr="^2"] .login-container a {
-  font-size: 32px;
+[data-dpr="2"] .login-container a {
+  font-size: 8px;
 }
-[data-dpr="^3"] .login-container a {
-  font-size: 48px;
+[data-dpr="3"] .login-container a {
+  font-size: 16px;
 }
 .login-container a.left {
   float: left;

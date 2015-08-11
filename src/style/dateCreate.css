@@ -39,22 +39,34 @@
   text-overflow: ellipsis;
 }
 .font-36 {
+  font-size: 12px;
+}
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
   font-size: 36px;
 }
-[data-dpr="^2"] .font-36 {
-  font-size: 72px;
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
 }
-[data-dpr="^3"] .font-36 {
-  font-size: 108px;
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
 }
 .font-48 {
+  font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
   font-size: 48px;
 }
-[data-dpr="^2"] .font-48 {
-  font-size: 96px;
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
 }
-[data-dpr="^3"] .font-48 {
-  font-size: 144px;
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -81,16 +93,22 @@
   overflow: hidden;
   height: 1.33333333rem;
   line-height: 1.33333333rem;
-  font-size: 48px;
+  font-size: 16px;
   border-top: 1px solid #ddd;
   background-color: #fff;
   padding: 0 0.44444444rem;
 }
-[data-dpr="^2"] .pbl-dating .row {
-  font-size: 96px;
+[data-dpr="2"] .pbl-dating .row {
+  font-size: 24px;
 }
-[data-dpr="^3"] .pbl-dating .row {
-  font-size: 144px;
+[data-dpr="3"] .pbl-dating .row {
+  font-size: 48px;
+}
+[data-dpr="2"] .pbl-dating .row {
+  font-size: 24px;
+}
+[data-dpr="3"] .pbl-dating .row {
+  font-size: 48px;
 }
 .pbl-dating .row.active {
   background-color: #f7f7f7;
@@ -155,14 +173,20 @@
   color: #ff863d;
 }
 .pbl-dating i {
-  font-size: 48px;
+  font-size: 16px;
   margin-right: 0.0462963rem;
 }
-[data-dpr="^2"] .pbl-dating i {
-  font-size: 96px;
+[data-dpr="2"] .pbl-dating i {
+  font-size: 24px;
 }
-[data-dpr="^3"] .pbl-dating i {
-  font-size: 144px;
+[data-dpr="3"] .pbl-dating i {
+  font-size: 48px;
+}
+[data-dpr="2"] .pbl-dating i {
+  font-size: 24px;
+}
+[data-dpr="3"] .pbl-dating i {
+  font-size: 48px;
 }
 .pbl-dating span {
   color: #212121;
@@ -215,13 +239,19 @@
   border-radius: 0.05555556rem;
   margin: 0.44444444rem;
   color: #FFF;
+  font-size: 18px;
+}
+[data-dpr="2"] .pbl-dating .publish button {
+  font-size: 27px;
+}
+[data-dpr="3"] .pbl-dating .publish button {
   font-size: 54px;
 }
-[data-dpr="^2"] .pbl-dating .publish button {
-  font-size: 108px;
+[data-dpr="2"] .pbl-dating .publish button {
+  font-size: 27px;
 }
-[data-dpr="^3"] .pbl-dating .publish button {
-  font-size: 162px;
+[data-dpr="3"] .pbl-dating .publish button {
+  font-size: 54px;
 }
 .pbl-dating #yContent {
   resize: none;

@@ -3,7 +3,7 @@
     <menu>
         <li><a class="iconfont" href="#!/date/create">&#xe646;</a></li>
         <li><a class="iconfont" href="#!/search">&#xe650;</a></li>
-        <li><a class="iconfont" href="#!/user/alter" ms-if="userAlter">修改</a></li>
+        <li ms-if="userAlter"><a class="iconfont" href="#!/user/alter">修改</a></li>
         <li class="iconfont" ms-on-tap="toggleOpenFilter" ms-if="filter">&#xe630;</li>
     </menu>
 </div>

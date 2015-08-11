@@ -39,22 +39,34 @@
   text-overflow: ellipsis;
 }
 .font-36 {
+  font-size: 12px;
+}
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
+}
+[data-dpr="3"] .font-36 {
   font-size: 36px;
 }
-[data-dpr="^2"] .font-36 {
-  font-size: 72px;
+[data-dpr="2"] .font-36 {
+  font-size: 18px;
 }
-[data-dpr="^3"] .font-36 {
-  font-size: 108px;
+[data-dpr="3"] .font-36 {
+  font-size: 36px;
 }
 .font-48 {
+  font-size: 16px;
+}
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font-48 {
   font-size: 48px;
 }
-[data-dpr="^2"] .font-48 {
-  font-size: 96px;
+[data-dpr="2"] .font-48 {
+  font-size: 24px;
 }
-[data-dpr="^3"] .font-48 {
-  font-size: 144px;
+[data-dpr="3"] .font-48 {
+  font-size: 48px;
 }
 .test-bor-grey {
   border: 1px solid #ccc;
@@ -85,17 +97,23 @@
   padding: 0.44444444rem 0.44444444rem 0;
 }
 .activity-detail .detail .title {
-  font-size: 60px;
+  font-size: 20px;
   color: #444444;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   line-height: 0.98148148rem;
   display: inline-block;
 }
-[data-dpr="^2"] .activity-detail .detail .title {
-  font-size: 120px;
+[data-dpr="2"] .activity-detail .detail .title {
+  font-size: 30px;
 }
-[data-dpr="^3"] .activity-detail .detail .title {
-  font-size: 180px;
+[data-dpr="3"] .activity-detail .detail .title {
+  font-size: 60px;
+}
+[data-dpr="2"] .activity-detail .detail .title {
+  font-size: 30px;
+}
+[data-dpr="3"] .activity-detail .detail .title {
+  font-size: 60px;
 }
 .activity-detail .detail .tag {
   display: inline-block;
@@ -103,30 +121,42 @@
   margin-left: 0.21296296rem;
   padding: 0.08333333rem;
   border-radius: 0.27777778rem;
-  font-size: 36px;
+  font-size: 12px;
   color: #ffffff;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   line-height: 0.27777778rem;
 }
-[data-dpr="^2"] .activity-detail .detail .tag {
-  font-size: 72px;
+[data-dpr="2"] .activity-detail .detail .tag {
+  font-size: 18px;
 }
-[data-dpr="^3"] .activity-detail .detail .tag {
-  font-size: 108px;
+[data-dpr="3"] .activity-detail .detail .tag {
+  font-size: 36px;
+}
+[data-dpr="2"] .activity-detail .detail .tag {
+  font-size: 18px;
+}
+[data-dpr="3"] .activity-detail .detail .tag {
+  font-size: 36px;
 }
 .activity-detail .detail .content {
   padding: 0 0.44444444rem 0.18518519rem;
-  font-size: 36px;
+  font-size: 12px;
   color: #666666;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   line-height: 0.55555556rem;
   border-bottom: 1px solid #cccccc;
 }
-[data-dpr="^2"] .activity-detail .detail .content {
-  font-size: 72px;
+[data-dpr="2"] .activity-detail .detail .content {
+  font-size: 18px;
 }
-[data-dpr="^3"] .activity-detail .detail .content {
-  font-size: 108px;
+[data-dpr="3"] .activity-detail .detail .content {
+  font-size: 36px;
+}
+[data-dpr="2"] .activity-detail .detail .content {
+  font-size: 18px;
+}
+[data-dpr="3"] .activity-detail .detail .content {
+  font-size: 36px;
 }
 .activity-detail .detail .other {
   padding: 0 0.44444444rem 0.18518519rem;
@@ -137,16 +167,22 @@
 .activity-detail .detail .icon span {
   display: inline-block;
   margin-left: 0.24074074rem;
-  font-size: 36px;
+  font-size: 12px;
   color: #666666;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   vertical-align: middle;
 }
-[data-dpr="^2"] .activity-detail .detail .icon span {
-  font-size: 72px;
+[data-dpr="2"] .activity-detail .detail .icon span {
+  font-size: 18px;
 }
-[data-dpr="^3"] .activity-detail .detail .icon span {
-  font-size: 108px;
+[data-dpr="3"] .activity-detail .detail .icon span {
+  font-size: 36px;
+}
+[data-dpr="2"] .activity-detail .detail .icon span {
+  font-size: 18px;
+}
+[data-dpr="3"] .activity-detail .detail .icon span {
+  font-size: 36px;
 }
 .activity-detail .detail .icon .iconfont {
   display: inline-block;
@@ -169,15 +205,21 @@
   margin-top: 0.23148148rem;
 }
 .activity-detail .album h3 {
-  font-size: 48px;
+  font-size: 16px;
   color: #444444;
   font-family: "hiraginosansgb w3", "microsoft yahei";
 }
-[data-dpr="^2"] .activity-detail .album h3 {
-  font-size: 96px;
+[data-dpr="2"] .activity-detail .album h3 {
+  font-size: 24px;
 }
-[data-dpr="^3"] .activity-detail .album h3 {
-  font-size: 144px;
+[data-dpr="3"] .activity-detail .album h3 {
+  font-size: 48px;
+}
+[data-dpr="2"] .activity-detail .album h3 {
+  font-size: 24px;
+}
+[data-dpr="3"] .activity-detail .album h3 {
+  font-size: 48px;
 }
 .activity-detail .album li {
   float: left;
@@ -192,16 +234,22 @@
 .activity-detail .tab-tip {
   color: #444444;
   background: #f5f5f5;
-  font-size: 48px;
+  font-size: 16px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   padding: 0.24074074rem 0.50925926rem;
   border-bottom: 1px solid #cccccc;
 }
-[data-dpr="^2"] .activity-detail .tab-tip {
-  font-size: 96px;
+[data-dpr="2"] .activity-detail .tab-tip {
+  font-size: 24px;
 }
-[data-dpr="^3"] .activity-detail .tab-tip {
-  font-size: 144px;
+[data-dpr="3"] .activity-detail .tab-tip {
+  font-size: 48px;
+}
+[data-dpr="2"] .activity-detail .tab-tip {
+  font-size: 24px;
+}
+[data-dpr="3"] .activity-detail .tab-tip {
+  font-size: 48px;
 }
 .activity-detail .enrolled {
   margin-top: 0.23148148rem;
@@ -244,38 +292,56 @@
 }
 .activity-detail .commented .item .username {
   color: #333333;
-  font-size: 44px;
+  font-size: 14.66666667px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
 }
-[data-dpr="^2"] .activity-detail .commented .item .username {
-  font-size: 88px;
+[data-dpr="2"] .activity-detail .commented .item .username {
+  font-size: 22px;
 }
-[data-dpr="^3"] .activity-detail .commented .item .username {
-  font-size: 132px;
+[data-dpr="3"] .activity-detail .commented .item .username {
+  font-size: 44px;
+}
+[data-dpr="2"] .activity-detail .commented .item .username {
+  font-size: 22px;
+}
+[data-dpr="3"] .activity-detail .commented .item .username {
+  font-size: 44px;
 }
 .activity-detail .commented .item .time {
   float: right;
-  font-size: 30px;
+  font-size: 10px;
   color: #999999;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   line-height: 0.7rem;
 }
-[data-dpr="^2"] .activity-detail .commented .item .time {
-  font-size: 60px;
+[data-dpr="2"] .activity-detail .commented .item .time {
+  font-size: 15px;
 }
-[data-dpr="^3"] .activity-detail .commented .item .time {
-  font-size: 90px;
+[data-dpr="3"] .activity-detail .commented .item .time {
+  font-size: 30px;
+}
+[data-dpr="2"] .activity-detail .commented .item .time {
+  font-size: 15px;
+}
+[data-dpr="3"] .activity-detail .commented .item .time {
+  font-size: 30px;
 }
 .activity-detail .commented .item .comment {
   color: #666666;
-  font-size: 38px;
+  font-size: 12.66666667px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
 }
-[data-dpr="^2"] .activity-detail .commented .item .comment {
-  font-size: 76px;
+[data-dpr="2"] .activity-detail .commented .item .comment {
+  font-size: 19px;
 }
-[data-dpr="^3"] .activity-detail .commented .item .comment {
-  font-size: 114px;
+[data-dpr="3"] .activity-detail .commented .item .comment {
+  font-size: 38px;
+}
+[data-dpr="2"] .activity-detail .commented .item .comment {
+  font-size: 19px;
+}
+[data-dpr="3"] .activity-detail .commented .item .comment {
+  font-size: 38px;
 }
 .activity-detail .top-menu {
   position: fixed;
@@ -290,15 +356,21 @@
   color: #000000;
   width: 33%;
   text-align: center;
-  font-size: 48px;
+  font-size: 16px;
   padding: 0.51851852rem 0;
   border-right: 1px solid #cccccc;
 }
-[data-dpr="^2"] .activity-detail .top-menu a {
-  font-size: 96px;
+[data-dpr="2"] .activity-detail .top-menu a {
+  font-size: 24px;
 }
-[data-dpr="^3"] .activity-detail .top-menu a {
-  font-size: 144px;
+[data-dpr="3"] .activity-detail .top-menu a {
+  font-size: 48px;
+}
+[data-dpr="2"] .activity-detail .top-menu a {
+  font-size: 24px;
+}
+[data-dpr="3"] .activity-detail .top-menu a {
+  font-size: 48px;
 }
 .activity-detail .top-menu a:last-child {
   border: none;
