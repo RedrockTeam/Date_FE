@@ -1,13 +1,22 @@
 //搜索
-define(['avalon', 'vms/tipBar','mmState', 'vms/main'], function(avalon, vmTipBar){
+define('states/search', ['avalon', 'vms/tipBar', 'request', 'vms/search','vms/main','mmState'], function(avalon, vmTipBar,request,vmSearch,vmsMain){
     avalon.state('search', {
         controller: "main",
         url: "/search",
         templateUrl: "tpl/search/yield.html",
         onEnter: function(){
             log('/search');
-            vmTipBar['state'] = 'search';
-            avalon.scan();
+            //vmTipBar['state'] = 'search';
+            vmsMain.state = 'loading';
+
+            request('searchHot',{
+                uid: '',
+                token: '',
+                type: 1,
+                content: ''
+            }).done(function(res){
+                log(res.data);
+            })
         }
     });
 });

@@ -887,12 +887,15 @@ body {
 .slider-layout .swiper-container {
   height: 3.7962963rem;
 }
-.search-container form {
+.search-container {
+  padding-top: 2.77777778rem;
+}
+.search-container #form-wrapper {
   width: auto;
   margin: 0.37037037rem 0;
   line-height: 1.15740741rem;
 }
-.search-container form .search-input {
+.search-container #form-wrapper .search-input {
   width: 90%;
   padding: 0.18518519rem;
   box-sizing: border-box;
@@ -905,23 +908,23 @@ body {
           appearance: none;
   margin-left: 5%;
 }
-[data-dpr="^2"] .search-container form .search-input {
+[data-dpr="^2"] .search-container #form-wrapper .search-input {
   font-size: 96px;
 }
-[data-dpr="^3"] .search-container form .search-input {
+[data-dpr="^3"] .search-container #form-wrapper .search-input {
   font-size: 144px;
 }
-.search-container form .icon-search {
+.search-container #form-wrapper .icon-search {
   position: absolute;
   font-size: 60px;
   color: #999999;
   margin-left: -0.64814815rem;
   margin-top: -0.01851852rem;
 }
-[data-dpr="^2"] .search-container form .icon-search {
+[data-dpr="^2"] .search-container #form-wrapper .icon-search {
   font-size: 120px;
 }
-[data-dpr="^3"] .search-container form .icon-search {
+[data-dpr="^3"] .search-container #form-wrapper .icon-search {
   font-size: 180px;
 }
 .search-container .hot-act,
@@ -958,7 +961,7 @@ body {
 }
 .search-container .act-discount {
   font-size: 48px;
-  background: #c3c3c3;
+  background: #ffab47;
   border-radius: 15px;
   margin-bottom: 0.18518519rem;
   color: white;

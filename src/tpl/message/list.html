@@ -1,16 +1,8 @@
-<section class="message">
-    <div class="message-list">
-        <div class="img-wrapper"></div>
+<section class="message" ms-controller="userMessage">
+    <div class="message-list" ms-repeat="items">
+        <div class="img-wrapper" ms-css-background="'url('+el.head+')'"></div>
         <div class="right">
-            <span class="peo-name">刘晓庆</span>报名参加了你的约会
-        </div>
-
-    </div>
-
-    <div class="message-list">
-        <div class="img-wrapper"></div>
-        <div class="right">
-            <span class="peo-name">刘晓庆</span>报名参加了你的约会
+            <span class="peo-name">{{el.nickname}}</span>报名参加了你的约会
         </div>
 
     </div>

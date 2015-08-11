@@ -12,6 +12,8 @@ define('urls', function(){
         "activityList": "http://127.0.0.1:8080/activity/list",
         "activityDetail": "http://127.0.0.1:8080/activity/detail",
         "userCheck": "http://127.0.0.1:8080/user/check",
+        "searchHot": "http://127.0.0.1:8080/search/hot",
+        "searchDo": "http://127.0.0.1:8080/search/do",
         "userMessage": "http://127.0.0.1:8080/user/message/recieve",
         "publish": "http://lich2013.com/date/index.php/api/date/createdate",
         "showBox": "http://lich2013.com/date/index.php/api/date/datelist",
@@ -22,6 +24,7 @@ define('urls', function(){
         "historyCreate": "http://lich2013.com/date/index.php/api/person/create",
         "historyJoin": "http://lich2013.com/date/index.php/api/person/join",
         //"dateList": "../mock.php?type=list",
+
 
         "detaildate": "http://lich2013.com/date/index.php/api/date/detaildate",
         "collect": "http://lich2013.com/date/index.php/api/person/collect",
