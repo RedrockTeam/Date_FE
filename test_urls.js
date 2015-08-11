@@ -253,6 +253,28 @@ var datas = {
     "/user/complete": {
         "status": 200,
         "info": "ok"
+
+    },
+    "/search": {
+        "data": {
+            person: [         //热门用户
+                {
+                    "uid": "",    //用户id
+                    "head": "",   //头像
+                    "gender": "",  // 1 男	2 女
+                    "signature": "" //个性签名(约会宣言)
+                }
+
+            ],
+            activity: [       //热门活动
+                {
+                    "title": "",  //标题
+                    "signature": "前十名免费玩耍，不收钱"  //优惠信息
+                }
+            ]
+        },
+        status: 200,
+        info: "成功"
     },
 
     "error": {

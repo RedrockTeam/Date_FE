@@ -1,9 +1,9 @@
 
-define(['avalon'], function(avalon){
-    var vm = avalon.define({
+define('vms/userMessage', ['avalon'], function(avalon){
+    return avalon.define({
         $id: 'userMessage',
         items: []
     });
 
-    return vm;
+
 });
