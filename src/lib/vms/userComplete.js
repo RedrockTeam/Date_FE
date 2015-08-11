@@ -1,4 +1,5 @@
 define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon, $, userCenter, request, filter$){
+
     var vm = avalon.define({
         $id: 'userComplete',
         cantprev: false,
@@ -106,6 +107,13 @@ define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon
     vm.$watch('data', function(){
         console.log('data cahnged');
     });
+    vm.$watch('userComleteDataChanged', function(data){
+        vm['data'] = data;
+    });
+    vm.$watch('userComleteTagsChanged', function(data){
+        vm['tags'] = data;
+    });
+
     //todo 图片上传 待定
 
     return vm;

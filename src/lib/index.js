@@ -39,7 +39,7 @@ require([
         'states/user.fans',           //个人粉丝
         'states/user.launched',      //个人发起约会查看
         'states/user.recorded',      //个人约会记录查看
-        //'states/user.login',        //个人登录
+        'states/user.login',        //个人登录
         'states/user.register',     //个人注册
         'states/user.complete',      //完善个人信息
         //'states/user.alter',        //修改个人信息
