@@ -10,5 +10,8 @@ define(['avalon'], function(avalon){
     vm.$watch('data', function(){
         log('change');
     });
-    return vm;
+    vm.$watch('dateDetailDataChanged', function(data){
+        vm['data'] = data;
+    });
+
 });

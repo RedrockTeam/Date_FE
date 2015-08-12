@@ -1,12 +1,13 @@
 //个人注册
-define(['avalon', 'vms/tipBar', 'mmState', 'vms/main', 'vms/register'], function(avalon, vmTipBar){
+define(['avalon', 'mmState'], function(avalon){
+    var vmMain = avalon.vmodels['main'];
     avalon.state('userRegister', {
         controller: "main",
         url: "/user/register",
         templateUrl: "tpl/user/register.html",
         onEnter: function(){
             log('/user/register');
-            vmTipBar['state'] = 'register';
+            vmMain.$fire('all!tipBarStateChanged', 'register');
             avalon.scan();
         }
     });

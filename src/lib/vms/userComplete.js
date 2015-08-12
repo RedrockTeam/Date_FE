@@ -115,6 +115,4 @@ define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon
     });
 
     //todo 图片上传 待定
-
-    return vm;
 });

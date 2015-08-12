@@ -61,9 +61,6 @@ define(['jquery', 'noop', 'userCenter', 'mmState'], function($, noop, userCenter
     });
 
     vm.$watch('tipBarStateChanged', function(s){
-        console.log(s);
         vm['state'] = s;
     });
-
-    return vm;
 });

@@ -1,7 +1,19 @@
 .box-icon .icon .iconfont {
   display: inline-block;
-  font-size: 0.42592593rem !important;
+  font-size: 12px;
   vertical-align: middle;
+}
+[data-dpr="2"] .box-icon .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .box-icon .icon .iconfont {
+  font-size: 36px;
+}
+[data-dpr="2"] .box-icon .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .box-icon .icon .iconfont {
+  font-size: 36px;
 }
 .box-icon .box-time .iconfont {
   color: #44d48b;
@@ -96,18 +108,20 @@
 }
 .login-container .input-item {
   width: 100%;
+  position: relative;
+  background: #ffffff;
 }
 .login-container .input-item input {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: 80%;
   border: none;
   outline: none;
-  background: #ffffff;
-  text-indent: 0.46296296rem;
+  background: none;
   padding: 0.46296296rem 0;
   color: #000000;
   font-size: 16px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
+  vertical-align: middle;
 }
 [data-dpr="2"] .login-container .input-item input {
   font-size: 24px;
@@ -120,6 +134,28 @@
 }
 [data-dpr="3"] .login-container .input-item input {
   font-size: 48px;
+}
+.login-container .input-item .icon {
+  width: 10%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.46296296rem 0;
+  font-style: normal;
+  text-align: center;
+  color: #cccccc;
+  font-size: 20px;
+}
+[data-dpr="2"] .login-container .input-item .icon {
+  font-size: 30px;
+}
+[data-dpr="3"] .login-container .input-item .icon {
+  font-size: 60px;
+}
+[data-dpr="2"] .login-container .input-item .icon {
+  font-size: 30px;
+}
+[data-dpr="3"] .login-container .input-item .icon {
+  font-size: 60px;
 }
 .login-container .input-item:nth-child(2) {
   border-bottom: 1px solid #dddddd;

@@ -28,9 +28,11 @@ var $$ = {}; //share vars obj
 require([
     'require',
     'avalon',
-    'mmState'
+    'mmState',
+    'vms/main'   //作为其他所有 vm 事件代理
 ], function(require,avalon) {
-    require([               //加载状态     //避免有时候  avalon.history 为 undefined
+    require([
+        //注册状态
         'states/home',       //主页
         'states/date.detail', //约会详细页
         'states/activity.detail', //活动详细页
@@ -44,7 +46,26 @@ require([
         'states/user.complete',      //完善个人信息
         //'states/user.alter',        //修改个人信息
         'states/date.create',        //发布约会
-        'states/search'            //搜索
+        'states/search',            //搜索
+
+        //注册 vm 一次加载进内存  全部只依赖于 vm`main`
+        'vms/register',
+        'vms/login',
+        'vms/dateList',
+        'vms/dateDetail',
+        'vms/activityList',
+        'vms/activityDetail',
+        'vms/navBar',
+        'vms/topBar',
+        'vms/tipBar',
+        'vms/filter',
+        'vms/dateCreate',
+        'vms/search',
+        'vms/slider',
+        'vms/userCheck',
+        'vms/userMessage',
+        'vms/userComplete'
+
     ], function(){
         avalon.history.start({
             basepath: "/"

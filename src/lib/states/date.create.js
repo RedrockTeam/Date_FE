@@ -1,5 +1,6 @@
 //发布约会
-define(['request', 'userCenter', 'vms/main', 'vms/dateCreate', 'mmState'], function(request, userCenter,vmMain){
+define(['request', 'userCenter', 'vms/dateCreate', 'mmState'], function(request, userCenter){
+    var vmMain = avalon.vmodels['main'];
     avalon.state('dateCreate', {
         controller: "main",
         url: "/date/create",

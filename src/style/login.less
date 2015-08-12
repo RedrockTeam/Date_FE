@@ -14,17 +14,31 @@
   }
   .input-item {
     width: 100%;
-    input{
-      display: block;
-      width: 100%;
+    position: relative;
+    background: #ffffff;
+    input {
+      display: inline-block;
+      width: 80%;
       border: none;
       outline: none;
-      background: #ffffff;
-      text-indent:50rem /@psdWidth;
-      padding:50rem /@psdWidth 0;
+      background: none;
+      //text-indent: 50rem /@psdWidth;
+      padding: 50rem /@psdWidth 0;
       color: #000000;
       .rfz(48px);
       font-family: @fm-base;
+      vertical-align: middle;
+    }
+    .icon {
+      //position: absolute;
+      width: 10%;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 50rem /@psdWidth 0;
+      font-style: normal;
+      text-align: center;
+      color: #cccccc;
+      .rfz(60px);
     }
   }
 

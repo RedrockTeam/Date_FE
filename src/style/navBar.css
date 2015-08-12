@@ -1,8 +1,20 @@
 /*navBar*/
 .box-icon .icon .iconfont {
   display: inline-block;
-  font-size: 0.42592593rem !important;
+  font-size: 12px;
   vertical-align: middle;
+}
+[data-dpr="2"] .box-icon .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .box-icon .icon .iconfont {
+  font-size: 36px;
+}
+[data-dpr="2"] .box-icon .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .box-icon .icon .iconfont {
+  font-size: 36px;
 }
 .box-icon .box-time .iconfont {
   color: #44d48b;

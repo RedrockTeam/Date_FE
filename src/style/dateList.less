@@ -20,6 +20,9 @@
     padding-bottom: 20rem / @psdWidth;
     border-bottom: 1px solid #cccccc;
   }
+  body{
+    border: 1px solid red;
+  }
 
   .person{
     float: left;
@@ -52,13 +55,22 @@
       .rfz(48px);
       font-family: @fm-base;
       vertical-align: middle;
+      max-width: 60%;
+      .text-over;
     }
     .gender{
       color: #ff607a;
       display: inline-block;
-      .rfz(48px);
+      .rfz(60px);
       vertical-align: middle;
       margin-left: 20rem / @psdWidth;
+    }
+    .gender.male{
+      color: #4f96ee;
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
     }
     .signature {
       .rfz(36px);
@@ -78,6 +90,36 @@
 
   main{
     position: relative;
+    .icon{
+      i {
+        display: inline-block;
+        font-style: normal;
+        vertical-align: middle;
+        .rfz(55px);
+        margin-right: 25rem / @psdWidth;
+      }
+      span {
+        display: inline-block;
+        color: #666666;
+        vertical-align: middle;
+        .rfz(36px);
+      }
+      &.time i{
+        color: #44d48b;
+      }
+      &.location i{
+        color: #4ea1ff;
+      }
+      &.cost i{
+        color: #ff7660;
+      }
+    }
+
+    .create-time{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
   }
 
   //内容
@@ -88,29 +130,6 @@
    padding: 26rem / @psdWidth 0 40rem / @psdWidth;
  }
 
-  .icon {
-    margin-bottom: 20rem / @psdWidth;
-    span {
-      display: inline-block;
-      margin-left: 26rem / @psdWidth;
-      .rfz(36px);
-      color: #666666;
-      font-family: @fm-base;
-      vertical-align: middle;
-    }
-  }
-  .icon:last-child{
-    margin: 0;
-  }
-  .box-icon;
-
-  .create-time{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    .rfz(36px);
-    color: #666666;
-  }
 
   footer{
     margin-top: 55rem / @psdWidth;

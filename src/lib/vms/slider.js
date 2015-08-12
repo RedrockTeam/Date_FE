@@ -74,6 +74,4 @@ define('vms/slider', ['avalon', 'jquery' ,'swiper'], function(avalon, $){
         vm['daLoad'] = true;
         log('sliderDaLoaded');
     });
-
-    return vm;
 });

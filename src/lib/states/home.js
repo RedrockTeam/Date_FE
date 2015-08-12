@@ -2,11 +2,7 @@
 define(
     [
         'avalon', 'userCenter',
-        'request', 'vms/main','vms/filter',
-        'vms/dateList','vms/slider',
-        'vms/navBar', 'vms/topBar',
-        'vms/userMessage', 'vms/userCheck',
-        'vms/activityList',
+        'request',
         'mmState'
     ],
 

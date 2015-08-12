@@ -55,5 +55,4 @@ define('vms/activityList', ['avalon', 'request', 'userCenter', 'filter$'], funct
         console.log('activityRuleChanged', data);
         vm['filterRule'] = rule;
     });
-    return vm;
 });

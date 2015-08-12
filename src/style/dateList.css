@@ -1,7 +1,19 @@
 .box-icon .icon .iconfont {
   display: inline-block;
-  font-size: 0.42592593rem !important;
+  font-size: 12px;
   vertical-align: middle;
+}
+[data-dpr="2"] .box-icon .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .box-icon .icon .iconfont {
+  font-size: 36px;
+}
+[data-dpr="2"] .box-icon .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .box-icon .icon .iconfont {
+  font-size: 36px;
 }
 .box-icon .box-time .iconfont {
   color: #44d48b;
@@ -101,6 +113,9 @@
   padding-bottom: 0.18518519rem;
   border-bottom: 1px solid #cccccc;
 }
+.date-list body {
+  border: 1px solid red;
+}
 .date-list .person {
   float: left;
 }
@@ -131,6 +146,10 @@
   font-size: 16px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   vertical-align: middle;
+  max-width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 [data-dpr="2"] .date-list .detail span {
   font-size: 24px;
@@ -147,21 +166,28 @@
 .date-list .detail .gender {
   color: #ff607a;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   vertical-align: middle;
   margin-left: 0.18518519rem;
 }
 [data-dpr="2"] .date-list .detail .gender {
-  font-size: 24px;
+  font-size: 30px;
 }
 [data-dpr="3"] .date-list .detail .gender {
-  font-size: 48px;
+  font-size: 60px;
 }
 [data-dpr="2"] .date-list .detail .gender {
-  font-size: 24px;
+  font-size: 30px;
 }
 [data-dpr="3"] .date-list .detail .gender {
-  font-size: 48px;
+  font-size: 60px;
+}
+.date-list .detail .gender.male {
+  color: #4f96ee;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
 }
 .date-list .detail .signature {
   font-size: 12px;
@@ -193,6 +219,57 @@
 .date-list main {
   position: relative;
 }
+.date-list main .icon i {
+  display: inline-block;
+  font-style: normal;
+  vertical-align: middle;
+  font-size: 18.33333333px;
+  margin-right: 0.23148148rem;
+}
+[data-dpr="2"] .date-list main .icon i {
+  font-size: 27.5px;
+}
+[data-dpr="3"] .date-list main .icon i {
+  font-size: 55px;
+}
+[data-dpr="2"] .date-list main .icon i {
+  font-size: 27.5px;
+}
+[data-dpr="3"] .date-list main .icon i {
+  font-size: 55px;
+}
+.date-list main .icon span {
+  display: inline-block;
+  color: #666666;
+  vertical-align: middle;
+  font-size: 12px;
+}
+[data-dpr="2"] .date-list main .icon span {
+  font-size: 18px;
+}
+[data-dpr="3"] .date-list main .icon span {
+  font-size: 36px;
+}
+[data-dpr="2"] .date-list main .icon span {
+  font-size: 18px;
+}
+[data-dpr="3"] .date-list main .icon span {
+  font-size: 36px;
+}
+.date-list main .icon.time i {
+  color: #44d48b;
+}
+.date-list main .icon.location i {
+  color: #4ea1ff;
+}
+.date-list main .icon.cost i {
+  color: #ff7660;
+}
+.date-list main .create-time {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 .date-list .content {
   color: #000000;
   font-size: 16px;
@@ -210,65 +287,6 @@
 }
 [data-dpr="3"] .date-list .content {
   font-size: 48px;
-}
-.date-list .icon {
-  margin-bottom: 0.18518519rem;
-}
-.date-list .icon span {
-  display: inline-block;
-  margin-left: 0.24074074rem;
-  font-size: 12px;
-  color: #666666;
-  font-family: "hiraginosansgb w3", "microsoft yahei";
-  vertical-align: middle;
-}
-[data-dpr="2"] .date-list .icon span {
-  font-size: 18px;
-}
-[data-dpr="3"] .date-list .icon span {
-  font-size: 36px;
-}
-[data-dpr="2"] .date-list .icon span {
-  font-size: 18px;
-}
-[data-dpr="3"] .date-list .icon span {
-  font-size: 36px;
-}
-.date-list .icon:last-child {
-  margin: 0;
-}
-.date-list .icon .iconfont {
-  display: inline-block;
-  font-size: 0.42592593rem !important;
-  vertical-align: middle;
-}
-.date-list .box-time .iconfont {
-  color: #44d48b;
-}
-.date-list .box-location .iconfont {
-  color: #4ea1ff;
-}
-.date-list .box-cost .iconfont {
-  color: #ff7660;
-}
-.date-list .create-time {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  font-size: 12px;
-  color: #666666;
-}
-[data-dpr="2"] .date-list .create-time {
-  font-size: 18px;
-}
-[data-dpr="3"] .date-list .create-time {
-  font-size: 36px;
-}
-[data-dpr="2"] .date-list .create-time {
-  font-size: 18px;
-}
-[data-dpr="3"] .date-list .create-time {
-  font-size: 36px;
 }
 .date-list footer {
   margin-top: 0.50925926rem;

@@ -8,5 +8,7 @@ define('vms/activityDetail',['avalon'], function(avalon){
     vm.$watch('data', function(){
         log('change');
     });
-    return vm;
+    vm.$watch('activityDetailDataChanged', function(data){
+        vm['data'] = data;
+    });
 });

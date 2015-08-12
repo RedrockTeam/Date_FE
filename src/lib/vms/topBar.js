@@ -24,6 +24,4 @@ define('vms/topBar', ['avalon'], function(avalon){
             vm['filter'] = false;
         }
     });
-
-    return vm;
 });

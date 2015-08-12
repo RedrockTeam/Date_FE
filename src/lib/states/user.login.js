@@ -1,5 +1,6 @@
 //个人登录
-define(['avalon', 'userCenter' ,'vms/main', 'vms/login', 'vms/tipBar', 'mmState'], function(avalon, userCenter,vmMain){
+define(['avalon', 'userCenter', 'mmState'], function(avalon, userCenter){
+    var vmMain = avalon.vmodels['main'];
     avalon.state('userLogin', {
         controller: "main",
         url: "/user/login",
@@ -8,7 +9,6 @@ define(['avalon', 'userCenter' ,'vms/main', 'vms/login', 'vms/tipBar', 'mmState'
             log('/user/login');
 
             userCenter.logout();
-            //vmTipBar['state'] = 'login';
             vmMain.$fire('all!tipBarStateChanged', 'login');
             avalon.scan();
             //todo

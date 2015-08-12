@@ -1,5 +1,5 @@
 //个人信息查看
-define(['avalon', 'mmState', 'vms/main'], function(avalon){
+define(['avalon', 'mmState'], function(avalon){
     avalon.state('user', {
         controller: "main",
         url: "/user/check/{id:[^.]*}",

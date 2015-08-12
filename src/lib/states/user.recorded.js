@@ -1,6 +1,7 @@
 
 //个人参与的约会和活动记录查看
-define(['avalon', 'vms/tipBar','mmState', 'vms/main'], function(avalon, vmTipBar){
+define(['avalon','mmState'], function(avalon){
+    var vmTipBar = avalon.vmodels['tipBar'];
     avalon.state('userRecored', {
         controller: "main",
         url: "/user/recorded",

@@ -3,7 +3,8 @@
  * @Author Ling.
  * @Email i@zeroling.com
  */
-define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'vms/main', 'userCenter', 'dialog', 'DateTimePicker', 'avaFilters'], function (avalon, $, moment, EP, request, vmMain, userCenter) {
+define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'userCenter', 'dialog', 'DateTimePicker', 'avaFilters'], function (avalon, $, moment, EP, request, userCenter) {
+    var vmMain = avalon.vmodels['main'];
     var lunar = ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
         weeks = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"];
     var vm = avalon.define({

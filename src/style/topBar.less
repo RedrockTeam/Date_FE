@@ -17,20 +17,28 @@
   menu {
     float: right;
     li {
-      float: left;
-      line-height: @topHei1;
+      display: inline-block;
       margin-left: 68rem / @psdWidth;
+      vertical-align: middle;
       //解决iconfont没有加粗
-      &:last-child {
-        font-weight: bold;
-      }
-      &,a {
+      &, a {
         color: #444444;
       }
     }
-    //iconfont font-size
-    .iconfont{
-      .rfz(70px) !important;
+
+    .icon{
+      color: #444444;
+      .rfz(100px);
+      line-height: @topHei1;
+    }
+    .icon.search{
+      .rfz(80px);
+      color: #000000;
+    }
+
+    .icon.filter{
+      .rfz(80px);
+      color: #000000;
     }
   }
 }

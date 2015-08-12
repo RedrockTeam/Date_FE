@@ -1,4 +1,5 @@
-define('vms/register', ['avalon', 'jquery', 'request', 'vms/main','dialog'],function(avalon, $, request, vmMain){
+define('vms/register', ['avalon', 'jquery', 'request','dialog'],function(avalon, $, request){
+    var vmMain = avalon.vmodels['main'];
     var vm = avalon.define({
         $id: 'register',
         veri_code: '',

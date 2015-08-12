@@ -477,8 +477,20 @@ body {
 /*layout 整体布局*/
 .box-icon .icon .iconfont {
   display: inline-block;
-  font-size: 0.42592593rem !important;
+  font-size: 12px;
   vertical-align: middle;
+}
+[data-dpr="2"] .box-icon .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .box-icon .icon .iconfont {
+  font-size: 36px;
+}
+[data-dpr="2"] .box-icon .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .box-icon .icon .iconfont {
+  font-size: 36px;
 }
 .box-icon .box-time .iconfont {
   color: #44d48b;
@@ -771,31 +783,62 @@ body {
   float: right;
 }
 .top-container menu li {
-  float: left;
-  line-height: 1.33333333rem;
+  display: inline-block;
   margin-left: 0.62962963rem;
-}
-.top-container menu li:last-child {
-  font-weight: bold;
+  vertical-align: middle;
 }
 .top-container menu li,
 .top-container menu li a {
   color: #444444;
 }
-.top-container menu .iconfont {
-  font-size: 23.33333333px !important;
+.top-container menu .icon {
+  color: #444444;
+  font-size: 33.33333333px;
+  line-height: 1.33333333rem;
 }
-[data-dpr="2"] .top-container menu .iconfont {
-  font-size: 35px !important;
+[data-dpr="2"] .top-container menu .icon {
+  font-size: 50px;
 }
-[data-dpr="3"] .top-container menu .iconfont {
-  font-size: 70px !important;
+[data-dpr="3"] .top-container menu .icon {
+  font-size: 100px;
 }
-[data-dpr="2"] .top-container menu .iconfont {
-  font-size: 35px !important;
+[data-dpr="2"] .top-container menu .icon {
+  font-size: 50px;
 }
-[data-dpr="3"] .top-container menu .iconfont {
-  font-size: 70px !important;
+[data-dpr="3"] .top-container menu .icon {
+  font-size: 100px;
+}
+.top-container menu .icon.search {
+  font-size: 26.66666667px;
+  color: #000000;
+}
+[data-dpr="2"] .top-container menu .icon.search {
+  font-size: 40px;
+}
+[data-dpr="3"] .top-container menu .icon.search {
+  font-size: 80px;
+}
+[data-dpr="2"] .top-container menu .icon.search {
+  font-size: 40px;
+}
+[data-dpr="3"] .top-container menu .icon.search {
+  font-size: 80px;
+}
+.top-container menu .icon.filter {
+  font-size: 26.66666667px;
+  color: #000000;
+}
+[data-dpr="2"] .top-container menu .icon.filter {
+  font-size: 40px;
+}
+[data-dpr="3"] .top-container menu .icon.filter {
+  font-size: 80px;
+}
+[data-dpr="2"] .top-container menu .icon.filter {
+  font-size: 40px;
+}
+[data-dpr="3"] .top-container menu .icon.filter {
+  font-size: 80px;
 }
 .tipBar {
   height: 1.55555556rem;
@@ -1157,6 +1200,9 @@ body {
   padding-bottom: 0.18518519rem;
   border-bottom: 1px solid #cccccc;
 }
+.date-list body {
+  border: 1px solid red;
+}
 .date-list .person {
   float: left;
 }
@@ -1187,6 +1233,10 @@ body {
   font-size: 16px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
   vertical-align: middle;
+  max-width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 [data-dpr="2"] .date-list .detail span {
   font-size: 24px;
@@ -1203,21 +1253,28 @@ body {
 .date-list .detail .gender {
   color: #ff607a;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   vertical-align: middle;
   margin-left: 0.18518519rem;
 }
 [data-dpr="2"] .date-list .detail .gender {
-  font-size: 24px;
+  font-size: 30px;
 }
 [data-dpr="3"] .date-list .detail .gender {
-  font-size: 48px;
+  font-size: 60px;
 }
 [data-dpr="2"] .date-list .detail .gender {
-  font-size: 24px;
+  font-size: 30px;
 }
 [data-dpr="3"] .date-list .detail .gender {
-  font-size: 48px;
+  font-size: 60px;
+}
+.date-list .detail .gender.male {
+  color: #4f96ee;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
 }
 .date-list .detail .signature {
   font-size: 12px;
@@ -1249,6 +1306,57 @@ body {
 .date-list main {
   position: relative;
 }
+.date-list main .icon i {
+  display: inline-block;
+  font-style: normal;
+  vertical-align: middle;
+  font-size: 18.33333333px;
+  margin-right: 0.23148148rem;
+}
+[data-dpr="2"] .date-list main .icon i {
+  font-size: 27.5px;
+}
+[data-dpr="3"] .date-list main .icon i {
+  font-size: 55px;
+}
+[data-dpr="2"] .date-list main .icon i {
+  font-size: 27.5px;
+}
+[data-dpr="3"] .date-list main .icon i {
+  font-size: 55px;
+}
+.date-list main .icon span {
+  display: inline-block;
+  color: #666666;
+  vertical-align: middle;
+  font-size: 12px;
+}
+[data-dpr="2"] .date-list main .icon span {
+  font-size: 18px;
+}
+[data-dpr="3"] .date-list main .icon span {
+  font-size: 36px;
+}
+[data-dpr="2"] .date-list main .icon span {
+  font-size: 18px;
+}
+[data-dpr="3"] .date-list main .icon span {
+  font-size: 36px;
+}
+.date-list main .icon.time i {
+  color: #44d48b;
+}
+.date-list main .icon.location i {
+  color: #4ea1ff;
+}
+.date-list main .icon.cost i {
+  color: #ff7660;
+}
+.date-list main .create-time {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 .date-list .content {
   color: #000000;
   font-size: 16px;
@@ -1266,65 +1374,6 @@ body {
 }
 [data-dpr="3"] .date-list .content {
   font-size: 48px;
-}
-.date-list .icon {
-  margin-bottom: 0.18518519rem;
-}
-.date-list .icon span {
-  display: inline-block;
-  margin-left: 0.24074074rem;
-  font-size: 12px;
-  color: #666666;
-  font-family: "hiraginosansgb w3", "microsoft yahei";
-  vertical-align: middle;
-}
-[data-dpr="2"] .date-list .icon span {
-  font-size: 18px;
-}
-[data-dpr="3"] .date-list .icon span {
-  font-size: 36px;
-}
-[data-dpr="2"] .date-list .icon span {
-  font-size: 18px;
-}
-[data-dpr="3"] .date-list .icon span {
-  font-size: 36px;
-}
-.date-list .icon:last-child {
-  margin: 0;
-}
-.date-list .icon .iconfont {
-  display: inline-block;
-  font-size: 0.42592593rem !important;
-  vertical-align: middle;
-}
-.date-list .box-time .iconfont {
-  color: #44d48b;
-}
-.date-list .box-location .iconfont {
-  color: #4ea1ff;
-}
-.date-list .box-cost .iconfont {
-  color: #ff7660;
-}
-.date-list .create-time {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  font-size: 12px;
-  color: #666666;
-}
-[data-dpr="2"] .date-list .create-time {
-  font-size: 18px;
-}
-[data-dpr="3"] .date-list .create-time {
-  font-size: 36px;
-}
-[data-dpr="2"] .date-list .create-time {
-  font-size: 18px;
-}
-[data-dpr="3"] .date-list .create-time {
-  font-size: 36px;
 }
 .date-list footer {
   margin-top: 0.50925926rem;
@@ -1758,8 +1807,20 @@ body {
 }
 .activity-list .detail .icon .iconfont {
   display: inline-block;
-  font-size: 0.42592593rem !important;
+  font-size: 12px;
   vertical-align: middle;
+}
+[data-dpr="2"] .activity-list .detail .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .activity-list .detail .icon .iconfont {
+  font-size: 36px;
+}
+[data-dpr="2"] .activity-list .detail .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .activity-list .detail .icon .iconfont {
+  font-size: 36px;
 }
 .activity-list .detail .box-time .iconfont {
   color: #44d48b;
@@ -2343,18 +2404,20 @@ body {
 }
 .login-container .input-item {
   width: 100%;
+  position: relative;
+  background: #ffffff;
 }
 .login-container .input-item input {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: 80%;
   border: none;
   outline: none;
-  background: #ffffff;
-  text-indent: 0.46296296rem;
+  background: none;
   padding: 0.46296296rem 0;
   color: #000000;
   font-size: 16px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
+  vertical-align: middle;
 }
 [data-dpr="2"] .login-container .input-item input {
   font-size: 24px;
@@ -2367,6 +2430,28 @@ body {
 }
 [data-dpr="3"] .login-container .input-item input {
   font-size: 48px;
+}
+.login-container .input-item .icon {
+  width: 10%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.46296296rem 0;
+  font-style: normal;
+  text-align: center;
+  color: #cccccc;
+  font-size: 20px;
+}
+[data-dpr="2"] .login-container .input-item .icon {
+  font-size: 30px;
+}
+[data-dpr="3"] .login-container .input-item .icon {
+  font-size: 60px;
+}
+[data-dpr="2"] .login-container .input-item .icon {
+  font-size: 30px;
+}
+[data-dpr="3"] .login-container .input-item .icon {
+  font-size: 60px;
 }
 .login-container .input-item:nth-child(2) {
   border-bottom: 1px solid #dddddd;
@@ -2532,8 +2617,20 @@ body {
 }
 .activity-detail .detail .icon .iconfont {
   display: inline-block;
-  font-size: 0.42592593rem !important;
+  font-size: 12px;
   vertical-align: middle;
+}
+[data-dpr="2"] .activity-detail .detail .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .activity-detail .detail .icon .iconfont {
+  font-size: 36px;
+}
+[data-dpr="2"] .activity-detail .detail .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .activity-detail .detail .icon .iconfont {
+  font-size: 36px;
 }
 .activity-detail .detail .box-time .iconfont {
   color: #44d48b;
