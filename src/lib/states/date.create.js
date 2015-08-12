@@ -1,5 +1,5 @@
 //发布约会
-define(['request', 'userCenter', 'vms/dateCreate', 'vms/main', 'eventproxy', 'mmState'], function(request, userCenter, vmdateCreate, vmMain, EP){
+define(['request', 'userCenter', 'vms/main', 'vms/dateCreate', 'mmState'], function(request, userCenter,vmMain){
     avalon.state('dateCreate', {
         controller: "main",
         url: "/date/create",
@@ -20,50 +20,21 @@ define(['request', 'userCenter', 'vms/dateCreate', 'vms/main', 'eventproxy', 'mm
             v.yType = v.yCollege = v.yGrade = v.ySex = v.yContent =
                 v.yLocation = v.yPeople = v.yTime = v.yTitle = '';
 
-            avalon.scan();
-            vmMain['state'] = 'ok';
-
             //失败统一出口
-            //function _fail(res){
-            //    log('Category Fetch Err', res);
-            //    avalon.scan();
-            //    if(res.status == 409){
-            //        return $.Dialog.fail(res.info);
-            //    }
-            //    $.Dialog.fail("服务器提了一个问题!");
-            //}
+            function _fail(res){
+                log('Category Fetch Err', res);
+                avalon.scan();
+                if(res.status == 409){
+                    return $.Dialog.fail(res.info);
+                }
+                $.Dialog.fail("服务器提了一个问题!");
+            }
 
-            //var ep = EP.create('category', 'academy', 'grade', function(cRes, aRes, gRes){
-            //    vmdateCreate['gradeHash'] = $$.gradeHash = gRes.data;
-            //
-            //    avalon.scan();
-            //    vmMain['state'] = 'ok';
-            //});
-            //
-            //if(!$$.typeHash){
-            //    request('category').done(function(res){
-            //        ep.emit('category', res);
-            //    });
-            //}else{
-            //    ep.emit('category', {status: 200, data: $$.typeHash});
-            //}
-            //
-            //if(!$$.academyHash){
-            //    request('academy').done(function(res){
-            //        ep.emit('academy', res);
-            //    });
-            //}else{
-            //    ep.emit('academy', {status: 200, data: $$.academyHash});
-            //}
-            //
-            //if(!$$.gradeHash){
-            //    request('gradeHash').done(function(res){
-            //        ep.emit('grade', res);
-            //    });
-            //}else{
-            //    ep.emit('grade', {status: 200, data: $$.gradeHash});
-            //}
-
+            request('schoolHash').done(function(res){
+                vmMain.$fire('all!dateCreateTypeChanged', res.data);
+                avalon.scan();
+                vmMain['state'] = 'ok';
+            });
         }
     });
 });

@@ -17,7 +17,7 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'vms/main', 'user
 
             function _getSchool(str) {
                 for (var i = 0, len = vm['schoolHash'].length; i < len; i++) {
-                    if (vm['schoolHash'][i].name == str) return vm['schoolHash'][i].id;
+                    if (vm['schoolHash'][i].school_name == str) return vm['schoolHash'][i].school_id;
                 }
                 return 0;
             }
@@ -47,31 +47,31 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'vms/main', 'user
             /**
              * 前端表单check
              */
-            if (info.date_type === '') {
-                return $.Dialog.fail("请选择类型");
-            }
-
-            if (info.title === '') {
-                return $.Dialog.fail("请输入标题");
-            } else if (info.title.length > 10) {
-                return $.Dialog.fail("标题请少于10个字符");
-            }
-
-            if (info.content.length > 150) {
-                return $.Dialog.fail("内容请少于150个字符");
-            }
-
-            if (!info.date_time) {//invalid equal to NaN
-                return $.Dialog.fail("请选择时间");
-            }
-
-            if (!info.date_place) {
-                return $.Dialog.fail("请输入地址");
-            }
-
-            if (!info.date_place) {
-                return $.Dialog.fail("请输入地址");
-            }
+            //if (info.date_type === '') {
+            //    return $.Dialog.fail("请选择类型");
+            //}
+            //
+            //if (info.title === '') {
+            //    return $.Dialog.fail("请输入标题");
+            //} else if (info.title.length > 10) {
+            //    return $.Dialog.fail("标题请少于10个字符");
+            //}
+            //
+            //if (info.content.length > 150) {
+            //    return $.Dialog.fail("内容请少于150个字符");
+            //}
+            //
+            //if (!info.date_time) {//invalid equal to NaN
+            //    return $.Dialog.fail("请选择时间");
+            //}
+            //
+            //if (!info.date_place) {
+            //    return $.Dialog.fail("请输入地址");
+            //}
+            //
+            //if (!info.date_place) {
+            //    return $.Dialog.fail("请输入地址");
+            //}
 
             request('publish', info).done(function (res) {
                 log('发布成功', res);
@@ -298,6 +298,11 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'vms/main', 'user
     });
     vm.$watch('yPeople', function (newStr, oldStr) {
         vm['yPeople'] = parseInt(newStr) || 0;
+    });
+
+    vm.$watch('dateCreateTypeChanged', function(data){
+        vm['schoolHash'] = data;
+        console.log( vm['schoolHash'] );
     });
 
     return vm;

@@ -13,6 +13,7 @@ define('urls', function(){
         "activityDetail": "http://127.0.0.1:8080/activity/detail",
         "userComplete": "http://127.0.0.1:8080/user/complete",
         "userCheck": "http://127.0.0.1:8080/user/check",
+        "schoolHash": "http://127.0.0.1:8080/school",
         "userTags": "http://127.0.0.1:8080/user/tags",
         "searchHot": "http://127.0.0.1:8080/search/hot",
         "searchDo": "http://127.0.0.1:8080/search/do",

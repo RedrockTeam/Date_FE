@@ -73,7 +73,8 @@
             <span class="subtitle">学校要求</span>
             <select id="ySchool" class="choose" ms-duplex="ySchool" ms-on-blur="ySchoolBlur">
                 <option value="不限">不限</option>
-                <option ms-repeat="schoolHash" ms-attr-value="el.name">{{el.name}}</option>
+
+                <option ms-repeat="schoolHash" ms-attr-value="el.school_name">{{el.school_name}}</option>
             </select>
             <a class="right">{{ySchool ? ySchool : "不限"}}</a>
         </div>

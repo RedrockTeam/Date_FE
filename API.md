@@ -982,3 +982,30 @@
 
 ### 2. 向某人发送消息
 `此部分调用第三方及时通讯工具`
+
+
+## 获取学校信息
+
+  - url: /school
+  - post: null
+  - res: 
+  
+  
+        {
+                status:0,
+                info:"成功",
+                data:[
+                        {
+                        school_id:1,
+                        school_name:"重邮"
+                        },
+                        {
+                        school_id:2,
+                        school_name:"重大"
+                        },
+                        {
+                        school_id:3,
+                        school_name:"家里蹲大"
+                        }
+                ]
+        }
