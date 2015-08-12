@@ -1,4 +1,4 @@
-define(['avalon', 'userCenter', 'vms/main', 'jquery', 'dialog', 'mmState'], function (avalon, userCenter, $) {
+define(['avalon', 'userCenter', 'jquery', 'vms/main', 'dialog', 'mmState'], function (avalon, userCenter, $) {
     var vmodels = avalon.vmodels,
         vmMain = vmodels['main'];
     return avalon.define({
@@ -6,6 +6,7 @@ define(['avalon', 'userCenter', 'vms/main', 'jquery', 'dialog', 'mmState'], func
         username: "",
         password: "",
         state: "",
+        head: 'imgs/1.jpg',   //大logo
         login: function(e){ //点击登陆
             e.preventDefault();
             userCenter.clear();

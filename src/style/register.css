@@ -80,15 +80,15 @@
 .test-bor-green {
   border: 1px solid green;
 }
-.register-container form {
+.register-container {
   margin-top: 0.43518519rem;
 }
 .register-container .input-item {
   position: relative;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #dbdbdb;
 }
 .register-container .input-item:first-child {
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #dbdbdb;
 }
 .register-container input {
   background: #ffffff;
@@ -115,7 +115,7 @@
   font-size: 48px;
 }
 .register-container .btn {
-  background: #8dda5e;
+  background: #ff9933;
   font-size: 16px;
   color: #ffffff;
   font-family: "hiraginosansgb w3", "microsoft yahei";
@@ -135,7 +135,7 @@
   font-size: 48px;
 }
 .register-container .veri_btn {
-  padding: 0.46296296rem 0.60185185rem;
+  padding: 0.48148148rem 0.60185185rem;
   position: absolute;
   right: 0;
   top: 0;
@@ -143,7 +143,9 @@
 .register-container .sub_btn {
   padding: 0.33333333rem 1.2037037rem;
   margin-top: 0.61111111rem;
-  border: 1px solid #cccccc;
+  margin-right: 0.27777778rem;
   float: right;
   box-shadow: 0 0 0.00925926rem #cccccc;
+  border-radius: 0.09259259rem;
+  outline: none;
 }

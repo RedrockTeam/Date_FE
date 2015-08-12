@@ -295,7 +295,14 @@ var datas = {
             }
         ]
     },
-
+    "/user/register/veri_code": {
+        "status": 200,
+        "info": "成功"
+    },
+    "/user/register": {
+        "status": 200,
+        "info": "成功"
+    },
     "error": {
         "status": 0,
         "info": "失败"

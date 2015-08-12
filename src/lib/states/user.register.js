@@ -1,5 +1,5 @@
 //个人注册
-define(['avalon', 'vms/tipBar', 'mmState', 'vms/main'], function(avalon, vmTipBar){
+define(['avalon', 'vms/tipBar', 'mmState', 'vms/main', 'vms/register'], function(avalon, vmTipBar){
     avalon.state('userRegister', {
         controller: "main",
         url: "/user/register",

@@ -2258,15 +2258,15 @@ body {
   border: 1px solid red;
   opacity: 0;
 }
-.register-container form {
+.register-container {
   margin-top: 0.43518519rem;
 }
 .register-container .input-item {
   position: relative;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #dbdbdb;
 }
 .register-container .input-item:first-child {
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #dbdbdb;
 }
 .register-container input {
   background: #ffffff;
@@ -2293,7 +2293,7 @@ body {
   font-size: 48px;
 }
 .register-container .btn {
-  background: #8dda5e;
+  background: #ff9933;
   font-size: 16px;
   color: #ffffff;
   font-family: "hiraginosansgb w3", "microsoft yahei";
@@ -2313,7 +2313,7 @@ body {
   font-size: 48px;
 }
 .register-container .veri_btn {
-  padding: 0.46296296rem 0.60185185rem;
+  padding: 0.48148148rem 0.60185185rem;
   position: absolute;
   right: 0;
   top: 0;
@@ -2321,9 +2321,11 @@ body {
 .register-container .sub_btn {
   padding: 0.33333333rem 1.2037037rem;
   margin-top: 0.61111111rem;
-  border: 1px solid #cccccc;
+  margin-right: 0.27777778rem;
   float: right;
   box-shadow: 0 0 0.00925926rem #cccccc;
+  border-radius: 0.09259259rem;
+  outline: none;
 }
 .login-container {
   border-top: 1px solid #cccccc;
@@ -2334,10 +2336,12 @@ body {
   border: 1px solid #999;
   border-radius: 100%;
   margin: 0.92592593rem auto;
-  box-shadow: 1px 1px 1px #999;
+  box-shadow: 0 0 1px #999;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .login-container .input-item {
-  border-bottom: 1px solid #cccccc;
   width: 100%;
 }
 .login-container .input-item input {
@@ -2349,60 +2353,68 @@ body {
   text-indent: 0.46296296rem;
   padding: 0.46296296rem 0;
   color: #000000;
-  font-size: 6px;
+  font-size: 16px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
 }
 [data-dpr="2"] .login-container .input-item input {
-  font-size: 9px;
+  font-size: 24px;
 }
 [data-dpr="3"] .login-container .input-item input {
-  font-size: 18px;
+  font-size: 48px;
 }
 [data-dpr="2"] .login-container .input-item input {
-  font-size: 9px;
+  font-size: 24px;
 }
 [data-dpr="3"] .login-container .input-item input {
-  font-size: 18px;
+  font-size: 48px;
+}
+.login-container .input-item:nth-child(2) {
+  border-bottom: 1px solid #dddddd;
+}
+.login-container .input-item:first-child {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #cccccc;
 }
 .login-container .btn {
   width: 90%;
   height: 1.34259259rem;
   margin: 0.74074074rem 5% 0;
-  border: 1px solid #79c24d;
   outline: none;
+  border: none;
   background: #ff9933;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   color: white;
   font-family: "hiraginosansgb w3", "microsoft yahei";
-  border-radius: 0.09259259rem;
-  font-size: 6px;
+  border-radius: 0.05555556rem;
+  font-size: 16px;
 }
 [data-dpr="2"] .login-container .btn {
-  font-size: 9px;
+  font-size: 24px;
 }
 [data-dpr="3"] .login-container .btn {
-  font-size: 18px;
+  font-size: 48px;
 }
 [data-dpr="2"] .login-container .btn {
-  font-size: 9px;
+  font-size: 24px;
 }
 [data-dpr="3"] .login-container .btn {
-  font-size: 18px;
+  font-size: 48px;
 }
 .login-container a {
   margin-top: 0.37037037rem;
-  font-size: 5.33333333px;
+  font-size: 12px;
 }
 [data-dpr="2"] .login-container a {
-  font-size: 8px;
+  font-size: 18px;
 }
 [data-dpr="3"] .login-container a {
-  font-size: 16px;
+  font-size: 36px;
 }
 [data-dpr="2"] .login-container a {
-  font-size: 8px;
+  font-size: 18px;
 }
 [data-dpr="3"] .login-container a {
-  font-size: 16px;
+  font-size: 36px;
 }
 .login-container a.left {
   float: left;

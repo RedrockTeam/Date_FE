@@ -47,31 +47,31 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'vms/main', 'user
             /**
              * 前端表单check
              */
-            //if (info.date_type === '') {
-            //    return $.Dialog.fail("请选择类型");
-            //}
-            //
-            //if (info.title === '') {
-            //    return $.Dialog.fail("请输入标题");
-            //} else if (info.title.length > 10) {
-            //    return $.Dialog.fail("标题请少于10个字符");
-            //}
-            //
-            //if (info.content.length > 150) {
-            //    return $.Dialog.fail("内容请少于150个字符");
-            //}
-            //
-            //if (!info.date_time) {//invalid equal to NaN
-            //    return $.Dialog.fail("请选择时间");
-            //}
-            //
-            //if (!info.date_place) {
-            //    return $.Dialog.fail("请输入地址");
-            //}
-            //
-            //if (!info.date_place) {
-            //    return $.Dialog.fail("请输入地址");
-            //}
+            if (info.date_type === '') {
+                return $.Dialog.fail("请选择类型");
+            }
+
+            if (info.title === '') {
+                return $.Dialog.fail("请输入标题");
+            } else if (info.title.length > 10) {
+                return $.Dialog.fail("标题请少于10个字符");
+            }
+
+            if (info.content.length > 150) {
+                return $.Dialog.fail("内容请少于150个字符");
+            }
+
+            if (!info.date_time) {//invalid equal to NaN
+                return $.Dialog.fail("请选择时间");
+            }
+
+            if (!info.date_place) {
+                return $.Dialog.fail("请输入地址");
+            }
+
+            if (!info.date_place) {
+                return $.Dialog.fail("请输入地址");
+            }
 
             request('publish', info).done(function (res) {
                 log('发布成功', res);

@@ -14,6 +14,8 @@ define('urls', function(){
         "userComplete": "http://127.0.0.1:8080/user/complete",
         "userCheck": "http://127.0.0.1:8080/user/check",
         "schoolHash": "http://127.0.0.1:8080/school",
+        "getAuth": "http://127.0.0.1:8080/user/register/veri_code",
+        "userRegister": "http://127.0.0.1:8080/user/register",
         "userTags": "http://127.0.0.1:8080/user/tags",
         "searchHot": "http://127.0.0.1:8080/search/hot",
         "searchDo": "http://127.0.0.1:8080/search/do",

@@ -2,14 +2,12 @@
 
 //namespace
 .register-container {
-  form{
-    margin-top: 47rem / @psdWidth;
-  }
+  margin-top: 47rem / @psdWidth;
   .input-item {
     position: relative;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #dbdbdb;
     &:first-child{
-      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #dbdbdb;
     }
   }
   input {
@@ -25,7 +23,7 @@
     outline: none;
   }
   .btn {
-    background: #8dda5e;
+    background: #ff9933;
     .font-48;
     color: #ffffff;
     font-family: @fm-base;
@@ -33,7 +31,7 @@
     outline: none;
   }
   .veri_btn {
-    padding: 50rem / @psdWidth 65rem / @psdWidth;
+    padding: 52rem / @psdWidth 65rem / @psdWidth;
     position: absolute;
     right: 0;
     top: 0;
@@ -41,8 +39,10 @@
   .sub_btn {
     padding: 36rem / @psdWidth 130rem / @psdWidth;
     margin-top: 66rem / @psdWidth;
-    border: 1px solid #cccccc;
+    margin-right: 30rem / @psdWidth;
     float: right;
     box-shadow: 0 0 1rem / @psdWidth #ccc;
+    border-radius: 10rem / @psdWidth;
+    outline: none;
   }
 }
