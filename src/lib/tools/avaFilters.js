@@ -114,4 +114,13 @@ define('avaFilters', ['avalon'], function(){
         }
         return "未知";
     }
+
+    avalon.filters.limitLength = function(s, n){
+        s = ''+s;
+        console.log(s);
+        if(s.length > n){
+            s = s.slice(0, n-1) + '..';
+        }
+        return s;
+    };
 });

@@ -9,7 +9,7 @@
                         <p class="signature">{{el.signature}}</p>
                     </div>
                 </main>
-                <aside class="side-tag">{{el.tags}}</aside>
+                <aside class="side-tag">{{el.tags | limitLength(6)}}</aside>
             </header>
             <main ms-on-tap="getDateDetail(el.date_id)">
                 <p class="content">{{el.title}}</p>

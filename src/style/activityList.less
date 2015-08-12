@@ -17,7 +17,7 @@
 
   .show{
     display: inline-block;
-    width: 398rem / @psdWidth;
+    width: 40%;
     height: 280rem / @psdWidth;
     border: 1px solid #cccccc;
     vertical-align: top;
@@ -26,7 +26,8 @@
 
   .detail{
     display: inline-block;
-    width: 576rem / @psdWidth;
+    width: 50%;
+    height: 280rem / @psdWidth;
     overflow: hidden;
     margin-left: 25rem / @psdWidth;
     position: relative;
@@ -44,25 +45,39 @@
       padding: 5rem / @psdWidth 10rem / @psdWidth;
       border-radius: 10rem / @psdWidth;
       .font-36;
-      letter-spacing: 8rem / @psdWidth;
+      letter-spacing: 4rem / @psdWidth;
       .text-over;
+      margin-bottom: 20rem /@psdWidth;
     }
     .icon{
-      span {
-        color: #666666;
-        .font-36;
+      i {
+        display: inline-block;
+        font-style: normal;
         vertical-align: middle;
+        .rfz(55px);
+        margin-right: 25rem / @psdWidth;
       }
-      margin-top: 15rem / @psdWidth;
+      span {
+        display: inline-block;
+        color: #666666;
+        vertical-align: middle;
+        .rfz(36px);
+      }
+      &.time i{
+        color: #44d48b;
+      }
+      &.location i{
+        color: #4ea1ff;
+      }
+      &.cost i{
+        color: #ff7660;
+      }
     }
-    .box-icon;
 
     .create-time{
       position: absolute;
       right: 0;
       bottom: 0;
-      .font-36;
-      color: #666666;
     }
   }
 

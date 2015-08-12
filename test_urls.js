@@ -15,7 +15,7 @@ var datas = {
             {
                 "date_id": "3",                //约会 item id
                 "head": "imgs/1.jpg",          //用户头像
-                "nickname": "lijinxinlijinxinlijinxinlijinxinlijinxin",            //用户昵称
+                "nickname": "梁朝伟",            //用户昵称
                 "authened": 1,                  //该用户是否认证过 `1`已认证 `2`未认证
                 "uid": "1",                    //用户id
                 "created_at": "1439094919536",    //创建时间     时间戳
@@ -30,7 +30,7 @@ var datas = {
                 "praised": 20,                  //多少人已点赞
                 "gender": 1,                   //性别 "1" 男性  "2"女性
                 "cost_mode": "1",              //0无限制 1AA, 2我请客, 3求请客 4无花费
-                "tags": ["吃饭", "睡觉"]        //用户标签
+                "tags": ["吃饭", "睡觉", "打蛋蛋"]        //用户标签
             },
 
             {
@@ -42,7 +42,7 @@ var datas = {
                 "created_at": "1439094919536",    //创建时间     时间戳
                 "date_time": "1429456315",     //约的具体时间  时间戳
                 "place": "重邮宾馆",            //地点
-                "title": "来约炮!",             //标题
+                "title": "<script>alert(325)</script>",             //标题
                 "date_type": "1",              // type
                 "category_id": "1",            //
                 "signature": "今天晚上我请客!",  //个性签名
