@@ -34,8 +34,6 @@ define(['request', 'userCenter', 'vms/dateCreate', 'vms/main', 'eventproxy', 'mm
             //}
 
             //var ep = EP.create('category', 'academy', 'grade', function(cRes, aRes, gRes){
-            //    vmdateCreate.datetype = $$.typeHash = cRes.data;
-            //    vmdateCreate.academy = $$.academyHash = aRes.data;
             //    vmdateCreate['gradeHash'] = $$.gradeHash = gRes.data;
             //
             //    avalon.scan();

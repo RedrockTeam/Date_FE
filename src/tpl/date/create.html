@@ -49,9 +49,11 @@
             <span class="subtitle">花费</span>
             <select id="ySpend" class="choose" ms-duplex="ySpend" ms-on-blur="ySpendBlur">
                 <option value=""></option>
+                <option value="无限制">无限制</option>
                 <option value="AA制">AA制</option>
                 <option value="我请客">我请客</option>
-                <option value="求请客">求请客</option>
+                <option value="求包养">求包养</option>
+                <option value="无消费">无消费</option>
             </select>
             <a class="right">{{ySpend ? ySpend : "请选择"}}</a>
         </div>
@@ -67,13 +69,13 @@
             </select>
             <a class="right">{{ySex ? ySex : "不限"}}</a>
         </div>
-        <div class="row" ms-on-tap="active('yGrade')" ms-class="active:yGradeStatus">
-            <span class="subtitle">年级要求</span>
-            <select id="yGrade" class="choose" ms-duplex="yGrade" ms-on-blur="yGradeBlur">
+        <div class="row" ms-on-tap="active('ySchool')" ms-class="active:ySchoolStatus">
+            <span class="subtitle">学校要求</span>
+            <select id="ySchool" class="choose" ms-duplex="ySchool" ms-on-blur="ySchoolBlur">
                 <option value="不限">不限</option>
-                <option ms-repeat="gradeHash" ms-attr-value="el.name">{{el.name}}</option>
+                <option ms-repeat="schoolHash" ms-attr-value="el.name">{{el.name}}</option>
             </select>
-            <a class="right">{{yGrade ? yGrade : "不限"}}</a>
+            <a class="right">{{ySchool ? ySchool : "不限"}}</a>
         </div>
         <!--<div class="row" ms-on-tap="active('yCollege')" ms-class="active:yCollegeStatus">-->
         <!--<span class="subtitle">学院要求</span>-->

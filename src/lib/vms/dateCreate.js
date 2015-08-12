@@ -11,13 +11,13 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'vms/main', 'user
         /**
          * 发布约会
          */
-        publish: function () {
+        finish: function () {
             vmMain['state'] = 'loading';
-            var _vm = avalon.vmodels['dateCreate'];
+            var _vm = vm;
 
-            function _getGrade(str) {
-                for (var i = 0, len = $$.gradeHash.length; i < len; i++) {
-                    if ($$.gradeHash[i].name == str) return $$.gradeHash[i].id;
+            function _getSchool(str) {
+                for (var i = 0, len = vm['schoolHash'].length; i < len; i++) {
+                    if (vm['schoolHash'][i].name == str) return vm['schoolHash'][i].id;
                 }
                 return 0;
             }
@@ -30,9 +30,16 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'vms/main', 'user
                 date_place: _vm.yLocation.trim(),
                 date_people: _vm.yPeople,
                 gender_limit: _vm.ySex == '不限' ? 0 : (_vm.ySex == '男' ? 1 : 2),  //0不限, 1男, 2女
-                grade_limit: _getGrade(_vm.yGrade), //年级限制
-                grade_select_model: 1, //正选
-                cost_model: _vm.ySpend == 'AA制' ? 1 : ( _vm.ySpend == '我请客' ? 2 : 3), //AA, 我请客, 求请客
+                school_limit: _getSchool(_vm.ySchool), //学校限制
+                cost_type: (function(){
+                    //_vm.ySpend == 'AA制' ? 1 : ( _vm.ySpend == '我请客' ? 2 : 3)
+                    var ret = 0;
+                    if(_vm.ySpend == 'AA制') ret = 1;
+                    else if(_vm.ySpend == '我请客') ret = 2;
+                    else if(_vm.ySpend == '求包养') ret = 3;
+                    else if(_vm.ySpend == '无消费') ret = 4;
+                    return ret;
+                })(), //AA, 我请客, 求请客
                 uid: user.uid,
                 token: user.token
             };
@@ -76,10 +83,21 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'vms/main', 'user
             });
         },
 
-        gradeHash: [],
-
+        schoolHash: [{"id":1, "name": "重邮"}],
+        //'1`运动 `2` 聚会 `3` 娱乐 `4` 拼车 `5` 交流 `6` 学习 `7` 旅游 `8` 活动(与发现那个模块不是一个) `9` 其它
         //类型
-        datetype: [],
+        datetype: [
+            {"id":0, "type": "不限"},
+            {"id": 1, "type": "运动"},
+            {"id": 2, "type": "聚会"},
+            {"id": 3, "type": "娱乐"},
+            {"id": 4, "type": "拼车"},
+            {"id": 5, "type": "交流"},
+            {"id": 6, "type": "学习"},
+            {"id": 7, "type": "旅游"},
+            {"id": 8, "type": "活动"},
+            {"id": 9, "type": "其他"}
+        ],
         selectedDateTypeId: '',
         yType: "",
         yTypeStatus: false,
@@ -194,16 +212,16 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'vms/main', 'user
 
         },
 
-        yGrade: "",
-        yGradeStatus: false,//标明激活状态
-        yGradeValid: false,//标明数据有效状态
-        yGradeBlur: function (ev) {
+        ySchool: "",
+        ySchoolStatus: false,//标明激活状态
+        ySchoolValid: false,//标明数据有效状态
+        ySchoolBlur: function (ev) {
             ev.stopPropagation();
             var _vm = avalon.vmodels['dateCreate'],
-                v = _vm['yGrade'];
-            _vm['yGradeStatus'] = false;
-            _vm['yGrade'] = v;
-            _vm['yGradeValid'] = true;
+                v = _vm['ySchool'];
+            _vm['ySchoolStatus'] = false;
+            _vm['ySchool'] = v;
+            _vm['ySchoolValid'] = true;
         },
 
         academy: [], //hash
@@ -248,7 +266,7 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'vms/main', 'user
                 case 'yPeople':
                 case 'ySpend':
                 case 'ySex':
-                case 'yGrade':
+                case 'ySchool':
                 case 'yCollege':
                 case 'yType':
                     _vm[type + 'Status'] = true;
@@ -261,7 +279,7 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'vms/main', 'user
     });
 
     vm.$watch('yType', function (newStr, oldStr) {
-        var idObj = $$.typeHash.filter(function (o) {
+        var idObj = vm['datetype'].filter(function (o) {
             return o.type == newStr;
         })[0];
         if (idObj) {
@@ -284,3 +302,6 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'vms/main', 'user
 
     return vm;
 });
+
+
+
