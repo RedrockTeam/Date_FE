@@ -26,6 +26,11 @@ define('vms/slider', ['avalon', 'jquery' ,'swiper'], function(avalon, $){
                 onSlideChangeEnd: function(){
                     $(".tab .z-active").removeClass('z-active');
                     $(".tab li").eq(tabsSwiper.activeIndex).addClass('z-active');
+                    if(tabsSwiper.activeIndex == 2 || tabsSwiper.activeIndex == 3){
+                        vm['show'] = false;
+                    }else{
+                        vm['show'] = true;
+                    }
                     vm.$fire('all!moduleState', vm['states'][tabsSwiper.activeIndex]);    //广播
                 }
             });

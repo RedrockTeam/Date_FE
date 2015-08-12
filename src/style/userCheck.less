@@ -12,14 +12,15 @@
     border: 1px solid #cccccc;
     .head {
       display: inline-block;
-      width: 182rem / @psdWidth;
+      width: 18%;
       height: 182rem / @psdWidth;
       border: 1px solid #dddddd;
+      .fix-img-small;
     }
     .detail {
       display: inline-block;
       margin-left: 24rem / @psdWidth;
-      width: 760rem / @psdWidth;
+      width: 75%;
       vertical-align: top;
     }
 
@@ -30,13 +31,31 @@
         color: #444444;
         .rfz(60px);
         font-family: @fm-base;
+        max-width: 60%;
+        .text-over;
       }
-      .gender{
+      .icon{
         display: inline-block;
-        vertical-align: middle;
         .rfz(60px);
-        color: #37b1ea;
+        vertical-align: middle;
+        margin-left: 20rem / @psdWidth;
       }
+      .icon.female{
+        color: #ff607a;
+      }
+      .icon.male{
+        color: #4f96ee;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+      }
+      .authen{
+        .rfz(70px);
+        margin-left: 10rem / @psdWidth;
+        color: #ffb053;
+      }
+
     }
 
     .signature{
@@ -92,7 +111,16 @@
       margin-left: 24rem / @psdWidth;
     }
     .icon{
-      .rfz(60px);
+      .rfz(70px);
+    }
+    .collect{
+      color: #ff6757;
+    }
+    .record{
+      color: #4ad84a;
+    }
+    .authen{
+      color: #ffb053;
     }
   }
 }

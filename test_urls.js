@@ -94,10 +94,10 @@ var datas = {
     "/user/check": {
         data: {
             "uid": 1,           //uid
-            "nickname": "sb",   //昵称
-            "realname": "aegsg", //真实姓名
+            "nickname": "Use the ",   //昵称
+            "realname": "陈到那个", //真实姓名
             "head": "imgs/1.jpg",    //头像
-            "signature": "safsh",     //签名 (约会宣言)
+            "signature": "生命不止，折腾不息",     //签名 (约会宣言)
             "school": "重庆邮电大学",       //学校
             "academy": "光电工程学院",        //学院
             "hobbies": ["保龄球", "足球"],  //爱好

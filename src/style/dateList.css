@@ -163,31 +163,50 @@
 [data-dpr="3"] .date-list .detail span {
   font-size: 48px;
 }
-.date-list .detail .gender {
-  color: #ff607a;
+.date-list .detail .icon {
   display: inline-block;
   font-size: 20px;
   vertical-align: middle;
   margin-left: 0.18518519rem;
 }
-[data-dpr="2"] .date-list .detail .gender {
+[data-dpr="2"] .date-list .detail .icon {
   font-size: 30px;
 }
-[data-dpr="3"] .date-list .detail .gender {
+[data-dpr="3"] .date-list .detail .icon {
   font-size: 60px;
 }
-[data-dpr="2"] .date-list .detail .gender {
+[data-dpr="2"] .date-list .detail .icon {
   font-size: 30px;
 }
-[data-dpr="3"] .date-list .detail .gender {
+[data-dpr="3"] .date-list .detail .icon {
   font-size: 60px;
 }
-.date-list .detail .gender.male {
+.date-list .detail .icon.female {
+  color: #ff607a;
+}
+.date-list .detail .icon.male {
   color: #4f96ee;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
+}
+.date-list .detail .authen {
+  font-size: 23.33333333px;
+  margin-left: 0.09259259rem;
+  color: #ffb053;
+}
+[data-dpr="2"] .date-list .detail .authen {
+  font-size: 35px;
+}
+[data-dpr="3"] .date-list .detail .authen {
+  font-size: 70px;
+}
+[data-dpr="2"] .date-list .detail .authen {
+  font-size: 35px;
+}
+[data-dpr="3"] .date-list .detail .authen {
+  font-size: 70px;
 }
 .date-list .detail .signature {
   font-size: 12px;
