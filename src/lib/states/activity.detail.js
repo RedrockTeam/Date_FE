@@ -22,6 +22,7 @@ define(['avalon', 'request', 'userCenter', 'mmState'], function(avalon, request,
             request('activityDetail', {date_id: activity_id, uid: user.uid, token: user.token})
                 .done(function(res){
                     vmMain.$fire('all!activityDetailDataChanged', res.data);
+                    vmMain.$fire('all!activityDetailIdChanged', activity_id);
                     avalon.scan();
                     vmMain['state'] = 'ok';
                 });

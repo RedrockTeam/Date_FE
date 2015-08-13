@@ -4,6 +4,7 @@ var datas = {
             "uid": 10,
             "token": "reihgitdh346456",
             "nickname": "lijinxin",
+            "head": "imgs/test.png",
             "completed": true
         },
         "status": 200,
@@ -149,27 +150,44 @@ var datas = {
 
     "/date/detail": {
         "data": {
-            "nickname": "srhdt",                                  //昵称
+            "nickname": "Angelababy",                                  //昵称
             "head": "imgs/test.png", //头像路径
             "gender": "2",        //性别
             "created_at": "1429446317",   //创建时间    时间戳
             "date_time": "1529456317",    //约会时间    时间戳
             "authened": 1,                  //该用户是否认证过 `1`已认证 `2`未认证
             "date_id": "1",                 //date id
+            "collected": true,              //约会是否已经收藏过
             "place": "重邮宾馆",           //约会地点
-            "title": "来约炮!",           //标题
-            "content": "约炮要不要",      // 约会详细内容
+            "title": "下午一起去吃饭有约的吗？!",           //标题
+            "content": "大家好，我想找人陪我吃饭，最近小明很忙。都不约我了，你们有空的可以到三里屯优衣库找我。",      // 约会详细内容
             "limit": {                   //要求，固定为学院、性别、人数
-                "academy": "se",    //学院, 没有则不限
+                "school": "重庆邮电大学",    //学校, 没有则不限
                 "number": 142,     //人数, 没有则不限
                 "gender": 1          // 1 男性 2 女性 (没有/0) 则不限
             },
             "cost_mode": 1,            //消费类型
-            "date_status": 1,           //约的状态 默认显示一个报名的按钮 , 1 已结束, 2 成功, 3 受理中 4 已拒绝
+            "date_status": 0,           //约的状态 默认显示一个报名的按钮 , 1 已结束, 2 成功, 3 受理中 4 已拒绝
             "enrolled": [                //已报名人详情, 会把报了名的人列出来， 详情见设计图
                 {
-                    "uid": 23,           //该用户uid
+                    "uid": 21,           //该用户uid
                     "head": "imgs/1.jpg"         //头像
+                },
+                {
+                    "uid": 23,          //该用户uid
+                    "head": "imgs/test.png"         //头像
+                },
+                {
+                    "uid": 23,          //该用户uid
+                    "head": "imgs/test.png"         //头像
+                },
+                {
+                    "uid": 23,          //该用户uid
+                    "head": "imgs/test.png"         //头像
+                },
+                {
+                    "uid": 23,          //该用户uid
+                    "head": "imgs/test.png"         //头像
                 },
                 {
                     "uid": 23,          //该用户uid
@@ -181,12 +199,13 @@ var datas = {
                     "uid": "435",      //该用户uid
                     nickname: "sh",   //昵称
                     "head": "imgs/1.jpg",     //头像
-                    "content": "sghdj",    //评论内容
+                    "content": "sghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdjsghdj",    //评论内容
                     "time": 2524532     //评论时间  时间戳
                 },
                 {
                     "uid": "423",            //该用户uid
                     "head": "imgs/1.jpg",           //头像
+                    "nickname": "smelriansmelriansmelriansmelriansmelriansmelriansmelriansmelriansmelriansmelriansmelrian",     //nickname
                     "content": "sgsh",        //评论内容
                     "time": 2524532     //评论时间  时间戳
                 }
@@ -203,9 +222,10 @@ var datas = {
             "created_at": "1429446317",                         //创建时间    时间戳
             "activity_time": "1529456317",                   //时间    时间戳
             "place": "重庆大剧院",                             //地点
-            "title": "重庆音乐 '月堡音乐节'",                  //标题
-            "signature": "前十名用户免费参与!!",              //副标题
-            "content": "约炮要不要",                       // 约会详细内容
+            "title": "重庆“乐堡音乐节”特别活动邀请你一起来参加！",                  //标题
+            "collected": true,                              //活动是否已经收藏过
+            "signature": "娱乐",              //副标题
+            "content": "本次乐堡音乐节特别邀请了好妹妹乐队、郝云、宋冬野等知名民谣歌手来为大家倾情献唱，希望大家踊跃报名。",                       // 约会详细内容
             "money": "2534",                                      //消费金额   以人民币计
             "activity_status":"1",                            //活动状态 默认显示一个报名的按钮 , 1 已结束, 2 成功, 3 受理中 4 已拒绝
             "activity_album": [                               //活动相册展示
@@ -300,6 +320,31 @@ var datas = {
         "info": "成功"
     },
     "/user/register": {
+        "status": 200,
+        "info": "成功"
+    },
+    "/date/comment": {
+        "status": 200,
+        "info": "成功"
+    },
+
+    "/date/collect": {
+        "status": "200",
+        "info": "成功"
+    },
+    "/date/delCollect": {
+        "status": "200",
+        "info": "成功"
+    },
+    "/activity/collect": {
+        "status": "200",
+        "info": "成功"
+    },
+    "/activity/delCollect": {
+        "status": "200",
+        "info": "成功"
+    },
+    "/activity/comment": {
         "status": 200,
         "info": "成功"
     },

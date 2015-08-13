@@ -25,18 +25,16 @@ define(['avalon','userCenter','request','mmState', 'dialog'], function(avalon, u
                 setTimeout(function(){avalon.router.navigate('')}, 1000);
             }else{
                 //获取detail的数据
-                request('dateDetail', {date_id: date_id, uid: user.uid, token: user.token})
-                    .done(function(res){
-                        vmMain.$fire('all!dateDetailDataChanged', res.data);
-                        //vmDetail['isCollected'] = res.data.collection_status;
-                        //vmDetail['isSignedUp'] = res.data.apply_status;
-                        //
-                        //vmDetail.data = res.data;
-                        //vmDetail['isCollected'] = res.data.collection_status;
-                        //vmDetail['isSignedUp'] = res.data.apply_status;
-                        avalon.scan();
-                        vmMain['state'] = 'ok';
-                    });
+                $.when(
+                    request('dateDetail', {date_id: date_id, uid: user.uid, token: user.token}),
+                    request('schoolHash',{})
+                ).done(function(data, school){
+                    vmMain.$fire('all!dateDetailDataChanged', data.data);
+                    vmMain.$fire('all!dateDetailIdChanged', date_id);
+                    vmMain.$fire('all!dateDetailSchoolHashChanged', school.data);
+                    avalon.scan();
+                    vmMain['state'] = 'ok';
+                });
             }
 
         }

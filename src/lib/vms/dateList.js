@@ -56,20 +56,5 @@ define('vms/dateList', ['avalon', 'userCenter', 'request', 'filter$'], function(
         vm['filterRule'] = rule;
         log('dateRuleChanged', rule);
     });
-
-    ////对象复制， 过滤 带$的属性
-    //function filter$(temp, data){
-    //    for(var key in data){
-    //        if(key[0] != '$'){
-    //            if(typeof data[key] == 'string'){
-    //                temp[key] = data[key]
-    //            } else{
-    //                temp[key] = {};
-    //                filter$(temp[key], data[key]);
-    //            }
-    //        }
-    //    }
-    //}
-
     return vm;
 });

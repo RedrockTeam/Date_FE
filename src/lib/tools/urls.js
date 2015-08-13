@@ -20,6 +20,24 @@ define('urls', function(){
         "searchHot": "http://127.0.0.1:8080/search/hot",
         "searchDo": "http://127.0.0.1:8080/search/do",
         "userMessage": "http://127.0.0.1:8080/user/message/recieve",
+        "dateComment": "http://127.0.0.1:8080/date/comment",
+        "dateCollect": "http://127.0.0.1:8080/date/collect",
+        "dateDelCollect": "http://127.0.0.1:8080/date/delCollect",
+        "activityCollect": "http://127.0.0.1:8080/activity/collect",
+        "activityDelCollect": "http://127.0.0.1:8080/activity/delCollect",
+        "activityComment": "http://127.0.0.1:8080/activity/comment",
+
+
+
+
+
+
+
+
+
+
+
+
         "publish": "http://lich2013.com/date/index.php/api/date/createdate",
         "showBox": "http://lich2013.com/date/index.php/api/date/datelist",
         //"showBox": "../mock.php?type=list",
@@ -45,4 +63,4 @@ define('urls', function(){
     };
 
     return urls;
-})
+});

@@ -118,7 +118,7 @@
 .activity-list .detail {
   display: inline-block;
   width: 50%;
-  height: 2.59259259rem;
+  min-height: 2.59259259rem;
   overflow: hidden;
   margin-left: 0.23148148rem;
   position: relative;

@@ -1,6 +1,5 @@
+<div ms-include-src="'tpl/widget/tipBar.html'"></div>
 <div class="activity-detail" ms-controller="activityDetail">
-    <div ms-include-src="'tpl/widget/tipBar.html'"></div>
-
     <div class="detail">
         <header class="title">
             {{data.title}}<span class="tag">{{data.signature}}</span>
@@ -10,9 +9,9 @@
             {{data.content}}
         </p>
         <footer class="other">
-            <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>{{data.activity_time}}</span></div>
-            <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>{{data.place}}</span></div>
-            <div class="icon box-cost"><i class="iconfont">&#xe60f</i><span>{{data.money}}</span></div>
+            <div class="icon"><i class="iconfont time">&#xe61e</i><span>{{data.activity_time}}</span></div>
+            <div class="icon"><i class="iconfont location">&#xe602;</i><span>{{data.place}}</span></div>
+            <div class="icon"><i class="iconfont cost">&#xe618;</i><span>{{data.money}}</span></div>
         </footer>
     </div>
     <div class="album">
@@ -23,15 +22,15 @@
     </div>
     <div class="enrolled">
         <h3 class="tab-tip">报名 {{data.enrolled.length}}</h3>
-        <a href="" class="item" ms-repeat="data.enrolled" ms-css-background-image="'url('+el.head+')'"></a>
+        <div class="item" ms-repeat="data.enrolled" ms-on-tap="getUserDetail(el.uid)" ms-css-background-image="'url('+el.head+')'"></div>
     </div>
     <div class="commented">
         <h3 class="tab-tip">评论:5</h3>
         <ul>
-            <li class="item" ms-repeat="data.commented">
+            <li class="item" ms-repeat="data.commented" ms-on-tap="getUserDetail(el.uid)">
                 <i ms-css-background-image="'url('+el.head+')'"></i>
                 <aside>
-                    <header class="clearfix"><span class="username">{{el.nickname}}</span> <span class="time">{{el.time}}</span></header>
+                    <header class="clearfix"><span class="username">{{el.nickname}}</span> <span class="time">{{el.time * 1000 | date("MM.dd HH:mm"}}</span></header>
                     <p class="comment">
                         {{el.content}}
                     </p>
@@ -40,10 +39,16 @@
         </ul>
     </div>
 
-
-    <div class="top-menu">
-        <a href="">评论</a>
-        <a href="">收藏</a>
-        <a href="">报名</a>
+    <div class="footer">
+        <div class="btn-wrap clearfix" ms-if="!showCommentInput">
+            <div ms-on-tap="toggleInput">评论</div>
+            <div ms-on-tap="chat">私聊</div>
+            <div ms-on-tap="toggleCollect" ms-class-special="collected">{{!collected ? '收藏' : '已收藏'}}</div>
+        </div>
+        <div class="input-wrap clearfix" ms-if="showCommentInput">
+            <textarea class="input" ms-duplex="comment_content" placeholder="请输入内容"></textarea>
+            <button class="comment-btn" ms-on-tap="comment">评论</button>
+            <span class="close" ms-on-tap="toggleInput">X</span>
+        </div>
     </div>
 </div>

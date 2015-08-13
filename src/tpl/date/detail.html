@@ -4,8 +4,9 @@
         <div class="initiator-info">
             <div class="logo-wrapper" ms-css-background-image="'url('+data.head+')'"></div>
             <span class="initiator">{{data.nickname}}</span>
-            <i class="icon-font sex">&#xe61b;</i>
-            <button class="button">{{data.date_status}}</button>
+            <i ms-class-male="data.gender == 1" ms-class-female="data.gender == 2" class="icon icon-font">{{data.gender == 1 ? '&#xe61b' : '&#xe61c'}}</i>
+            <i ms-if="el.authened" class="icon iconfont authen">&#xe624;</i>
+            <button ms-class-invalid="data.date_status != 0" class="button">{{data.date_status | myStatusFilter}}</button>
         </div>
 
         <div class="date-title">
@@ -16,16 +17,19 @@
         <div class="date-info">
             
             <ul>
-                <li><i class="icon-font place">&#xe6b6;</i>{{data.place}}</li>
-                <li><i class="icon-font time">&#xe61e;</i>{{data.date_time}}</li>
-                <li><i class="icon-font guest">&#xe60f;</i>{{data.cost_mode}}</li>
+                <li><i class="icon-font place">&#xe602;</i>{{data.place}}</li>
+                <li><i class="icon-font time">&#xe61e;</i>{{data.date_time * 1000 | date("MM.dd HH:mm")}}</li>
+                <li><i class="icon-font guest">&#xe618;</i>{{data.cost_mode | costModel}}</li>
             </ul>
         </div>
 
         <div class="date-demand">
             <p class="demand">要求</p>
             <ul>
-                <li ms-repeat="data.limit">{{$key}} --- {{$val}}</li>
+                <!--<li ms-repeat="data.limit">{{$key}} -&#45;&#45; {{$val}}</li>-->
+                <li>性别：{{data.limit.gender|genderLimit}}</li>
+                <li>学校：{{data.limit.school}}</li>
+                <li>人数：{{data.limit.number}}人</li>
             </ul>
         </div>
     </div>
@@ -33,18 +37,34 @@
     <div class="participant">
 
         <div class="part-title">报名：<span>{{data.enrolled.length}}</span></div>
-        <div class="logo-wrapper" ms-repeat="data.enrolled" ms-css-background-image="'url('+el.head+')'"></div>
+        <div class="logo-wrapper" ms-repeat="data.enrolled" ms-on-tap="getUserDetail(el.uid)" ms-css-background-image="'url('+el.head+')'"></div>
     </div>
 
-    <div class="comment">
-        <div class="com-title">评论：<span>{{data.commented.length}}人</span></div>
-        <div class="logo-wrapper" ms-repeat="data.enrolled" ms-css-background-image="'url('+el.head+')'">
-
+    <div class="commented">
+        <h3 class="tab-tip">评论:5</h3>
+        <ul>
+            <li class="item" ms-repeat="data.commented" ms-on-tap="getUserDetail(el.uid)">
+                <i ms-css-background-image="'url('+el.head+')'"></i>
+                <aside>
+                    <header class="clearfix"><span class="username">{{el.nickname}}</span> <span class="time">{{el.time * 1000 | date("MM.dd HH:mm"}}</span></header>
+                    <p class="comment">
+                        {{el.content}}
+                    </p>
+                </aside>
+            </li>
+        </ul>
     </div>
 
     <div class="footer">
-        <div>评论</div>
-        <div>私聊</div>
-        <div class="special">收藏</div>
+        <div class="btn-wrap clearfix" ms-if="!showCommentInput">
+            <div ms-on-tap="toggleInput">评论</div>
+            <div ms-on-tap="chat">私聊</div>
+            <div ms-on-tap="toggleCollect" ms-class-special="collected">{{!collected ? '收藏' : '已收藏'}}</div>
+        </div>
+        <div class="input-wrap clearfix" ms-if="showCommentInput">
+            <textarea class="input" ms-duplex="comment_content" placeholder="请输入内容"></textarea>
+            <button class="comment-btn" ms-on-tap="comment">评论</button>
+            <span class="close" ms-on-tap="toggleInput">X</span>
+        </div>
     </div>
 </section>
