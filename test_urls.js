@@ -348,6 +348,21 @@ var datas = {
         "status": 200,
         "info": "成功"
     },
+    "/user/findPasswd/veri_code": {    //发送短信
+        "status": 200,
+        "info": "成功"
+    },
+    "/user/findPasswd/verify": {     //验证短信
+        "data":{
+            "token": "qwaert"             //验证确认过后发送的token时效检测
+        },
+        "status": 200,
+        "info": "验证成功"
+    },
+    "/user/findPasswd/reset": {       //修改
+        "status": 200,
+        "info": "成功"
+    },
     "error": {
         "status": 0,
         "info": "失败"

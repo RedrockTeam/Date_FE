@@ -1,22 +1,19 @@
-define('vms/register', ['avalon', 'jquery', 'request','dialog'],function(avalon, $, request){
-    var vmMain = avalon.vmodels['main'];
+define('vms/userFindPasswd', ['avalon', 'jquery', 'request', 'dialog'], function(avalon, $, request){
     var vm = avalon.define({
-        $id: 'register',
+        $id: 'userFindPasswd',
         veri_code: '',
+        token: "",
         tel: '',
-        password: '',
-        repassword: '',
         timer: 0,  //计时
 
         getAuth: function(){   //获取验证码
             if(vm['timer'])return 0;
-
             if(! checkTel(vm['tel']) )  {
                 $.Dialog.fail('请输入正确的手机号码!!!');
                 return 0;
             }
 
-            request('getRegisterAuth', {tel: vm['tel']}).done(function(res){
+            request('getFindPasswdAuth', {tel: vm['tel']}).done(function(res){
                 $.Dialog.success('发送成功!!!');
                 vm['timer'] = 60;
                 var timer = setInterval(function(){
@@ -28,7 +25,7 @@ define('vms/register', ['avalon', 'jquery', 'request','dialog'],function(avalon,
             });
         },
 
-        finish: function(){
+        send: function(){
             if( !checkTel(vm['tel']) ){
                 $.Dialog.fail('请输入正确的手机号码!!!');
                 vm['veri_code'] = '';
@@ -40,34 +37,18 @@ define('vms/register', ['avalon', 'jquery', 'request','dialog'],function(avalon,
                 return 0;
             }
 
-            if(!vm['password']){
-                $.Dialog.fail('请输入密码!!!');
-                return 0;
-            }
+            $.Dialog.loading();
 
-            if(!vm['repassword']){
-                $.Dialog.fail('请再次输入密码!!!');
-                return 0;
-            }
-
-            if(vm['repassword'] != vm['password']){
-                $.Dialog.fail('两次密码不一致!!!');
-                return 0;
-            }
-
-            vmMain['state'] = 'loading';
-            request('userRegister', {veri_code: vm['veri_code'], tel: vm['tel'], password: vm['password']}).done(function(res){
-                $.Dialog.success('注册成功!!!');
-                setTimeout(function(){
-                    avalon.router.navigate('/user/login');
-                    vmMain['state'] = 'ok';
-                }, 2000);
+            request('findPasswdVerify', {'veri_code': vm['veri_code'], 'tel': vm['tel']}, function(res){
+                $.Dialog.close();
+                vm.$fire('all!userResetPasswdTokenChanged', res.data.token);
+                vm.$fire('all!userResetPasswdTelChanged', vm['tel']);
+                setTimeout(function(){avalon.router.navigate('/user/resetPasswd')}, 0);
             }).fail(function(){
-                vmMain['state'] = 'ok';
+                $.Dialog.fail("验证失败噢");
             });
         }
     });
-
 
     function checkTel(tel){
         var regTel = /^\d{11}$/;

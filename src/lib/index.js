@@ -47,6 +47,9 @@ require([
         //'states/user.alter',        //修改个人信息
         'states/date.create',        //发布约会
         'states/search',            //搜索
+        'states/user.findPasswd',   //找回密码 验证码
+        'states/user.resetPasswd',   //重置密码
+
 
         //注册 vm 一次加载进内存  全部只依赖于 vm`main`
         'vms/register',
@@ -64,7 +67,10 @@ require([
         'vms/slider',
         'vms/userCheck',
         'vms/userMessage',
-        'vms/userComplete'
+        'vms/userComplete',
+        'vms/userFindPasswd',
+        'vms/userResetPasswd'
+
 
     ], function(){
         avalon.history.start({

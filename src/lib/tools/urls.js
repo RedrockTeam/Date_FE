@@ -14,7 +14,7 @@ define('urls', function(){
         "userComplete": "http://127.0.0.1:8080/user/complete",
         "userCheck": "http://127.0.0.1:8080/user/check",
         "schoolHash": "http://127.0.0.1:8080/school",
-        "getAuth": "http://127.0.0.1:8080/user/register/veri_code",
+        "getRegisterAuth": "http://127.0.0.1:8080/user/register/veri_code",      //注册短信验证码获取
         "userRegister": "http://127.0.0.1:8080/user/register",
         "userTags": "http://127.0.0.1:8080/user/tags",
         "searchHot": "http://127.0.0.1:8080/search/hot",
@@ -26,6 +26,9 @@ define('urls', function(){
         "activityCollect": "http://127.0.0.1:8080/activity/collect",
         "activityDelCollect": "http://127.0.0.1:8080/activity/delCollect",
         "activityComment": "http://127.0.0.1:8080/activity/comment",
+        "getFindPasswdAuth": "http://127.0.0.1:8080/user/findPasswd/veri_code",     //找回密码验证码获取
+        "findPasswdVerify": "http://127.0.0.1:8080/user/findPasswd/verify",     //找回密码验证码获取
+        "userResetPasswd": "http://127.0.0.1:8080/user/findPasswd/reset",     //重置密码
 
 
 

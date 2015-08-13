@@ -70,7 +70,7 @@
   - post: 
   
 		{
-			ver_code:  "34e346GH" ,     //验证码
+			veri_code:  "34e346GH" ,     //验证码
 			tel: "",                   //手机号码
 			password: "dhdthdthsthd"   //密码
 		}
@@ -145,7 +145,7 @@
 `找回密码，通过修改密码的方式，适用于手机号码注册的`
 
 ### 1. 获取验证码
-  - url: /user/gpasswd/veri_code
+  - url: /user/FindPasswd/veri_code
   - post: 
   
 		{
@@ -157,13 +157,32 @@
 			status: 200,            //状态码
 			info: "发送成功",        // info
 		}
+		
+### 2.找回密码短信验证
+  - url: /user/findPasswd/verify
+  - post: 
+  
+        {
+            "data":{
+                "token": "qwaert"             //验证确认过后发送的token时效检测
+            },
+            "veri_code": "",     //验证码
+            "tel": 142141355,   //手机
+        }
+        
+  - res: 
+  
+        {
+            "status": 200,
+            "info": "验证成功"
+        }
 
-### 2. 修改密码
-  - url: /user/gpasswd/alter
+### 3. 重置密码
+  - url: /user/findPasswd/reset
   - post
 
 		{
-			ver_code:  "34e346GH" ,     //验证码
+			token:  "34e346GH" ,        //token 时效
 			tel: "",                    //手机号码
 			password: "dhdthdthsthd"    //密码
 		}

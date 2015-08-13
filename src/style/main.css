@@ -2315,46 +2315,6 @@ body {
 .user-check .more .authen {
   color: #ffb053;
 }
-.message .message-list {
-  padding: 5%;
-  background-color: #fff;
-  *zoom: 1;
-}
-.message .message-list:before,
-.message .message-list:after {
-  display: table;
-  content: "";
-}
-.message .message-list:after {
-  clear: both;
-}
-.message .message-list .img-wrapper {
-  width: 1.2962963rem;
-  height: 1.2962963rem;
-  border-radius: 100%;
-  float: left;
-  border: 1px solid #999999;
-}
-.message .message-list .peo-name {
-  color: #49a3f6;
-}
-.message .message-list .right {
-  margin-left: 1.48148148rem;
-  line-height: 1.2962963rem;
-  font-size: 15.33333333px;
-}
-[data-dpr="2"] .message .message-list .right {
-  font-size: 23px;
-}
-[data-dpr="3"] .message .message-list .right {
-  font-size: 46px;
-}
-[data-dpr="2"] .message .message-list .right {
-  font-size: 23px;
-}
-[data-dpr="3"] .message .message-list .right {
-  font-size: 46px;
-}
 .user-complete p,
 .user-complete ul,
 .user-complete h4,
@@ -2778,6 +2738,138 @@ body {
   color: #999999;
   margin-right: 5%;
   float: right;
+}
+.findPasswd-container {
+  margin-top: 0.43518519rem;
+}
+.findPasswd-container .input-item {
+  position: relative;
+  border-bottom: 1px solid #dbdbdb;
+}
+.findPasswd-container .input-item:first-child {
+  border-top: 1px solid #dbdbdb;
+}
+.findPasswd-container input {
+  background: #ffffff;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.48148148rem 0 0.48148148rem 0.2962963rem;
+  font-size: 16px;
+  color: #000000;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  border: none;
+  outline: none;
+}
+[data-dpr="2"] .findPasswd-container input {
+  font-size: 24px;
+}
+[data-dpr="3"] .findPasswd-container input {
+  font-size: 48px;
+}
+[data-dpr="2"] .findPasswd-container input {
+  font-size: 24px;
+}
+[data-dpr="3"] .findPasswd-container input {
+  font-size: 48px;
+}
+.findPasswd-container .btn {
+  background: #ff9933;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  border: none;
+  outline: none;
+}
+[data-dpr="2"] .findPasswd-container .btn {
+  font-size: 24px;
+}
+[data-dpr="3"] .findPasswd-container .btn {
+  font-size: 48px;
+}
+[data-dpr="2"] .findPasswd-container .btn {
+  font-size: 24px;
+}
+[data-dpr="3"] .findPasswd-container .btn {
+  font-size: 48px;
+}
+.findPasswd-container .veri_btn {
+  padding: 0.48148148rem 0.60185185rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.findPasswd-container .sub_btn {
+  padding: 0.33333333rem 1.2037037rem;
+  margin-top: 0.61111111rem;
+  margin-right: 0.27777778rem;
+  float: right;
+  box-shadow: 0 0 0.00925926rem #cccccc;
+  border-radius: 0.09259259rem;
+  outline: none;
+}
+.resetPasswd-container {
+  margin-top: 0.43518519rem;
+}
+.resetPasswd-container .input-item {
+  position: relative;
+  border-bottom: 1px solid #dbdbdb;
+}
+.resetPasswd-container .input-item:first-child {
+  border-top: 1px solid #dbdbdb;
+}
+.resetPasswd-container input {
+  background: #ffffff;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.48148148rem 0 0.48148148rem 0.2962963rem;
+  font-size: 16px;
+  color: #000000;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  border: none;
+  outline: none;
+}
+[data-dpr="2"] .resetPasswd-container input {
+  font-size: 24px;
+}
+[data-dpr="3"] .resetPasswd-container input {
+  font-size: 48px;
+}
+[data-dpr="2"] .resetPasswd-container input {
+  font-size: 24px;
+}
+[data-dpr="3"] .resetPasswd-container input {
+  font-size: 48px;
+}
+.resetPasswd-container .btn {
+  background: #ff9933;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+  border: none;
+  outline: none;
+}
+[data-dpr="2"] .resetPasswd-container .btn {
+  font-size: 24px;
+}
+[data-dpr="3"] .resetPasswd-container .btn {
+  font-size: 48px;
+}
+[data-dpr="2"] .resetPasswd-container .btn {
+  font-size: 24px;
+}
+[data-dpr="3"] .resetPasswd-container .btn {
+  font-size: 48px;
+}
+.resetPasswd-container .sub_btn {
+  padding: 0.33333333rem 1.2037037rem;
+  margin-top: 0.61111111rem;
+  margin-right: 0.27777778rem;
+  float: right;
+  box-shadow: 0 0 0.00925926rem #cccccc;
+  border-radius: 0.09259259rem;
+  outline: none;
 }
 .activity-detail ul,
 .activity-detail h2,
@@ -3324,6 +3416,46 @@ body {
 }
 .hot-peo .peo-lists p {
   margin: 0;
+}
+.message .message-list {
+  padding: 5%;
+  background-color: #fff;
+  *zoom: 1;
+}
+.message .message-list:before,
+.message .message-list:after {
+  display: table;
+  content: "";
+}
+.message .message-list:after {
+  clear: both;
+}
+.message .message-list .img-wrapper {
+  width: 1.2962963rem;
+  height: 1.2962963rem;
+  border-radius: 100%;
+  float: left;
+  border: 1px solid #999999;
+}
+.message .message-list .peo-name {
+  color: #49a3f6;
+}
+.message .message-list .right {
+  margin-left: 1.48148148rem;
+  line-height: 1.2962963rem;
+  font-size: 15.33333333px;
+}
+[data-dpr="2"] .message .message-list .right {
+  font-size: 23px;
+}
+[data-dpr="3"] .message .message-list .right {
+  font-size: 46px;
+}
+[data-dpr="2"] .message .message-list .right {
+  font-size: 23px;
+}
+[data-dpr="3"] .message .message-list .right {
+  font-size: 46px;
 }
 .pbl-dating {
   background-color: #efefef;
