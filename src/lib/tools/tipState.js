@@ -21,6 +21,8 @@ define(['avalon'], function (avalon) {
 
         dateCreate: getState({'title': '发起约会', rightSub: true, rightSubCb: 'finish'}),
 
+        userAuthen: getState({'title': '实名认证', rightSub: true, rightSubCb: 'finish'}),
+
         userCollection: getState({'title': '我的收藏', rightShare: true, rightShareCb: 'share'}),
 
         userRecoreded: getState({'title': '我参与的', rightShare: true, rightShareCb: 'share'}),

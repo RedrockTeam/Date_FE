@@ -1,0 +1,42 @@
+<div ms-include-src="'tpl/widget/tipBar.html'"></div>
+<div class="authen-container" ms-controller="userAuthen">
+    <p class="tip">
+        为了保证更优质的服务与完善的大学生社交平台，采<span class="warning">用学生证
+        实名认证</span>审核，上传你的学生证封面及详细信息照片审核成功
+        后获得官方认证标志，魅力值上升，快来上传吧！
+    </p>
+
+    <div class="up-container">
+        <h3 class="title">上传照片</h3>
+        <div class="preview">
+            <div class="item">
+                <div class="wrap" ms-css-background-image="'url('+up_front+')'">
+                    <input class="file" ms-on-change="upload('front')" type="file"/>
+                    <span class="plus">+</span>
+                </div>
+                <div class="tip">学生证正面</div>
+            </div>
+            <div class="item">
+                <div class="wrap" ms-css-background-image="'url('+up_end+')'">
+                    <input class="file" ms-on-change="upload('end')" type="file"/>
+                    <span class="plus">+</span>
+                </div>
+                <div class="tip">学生证反面</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="up-container">
+        <h3 class="title">上传实例</h3>
+        <div class="preview">
+            <div class="item">
+                <div class="wrap" ms-css-background-image="'url('+show_front+')'"></div>
+                <div class="tip">学生证正面</div>
+            </div>
+            <div class="item">
+                <div class="wrap" ms-css-background-image="'url('+show_end+')'"></div>
+                <div class="tip">学生证反面</div>
+            </div>
+        </div>
+    </div>
+</div>
