@@ -280,82 +280,77 @@
 	<b style="color:red">活动：</b>
 
 		{
-			data:[{
-                "activity_id": "3",            //activity item的id
-                "head": "xxxxxxxxxx",          //头像
-                "group_id": "1",			   //group id	
-                "created_at": "1429446315",    //创建时间     时间戳
-                "date_time": "1429456315",     //约的具体时间  时间戳    
-                "place": "重邮宾馆",            //地点
-                "title": "来约炮!",             //标题
-                "signature": "前十名用户免费参与!!",  //优惠信息  
-				"erolled": 20,                  //多少人已报名
-				"commented": 20,                //多少人已评论
-				"praised": 20                  //多少人已点赞
-            },
-            {
-                "activity_id": "3",            //activity item的id
-                "head": "xxxxxxxxxx",          //头像
-                "group_id": "1",			   //group id	
-                "created_at": "1429446315",    //创建时间     时间戳
-                "date_time": "1429456315",     //约的具体时间  时间戳    
-                "place": "重邮宾馆",            //地点
-                "title": "来约炮!",             //标题
-                "signature": "前十名用户免费参与!!",//优惠信息  
-				"erolled": 20,                  //多少人已报名
-				"commented": 20,                //多少人已评论
-				"praised": 20,                  //多少人已点赞
-            }],
+			data: {
+			    "activity": [{
+                            "activity_id": "3",            //activity item的id
+                            "head": "xxxxxxxxxx",          //头像
+                            "group_id": "1",			   //group id	
+                            "created_at": "1429446315",    //创建时间     时间戳
+                            "date_time": "1429456315",     //约的具体时间  时间戳    
+                            "place": "重邮宾馆",            //地点
+                            "title": "来约炮!",             //标题
+                            "signature": "前十名用户免费参与!!",  //优惠信息  
+                            "erolled": 20,                  //多少人已报名
+                            "commented": 20,                //多少人已评论
+                            "praised": 20                  //多少人已点赞
+                        },
+                        {
+                            "activity_id": "3",            //activity item的id
+                            "head": "xxxxxxxxxx",          //头像
+                            "group_id": "1",			   //group id	
+                            "created_at": "1429446315",    //创建时间     时间戳
+                            "date_time": "1429456315",     //约的具体时间  时间戳    
+                            "place": "重邮宾馆",            //地点
+                            "title": "来约炮!",             //标题
+                            "signature": "前十名用户免费参与!!",//优惠信息  
+                            "erolled": 20,                  //多少人已报名
+                            "commented": 20,                //多少人已评论
+                            "praised": 20,                  //多少人已点赞
+                }],
+                "date": [{
+                             "date_id": "3",                //约会 item id
+                             "head": "xxxxxxxxxx",          //头像
+                             "uid": "1",				   //用户id	
+                             "created_at": "1429446315",    //创建时间     时间戳
+                             "date_time": "1429456315",     //约的具体时间  时间戳    
+                             "place": "重邮宾馆",            //地点
+                             "title": "来约炮!",             //标题
+                             "gender_limit": "1",           //性别限制
+                             "academy_limit": [],           //学院限制
+                             "grade_limit": [],             //年极限制
+                             "signature": "今天晚上我请客!",  //个性签名   
+                              "erolled": 20,                 //多少人已报名
+                              "commented": 20,               //多少人已评论
+                              "praised": 20,                  //多少人已点赞
+                              "tag": "吃饭",                   //标签
+                              "gender": 1，                    //性别 "1" 男性  "2"女性
+                              "mode": "1",              //1AA, 2我请客, 3求请客
+                              "nickname": "segrdh"            //昵称
+                        },
+                        {
+                            "date_id": "2",
+                            "head": "xxxxxxxxxx",
+                            "uid": "1",
+                            "created_at": "1429446316",
+                            "date_time": "1429456316",
+                            "place": "重邮宾馆",
+                            "title": "来约炮!",
+                            "gender_limit": "1",
+                            "academy_limit": [],
+                            "grade_limit": [],
+                            "signature": "今天晚上我请客!",
+                            "erolled": 20,                  //多少人已报名
+                            "commented": 20,               //多少人已评论
+                            "praised": 20,                  //多少人已点赞
+                            "tag": "打炮" ，                 //标签
+                            "gender": 1 ，                   //性别 "1" 男性  "2"女性 
+                            "mode": "1" ，             //1AA, 2我请客, 3求请客
+                            "nickname": "sehr"
+                }]
+			},
             "status" : 200,
             "info" : "成功"
 	}
-
-	<b style="color:red">约会：</b>
-
-		{
-			data:[{
-                "date_id": "3",                //约会 item id
-                "head": "xxxxxxxxxx",          //头像
-                "uid": "1",				   //用户id	
-                "created_at": "1429446315",    //创建时间     时间戳
-                "date_time": "1429456315",     //约的具体时间  时间戳    
-                "place": "重邮宾馆",            //地点
-                "title": "来约炮!",             //标题
-                "gender_limit": "1",           //性别限制
-                "academy_limit": [],           //学院限制
-                "grade_limit": [],             //年极限制
-                "signature": "今天晚上我请客!",  //个性签名   
-				"erolled": 20,                 //多少人已报名
-				"commented": 20,               //多少人已评论
-				"praised": 20,                  //多少人已点赞
-				"tag": "吃饭",                   //标签
-				"gender": 1，                    //性别 "1" 男性  "2"女性
-				"mode": "1",              //1AA, 2我请客, 3求请客
-				"nickname": "segrdh"            //昵称
-            },
-            {
-                "date_id": "2",
-                "head": "xxxxxxxxxx",
-                "uid": "1",
-                "created_at": "1429446316",
-                "date_time": "1429456316",
-                "place": "重邮宾馆",
-                "title": "来约炮!",
-                "gender_limit": "1",
-                "academy_limit": [],
-                "grade_limit": [],
-                "signature": "今天晚上我请客!",
-				"erolled": 20,                  //多少人已报名
-				"commented": 20,               //多少人已评论
-				"praised": 20,                  //多少人已点赞
-				"tag": "打炮" ，                 //标签
-				"gender": 1 ，                   //性别 "1" 男性  "2"女性 
-				"mode": "1" ，             //1AA, 2我请客, 3求请客
-				"nickname": "sehr"
-            }],
-            "status" : 200,
-            "info" : "成功"
-		}
 
 
 ### 4. 获取热门爱好标签

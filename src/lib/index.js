@@ -69,7 +69,10 @@ require([
         'vms/userMessage',
         'vms/userComplete',
         'vms/userFindPasswd',
-        'vms/userResetPasswd'
+        'vms/userResetPasswd',
+        'vms/userCollection',
+        'vms/userRecorded',
+
 
 
     ], function(){

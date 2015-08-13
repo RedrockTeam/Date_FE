@@ -1254,7 +1254,6 @@ body {
   display: inline-block;
   font-size: 20px;
   vertical-align: middle;
-  margin-left: 0.18518519rem;
 }
 [data-dpr="2"] .date-list .detail .icon {
   font-size: 30px;
@@ -1280,7 +1279,6 @@ body {
 }
 .date-list .detail .authen {
   font-size: 23.33333333px;
-  margin-left: 0.09259259rem;
   color: #ffb053;
 }
 [data-dpr="2"] .date-list .detail .authen {
@@ -2871,6 +2869,102 @@ body {
   border-radius: 0.09259259rem;
   outline: none;
 }
+.collection-container * {
+  margin: 0;
+  padding: 0;
+}
+.collection-container .switch {
+  margin: 0.22222222rem 0.27777778rem;
+  border: 1px solid #999999;
+  border-radius: 0.25925926rem;
+  width: 3.27777778rem;
+  position: relative;
+  overflow: hidden;
+}
+.collection-container .switch li {
+  float: left;
+  width: 50%;
+  padding: 0.18518519rem 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+[data-dpr="2"] .collection-container .switch li {
+  font-size: 24px;
+}
+[data-dpr="3"] .collection-container .switch li {
+  font-size: 48px;
+}
+[data-dpr="2"] .collection-container .switch li {
+  font-size: 24px;
+}
+[data-dpr="3"] .collection-container .switch li {
+  font-size: 48px;
+}
+.collection-container .switch li.active {
+  background: #999999;
+  color: #333333;
+}
+.collection-container .date,
+.collection-container .activity {
+  width: 100%;
+  margin-top: 0.22222222rem;
+  border-right: none;
+  border-left: none;
+}
+.collection-container .date .load-more,
+.collection-container .activity .load-more {
+  display: none;
+}
+.recorded-container * {
+  margin: 0;
+  padding: 0;
+}
+.recorded-container .switch {
+  margin: 0.22222222rem 0.27777778rem;
+  border: 1px solid #999999;
+  border-radius: 0.25925926rem;
+  width: 3.27777778rem;
+  position: relative;
+  overflow: hidden;
+}
+.recorded-container .switch li {
+  float: left;
+  width: 50%;
+  padding: 0.18518519rem 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+[data-dpr="2"] .recorded-container .switch li {
+  font-size: 24px;
+}
+[data-dpr="3"] .recorded-container .switch li {
+  font-size: 48px;
+}
+[data-dpr="2"] .recorded-container .switch li {
+  font-size: 24px;
+}
+[data-dpr="3"] .recorded-container .switch li {
+  font-size: 48px;
+}
+.recorded-container .switch li.active {
+  background: #999999;
+  color: #333333;
+}
+.recorded-container .date,
+.recorded-container .activity {
+  width: 100%;
+  margin-top: 0.22222222rem;
+  border-right: none;
+  border-left: none;
+}
+.recorded-container .date .load-more,
+.recorded-container .activity .load-more {
+  display: none;
+}
 .activity-detail ul,
 .activity-detail h2,
 .activity-detail h3,
@@ -3645,13 +3739,11 @@ body {
 }
 .filter-container {
   display: none;
-  background: #ffffff;
   position: absolute;
   width: 5rem;
   min-height: 100%;
   right: 0;
   top: 1.33333333rem;
-  border: 1px solid #cccccc;
   z-index: 1000;
 }
 .filter-container h5,

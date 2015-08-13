@@ -167,7 +167,6 @@
   display: inline-block;
   font-size: 20px;
   vertical-align: middle;
-  margin-left: 0.18518519rem;
 }
 [data-dpr="2"] .date-list .detail .icon {
   font-size: 30px;
@@ -193,7 +192,6 @@
 }
 .date-list .detail .authen {
   font-size: 23.33333333px;
-  margin-left: 0.09259259rem;
   color: #ffb053;
 }
 [data-dpr="2"] .date-list .detail .authen {

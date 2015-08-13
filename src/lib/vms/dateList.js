@@ -30,8 +30,9 @@ define('vms/dateList', ['avalon', 'userCenter', 'request', 'filter$'], function(
                     $.Dialog.success("木有更多啦");
                     $('.date-list .load-more').text('木有更多了');
                     return setTimeout(function(){vm['loadingFlag'] = false}, 2500);
+                }else{
+                    $('.date-list .load-more').text('加载更多');
                 }
-                log('loadmore');
                 vm['items'].pushArray(res.data);
                 vm['page'] = vm['page'] + 1;
                 setTimeout(function(){

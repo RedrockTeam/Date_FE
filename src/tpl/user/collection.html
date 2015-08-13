@@ -1,1 +1,13 @@
-<div>collection</div>
+<div ms-include-src="'tpl/widget/tipBar.html'"></div>
+<div class="collection-container" ms-controller="userCollection">
+    <menu class="switch clearfix">
+        <li ms-class-active="ct=='activity'" ms-on-tap="switchSt('activity')">活动</li>
+        <li ms-class-active="ct=='date'" ms-on-tap="switchSt('date')">约会</li>
+    </menu>
+
+    <div ms-if="ct=='activity'" class="activity" ms-include-src="'tpl/activity/list.html'">
+    </div>
+
+    <div ms-if="ct=='date'" class="date" ms-include-src="'tpl/date/list.html'">
+    </div>
+</div>

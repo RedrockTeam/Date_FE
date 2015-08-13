@@ -29,6 +29,8 @@ define('vms/activityList', ['avalon', 'request', 'userCenter', 'filter$'], funct
                     $.Dialog.success("木有更多啦");
                     $('.activity-list .load-more').text('木有更多了');
                     return setTimeout(function(){vm['loadingFlag'] = false}, 2500);
+                }else{
+                    $.Dialog.success("加载更多");
                 }
                 vm['items'].pushArray(res.data);
                 vm['page'] = vm['page'] + 1;

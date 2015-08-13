@@ -94,13 +94,11 @@
 }
 .filter-container {
   display: none;
-  background: #ffffff;
   position: absolute;
   width: 5rem;
   min-height: 100%;
   right: 0;
   top: 1.33333333rem;
-  border: 1px solid #cccccc;
   z-index: 1000;
 }
 .filter-container h5,
