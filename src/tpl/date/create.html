@@ -5,7 +5,6 @@
         <div class="row" ms-on-tap="active('yType')" ms-class="active:yTypeStatus">
             <span class="dating-type">约什么</span>
             <select id="yType" class="choose" ms-duplex="yType" ms-on-blur="yTypeBlur">
-                <option value=""></option><!-- todo-->
                 <option ms-repeat="datetype" ms-attr-value="el.type">{{el.type}}</option>
             </select>
             <a class="right">{{yType ? yType : "点击更改"}}</a>
@@ -27,28 +26,27 @@
     <div class="row-group light-grey">
 
         <div class="row" ms-on-click="active('yTime', $event)" ms-class="active:yTimeStatus">
-            <i class="iconfont time">&#xe611;</i>
+            <i class="iconfont time">&#xe61e;</i>
             <span class="subtitle">约会时间</span>
             <input type="text" id="yTime" data-view="Popup" ms-duplex="yTime" data-field="datetime" readonly ms-on-blur="yTimeBlur"/>
             <a class="right">{{yTime ? yTime : "请选择"}}</a>
         </div>
         <div class="row" ms-on-tap="active('yLocation')" ms-class="active:yLocationStatus">
-            <i class="iconfont location">&#xe612;</i>
+            <i class="iconfont location">&#xe602;</i>
             <span class="subtitle">约会地点</span>
             <input type="text" ms-visible="yLocationStatus" id="yLocation" class="w50" ms-duplex="yLocation" ms-on-blur="yLocationBlur"/>
             <a class="right2" ms-if="!yLocationStatus">{{yLocation ? yLocation : "请输入"}}</a>
         </div>
         <div class="row" ms-on-tap="active('yPeople')" ms-class="active:yPeopleStatus">
-            <i class="iconfont people">&#xe610;</i>
+            <i class="iconfont people">&#xe60b;</i>
             <span class="subtitle">约会人数</span>
             <input type="tel" ms-visible="yPeopleStatus" id="yPeople" class="w50" ms-duplex="yPeople" ms-on-blur="yPeopleBlur"/>
             <a class="right2" ms-if="!yPeopleStatus">{{yPeople ? yPeople : "请选择"}}</a>
         </div>
         <div class="row" ms-on-tap="active('ySpend')" ms-class="active:ySpendStatus">
-            <i class="iconfont dollar">&#xe60f;</i>
+            <i class="iconfont dollar">&#xe61e;</i>
             <span class="subtitle">花费</span>
             <select id="ySpend" class="choose" ms-duplex="ySpend" ms-on-blur="ySpendBlur">
-                <option value=""></option>
                 <option value="无限制">无限制</option>
                 <option value="AA制">AA制</option>
                 <option value="我请客">我请客</option>
