@@ -8,12 +8,12 @@ define(['avalon', 'userCenter', 'request','mmState'], function(avalon, userCente
         templateUrl: "tpl/user/complete.html",
         onEnter: function(){
             vmMain['state'] = 'loading';
-            vmMain.$fire('all!tipBarStateChanged', 'userComplete');
             var user = userCenter.info();
             if(!user.state){
                 setTimeout(function(){avalon.router.navigate('/user/login')}, 0);
                 return;
             }//认证处理
+            vmMain.$fire('all!tipBarStateChanged', 'userComplete');
 
             $.when(
                 request('userCheck', { uid: user.uid, token: user.token }),

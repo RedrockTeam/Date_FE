@@ -17,6 +17,8 @@ define(['avalon'], function (avalon) {
 
         userComplete: getState({'title': '完善信息', rightSub: true, rightSubCb: 'finish'}),
 
+        userCheck: getState({'title': '个人信息'}),
+
         userAlter: getState({'title': '修改资料', rightSub: true, rightSubCb: 'finish'}),
 
         dateCreate: getState({'title': '发起约会', rightSub: true, rightSubCb: 'finish'}),
@@ -27,7 +29,9 @@ define(['avalon'], function (avalon) {
 
         userRecoreded: getState({'title': '我参与的', rightShare: true, rightShareCb: 'share'}),
 
-        userFans: getState({'title': '我的粉丝', rightSub: true, rightSubCb: 'share'}),
+        userFans: getState({'title': '粉丝', rightShare: true, rightShareCb: 'share'}),
+
+        userFollows: getState({'title': '关注', rightShare: true, rightShareCb: 'share'}),
 
         activityDetail: getState({'title': '活动详情', rightShare: true, rightShareCb: 'share'}),
 

@@ -1,4 +1,5 @@
 <div class="user-check" ms-controller="userCheck">
+    <div ms-if="!isRoot" ms-include-src="'tpl/widget/tipBar.html'"></div>
     <header>
         <div class="person clearfix">
             <i class="head" ms-css-background-image="'url('+data.head+')'"></i>
@@ -25,8 +26,14 @@
         <li>兴趣：{{data.hobbies}}</li>
     </ul>
     <footer class="more">
-        <a href="#!/user/collection"><i class="icon iconfont collect">&#xe623;</i><span>我收藏的</span></a>
-        <a href="#!/user/recorded"><i class="icon iconfont record">&#xe8d4;</i> <span>我参与的</span></a>
-        <a href="#!/user/complete"><i class="icon iconfont authen">&#xe610;</i><span>实名认证</span></a>
+        <a href="javascript:void(0)" ms-on-tap="go('collection')">
+            <i class="icon iconfont collect">&#xe623;</i>
+            <span>{{isRoot ? '我' : (data.gender == 1 ? '他' : '她')}}收藏的</span>
+        </a>
+        <a href="javascript:void(0)" ms-on-tap="go('recorded')">
+            <i class="icon iconfont record">&#xe8d4;</i>
+            <span>{{isRoot ? '我' : (data.gender == 1 ? '他' : '她')}}参与的</span>
+        </a>
+        <a href="#!/user/authen" ms-if="isRoot"><i class="icon iconfont authen">&#xe610;</i><span>实名认证</span></a>
     </footer>
 </div>

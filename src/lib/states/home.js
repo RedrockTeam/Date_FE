@@ -13,13 +13,14 @@ define(
             url: "/",
             templateUrl: "tpl/home/yield.html",
             onEnter: function(){
-                vmMain['state'] = 'loading';
                 vmMain.$fire('all!sliderModCoutChanged', 0);
                 var user = userCenter.info();
                 if(!user.state){
                     setTimeout(function(){avalon.router.navigate('/user/login')}, 0);
                     return;
                 }//认证处理
+
+                vmMain['state'] = 'loading';
 
                 $.when(     //首屏一次性加载完 所需要的数据
                     request('slider'),
@@ -45,9 +46,10 @@ define(
                         vmMain.$fire('all!activityItemsChanged', al.data);
                         vmMain.$fire('all!userMessageItemsChanged', um.data);
                         vmMain.$fire('all!userCheckDataChanged', uc.data);
+                        vmMain.$fire('all!userCheckDataCpy', uc.data);   //第一次通知复制自己的数据
                         vmMain.$fire('all!sliderDaLoaded', true);
-                        avalon.scan();
                         vmMain['state'] = 'ok';
+                        avalon.scan();
                     }
                 );
             }

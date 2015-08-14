@@ -92,6 +92,9 @@
 .test-bor-green {
   border: 1px solid green;
 }
+.activity-detail {
+  margin-bottom: 1.2962963rem;
+}
 .activity-detail ul,
 .activity-detail h2,
 .activity-detail h3,
@@ -101,7 +104,6 @@
   font-weight: normal;
 }
 .activity-detail .detail {
-  margin-top: 0.23148148rem;
   border: 1px solid #dddddd;
   background: #ffffff;
 }

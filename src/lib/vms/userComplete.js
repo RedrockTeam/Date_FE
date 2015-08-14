@@ -3,24 +3,7 @@ define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon
     var vm = avalon.define({
         $id: 'userComplete',
         cantprev: false,
-        data: {
-            nickname: "",
-            realname: "",
-            head: "",
-            school: "",
-            gender: "",
-            academy: "",
-            signature: "",
-            weixin: "",
-            qq: "",
-            contact: {
-                weixin: "",
-                tel: "",
-                qq: "",
-                weibo: ""
-            },
-            hobbies: []
-        },
+        data: {},
         tags: ["ewg", "egf"],     //所有标签
         toggleHobbyCb: function(hobby){
             var data = vm['data'];

@@ -12,8 +12,13 @@ define(['avalon', 'userCenter', 'request','mmState'], function(avalon, userCente
                 return;
             }//认证处理
             vmMain['state'] = 'loading';
-            request('userCheck', {'check_uid': this.params.id || user.uid, 'uid': user.uid, 'token': user.token}).done(function(res){
+            var get_uid = this.params.id;
+            request('userCheck', {'check_uid': get_uid || user.uid, 'uid': user.uid, 'token': user.token}).done(function(res){
                 vmMain.$fire('all!userCheckDataChanged', res.data);
+                if(get_uid || get_uid != user.uid) {
+                    vmMain.$fire('all!userCheckIsRootChanged', false);
+                    vmMain.$fire('all!tipBarStateChanged', 'userCheck');
+                }
                 avalon.scan();
                 vmMain['state'] = 'ok';
             });

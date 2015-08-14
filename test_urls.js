@@ -523,6 +523,63 @@ var datas = {
         "status": 200,
         "info": "成功"
     },
+
+    "/user/fans": {
+        "data": [
+            {
+                "head": "imgs/1.jpg",          //头像
+                "nickname": "村里没有巧克力",    //nickname
+                "uid": "1",				   		//用户id
+                "gender": 1,                    //性别 "1" 男性  "2"女性
+                "signature": "今天晚上我请客!"    //个性签名
+            },
+            {
+                "head": "imgs/test.png",          //头像
+                "nickname": "愤怒的小黄瓜",       //nickname
+                "uid": "1",				   		//用户id
+                "gender": 2,                    //性别 "1" 男性  "2"女性
+                "signature": "明天晚上你请客请客!"    //个性签名
+            },
+            {
+                "head": "imgs/1.jpg",          //头像
+                "uid": "1",				   		//用户id
+                "nickname": "梁静茹",           //nickname
+                "gender": 1,                    //性别 "1" 男性  "2"女性
+                "signature": "后天晚上晚上他请客!"    //个性签名
+            }
+        ],
+        "status": 200,
+        "info": "获取成功"
+    },
+
+    "/user/follows": {
+        "data": [
+            {
+                "head": "imgs/1.jpg",          //头像
+                "nickname": "村里没有巧克力",    //nickname
+                "uid": "1",				   		//用户id
+                "gender": 1,                    //性别 "1" 男性  "2"女性
+                "signature": "今天晚上我请客!"    //个性签名
+            },
+            {
+                "head": "imgs/test.png",          //头像
+                "nickname": "愤怒的小黄瓜",       //nickname
+                "uid": "1",				   		//用户id
+                "gender": 2,                    //性别 "1" 男性  "2"女性
+                "signature": "明天晚上你请客请客!"    //个性签名
+            },
+            {
+                "head": "imgs/1.jpg",          //头像
+                "uid": "1",				   		//用户id
+                "nickname": "梁静茹",           //nickname
+                "gender": 1,                    //性别 "1" 男性  "2"女性
+                "signature": "后天晚上晚上他请客!"    //个性签名
+            }
+        ],
+        "status": 200,
+        "info": "获取成功"
+    },
+
     "error": {
         "status": 0,
         "info": "失败"

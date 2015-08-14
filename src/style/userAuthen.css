@@ -94,6 +94,7 @@
 }
 .authen-container {
   padding: 0.38888889rem;
+  padding-top: 0;
 }
 .authen-container .tip {
   font-size: 12px;

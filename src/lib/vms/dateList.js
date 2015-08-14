@@ -50,12 +50,10 @@ define('vms/dateList', ['avalon', 'userCenter', 'request', 'filter$'], function(
 
     vm.$watch('dateItemsChanged', function(data){
         vm['items'] = data;
-        log('dateItemsChanged', data);
     });
 
     vm.$watch('dateRuleChanged', function(rule){
         vm['filterRule'] = rule;
-        log('dateRuleChanged', rule);
     });
     return vm;
 });
