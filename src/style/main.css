@@ -2659,6 +2659,9 @@ body {
   border: none;
   color: #8dda5e;
 }
+.fan {
+  padding-top: 2.77777778rem;
+}
 .hot-peo {
   padding: 0 5%;
   background-color: #fff;
@@ -2694,8 +2697,6 @@ body {
 }
 .hot-peo .sex {
   font-style: normal;
-  background-color: #ff6b5c;
-  color: white;
 }
 .hot-peo .peo-nickname {
   font-size: 15.33333333px;
@@ -2717,7 +2718,6 @@ body {
   background-color: white;
   color: #ff6b5c;
   font-size: 18.53333333px;
-  width: 0.83333333rem;
 }
 [data-dpr="2"] .hot-peo .peo-nickname i {
   font-size: 27.8px;
@@ -3098,7 +3098,7 @@ body {
   content: "\e605";
 }
 .icon-female:before {
-  content: "\e613";
+  content: "\e61b";
 }
 .icon-male {
   font-size: 6px;
@@ -3148,7 +3148,7 @@ body {
   font-size: 18px;
 }
 .icon-male:before {
-  content: "\e614";
+  content: "\e61e";
 }
 .icon-ren:before {
   content: "\e610";

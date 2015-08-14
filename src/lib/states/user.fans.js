@@ -1,6 +1,6 @@
 
 //个人粉丝查看
-define(['avalon', 'vms/tipBar', 'mmState', 'vms/main'], function(avalon, vmTipBar){
+define('states/user.fans',['request','avalon', 'vms/tipBar', 'vms/userFans', 'vms/main', 'mmState'], function(request,avalon, vmTipBar,vmFans,vmsMain){
     avalon.state('userFans', {
         controller: "main",
         url: "/user/fans",
@@ -8,7 +8,17 @@ define(['avalon', 'vms/tipBar', 'mmState', 'vms/main'], function(avalon, vmTipBa
         onEnter: function(){
             log('/user/fans');
             vmTipBar['state'] = 'userFans';
-            avalon.scan();
+            vmsMain.state = 'loading';
+
+            request('fans',{
+                uid:'',
+                token:''
+            }).done(function(res){
+                vmFans.lists = res.data;
+                log(vmFans.lists);
+                avalon.scan();
+                vmsMain.state = 'ok';
+            })
         }
     });
 });

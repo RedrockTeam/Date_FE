@@ -14,6 +14,7 @@ define('urls', function(){
         "userCheck": "http://127.0.0.1:8080/user/check",
         "searchHot": "http://127.0.0.1:8080/search/hot",
         "searchDo": "http://127.0.0.1:8080/search/do",
+        "fans": "http://127.0.0.1:8080/user/fans",
         "userMessage": "http://127.0.0.1:8080/user/message/recieve",
         "publish": "http://lich2013.com/date/index.php/api/date/createdate",
         "showBox": "http://lich2013.com/date/index.php/api/date/datelist",

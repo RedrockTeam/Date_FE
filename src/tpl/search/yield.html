@@ -4,37 +4,19 @@
 
 <section class="search-container" ms-controller="search">
     <div id="form-wrapper">
-        <input class="search-input" type="search" placeholder="搜索..."/>
-        <a href="javascript:void(0)" title="搜索"  class="icon-font icon-search">&#xe650;</a>
+        <input class="search-input" ms-duplex="content" type="search" placeholder="搜索..."/>
+        <a href="javascript:void(0)" title="搜索" ms-on-tap="finish()"  class="icon-font icon-search">&#xe650;</a>
     </div>
 
 
     <div class="hot-act">
         <p class="hot-title">热门活动</p>
-        <div class="act-lists">
+        <div class="act-lists" ms-repeat="list_activity">
             <span class="act-title">
-                重庆“2015乐堡啤酒”音乐节盛大开幕.
+                {{el.title}}
             </span>
             <span class="act-discount">
-                前10名报名免费参加
-            </span>
-        </div>
-
-        <div class="act-lists">
-            <span class="act-title">
-                重庆“2015乐堡啤酒”音乐节盛大开幕.
-            </span>
-            <span class="act-discount">
-                前10名报名免费参加
-            </span>
-        </div>
-
-        <div class="act-lists">
-            <span class="act-title">
-                重庆“2015乐堡啤酒”音乐节盛大开幕.
-            </span>
-            <span class="act-discount">
-                前10名报名免费参加
+                {{el.signature}}
             </span>
         </div>
     </div>
@@ -42,55 +24,19 @@
     <div class="hot-peo">
         <p class="hot-title">热门用户</p>
 
-        <div class="peo-lists">
-            <div class="img-wrapper">
+        <div class="peo-lists" ms-repeat="list_people">
+            <div class="img-wrapper" ms-css-background="'url('+{{el.head}}+')">
 
             </div>
 
             <div class="right">
                 <p class="peo-nickname">
-                    村里没有巧克力
-                        <i class="icon-font sex">&#xe61b;</i>
+                    {{el.uid}}
+                        <i class="icon-font sex" ms-class-icon-female="el.gender == 2" ms-class-icon-male="el.gender == 1"></i>
                 </p>
 
                 <p class="signature">
-                    活着就是为了改变世界
-                </p>
-            </div>
-
-        </div>
-
-        <div class="peo-lists">
-            <div class="img-wrapper">
-
-            </div>
-
-            <div class="right">
-                <p class="peo-nickname">
-                    村里没有巧克力
-                        <i class="icon-font sex">&#xe61b;</i>
-                </p>
-
-                <p class="signature">
-                    活着就是为了改变世界
-                </p>
-            </div>
-
-        </div>
-
-        <div class="peo-lists">
-            <div class="img-wrapper">
-
-            </div>
-
-            <div class="right">
-                <p class="peo-nickname">
-                    村里没有巧克力
-                        <i class="icon-font sex">&#xe61b;</i>
-                </p>
-
-                <p class="signature">
-                    活着就是为了改变世界
+                    {{el.signature}}
                 </p>
             </div>
 

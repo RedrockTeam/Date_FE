@@ -80,6 +80,9 @@
 .test-bor-green {
   border: 1px solid green;
 }
+.fan {
+  padding-top: 2.77777778rem;
+}
 .hot-peo {
   padding: 0 5%;
   background-color: #fff;
@@ -115,8 +118,6 @@
 }
 .hot-peo .sex {
   font-style: normal;
-  background-color: #ff6b5c;
-  color: white;
 }
 .hot-peo .peo-nickname {
   font-size: 15.33333333px;
@@ -138,7 +139,6 @@
   background-color: white;
   color: #ff6b5c;
   font-size: 18.53333333px;
-  width: 0.83333333rem;
 }
 [data-dpr="2"] .hot-peo .peo-nickname i {
   font-size: 27.8px;
