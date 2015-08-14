@@ -10,15 +10,13 @@ define('states/search', ['avalon', 'vms/tipBar', 'request', 'vms/search','vms/ma
             vmsMain.state = 'loading';
 
             request('searchHot',{
-                uid: '',
-                token: '',
-                type: 1,
-                content: ''
+                'uid': '',
+                'token': ''
             }).done(function(res){
                 vmSearch.list_activity = res.data.activity;
                 vmSearch.list_people = res.data.people;
                 avalon.scan();
-                log(vmSearch.list.activity);
+                //log(vmSearch.list.activity);
                 vmsMain.state = 'ok';
             })
         }

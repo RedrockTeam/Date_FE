@@ -19,6 +19,7 @@ define('vms/search', ['avalon', 'request'], function(avalon,request){
                 content: content == '' ? '' : content.trim()
             }).done(function(res){
                 list = res.data;
+
             })
         }
     });

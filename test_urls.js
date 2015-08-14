@@ -274,7 +274,6 @@ var datas = {
     "/user/complete": {
         "status": 200,
         "info": "ok"
-
     },
     "/search/hot": {
         "data": {
