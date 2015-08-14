@@ -1,5 +1,7 @@
 @import "var";
-.user-complete{
+
+//namespace
+.alter-container{
   p,ul,h4,h5{
     margin: 0;
     padding: 0;
@@ -52,26 +54,27 @@
 
     li {
       border-bottom: 1px solid #cccccc;
+      position: relative;
       .filed-tip {
+        position: absolute;
+        right: 0;
         box-sizing: border-box;
-        display: inline-block;
-        max-width: 50%;
-        padding: 50rem/@psdWidth 20rem/@psdWidth 50rem/@psdWidth 50rem/@psdWidth;
+        padding: 50rem / @psdWidth 0 50rem / @psdWidth 50rem / @psdWidth;
         .font-48;
         color: #999999;
         font-family: @fm-base;
-        vertical-align: top;
       }
-      .warning{
-        color: red;
+      .gender_tip{
+        position: relative;
+        display: block;
+        color: #444444;
       }
       input {
         box-sizing: border-box;
-        max-width: 50%;
+        width: 80%;
         display: inline-block;
         overflow: hidden;
         padding: 50rem / @psdWidth;
-        padding-left: 0;
         outline: none;
         border: none;
         .font-48;
@@ -84,7 +87,7 @@
       display: inline-block;
       color: #999999;
       .font-48;
-      padding: 50rem / @psdWidth 0;
+      padding: 50rem/@psdWidth 0 50rem/@psdWidth 0.46296296rem;
       vertical-align: middle;
       max-width: 50%;
       .text-over;

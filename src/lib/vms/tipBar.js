@@ -1,6 +1,4 @@
 define(['jquery', 'noop', 'userCenter', 'tools/tipState','mmState'], function($, noop, userCenter, tipStates){
-
-    var vmodels = avalon.vmodels;
     var vm = avalon.define({
         $id: "tipBar",
         title: "",   //default
@@ -8,7 +6,8 @@ define(['jquery', 'noop', 'userCenter', 'tools/tipState','mmState'], function($,
         rightShare: false,
         subCb: function(){
             var s = vm['state'];
-            vmodels[s].finish();
+            var ev = 'all!'+ s +'Finish';
+            vm.$fire(ev, {});
         },
         rightShareCb: "",
         state: ""

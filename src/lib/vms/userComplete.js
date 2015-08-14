@@ -1,10 +1,26 @@
 define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon, $, userCenter, request, filter$){
-
     var vm = avalon.define({
         $id: 'userComplete',
         cantprev: false,
-        data: {},
-        tags: ["ewg", "egf"],     //所有标签
+        data: {
+            "uid": '',          //uid
+            "nickname": "",   //昵称
+            "realname": "", //真实姓名
+            "head": "",    //头像
+            "signature": "",     //签名 (约会宣言)
+            "school": "",       //学校
+            "academy": "",        //学院
+            "hobbies": [],  //爱好
+            "gender" : 1,            //性别  `1`男 `2`女
+            "authened": 0,          //是否认证过 `1`已认证 `2`未认证
+            "contact": {            //联系方式 固定
+                "weixin": "",   //微信号
+                "tel": '',   //手机号
+                "qq": '', //qq
+                "weibo": ""   //微博
+            }
+        },
+        tags: [],     //展示的标签
         toggleHobbyCb: function(hobby){
             var data = vm['data'];
             var index = data['hobbies'].indexOf(hobby);
@@ -39,11 +55,22 @@ define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon
 
             }
         },
-        selectGender: function(){
-
-        },
         finishHeadCb: function(){
 
+        },
+        getMoreTags: function(){
+            //todo
+            vm.$fire('all!userSelectTagsFromChanged','/user/complete');
+            vm.$fire('all!userCallSelectedChanged',vm['data']['hobbies']);
+            setTimeout(function(){
+                avalon.router.navigate('/user/selectTags');
+            }, 0);
+        },
+        goAuthen: function(){
+            vm.$fire('all!goAuthen', 'userCheck');
+            setTimeout(function(){
+                avalon.router.navigate('/user/authen');
+            }, 0);
         },
         finish: function(){
             var user = userCenter.info();
@@ -52,22 +79,18 @@ define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon
                 $.Dialog.fail("请上传你的自拍，好吗");
                 return;
             }
-
             if(!vd['nickname']){
                 $.Dialog.fail("请填上昵称");
                 return;
             }
-
             if(!vd['realname']){
                 $.Dialog.fail("请填上真实姓名");
                 return;
             }
-
             if(!vd['school']){
                 $.Dialog.fail("没有填学校噢!!!");
                 return;
             }
-
             if(!vd['academy']){
                 $.Dialog.fail("没有填学院噢!!!");
                 return;
@@ -78,8 +101,6 @@ define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon
                 uid: user.uid,
                 token: user.token
             }, temp);
-
-
             request('userComplete', data).done(function(res){
                 $.Dialog.success("信息完善成功!!, 开始约炮吧!!!!");
                 setTimeout(function(){avalon.router.navigate('')}, 2000);
@@ -87,15 +108,25 @@ define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon
         }
     });
 
-    vm.$watch('data', function(){
-        console.log('data cahnged');
-    });
-    vm.$watch('userComleteDataChanged', function(data){
-        vm['data'] = data;
-    });
-    vm.$watch('userComleteTagsChanged', function(data){
-        vm['tags'] = data;
+    vm.$watch('userComleteTagsChanged', function(tags){
+        if(tags.length > 4){
+            vm['tags'] = tags.slice(0,4);
+            return 0;
+        }
+        vm['tags'] = tags;
     });
 
+    vm.$watch('userCompleteFinish', function(){
+        vm['finish']();
+    });
+
+    vm.$watch('completeBackTagsChanged', function(selected){    //用户从标签选择回来了过后
+        vm['data']['hobbies'] = selected;
+        if(selected.length > 4){
+            vm['tags'] = selected.slice(0,4);
+            return 0;
+        }
+        vm['tags'] = selected;
+    });
     //todo 图片上传 待定
 });

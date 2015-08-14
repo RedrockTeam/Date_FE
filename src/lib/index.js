@@ -45,6 +45,7 @@ require([
         'states/user.login',        //个人登录
         'states/user.register',     //个人注册
         'states/user.complete',      //完善个人信息
+        'states/user.selectTags',      //完善个人信息
         'states/user.alter',        //修改个人信息
         'states/date.create',        //发布约会
         'states/search',            //搜索
@@ -70,13 +71,15 @@ require([
         'vms/userCheck',
         'vms/userMessage',
         'vms/userComplete',
+        'vms/userSelectTags',
         'vms/userFindPasswd',
         'vms/userResetPasswd',
         'vms/userCollection',
         'vms/userRecorded',
         'vms/userAuthen',
         'vms/userFans',
-        'vms/userFollows'
+        'vms/userFollows',
+        'vms/userAlter'
 
     ], function(){
         avalon.history.start({

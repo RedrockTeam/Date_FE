@@ -8,8 +8,6 @@ define(['avalon','userCenter','request','mmState', 'dialog'], function(avalon, u
         url: "/date/detail/:id",
         templateUrl: "tpl/date/detail.html",
         onEnter: function(){
-            vmMain.$fire('all!tipBarStateChanged', 'dateDetail');
-            vmMain['state'] = 'loading';
 
             //验证用户登录
             var user = userCenter.info();
@@ -17,7 +15,7 @@ define(['avalon','userCenter','request','mmState', 'dialog'], function(avalon, u
                 setTimeout(avalon.router.navigate.bind(avalon.router, "login"), 0);
                 return;
             }
-
+            vmMain['state'] = 'loading';
             var date_id = this.params.id;
             //todo 没有date_id
             if(!date_id){
@@ -29,6 +27,7 @@ define(['avalon','userCenter','request','mmState', 'dialog'], function(avalon, u
                     request('dateDetail', {date_id: date_id, uid: user.uid, token: user.token}),
                     request('schoolHash',{})
                 ).done(function(data, school){
+                        vmMain.$fire('all!tipBarStateChanged', 'dateDetail');
                     vmMain.$fire('all!dateDetailDataChanged', data.data);
                     vmMain.$fire('all!dateDetailIdChanged', date_id);
                     vmMain.$fire('all!dateDetailSchoolHashChanged', school.data);

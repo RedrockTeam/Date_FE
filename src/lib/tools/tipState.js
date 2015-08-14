@@ -25,6 +25,8 @@ define(['avalon'], function (avalon) {
 
         userAuthen: getState({'title': '实名认证', rightSub: true, rightSubCb: 'finish'}),
 
+        userSelectTags: getState({'title': '选择标签', rightSub: true, rightSubCb: 'finish'}),
+
         userCollection: getState({'title': '我的收藏', rightShare: true, rightShareCb: 'share'}),
 
         userRecoreded: getState({'title': '我参与的', rightShare: true, rightShareCb: 'share'}),
