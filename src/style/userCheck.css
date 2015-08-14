@@ -1,7 +1,19 @@
 .box-icon .icon .iconfont {
   display: inline-block;
-  font-size: 0.42592593rem !important;
+  font-size: 12px;
   vertical-align: middle;
+}
+[data-dpr="2"] .box-icon .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .box-icon .icon .iconfont {
+  font-size: 36px;
+}
+[data-dpr="2"] .box-icon .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .box-icon .icon .iconfont {
+  font-size: 36px;
 }
 .box-icon .box-time .iconfont {
   color: #44d48b;
@@ -92,14 +104,17 @@
 }
 .user-check header .head {
   display: inline-block;
-  width: 1.68518519rem;
+  width: 18%;
   height: 1.68518519rem;
   border: 1px solid #dddddd;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .user-check header .detail {
   display: inline-block;
   margin-left: 0.22222222rem;
-  width: 7.03703704rem;
+  width: 75%;
   vertical-align: top;
 }
 .user-check header .username span {
@@ -108,6 +123,10 @@
   color: #444444;
   font-size: 20px;
   font-family: "hiraginosansgb w3", "microsoft yahei";
+  max-width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 [data-dpr="2"] .user-check header .username span {
   font-size: 30px;
@@ -121,23 +140,50 @@
 [data-dpr="3"] .user-check header .username span {
   font-size: 60px;
 }
-.user-check header .username .gender {
+.user-check header .username .icon {
   display: inline-block;
-  vertical-align: middle;
   font-size: 20px;
-  color: #37b1ea;
+  vertical-align: middle;
+  margin-left: 0.18518519rem;
 }
-[data-dpr="2"] .user-check header .username .gender {
+[data-dpr="2"] .user-check header .username .icon {
   font-size: 30px;
 }
-[data-dpr="3"] .user-check header .username .gender {
+[data-dpr="3"] .user-check header .username .icon {
   font-size: 60px;
 }
-[data-dpr="2"] .user-check header .username .gender {
+[data-dpr="2"] .user-check header .username .icon {
   font-size: 30px;
 }
-[data-dpr="3"] .user-check header .username .gender {
+[data-dpr="3"] .user-check header .username .icon {
   font-size: 60px;
+}
+.user-check header .username .icon.female {
+  color: #ff607a;
+}
+.user-check header .username .icon.male {
+  color: #4f96ee;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+.user-check header .username .authen {
+  font-size: 23.33333333px;
+  margin-left: 0.09259259rem;
+  color: #ffb053;
+}
+[data-dpr="2"] .user-check header .username .authen {
+  font-size: 35px;
+}
+[data-dpr="3"] .user-check header .username .authen {
+  font-size: 70px;
+}
+[data-dpr="2"] .user-check header .username .authen {
+  font-size: 35px;
+}
+[data-dpr="3"] .user-check header .username .authen {
+  font-size: 70px;
 }
 .user-check header .signature {
   font-family: "hiraginosansgb w3", "microsoft yahei";
@@ -236,17 +282,26 @@
   font-size: 48px;
 }
 .user-check .more .icon {
-  font-size: 20px;
+  font-size: 23.33333333px;
 }
 [data-dpr="2"] .user-check .more .icon {
-  font-size: 30px;
+  font-size: 35px;
 }
 [data-dpr="3"] .user-check .more .icon {
-  font-size: 60px;
+  font-size: 70px;
 }
 [data-dpr="2"] .user-check .more .icon {
-  font-size: 30px;
+  font-size: 35px;
 }
 [data-dpr="3"] .user-check .more .icon {
-  font-size: 60px;
+  font-size: 70px;
+}
+.user-check .more .collect {
+  color: #ff6757;
+}
+.user-check .more .record {
+  color: #4ad84a;
+}
+.user-check .more .authen {
+  color: #ffb053;
 }

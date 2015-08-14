@@ -2,22 +2,19 @@
 define(
     [
         'avalon', 'userCenter',
-        'request', 'vms/dateList',
-        'vms/main', 'vms/slider',
-        'vms/activityList', 'vms/userMessage',
-        'vms/userCheck',
+        'request',
         'mmState'
     ],
 
     function(avalon, userCenter, request){
-        var vmodels = avalon.vmodels;
+        var vmMain = avalon.vmodels['main'];
         avalon.state('home', {
             controller: "main",
             url: "/",
             templateUrl: "tpl/home/yield.html",
             onEnter: function(){
-                vmodels['main']['state'] = 'loading';
-                vmodels['slider']['modCout'] = 0;
+                vmMain['state'] = 'loading';
+                vmMain.$fire('all!sliderModCoutChanged', 0);
                 var user = userCenter.info();
                 if(!user.state){
                     setTimeout(function(){avalon.router.navigate('/user/login')}, 0);
@@ -43,14 +40,14 @@ define(
                         {'uid': user.uid, 'token': user.token}
                     )
                 ).done(function(slider, dl, al, um, uc){
-                        vmodels['slider']['items'] = slider.data;
-                        vmodels['dateList']['items'] = dl.data;
-                        vmodels['activityList']['items'] = al.data;
-                        vmodels['userMessage']['items'] = um.data;
-                        vmodels['userCheck']['data'] = uc.data;
-                        vmodels['slider']['daLoad'] = true;
+                        vmMain.$fire('all!sliderItemsChanged', slider.data);
+                        vmMain.$fire('all!dateItemsChanged', dl.data);
+                        vmMain.$fire('all!activityItemsChanged', al.data);
+                        vmMain.$fire('all!userMessageItemsChanged', um.data);
+                        vmMain.$fire('all!userCheckDataChanged', uc.data);
+                        vmMain.$fire('all!sliderDaLoaded', true);
                         avalon.scan();
-                        vmodels['main']['state'] = 'ok';
+                        vmMain['state'] = 'ok';
                     }
                 );
             }

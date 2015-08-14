@@ -1,38 +1,27 @@
-define(['avalon', 'vms/filter', 'vms/navBar', 'vms/slider'], function(avalon, vmFilter, vmNavBar, vmSlider){
+define('vms/topBar', ['avalon'], function(avalon){
     var vm = avalon.define({
         $id: 'topBar',
         userAlter: false,
         filter: true,
+        moduleState: 'dateList',
         toggleOpenFilter: function(){
-            vmFilter['toggleOpen']();
+            vm.$fire('all!toggleOpenFilter','');
         }
     });
 
-    vmNavBar.$watch('cState', function(s){
+    vm.$watch('moduleState', function(s){
         if(s == 'dateList' || s == 'activityList'){
             vm['userAlter'] = false;
             vm['fiter'] = true;
-            vmSlider['show'] = true;
             vm['filter'] = true;
-            if(s == 'dateList'){
-                vmFilter['showDate'] = true;
-                vmFilter['ct'] = 'date';
-            }else{
-                vmFilter['showDate'] = false;
-                vmFilter['ct'] = 'activity';
-            }
         }else if(s == 'userCheck'){
             vm['userAlter'] = true;
             vm['fiter'] = false;
-            vmSlider['show'] = false;
             vm['filter'] = false;
         }else{
             vm['userAlter'] = false;
             vm['fiter'] = false;
-            vmSlider['show'] = false;
             vm['filter'] = false;
         }
     });
-
-    return vm;
 });

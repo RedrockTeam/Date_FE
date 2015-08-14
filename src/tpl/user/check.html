@@ -3,7 +3,11 @@
         <div class="person clearfix">
             <i class="head" ms-css-background-image="'url('+data.head+')'"></i>
             <aside class="detail">
-                <p class="username"><span>{{data.nickname}}</span> <i class="gender iconfont">&#xe61b;</i></p>
+                <p class="username">
+                    <span>{{data.nickname}}</span>
+                    <i ms-class-male="data.gender == 1" ms-class-female="data.gender == 2" class="icon iconfont">{{data.gender == 1 ? '&#xe61b' : '&#xe61c'}}</i>
+                    <i ms-if="data.authened" class="icon authen iconfont">&#xe624;</i>
+                </p>
                 <p class="signature">{{data.signature}}</p>
             </aside>
         </div>
@@ -21,8 +25,8 @@
         <li>兴趣：{{data.hobbies}}</li>
     </ul>
     <footer class="more">
-        <a href=""><i class="icon iconfont">&#xe61b;</i><span>我收藏的</span></a>
-        <a href=""><i class="icon iconfont">&#xe61b;</i> <span>我参与的</span></a>
-        <a href=""><i class="icon iconfont">&#xe61b;</i><span>实名认证</span></a>
+        <a href="#!/user/collection"><i class="icon iconfont collect">&#xe623;</i><span>我收藏的</span></a>
+        <a href="#!/user/recorded"><i class="icon iconfont record">&#xe8d4;</i> <span>我参与的</span></a>
+        <a href="#!/user/complete"><i class="icon iconfont authen">&#xe610;</i><span>实名认证</span></a>
     </footer>
 </div>

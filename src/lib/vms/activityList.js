@@ -1,9 +1,15 @@
 
-define(['avalon', 'request', 'userCenter', 'vms/cache'], function(avalon, request, userCenter, vmCache){
+define('vms/activityList', ['avalon', 'request', 'userCenter', 'filter$'], function(avalon, request, userCenter, filter$){
     var vm = avalon.define({
         $id: 'activityList',
         items: [],
         page: 0,
+        filterRule: {
+            activity_type: 0,
+            order: 1,
+            cost_mode: 0,
+            time: 0
+        },
         loadingFlag: false,
         loadMore: function(){     //加载更多
             if(vm['loadingFlag']) return;
@@ -15,12 +21,16 @@ define(['avalon', 'request', 'userCenter', 'vms/cache'], function(avalon, reques
                 page: vm['page'],
                 size: 10
             };
-            avalon.mix(data, vmCache['activityS']);
+            var temp = {};
+            filter$(temp, vm['filterRule']);
+            avalon.mix(data,temp);
             request('activityList', data).done(function(res){
                 if(!res.data.length){
                     $.Dialog.success("木有更多啦");
                     $('.activity-list .load-more').text('木有更多了');
                     return setTimeout(function(){vm['loadingFlag'] = false}, 2500);
+                }else{
+                    $.Dialog.success("加载更多");
                 }
                 vm['items'].pushArray(res.data);
                 vm['page'] = vm['page'] + 1;
@@ -37,5 +47,14 @@ define(['avalon', 'request', 'userCenter', 'vms/cache'], function(avalon, reques
             //avalon.router.navigate('/user/check/' + id);
         }
     });
-    return vm;
+
+    vm.$watch('activityItemsChanged', function(data){
+        console.log('activityItemsChanged', data);
+        vm['items'] = data;
+    });
+
+    vm.$watch('activityRuleChanged', function(rule){
+        console.log('activityRuleChanged', data);
+        vm['filterRule'] = rule;
+    });
 });

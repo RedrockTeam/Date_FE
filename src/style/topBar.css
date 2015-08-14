@@ -1,8 +1,20 @@
 /*topBar*/
 .box-icon .icon .iconfont {
   display: inline-block;
-  font-size: 0.42592593rem !important;
+  font-size: 12px;
   vertical-align: middle;
+}
+[data-dpr="2"] .box-icon .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .box-icon .icon .iconfont {
+  font-size: 36px;
+}
+[data-dpr="2"] .box-icon .icon .iconfont {
+  font-size: 18px;
+}
+[data-dpr="3"] .box-icon .icon .iconfont {
+  font-size: 36px;
 }
 .box-icon .box-time .iconfont {
   color: #44d48b;
@@ -112,29 +124,60 @@
   float: right;
 }
 .top-container menu li {
-  float: left;
-  line-height: 1.33333333rem;
+  display: inline-block;
   margin-left: 0.62962963rem;
-}
-.top-container menu li:last-child {
-  font-weight: bold;
+  vertical-align: middle;
 }
 .top-container menu li,
 .top-container menu li a {
   color: #444444;
 }
-.top-container menu .iconfont {
-  font-size: 23.33333333px !important;
+.top-container menu .icon {
+  color: #444444;
+  font-size: 33.33333333px;
+  line-height: 1.33333333rem;
 }
-[data-dpr="2"] .top-container menu .iconfont {
-  font-size: 35px !important;
+[data-dpr="2"] .top-container menu .icon {
+  font-size: 50px;
 }
-[data-dpr="3"] .top-container menu .iconfont {
-  font-size: 70px !important;
+[data-dpr="3"] .top-container menu .icon {
+  font-size: 100px;
 }
-[data-dpr="2"] .top-container menu .iconfont {
-  font-size: 35px !important;
+[data-dpr="2"] .top-container menu .icon {
+  font-size: 50px;
 }
-[data-dpr="3"] .top-container menu .iconfont {
-  font-size: 70px !important;
+[data-dpr="3"] .top-container menu .icon {
+  font-size: 100px;
+}
+.top-container menu .icon.search {
+  font-size: 26.66666667px;
+  color: #000000;
+}
+[data-dpr="2"] .top-container menu .icon.search {
+  font-size: 40px;
+}
+[data-dpr="3"] .top-container menu .icon.search {
+  font-size: 80px;
+}
+[data-dpr="2"] .top-container menu .icon.search {
+  font-size: 40px;
+}
+[data-dpr="3"] .top-container menu .icon.search {
+  font-size: 80px;
+}
+.top-container menu .icon.filter {
+  font-size: 26.66666667px;
+  color: #000000;
+}
+[data-dpr="2"] .top-container menu .icon.filter {
+  font-size: 40px;
+}
+[data-dpr="3"] .top-container menu .icon.filter {
+  font-size: 80px;
+}
+[data-dpr="2"] .top-container menu .icon.filter {
+  font-size: 40px;
+}
+[data-dpr="3"] .top-container menu .icon.filter {
+  font-size: 80px;
 }

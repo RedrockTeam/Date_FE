@@ -1,13 +1,7 @@
-define(['avalon', 'jquery'], function(avalon, $){
+define('vms/navBar', ['avalon', 'jquery'], function(avalon, $){
     var vm = avalon.define({
         $id: 'navBar',
-        states: ['dateList', 'activityList', 'userMessage', 'userCheck'],
-        'cState': 'dateList'
+        states: ['dateList', 'activityList', 'userMessage', 'userCheck']
     });
-
-    vm.$watch('cState', function(s){
-
-    });
-
     return vm;
 });

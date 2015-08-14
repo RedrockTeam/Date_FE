@@ -3,6 +3,7 @@
 **/
 
 define('vms/search', ['avalon', 'request'], function(avalon,request){
+
     return avalon.define({
         $id : "search",
         list_activity: {},

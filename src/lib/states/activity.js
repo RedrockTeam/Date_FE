@@ -1,5 +1,5 @@
 //活动
-define(['avalon', 'mmState', 'vms/main'], function(avalon){
+define(['avalon', 'mmState'], function(avalon){
     avalon.state('activity', {
         controller: "main",
         url: "/activity",

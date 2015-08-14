@@ -1,20 +1,12 @@
 //活动详情页
-define(
-    [
-        'avalon', 'vms/tipBar',
-        'vms/main', 'request',
-        'vms/activityDetail', 'userCenter',
-        'mmState'
-    ],
-    function(avalon, vmTipBar, vmMain, request, vmADet, userCenter){
-        avalon.state('activityDetail', {
+define(['avalon', 'request', 'userCenter', 'mmState'], function(avalon, request,userCenter){
+    var vmMain = avalon.vmodels['main'];
+    avalon.state('activityDetail', {
         controller: "main",
         url: "/activity/detail/:id",
         templateUrl: "tpl/activity/detail.html",
         onEnter: function(){
-            log('/activity/detail');
-            vmTipBar['state'] = 'activityDetail';
-
+            vmMain.$fire('all!tipBarStateChanged', 'activityDetail');
             vmMain['state'] = 'loading';
             //验证用户登录
             var user = userCenter.info();
@@ -29,7 +21,8 @@ define(
             //获取detail的数据
             request('activityDetail', {date_id: activity_id, uid: user.uid, token: user.token})
                 .done(function(res){
-                    vmADet.data = res.data;
+                    vmMain.$fire('all!activityDetailDataChanged', res.data);
+                    vmMain.$fire('all!activityDetailIdChanged', activity_id);
                     avalon.scan();
                     vmMain['state'] = 'ok';
                 });

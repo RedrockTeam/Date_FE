@@ -1,10 +1,17 @@
 //约会列表
-define(['avalon', 'userCenter', 'vms/cache', 'request'], function(avalon, userCenter, vmCache, request){
+define('vms/dateList', ['avalon', 'userCenter', 'request', 'filter$'], function(avalon, userCenter, request, filter$){
     var vm = avalon.define({
         $id: 'dateList',
         items: [],
         page: 0,    //当前页
         loadingFlag: false,
+        filterRule: {
+            date_type: 0,
+            order: 1,
+            date_gender: 0,
+            cost_mode: 0,
+            time: 0
+        },
         loadMore: function(){     //加载更多
             if(vm['loadingFlag']) return;
             vm['loadingFlag'] = true;
@@ -15,12 +22,16 @@ define(['avalon', 'userCenter', 'vms/cache', 'request'], function(avalon, userCe
                 page: vm['page'],
                 size: 10
             };
-            avalon.mix(data, vmCache['dateS']);
+            var temp = {};
+            filter$(temp, vm['filterRule']);
+            avalon.mix(data, temp);
             request('dateList', data).done(function(res){
                 if(!res.data.length){
                     $.Dialog.success("木有更多啦");
                     $('.date-list .load-more').text('木有更多了');
                     return setTimeout(function(){vm['loadingFlag'] = false}, 2500);
+                }else{
+                    $('.date-list .load-more').text('加载更多');
                 }
                 vm['items'].pushArray(res.data);
                 vm['page'] = vm['page'] + 1;
@@ -37,5 +48,14 @@ define(['avalon', 'userCenter', 'vms/cache', 'request'], function(avalon, userCe
         }
     });
 
+    vm.$watch('dateItemsChanged', function(data){
+        vm['items'] = data;
+        log('dateItemsChanged', data);
+    });
+
+    vm.$watch('dateRuleChanged', function(rule){
+        vm['filterRule'] = rule;
+        log('dateRuleChanged', rule);
+    });
     return vm;
 });

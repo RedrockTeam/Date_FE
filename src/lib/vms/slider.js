@@ -1,10 +1,10 @@
-define('vms/slider', ['avalon', 'jquery' , 'vms/navBar', 'swiper'], function(avalon, $, vmNav){
+define('vms/slider', ['avalon', 'jquery' ,'swiper'], function(avalon, $){
     var vm = avalon.define({
         $id: "slider",
         show: true,
         auto: 'auto',
+        states: ['dateList', 'activityList', 'userMessage', 'userCheck'],
         modCout: 0,   //计数
-        ch: 0,        //动态调节高度, 避免插件自适应高度
         hst: '',   //当前改变高度的状态
         daLoad: false,    //数据是否加载完毕
         items: [{'href': 'http://www.baidu.com', 'img': 'imgs/slider_1.jpg'}, {'href': 'http://www.baidu.com', 'img': 'imgs/slider_2.jpg'}, {'href': 'http://www.baidu.com', 'img': 'imgs/slider_3.jpg'}],
@@ -25,8 +25,13 @@ define('vms/slider', ['avalon', 'jquery' , 'vms/navBar', 'swiper'], function(ava
                 initialSlide : 0,
                 onSlideChangeEnd: function(){
                     $(".tab .z-active").removeClass('z-active');
-                    vmNav['cState'] = vmNav['states'][tabsSwiper.activeIndex];
                     $(".tab li").eq(tabsSwiper.activeIndex).addClass('z-active');
+                    if(tabsSwiper.activeIndex == 2 || tabsSwiper.activeIndex == 3){
+                        vm['show'] = false;
+                    }else{
+                        vm['show'] = true;
+                    }
+                    vm.$fire('all!moduleState', vm['states'][tabsSwiper.activeIndex]);    //广播
                 }
             });
 
@@ -58,16 +63,20 @@ define('vms/slider', ['avalon', 'jquery' , 'vms/navBar', 'swiper'], function(ava
             }
 
             vm['ch'] = $self.height();
-        },
+        }
+    });
+    vm.$watch('sliderModCoutChanged', function(n){
+        vm['modCout'] = n;
+        log('sliderModCoutChanged', n);
     });
 
-    vm.$watch('daLoad', function(){
-
+    vm.$watch('sliderItemsChanged', function(data){
+        vm['items'] = data;
+        log('sliderItemsChanged', data);
     });
 
-    vm.$watch('ch', function(){
-        //if(vmNav['cState'] != vm['hst']) return ;
-        //vm['ch'] = vm['ch'];
+    vm.$watch('sliderDaLoaded', function(){
+        vm['daLoad'] = true;
+        log('sliderDaLoaded');
     });
-    return vm;
 });

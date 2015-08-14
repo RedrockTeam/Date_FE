@@ -1,12 +1,10 @@
 define(
+    'vms/filter',
     [
-        'avalon', 'vms/navBar', 'request',
-        'userCenter',
-        'vms/dateList',
-        'vms/activityList',
-        'vms/cache'
+        'avalon','request',
+        'userCenter'
     ],
-    function(avalon, vmNavBar, request, userCenter, vmDL, vmAL, vmCache){
+    function(avalon,request, userCenter){
         var vm = avalon.define({
             $id: 'filter',
             opened: false,   //初始状态
@@ -119,19 +117,19 @@ define(
                 var tmp;
                 if(vm['ct'] == 'date'){
                     tmp  = vm['getParams']('date');
-                    vmCache['dateS'] = tmp;
+                    vm.$fire('all!dateRuleChanged', tmp);
                     avalon.mix( data,  tmp);
-                    log(data);
                     request('dateList', data ).done(function(res){
-                        vmDL['items'] = res.data;
+                        vm.$fire('all!dateItemsChanged', res.data);
+
                     });
                 }else{
                     tmp = vm['getParams']('activity');
+                    vm.$fire('all!activityRuleChanged', tmp);
                     avalon.mix( data,  tmp);
-                    vmCache['activityS'] = tmp;
                     log(data);
                     request('activityList', data ).done(function(res){
-                        vmAL['items'] = res.data;
+                        vm.$fire('all!activityItemsChanged', res.data);
                     });
                 }
 
@@ -142,6 +140,19 @@ define(
             }
         });
 
-        console.log(vmCache);
+        vm.$watch('moduleState', function(s){
+            if(s == 'dateList'){
+                vm['showDate'] = true;
+                vm['ct'] = 'date';
+            }else if( s== 'activityList' ){
+                vm['showDate'] = false;
+                vm['ct'] = 'activity';
+            }
+        });
+
+        vm.$watch('toggleOpenFilter', function(){
+            vm['toggleOpen']();
+        });
+
     return vm;
 });

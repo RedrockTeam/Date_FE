@@ -108,10 +108,21 @@ define('avaFilters', ['avalon'], function(){
     avalon.filters.myStatusFilter = function(n){
         n = parseInt(n);
         switch(n){
-            case 0: return "已结束";
-            case 1: return "成功";
-            case 2: return "等待中";
+            case 0: return "立即报名";
+            case 1: return "已结束";
+            case 2: return "成功";
+            case 3: return "受理中";
+            case 4: return "被拒绝";
         }
         return "未知";
-    }
+    };
+
+    avalon.filters.limitLength = function(s, n){
+        s = ''+s;
+        console.log(s);
+        if(s.length > n){
+            s = s.slice(0, n-3) + '..';
+        }
+        return s;
+    };
 });

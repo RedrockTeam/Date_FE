@@ -1,92 +1,91 @@
 <!--发布约会-->
-<section class="pbl-dating" >
-    <div ms-include-src="'tpl/widget/menuBar.html'"></div>
+<div ms-include-src="'tpl/widget/tipBar.html'"></div>
+<section class="pbl-dating" ms-controller="dateCreate">
     <div class="row-group">
-        <div class="row">
+        <div class="row" ms-on-tap="active('yType')" ms-class="active:yTypeStatus">
             <span class="dating-type">约什么</span>
-            <select id="yType" class="choose">
-                <option value="">seg</option>
-                <option value="">seg</option>
-                <option >哈哈</option>
+            <select id="yType" class="choose" ms-duplex="yType" ms-on-blur="yTypeBlur">
+                <option ms-repeat="datetype" ms-attr-value="el.type">{{el.type}}</option>
             </select>
-            <a class="right">点击更改</a>
+            <a class="right">{{yType ? yType : "点击更改"}}</a>
         </div>
     </div>
 
     <div class="row-group light-grey">
-        <div class="row"  >
+        <div class="row" ms-on-tap="active('yTitle')" ms-class="active:yTitleStatus">
             <span class="title">标题</span>
-            <input type="text"  id="yTitle" class="w50"  />
-            <a class="right" >请输入</a>
+            <input type="text" ms-visible="yTitleStatus" id="yTitle" class="w50" ms-duplex="yTitle" ms-on-blur="yTitleBlur"/>
+            <a class="right" ms-if="!yTitleStatus">{{yTitle ? yTitle : "请输入"}}</a>
         </div>
-        <div class="row row-content"  >
-            <textarea id="yContent"  placeholder="内容" ></textarea>
+        <div class="row row-content" ms-on-tap="$('.row-content').addClass('active')" ms-class="active:yContentStatus">
+            <textarea id="yContent" ms-duplex="yContent" placeholder="内容" ms-on-blur="$('.row-content').removeClass('active')"></textarea>
         </div>
 
     </div>
 
     <div class="row-group light-grey">
 
-        <div class="row">
-            <i class="iconfont time">&#xe611;</i>
+        <div class="row" ms-on-click="active('yTime', $event)" ms-class="active:yTimeStatus">
+            <i class="iconfont time">&#xe61e;</i>
             <span class="subtitle">约会时间</span>
-            <input type="text" id="yTime" data-view="Popup"  data-field="datetime" readonly />
-            <a class="right"></a>
+            <input type="text" id="yTime" data-view="Popup" ms-duplex="yTime" data-field="datetime" readonly ms-on-blur="yTimeBlur"/>
+            <a class="right">{{yTime ? yTime : "请选择"}}</a>
         </div>
-        <div class="row"  >
-            <i class="iconfont location">&#xe612;</i>
+        <div class="row" ms-on-tap="active('yLocation')" ms-class="active:yLocationStatus">
+            <i class="iconfont location">&#xe602;</i>
             <span class="subtitle">约会地点</span>
-            <input type="text"  id="yLocation" class="w50"  />
-            <a class="right2" >请输入</a>
+            <input type="text" ms-visible="yLocationStatus" id="yLocation" class="w50" ms-duplex="yLocation" ms-on-blur="yLocationBlur"/>
+            <a class="right2" ms-if="!yLocationStatus">{{yLocation ? yLocation : "请输入"}}</a>
         </div>
-        <div class="row"  >
-            <i class="iconfont people">&#xe610;</i>
+        <div class="row" ms-on-tap="active('yPeople')" ms-class="active:yPeopleStatus">
+            <i class="iconfont people">&#xe60b;</i>
             <span class="subtitle">约会人数</span>
-            <input type="tel"  id="yPeople" class="w50"  />
-            <a class="right2" >请选择</a>
+            <input type="tel" ms-visible="yPeopleStatus" id="yPeople" class="w50" ms-duplex="yPeople" ms-on-blur="yPeopleBlur"/>
+            <a class="right2" ms-if="!yPeopleStatus">{{yPeople ? yPeople : "请选择"}}</a>
         </div>
-        <div class="row"  >
-            <i class="iconfont dollar">&#xe60f;</i>
+        <div class="row" ms-on-tap="active('ySpend')" ms-class="active:ySpendStatus">
+            <i class="iconfont dollar">&#xe61e;</i>
             <span class="subtitle">花费</span>
-            <select id="ySpend" class="choose"  >
-                <option value=""></option>
+            <select id="ySpend" class="choose" ms-duplex="ySpend" ms-on-blur="ySpendBlur">
+                <option value="无限制">无限制</option>
                 <option value="AA制">AA制</option>
                 <option value="我请客">我请客</option>
-                <option value="求请客">求请客</option>
+                <option value="求包养">求包养</option>
+                <option value="无消费">无消费</option>
             </select>
-            <a class="right">请选择</a>
+            <a class="right">{{ySpend ? ySpend : "请选择"}}</a>
         </div>
     </div>
 
     <div class="row-group light-grey mb0">
-        <div class="row"  >
+        <div class="row" ms-on-tap="active('ySex')" ms-class="active:ySexStatus">
             <span class="subtitle">性别要求</span>
-            <select id="ySex" class="choose"  >
+            <select id="ySex" class="choose" ms-duplex="ySex" ms-on-blur="ySexBlur">
                 <option value="不限">不限</option>
                 <option value="男">男</option>
                 <option value="女">女</option>
             </select>
             <a class="right">{{ySex ? ySex : "不限"}}</a>
         </div>
-        <div class="row"  >
-            <span class="subtitle">年级要求</span>
-            <select id="yGrade" class="choose"  >
+        <div class="row" ms-on-tap="active('ySchool')" ms-class="active:ySchoolStatus">
+            <span class="subtitle">学校要求</span>
+            <select id="ySchool" class="choose" ms-duplex="ySchool" ms-on-blur="ySchoolBlur">
                 <option value="不限">不限</option>
-                <option>d</option>
-                <option>d</option>
+
+                <option ms-repeat="schoolHash" ms-attr-value="el.school_name">{{el.school_name}}</option>
             </select>
-            <a class="right">不限</a>
+            <a class="right">{{ySchool ? ySchool : "不限"}}</a>
         </div>
-        <!--<div class="row"  >-->
+        <!--<div class="row" ms-on-tap="active('yCollege')" ms-class="active:yCollegeStatus">-->
         <!--<span class="subtitle">学院要求</span>-->
-        <!--<select id="yCollege" class="choose"  >-->
-        <!--<option  >{{aca.name}}</option>-->
+        <!--<select id="yCollege" class="choose" ms-duplex="yCollege" ms-on-blur="yCollegeBlur">-->
+        <!--<option ms-repeat-aca="academy" ms-data-value="aca.name">{{aca.name}}</option>-->
         <!--</select>-->
         <!--<a class="right">{{yCollege ? yCollege : "不限"}}</a>-->
         <!--</div>-->
     </div>
     <div class="widget"></div> <!-- 别删 -->
     <!--<div class="publish">-->
-    <!--<button >发布</button>-->
+    <!--<button ms-on-tap="publish">发布</button>-->
     <!--</div>-->
 </section>

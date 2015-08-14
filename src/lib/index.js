@@ -3,7 +3,6 @@ require.config({
     paths: {
         avalon: "avalon.mobile.shim",
         jquery: "jquery-2.1.3",
-
         dialog: "tools/jq.dialog",
         avaFilters: "tools/avaFilters",
         userCenter: "tools/userCenter",
@@ -15,7 +14,10 @@ require.config({
         moment: "tools/moment",
         score: "tools/jq.score",
         navState: "tools/tipState",
-        request: "tools/request"
+        request: "tools/request",
+        filter$: "tools/filter$"
+
+        //vms
     }
 });
 
@@ -26,13 +28,13 @@ var $$ = {}; //share vars obj
 require([
     'require',
     'avalon',
-    'mmState'
+    'mmState',
+    'vms/main'   //作为其他所有 vm 事件代理
 ], function(require,avalon) {
-    require([               //加载状态     //避免有时候  avalon.history 为 undefined
+    require([
+        //注册状态
         'states/home',       //主页
-        'states/date',       //约会列表
         'states/date.detail', //约会详细页
-        'states/activity',    //活动列表
         'states/activity.detail', //活动详细页
         'states/user.check',          //个人信息
         'states/user.collection',     //个人收藏
@@ -42,10 +44,39 @@ require([
         'states/user.login',        //个人登录
         'states/user.register',     //个人注册
         'states/user.complete',      //完善个人信息
-        'states/user.alter',        //修改个人信息
+        //'states/user.alter',        //修改个人信息
         'states/date.create',        //发布约会
         'states/search',            //搜索
-        'states/message'            //消息页
+        'states/user.findPasswd',   //找回密码 验证码
+        'states/user.resetPasswd',   //重置密码
+        'states/user.authen',         //实名认证
+
+
+        //注册 vm 一次加载进内存  全部只依赖于 vm`main`, 相互间的操作通过vm`main`监听代理
+        'vms/register',
+        'vms/login',
+        'vms/dateList',
+        'vms/dateDetail',
+        'vms/activityList',
+        'vms/activityDetail',
+        'vms/navBar',
+        'vms/topBar',
+        'vms/tipBar',
+        'vms/filter',
+        'vms/dateCreate',
+        'vms/search',
+        'vms/slider',
+        'vms/userCheck',
+        'vms/userMessage',
+        'vms/userComplete',
+        'vms/userFindPasswd',
+        'vms/userResetPasswd',
+        'vms/userCollection',
+        'vms/userRecorded',
+        'vms/userAuthen',
+
+
+
     ], function(){
         avalon.history.start({
             basepath: "/"

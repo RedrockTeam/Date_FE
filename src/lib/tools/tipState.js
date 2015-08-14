@@ -21,9 +21,11 @@ define(['avalon'], function (avalon) {
 
         dateCreate: getState({'title': '发起约会', rightSub: true, rightSubCb: 'finish'}),
 
-        userCollection: getState({'title': '我的收藏', rightSub: true, rightSubCb: 'share'}),
+        userAuthen: getState({'title': '实名认证', rightSub: true, rightSubCb: 'finish'}),
 
-        userRecoreded: getState({'title': '我参与的', rightSub: true, rightSubCb: 'share'}),
+        userCollection: getState({'title': '我的收藏', rightShare: true, rightShareCb: 'share'}),
+
+        userRecoreded: getState({'title': '我参与的', rightShare: true, rightShareCb: 'share'}),
 
         userFans: getState({'title': '我的粉丝', rightSub: true, rightSubCb: 'share'}),
 
@@ -31,7 +33,12 @@ define(['avalon'], function (avalon) {
 
         dateDetail: getState({'title': '约会详情', rightShare: true, rightShareCb: 'share'}),
 
-        search: getState({'title': '搜索', rightSub: true, rightSubCb: 'share'})
+        search: getState({'title': '搜索', rightSub: true, rightSubCb: 'share'}),
+
+        userFindPasswd: getState({'title': '找回密码'}),
+
+        userResetPasswd: getState({'title': '重置密码'}),
+
 
     };
 });

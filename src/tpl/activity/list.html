@@ -6,8 +6,8 @@
                 <aside class="detail">
                     <h2>{{el.title}}</h2>
                     <p class="signature">{{el.signature ? el.signature : "没有优惠信息噢!!!!"}}</p>
-                    <div class="icon box-time"><i class="iconfont">&#xe61e</i><span>{{ el.activity_time * 1000 | date("MM.dd HH:mm")}}</span></div>
-                    <div class="icon box-location"><i class="iconfont">&#xe6b6</i><span>{{el.place}}</span></div>
+                    <div class="icon time"><i class="iconfont">&#xe61e</i><span>{{ el.activity_time * 1000 | date("MM.dd HH:mm")}}</span></div>
+                    <div class="icon location"><i class="iconfont">&#xe602;</i><span>{{el.place}}</span></div>
                     <p class="create-time">{{el.created_at | createdTime}}</p>
                 </aside>
             </main>
