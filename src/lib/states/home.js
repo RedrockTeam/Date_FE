@@ -49,9 +49,32 @@ define(
                         vmMain.$fire('all!userCheckDataCpy', uc.data);   //第一次通知复制自己的数据
                         vmMain.$fire('all!sliderDaLoaded', true);
                         vmMain['state'] = 'ok';
+                        poller();  //开始轮询
                         avalon.scan();
                     }
                 );
             }
         });
+
+        var fcount = 0;  //计失败次数，如果连续到达20之后就通知用户
+        var init = 10000;
+        var ninit = 20000;
+        var finit = 20000;
+        var timer = init;
+        var user = userCenter.info();
+        function poller(){    //轮询
+            request('userMessage', {uid: user.uid, token: user.token}).done(function(res){
+                fcount > 0 && (fcount -= 2);
+                if(!res.data.notice.length && !res.data.news.length)timer = ninit;
+                else{
+                    timer = init;
+                    vmMain.$fire('all!userMessageItemsChanged', res.data);
+                    vmMain.$fire('all!newMessageComing', true);   //通知用户
+                }
+                setTimeout(poller, timer);
+            }).fail(function(){
+                fcount++;
+                setTimeout(poller, finit);
+            });
+        }
    });
