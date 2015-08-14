@@ -264,6 +264,7 @@ var datas = {
         info: "成功"
     },
 
+
     "/user/tags": {
         "data": ["游泳", "篮球", "足球", "乒乓球", "保龄球"],
         "status": 200,
@@ -273,9 +274,8 @@ var datas = {
     "/user/complete": {
         "status": 200,
         "info": "ok"
-
     },
-    "/search": {
+    "/search/hot": {
         "data": {
             person: [         //热门用户
                 {
@@ -295,6 +295,48 @@ var datas = {
         },
         status: 200,
         info: "成功"
+    },
+
+
+    "/search/do": {
+        "data": {
+            person: [         //热门用户
+                {
+                    "uid": "",    //用户id
+                    "head": "",   //头像
+                    "gender": "",  // 1 男	2 女
+                    "signature": "" //个性签名(约会宣言)
+                }
+
+            ],
+            activity: [       //热门活动
+                {
+                    "title": "",  //标题
+                    "signature": "前六名免费玩耍，不收钱"  //优惠信息
+                }
+            ]
+        },
+        status: 200,
+        info: "成功"
+    },
+
+    "/user/fans": {
+        "data": [
+            {
+                "head": "xxxxxxxxxx",          //头像
+                "uid": "1",				   		//用户id
+                "gender": 1,                    //性别 "1" 男性  "2"女性
+                "signature": "今天晚上我请客!"    //个性签名
+            },
+            {
+                "head": "xxxxxxxxxx",           //头像
+                "uid": "1",				   		//用户id
+                "gender": 1,                   //性别 "1" 男性  "2"女性
+                "signature": "今天晚上我请客!"    //个性签名
+            }
+        ],
+        "status": 200,
+        "info": "成功"
     },
 
     "/school": {

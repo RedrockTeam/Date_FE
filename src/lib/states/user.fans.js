@@ -1,4 +1,3 @@
-
 //个人粉丝查看
 define(['avalon', 'request', 'userCenter', 'mmState'], function(avalon, request, userCenter){
     var vmMain = avalon.vmodels['main'];

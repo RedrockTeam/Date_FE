@@ -5,17 +5,19 @@ define('states/search', ['avalon', 'vms/tipBar', 'request', 'vms/search','vms/ma
         url: "/search",
         templateUrl: "tpl/search/yield.html",
         onEnter: function(){
-            log('/search');
+            //log('/search');
             //vmTipBar['state'] = 'search';
             vmsMain.state = 'loading';
 
             request('searchHot',{
-                uid: '',
-                token: '',
-                type: 1,
-                content: ''
+                'uid': '',
+                'token': ''
             }).done(function(res){
-                log(res.data);
+                vmSearch.list_activity = res.data.activity;
+                vmSearch.list_people = res.data.people;
+                avalon.scan();
+                //log(vmSearch.list.activity);
+                vmsMain.state = 'ok';
             })
         }
     });

@@ -19,6 +19,7 @@ define('urls', function(){
         "userTags": "http://127.0.0.1:8080/user/tags",
         "searchHot": "http://127.0.0.1:8080/search/hot",
         "searchDo": "http://127.0.0.1:8080/search/do",
+        "fans": "http://127.0.0.1:8080/user/fans",
         "userMessage": "http://127.0.0.1:8080/user/message/recieve",
         "dateComment": "http://127.0.0.1:8080/date/comment",
         "dateCollect": "http://127.0.0.1:8080/date/collect",
