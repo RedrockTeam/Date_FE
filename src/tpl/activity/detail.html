@@ -25,7 +25,7 @@
         <div class="item" ms-repeat="data.enrolled" ms-on-tap="getUserDetail(el.uid)" ms-css-background-image="'url('+el.head+')'"></div>
     </div>
     <div class="commented">
-        <h3 class="tab-tip">评论:5</h3>
+        <h3 class="tab-tip">评论:{{data.commented.length}}</h3>
         <ul>
             <li class="item" ms-repeat="data.commented" ms-on-tap="getUserDetail(el.uid)">
                 <i ms-css-background-image="'url('+el.head+')'"></i>

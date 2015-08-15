@@ -10,37 +10,42 @@
         <div class="btn" ms-on-tap="finishHeadCb">完成</div>
     </div>
     <ul class="detail inputs">
-        <li><span class="filed-tip">用户名(必填)</span><input type="text" ms-duplex="data.nickname" /></li>
-        <li><span class="filed-tip">真实姓名(必填)</span><input type="text" ms-duplex="data.realname" /></li>
-        <li ms-on-tap="selectGender" class="gender">
-            <span class="filed-tip">性别</span>
+        <li><span class="filed-tip">用户名<span class="warning">*</span></span><input type="text" ms-duplex="data.nickname" /></li>
+        <li><span class="filed-tip">真实姓名<span class="warning">*</span></span><input type="text" ms-duplex="data.realname" /></li>
+        <li class="gender">
+            <span class="filed-tip">性别<span class="warning">*</span></span>
             <span class="filed-tip">{{data.gender == 1 ? '男': '女'}}</span>
             <select ms-duplex="data.gender">
                 <option value="1">男</option>
                 <option value="2">女</option>
             </select>
         </li>
-        <li><span class="filed-tip">学校</span><input type="text" ms-duplex="data.school" /></li>
+        <li><span class="filed-tip">学校<span class="warning">*</span></span><input type="text" ms-duplex="data.school" /></li>
         <li><span class="filed-tip">学院</span><input type="text" ms-duplex="data.academy"/></li>
     </ul>
 
     <ul class="other inputs">
-        <li><span class="filed-tip">约会宣言(个性签名)</span><input type="text" ms-duplex="data.signature"/></li>
+        <li><span class="filed-tip">约会宣言</span><input type="text" ms-duplex="data.signature"/></li>
         <li><span class="filed-tip">手机号</span><input type="text" ms-duplex="data.contact.tel"/></li>
         <li><span class="filed-tip">微信</span><input type="text" ms-duplex="data.contact.weixin"/></li>
         <li><span class="filed-tip">微博</span><input type="text" ms-duplex="data.contact.weibo"/></li>
         <li><span class="filed-tip">QQ</span><input type="text" ms-duplex="data.contact.qq"/></li>
-        <li><span class="filed-tip">兴趣爱好</span><input type="text" ms-duplex="data.hobbies" readonly/></li>
+        <li ms-on-tap="getMoreTags"><span class="filed-tip">兴趣爱好</span><span class="selected-show">{{data.hobbies}}</span></li>
     </ul>
 
     <div class="tags clearfix">
         <h4 class="tab-tip">热门标签</h4>
         <div class="item" ms-repeat="tags" ms-on-tap="toggleHobbyCb(el)">{{el}}<i class="selected" ms-if="data.hobbies.indexOf(el) != -1">*</i></div>
+        <div class="item" ms-on-tap="getMoreTags">{{data.hobbies.length > 4 ? '...': '+'}}</div>
     </div>
 
     <div class="authen">
         <h4 class="tab-tip">实名认证</h4>
         <h5>上传学生证(选填)</h5>
-        <div class="file-wrapper"><input id="upImg" type="file"/>选择照片</div>
+        <div class="file-wrapper" ms-on-tap="goAuthen">选择照片</div>
     </div>
+
+    <div class="select-tag-wraper">
+    </div>
+
 </div>

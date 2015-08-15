@@ -1,10 +1,11 @@
-//个人粉丝查看
+
+//个人关注查看
 define(['avalon', 'request', 'userCenter', 'mmState'], function(avalon, request, userCenter){
     var vmMain = avalon.vmodels['main'];
-    avalon.state('userFans', {
+    avalon.state('userFollows', {
         controller: "main",
-        url: "/user/:id/fans",
-        templateUrl: "tpl/user/fans.html",
+        url: "/user/:id/follows",
+        templateUrl: "tpl/user/follows.html",
         onEnter: function(){
             var user = userCenter.info();
             if(!user.state){
@@ -14,9 +15,9 @@ define(['avalon', 'request', 'userCenter', 'mmState'], function(avalon, request,
             vmMain['state'] = 'loading';
             var get_id = this.params.id;
 
-            request("userFans", {"get_id": get_id || user.uid, "uid": user.uid, "token": ""}).done(function(res){
-                vmMain.$fire('all!userFansDataChanged', res.data);
-                vmMain.$fire('all!tipBarStateChanged', 'userFans');
+            request("userFollows", {"get_id": get_id || user.uid, "uid": user.uid, "token": ""}).done(function(res){
+                vmMain.$fire('all!userFollowsDataChanged', res.data);
+                vmMain.$fire('all!tipBarStateChanged', 'userFollows');
                 avalon.scan();
                 vmMain['state'] = 'ok';
             });

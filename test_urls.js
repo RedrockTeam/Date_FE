@@ -110,7 +110,7 @@ var datas = {
             "contact": {            //联系方式 固定
                 "weixin": "3454",   //微信号
                 "tel": 18166387284,   //手机号
-                "qq": 3235235253, //qq
+                "qq": '', //qq
                 "weibo": "weibo"   //微博
             }
         },
@@ -122,17 +122,31 @@ var datas = {
         data: {
             "notice": [                             //通知部分 活动审核通知， 活动时间通知等
                 {
-                    "head":    "sg",             //来源用户头像
-                    "content":  "拒绝了你的请求", //内容
-                    "nickname": "shsh",  //来源用户昵称
-                    "mid": "",            //来源约会的 date_id/ 活动的 activity_id
-                    "type": 1           //通知内容的类型， 1.约会相关; 2. 活动相关
+                    "head":    "imgs/test.png",     //来源用户头像
+                    "content":  "拒绝了你的请求",      //内容
+                    "name": "大风暴活动",             //来源用户昵称 或 活动名称
+                    "mid": "",                      //来源约会的 date_id/ 活动的 activity_id
+                    "type": 1                       //通知内容的类型， 1.约会相关; 2. 活动相关
+                },
+                {
+                    "head":    "imgs/1.jpg",     //来源用户头像
+                    "content":  "拒绝了你的“有没有陪我去吃饭的人？”的活动",      //内容
+                    "name": "周杰伦",             //来源用户昵称 或 活动名称
+                    "mid": "",                      //来源约会的 date_id/ 活动的 activity_id
+                    "type": 1                       //通知内容的类型， 1.约会相关; 2. 活动相关
                 }
             ],
+
             "news": [                            //别人发来的消息
                 {
-                    "head": "sg",               //来源用户头像
-                    "content": "你好",            //内容
+                    "head": "imgs/1.jpg",        //来源用户头像
+                    "content": "你好,你TM的不认识我了吗",           //内容
+                    "nickname": "shsh",         //来源用户昵称
+                    "uid": ""                   //来源用户uid
+                },
+                {
+                    "head": "imgs/test.png",        //来源用户头像
+                    "content": "今天下午去天上人间怎么样,今天下午去天上人间怎么样今天下午去天上人间怎么样今天下午去天上人间怎么样今天下午去天上人间怎么样?",           //内容
                     "nickname": "shsh",         //来源用户昵称
                     "uid": ""                   //来源用户uid
                 }
@@ -565,6 +579,63 @@ var datas = {
         "status": 200,
         "info": "成功"
     },
+
+    "/user/fans": {
+        "data": [
+            {
+                "head": "imgs/1.jpg",          //头像
+                "nickname": "村里没有巧克力",    //nickname
+                "uid": "1",				   		//用户id
+                "gender": 1,                    //性别 "1" 男性  "2"女性
+                "signature": "今天晚上我请客!"    //个性签名
+            },
+            {
+                "head": "imgs/test.png",          //头像
+                "nickname": "愤怒的小黄瓜",       //nickname
+                "uid": "1",				   		//用户id
+                "gender": 2,                    //性别 "1" 男性  "2"女性
+                "signature": "明天晚上你请客请客!"    //个性签名
+            },
+            {
+                "head": "imgs/1.jpg",          //头像
+                "uid": "1",				   		//用户id
+                "nickname": "梁静茹",           //nickname
+                "gender": 1,                    //性别 "1" 男性  "2"女性
+                "signature": "后天晚上晚上他请客!"    //个性签名
+            }
+        ],
+        "status": 200,
+        "info": "获取成功"
+    },
+
+    "/user/follows": {
+        "data": [
+            {
+                "head": "imgs/1.jpg",          //头像
+                "nickname": "村里没有巧克力",    //nickname
+                "uid": "1",				   		//用户id
+                "gender": 1,                    //性别 "1" 男性  "2"女性
+                "signature": "今天晚上我请客!"    //个性签名
+            },
+            {
+                "head": "imgs/test.png",          //头像
+                "nickname": "愤怒的小黄瓜",       //nickname
+                "uid": "1",				   		//用户id
+                "gender": 2,                    //性别 "1" 男性  "2"女性
+                "signature": "明天晚上你请客请客!"    //个性签名
+            },
+            {
+                "head": "imgs/1.jpg",          //头像
+                "uid": "1",				   		//用户id
+                "nickname": "梁静茹",           //nickname
+                "gender": 1,                    //性别 "1" 男性  "2"女性
+                "signature": "后天晚上晚上他请客!"    //个性签名
+            }
+        ],
+        "status": 200,
+        "info": "获取成功"
+    },
+
     "error": {
         "status": 0,
         "info": "失败"

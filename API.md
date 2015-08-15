@@ -434,7 +434,8 @@
   
 		{
 			"uid": "",
-			"token": ""
+			"token": "",
+			"get_id": ""  // 要查看的人的uid
 		}
 
   - res: 

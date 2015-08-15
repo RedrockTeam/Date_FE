@@ -96,6 +96,9 @@
   background-color: #efefef;
   overflow: hidden;
 }
+.pbl-dating .row-group:first-child {
+  margin-top: 0;
+}
 .pbl-dating .row-group {
   margin: 0.46296296rem 0;
   border-bottom: 1px solid #DDD;

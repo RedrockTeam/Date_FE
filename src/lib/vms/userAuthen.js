@@ -1,7 +1,7 @@
 define('vms/userAuthen',['avalon', 'jquery', 'dialog'], function(avalon, $){
     var vm = avalon.define({
         $id: 'userAuthen',
-        show_frurlont: 'imgs/auth_frurlont.jpg',
+        show_front: 'imgs/auth_front.jpg',
         show_end: 'imgs/auth_end.jpg',
         cantUpload: false,
         up_front: '',

@@ -1,0 +1,25 @@
+
+<section class="message-container" ms-controller="userMessage">
+    <menu class="switch clearfix">
+        <li ms-class-active="ct=='notice'" ms-on-tap="switchSt('notice')">通知</li>
+        <li ms-class-active="ct=='news'" ms-on-tap="switchSt('news')">消息</li>
+    </menu>
+
+    <div ms-if="ct=='notice'" class="notice-wrapper">
+        <div class="message-list" ms-repeat="notice">
+            <div class="img-wrapper" ms-css-background-image="'url('+el.head+')'"></div>
+            <div class="right">
+                <span class="peo-name">{{el.name}}</span>{{el.content}}
+            </div>
+        </div>
+    </div>
+
+    <div ms-if="ct=='news'" class="news-wrapper">
+        <div class="message-list" ms-repeat="news">
+            <div class="img-wrapper" ms-css-background-image="'url('+el.head+')'"></div>
+            <div class="right">
+                <span class="peo-name">{{el.nickname}}</span>{{el.content}}
+            </div>
+        </div>
+    </div>
+</section>

@@ -92,9 +92,6 @@
 .test-bor-green {
   border: 1px solid green;
 }
-.resetPasswd-container {
-  margin-top: 0.43518519rem;
-}
 .resetPasswd-container .input-item {
   position: relative;
   border-bottom: 1px solid #dbdbdb;

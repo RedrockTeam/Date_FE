@@ -1,0 +1,64 @@
+
+@import "var";
+.fans-container{
+  padding:0 5%;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 40rem/@psdWidth;
+  .hot-title{
+    .rfz(46px);
+    color:@theme-green;
+    margin: 25rem/@psdWidth 0;
+  }
+  .img-wrapper{
+    float:left;
+    width:145rem/@psdWidth;
+    height:145rem/@psdWidth;
+    .border-radius(7px);
+    border:1px solid #dddddd;
+    .fix-img-small;
+  }
+  .right{
+    margin-left: 175rem/@psdWidth;
+  }
+  .icon{
+    .rfz(60px);
+  }
+  .icon.female{
+    color: #ff607a;
+  }
+  .icon.male{
+    color: #4f96ee;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  .peo-nickname{
+    .rfz(46px);
+    line-height: 70rem/@psdWidth;
+    i {
+      background-color: white;
+      color: #ff6b5c;
+      .rfz(55.6px);
+    }
+  }
+
+  .signature{
+    color: #666666;
+    .rfz(42px);
+    line-height: 40rem/@psdWidth;
+    margin-top: 10rem/@psdWidth;
+  }
+  .peo-lists{
+    border-bottom: 1px solid #cccccc;
+    padding: 25rem/@psdWidth 0;
+    .clearfix();
+    p{
+      margin:0;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+}

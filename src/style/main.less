@@ -13,15 +13,6 @@ html, body{
   font-family: 'iconfont', 'Microsoft YaHei', "WenQuanYi MicroHei", sans-serif;
 }
 
-
-//将body定在中间， 最大宽度为 10rem
-//body{
-//  max-width: 10rem;
-//  margin: auto;
-//  overflow-x: hidden;
-//  height: auto;
-//}
-
 a, a:hover, a:active, a:visited{
   text-decoration: none;
   outline: none;
@@ -52,15 +43,16 @@ body{position: relative;} //使得body下面的绝对定位元素有父级定位
 @import "userFindPasswd";
 @import "userResetPasswd";
 @import "userCollection";
+@import "userAlter";
 @import "userRecorded";
 @import "userAuthen";
+@import "userSelectTags";
 @import "activityDetail";
-@import "fans";
-@import "messageList";
+@import "userFans";
+@import "userFollows";
+@import "userMessage";
 @import "dateCreate";
 @import "filter";
-
-
 .loading:after{
   content: " ";
   width: 100%;
@@ -70,7 +62,6 @@ body{position: relative;} //使得body下面的绝对定位元素有父级定位
   top: 0;
   left: 0;
 }
-
 //iconfont
  .iconfont {
    font-family:"iconfont" !important;

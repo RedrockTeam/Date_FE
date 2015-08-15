@@ -31,8 +31,9 @@ define('urls', function(){
         "findPasswdVerify": "http://127.0.0.1:8080/user/findPasswd/verify",     //找回密码验证码获取
         "userResetPasswd": "http://127.0.0.1:8080/user/findPasswd/reset",     //重置密码
         "userCollection": "http://127.0.0.1:8080/user/collection",          //收藏
-        "userRecorded": "http://127.0.0.1:8080/user/recorded",          //收藏
-
+        "userRecorded": "http://127.0.0.1:8080/user/recorded",              //收藏
+        "userFans": "http://127.0.0.1:8080/user/fans",              //粉丝
+        "userFollows": "http://127.0.0.1:8080/user/follows",              //粉丝
 
 
 

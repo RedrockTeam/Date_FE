@@ -1,6 +1,6 @@
-define('vms/userFans', ['avalon', 'jquery'], function(avalon, $){
+define('vms/userFollows', ['avalon', 'jquery'], function(avalon, $){
     var vm = avalon.define({
-        $id: 'userFans',
+        $id: 'userFollows',
         data: {},
         getUserDetail: function(uid){
             var url = '/user/check/' + uid;
@@ -9,7 +9,7 @@ define('vms/userFans', ['avalon', 'jquery'], function(avalon, $){
             }, 0);
         }
     });
-    vm.$watch('userFansDataChanged', function(data){
+    vm.$watch('userFollowsDataChanged', function(data){
         vm['data'] = data;
         log(data);
     });

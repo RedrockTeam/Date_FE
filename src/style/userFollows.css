@@ -92,108 +92,135 @@
 .test-bor-green {
   border: 1px solid green;
 }
-.fan {
-  padding-top: 2.77777778rem;
-}
-.hot-peo {
+.follows-container {
   padding: 0 5%;
   background-color: #fff;
   overflow: hidden;
   margin-bottom: 0.37037037rem;
 }
-.hot-peo .hot-title {
+.follows-container .hot-title {
   font-size: 15.33333333px;
   color: #8dda5e;
   margin: 0.23148148rem 0;
 }
-[data-dpr="2"] .hot-peo .hot-title {
+[data-dpr="2"] .follows-container .hot-title {
   font-size: 23px;
 }
-[data-dpr="3"] .hot-peo .hot-title {
+[data-dpr="3"] .follows-container .hot-title {
   font-size: 46px;
 }
-[data-dpr="2"] .hot-peo .hot-title {
+[data-dpr="2"] .follows-container .hot-title {
   font-size: 23px;
 }
-[data-dpr="3"] .hot-peo .hot-title {
+[data-dpr="3"] .follows-container .hot-title {
   font-size: 46px;
 }
-.hot-peo .img-wrapper {
+.follows-container .img-wrapper {
   float: left;
   width: 1.34259259rem;
   height: 1.34259259rem;
-  border-radius: 15px;
-  border: 1px solid #999999;
+  border-radius: 7px;
+  border: 1px solid #dddddd;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
-.hot-peo .right {
+.follows-container .right {
   margin-left: 1.62037037rem;
 }
-.hot-peo .sex {
-  font-style: normal;
+.follows-container .icon {
+  font-size: 20px;
 }
-.hot-peo .peo-nickname {
+[data-dpr="2"] .follows-container .icon {
+  font-size: 30px;
+}
+[data-dpr="3"] .follows-container .icon {
+  font-size: 60px;
+}
+[data-dpr="2"] .follows-container .icon {
+  font-size: 30px;
+}
+[data-dpr="3"] .follows-container .icon {
+  font-size: 60px;
+}
+.follows-container .icon.female {
+  color: #ff607a;
+}
+.follows-container .icon.male {
+  color: #4f96ee;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+.follows-container .peo-nickname {
   font-size: 15.33333333px;
   line-height: 0.64814815rem;
 }
-[data-dpr="2"] .hot-peo .peo-nickname {
+[data-dpr="2"] .follows-container .peo-nickname {
   font-size: 23px;
 }
-[data-dpr="3"] .hot-peo .peo-nickname {
+[data-dpr="3"] .follows-container .peo-nickname {
   font-size: 46px;
 }
-[data-dpr="2"] .hot-peo .peo-nickname {
+[data-dpr="2"] .follows-container .peo-nickname {
   font-size: 23px;
 }
-[data-dpr="3"] .hot-peo .peo-nickname {
+[data-dpr="3"] .follows-container .peo-nickname {
   font-size: 46px;
 }
-.hot-peo .peo-nickname i {
+.follows-container .peo-nickname i {
   background-color: white;
   color: #ff6b5c;
   font-size: 18.53333333px;
+  width: 0.83333333rem;
 }
-[data-dpr="2"] .hot-peo .peo-nickname i {
+[data-dpr="2"] .follows-container .peo-nickname i {
   font-size: 27.8px;
 }
-[data-dpr="3"] .hot-peo .peo-nickname i {
+[data-dpr="3"] .follows-container .peo-nickname i {
   font-size: 55.6px;
 }
-[data-dpr="2"] .hot-peo .peo-nickname i {
+[data-dpr="2"] .follows-container .peo-nickname i {
   font-size: 27.8px;
 }
-[data-dpr="3"] .hot-peo .peo-nickname i {
+[data-dpr="3"] .follows-container .peo-nickname i {
   font-size: 55.6px;
 }
-.hot-peo .signature {
+.follows-container .signature {
+  color: #666666;
   font-size: 14px;
   line-height: 0.37037037rem;
   margin-top: 0.09259259rem;
 }
-[data-dpr="2"] .hot-peo .signature {
+[data-dpr="2"] .follows-container .signature {
   font-size: 21px;
 }
-[data-dpr="3"] .hot-peo .signature {
+[data-dpr="3"] .follows-container .signature {
   font-size: 42px;
 }
-[data-dpr="2"] .hot-peo .signature {
+[data-dpr="2"] .follows-container .signature {
   font-size: 21px;
 }
-[data-dpr="3"] .hot-peo .signature {
+[data-dpr="3"] .follows-container .signature {
   font-size: 42px;
 }
-.hot-peo .peo-lists {
-  border-bottom: 1px solid #999999;
+.follows-container .peo-lists {
+  border-bottom: 1px solid #cccccc;
   padding: 0.23148148rem 0;
   *zoom: 1;
 }
-.hot-peo .peo-lists:before,
-.hot-peo .peo-lists:after {
+.follows-container .peo-lists:before,
+.follows-container .peo-lists:after {
   display: table;
   content: "";
 }
-.hot-peo .peo-lists:after {
+.follows-container .peo-lists:after {
   clear: both;
 }
-.hot-peo .peo-lists p {
+.follows-container .peo-lists p {
   margin: 0;
+}
+.follows-container .peo-lists:last-child {
+  border-bottom: none;
 }

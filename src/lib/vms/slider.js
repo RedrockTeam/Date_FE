@@ -32,6 +32,7 @@ define('vms/slider', ['avalon', 'jquery' ,'swiper'], function(avalon, $){
                         vm['show'] = true;
                     }
                     vm.$fire('all!moduleState', vm['states'][tabsSwiper.activeIndex]);    //广播
+                    if(tabsSwiper.activeIndex == 3) vm.$fire('all!userCheckIsRootChanged', true);   //通知userCheck 到自己的信息
                 }
             });
 
@@ -52,7 +53,7 @@ define('vms/slider', ['avalon', 'jquery' ,'swiper'], function(avalon, $){
                 vm['moduleSlider']();
             }
         },
-        lpRenderedCb: function(){     //各模块循环结束后冒泡到 slider controller 控制高度
+        lpRenderedCb: function(){
             var $self = $(this);
             if( $self.hasClass('date-list') ){
                 vm['hst'] = 'dateList';

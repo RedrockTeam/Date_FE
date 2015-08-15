@@ -92,43 +92,89 @@
 .test-bor-green {
   border: 1px solid green;
 }
-.message .message-list {
+.message-container * {
+  margin: 0;
+  padding: 0;
+}
+.message-container .switch {
+  margin: 0 0.27777778rem 0.22222222rem;
+  border: 1px solid #999999;
+  border-radius: 0.25925926rem;
+  width: 3.27777778rem;
+  position: relative;
+  overflow: hidden;
+}
+.message-container .switch li {
+  float: left;
+  width: 50%;
+  padding: 0.18518519rem 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+  font-family: "hiraginosansgb w3", "microsoft yahei";
+}
+[data-dpr="2"] .message-container .switch li {
+  font-size: 24px;
+}
+[data-dpr="3"] .message-container .switch li {
+  font-size: 48px;
+}
+[data-dpr="2"] .message-container .switch li {
+  font-size: 24px;
+}
+[data-dpr="3"] .message-container .switch li {
+  font-size: 48px;
+}
+.message-container .switch li.active {
+  background: #999999;
+  color: #333333;
+}
+.message-container .notice-wrapper,
+.message-container .news-wrapper {
+  border-top: 1px solid #dddddd;
+}
+.message-container .message-list {
   padding: 5%;
   background-color: #fff;
+  border-bottom: 1px solid #dddddd;
   *zoom: 1;
 }
-.message .message-list:before,
-.message .message-list:after {
+.message-container .message-list:before,
+.message-container .message-list:after {
   display: table;
   content: "";
 }
-.message .message-list:after {
+.message-container .message-list:after {
   clear: both;
 }
-.message .message-list .img-wrapper {
+.message-container .message-list .img-wrapper {
   width: 1.2962963rem;
   height: 1.2962963rem;
   border-radius: 100%;
   float: left;
   border: 1px solid #999999;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
-.message .message-list .peo-name {
+.message-container .message-list .peo-name {
   color: #49a3f6;
 }
-.message .message-list .right {
-  margin-left: 1.48148148rem;
-  line-height: 1.2962963rem;
+.message-container .message-list .right {
+  vertical-align: middle;
+  margin: 0.25rem 0 0 1.48148148rem;
+  line-height: 0.76851852rem;
   font-size: 15.33333333px;
 }
-[data-dpr="2"] .message .message-list .right {
+[data-dpr="2"] .message-container .message-list .right {
   font-size: 23px;
 }
-[data-dpr="3"] .message .message-list .right {
+[data-dpr="3"] .message-container .message-list .right {
   font-size: 46px;
 }
-[data-dpr="2"] .message .message-list .right {
+[data-dpr="2"] .message-container .message-list .right {
   font-size: 23px;
 }
-[data-dpr="3"] .message .message-list .right {
+[data-dpr="3"] .message-container .message-list .right {
   font-size: 46px;
 }
