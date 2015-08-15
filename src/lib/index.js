@@ -50,6 +50,7 @@ require([
         'states/user.findPasswd',   //找回密码 验证码
         'states/user.resetPasswd',   //重置密码
         'states/user.authen',         //实名认证
+        'states/search',              //搜索
 
 
         //注册 vm 一次加载进内存  全部只依赖于 vm`main`, 相互间的操作通过vm`main`监听代理
@@ -74,6 +75,7 @@ require([
         'vms/userCollection',
         'vms/userRecorded',
         'vms/userAuthen',
+        'vms/search'
 
 
 
