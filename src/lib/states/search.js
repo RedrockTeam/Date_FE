@@ -8,7 +8,6 @@ define('states/search', ['avalon', 'vms/tipBar', 'request', 'vms/search','vms/ma
             //log('/search');
             //vmTipBar['state'] = 'search';
             vmsMain.state = 'loading';
-
             request('searchHot',{
                 'uid': '',
                 'token': ''
