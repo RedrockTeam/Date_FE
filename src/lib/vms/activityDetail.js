@@ -63,9 +63,6 @@ define('vms/activityDetail',['avalon', 'userCenter', 'request'], function(avalon
         }
     });
 
-    vm.$watch('data', function(){
-        log('change');
-    });
     vm.$watch('activityDetailDataChanged', function(data){
         vm['data'] = data;
     });

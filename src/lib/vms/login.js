@@ -25,9 +25,6 @@ define(['avalon', 'userCenter', 'jquery', 'dialog', 'mmState'], function (avalon
             });
         },
         rendered: function(){
-            alert('sge');
-            //console.log('rendered');
-            //vmMain['state'] = '';
         }
     });
 });

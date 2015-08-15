@@ -2,42 +2,51 @@
 * created by liuhzz
 **/
 
-define('vms/search', ['avalon', 'vms/main', 'request'], function(avalon,vmsMain,request){
+define('vms/search', ['avalon', 'userCenter', 'request', 'jquery','dialog'], function (avalon, userCenter, request ,$) {
+    var vm = avalon.define({
+        $id: "search",
+        states: ['all', 'person', 'activity'],
+        ct: 'all',
+        type: 0,      //搜索类型
+        hot: {        //热门
+            person: [],
+            activity: []
+        },
+        search: {   //自己搜索
+            person: [],
+            activity:[]
+        },
 
-    var vmSearch = avalon.define({
-        $id : "search",
-        list_activity: [{
-            "title":'',
-            "signature":''
-        }] ,
-        list_people: [{
-            "uid": '',
-            "head": '',
-            "gender": '',
-            "signature": ''
-        }],
-        content:'',
+        doSearch: function(){
+            var user = userCenter.info();
+            $.Dialog.loading();
+            request('searchDo', {'uid': user.uid, 'token': user.token, 'type': vm['type']}).done(function(res){
+                if(vm['type'] == 0)  vm['search'] = res.data;
+                else if(vm['type'] == 1)  vm['search']['person'] = res.data.person;
+                else vm['search']['activity'] = res.data.activity;
+                $.Dialog.close();
+            });
+        },
 
-        finish:function(){
-            vmsMain.state = 'loading';
-            var content = avalon.vmodels['search'].content;
-            var list_activity = avalon.vmodels['search'].list_activity;
-            var list_people = avalon.vmodels['search'].list_people;
-            request('searchDo',{
-                uid: '',
-                token: '',
-                type: 1,
-                content: content == '' ? '' : content.trim()
-            }).done(function(res){
-                list_activity = res.data.activity;
-                list_people = res.data.people;
-                avalon.scan();
-                vmsMain.state = 'ok';
-                log(list_activity);
-            })
+        getActivityDetail: function(activity_id){
+            setTimeout(function(){
+                avalon.router.navigate('/activity/detail/'+activity_id);
+            }, 0);
+        },
+        getUserDetail: function(uid){
+            setTimeout(function(){
+                avalon.router.navigate('/user/check/'+uid);
+            }, 0);
+        },
+
+        switchTab: function(n){
+            vm['ct'] = vm['states'][n];
+            vm['type'] = n;
         }
     });
 
-    return vmSearch;
+    vm.$watch('SearchHotDataChanged', function(hot){
+        vm['hot'] = hot;
+    });
 
-})
+});

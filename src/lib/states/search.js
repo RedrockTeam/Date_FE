@@ -1,23 +1,24 @@
 //搜索
-define('states/search', ['avalon', 'vms/tipBar', 'request', 'vms/search','vms/main','mmState'], function(avalon, vmTipBar,request,vmSearch,vmsMain){
+define('states/search', ['avalon', 'userCenter','request','mmState'], function(avalon, userCenter,request){
+    var vmMain = avalon.vmodels['main'];
     avalon.state('search', {
         controller: "main",
         url: "/search",
         templateUrl: "tpl/search/yield.html",
         onEnter: function(){
-            //log('/search');
-            //vmTipBar['state'] = 'search';
-            vmsMain.state = 'loading';
-            request('searchHot',{
-                'uid': '',
-                'token': ''
-            }).done(function(res){
-                vmSearch.list_activity = res.data.activity;
-                vmSearch.list_people = res.data.people;
+            var user = userCenter.info();
+            if(!user.state){
+                setTimeout(function(){avalon.router.navigate('/user/login')}, 0);
+                return;
+            }//认证处理
+            vmMain['state'] = 'loading';
+
+            request("searchHot", {"uid": user.uid, "token": ""}).done(function(res){
+                vmMain.$fire('all!SearchHotDataChanged', res.data);
+                vmMain.$fire('all!tipBarStateChanged', 'search');
                 avalon.scan();
-                //log(vmSearch.list.activity);
-                vmsMain.state = 'ok';
-            })
+                vmMain['state'] = 'ok';
+            });
         }
     });
 });

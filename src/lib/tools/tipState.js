@@ -39,12 +39,11 @@ define(['avalon'], function (avalon) {
 
         dateDetail: getState({'title': '约会详情', rightShare: true, rightShareCb: 'share'}),
 
-        search: getState({'title': '搜索', rightSub: true, rightSubCb: 'share'}),
+        search: getState({'title': '搜索', rightShare: true, rightShareCb: 'share'}),
 
         userFindPasswd: getState({'title': '找回密码'}),
 
-        userResetPasswd: getState({'title': '重置密码'}),
-
+        userResetPasswd: getState({'title': '重置密码'})
 
     };
 });

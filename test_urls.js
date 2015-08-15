@@ -293,17 +293,34 @@ var datas = {
         "data": {
             person: [         //热门用户
                 {
-                    "uid": "",    //用户id
-                    "head": "",   //头像
-                    "gender": "",  // 1 男	2 女
-                    "signature": "" //个性签名(约会宣言)
+                    "uid": 2152,    //用户id
+                    "head": "imgs/test.png",   //头像
+                    "nickname": "村里没有巧克力",  //nickname
+                    "gender": 1,  // 1 男	2 女
+                    "signature": "今天一起去打牌吧", //个性签名(约会宣言)
+                    "authened": false //是否认证
+                },
+                {
+                    "uid": 999,    //用户id
+                    "nickname": "村里没有牛奶糖",   //nickname
+                    "head": "imgs/1.jpg",   //头像
+                    "gender": 1,  // 1 男	2 女
+                    "signature": "今天去泡温泉吧", //个性签名(约会宣言)
+                    "authened": true //是否认证
                 }
 
             ],
+
             activity: [       //热门活动
                 {
-                    "title": "",  //标题
+                    "activity_id": 124,    //activity_id
+                    "title": "庆“2015乐堡啤酒”音乐节盛大开幕。",  //标题
                     "signature": "前十名免费玩耍，不收钱"  //优惠信息
+                },
+                {
+                    "activity_id": 124,    //activity_id
+                    "title": "重庆“恋爱的犀牛”话剧团表演。",  //标题
+                    "signature": "前10位报名用户可享受8折优惠"  //优惠信息
                 }
             ]
         },
@@ -316,16 +333,32 @@ var datas = {
         "data": {
             person: [         //热门用户
                 {
-                    "uid": "",    //用户id
-                    "head": "",   //头像
-                    "gender": "",  // 1 男	2 女
-                    "signature": "" //个性签名(约会宣言)
+                    "uid": "35",    //用户id
+                    "head": "imgs/test.png",   //头像
+                    "gender": 1,  // 1 男	2 女
+                    "signature": "打不死你", //个性签名(约会宣言)
+                    "nickname": "没有答案"   //nickname
+
+                },
+                {
+                    "uid": "35",    //用户id
+                    "head": "imgs/1.jpg",   //头像
+                    "gender": 1,  // 1 男	2 女
+                    "signature": "哈哈哈，来打我呀", //个性签名(约会宣言)
+                    "nickname": "绕不过"   //nickname
+
                 }
 
             ],
             activity: [       //热门活动
                 {
-                    "title": "",  //标题
+                    "title": "麦当劳全新饮品冰激凌“第二杯半价”。",  //标题
+                    "signature": "前六名免费玩耍，不收钱",  //优惠信息
+                    "activity_id": 23
+                },
+                {
+                    "activity_id": 23,
+                    "title": "唱歌很好听的哟！~",  //标题
                     "signature": "前六名免费玩耍，不收钱"  //优惠信息
                 }
             ]

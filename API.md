@@ -923,7 +923,7 @@
 		{
 			"uid": "", //uid
 			"content": "", //搜素的内容
-			"type": 1 ,   //只限制在某一个模块搜索  1 全部 2 用户名 3 活动
+			"type": 0 ,   //只限制在某一个模块搜索  0 全部 1 用户 2 活动
 			"token": ""
 		}
 
@@ -932,14 +932,19 @@
 		{
 			"data": [
 				person: [         //搜索到用户
-					"uid": "",
-					"head": "",   //头像
-					"gender": "",  // 1 男	2 女	
-					"signature": "", //个性签名(约会宣言)
+					{
+						"uid": "",
+                    	"head": "",   //头像
+                    	"nickname": "村里没有巧克力",   //nickname
+                    	"gender": "",  // 1 男	2 女	
+                    	"signature": "", //个性签名(约会宣言)
+                    	"authened": true   // 是否经过认证
+                    }
 				],
 				activity: [       //搜索到活动
 					"title": "",  //标题 
-					"signature": "前十名免费玩耍，不收钱"  //优惠信息   
+					"signature": "前十名免费玩耍，不收钱",  //优惠信息 
+					"activity_id": 153    //活动id
 				]
 			],
 			status: 200,
@@ -958,14 +963,21 @@
 		{
 			"data": [
 				person: [         //热门用户
-					"uid": "",    //用户id
-					"head": "",   //头像
-					"gender": "",  // 1 男	2 女	
-					"signature": "" //个性签名(约会宣言)
+					{
+                    	"uid": "",
+                        "head": "",   //头像
+                        "nickname": "", //nickname
+                        "gender": "",  // 1 男	2 女	
+                        "signature": "", //个性签名(约会宣言)
+                        "authened": true   //是否经过认证
+                    }
 				],
 				activity: [       //热门活动
-					"title": "",  //标题
-					"signature": "前十名免费玩耍，不收钱"  //优惠信息   
+					{
+					    "activity_id": "",  //活动id
+						"title": "",  //标题
+                        "signature": "前十名免费玩耍，不收钱"  //优惠信息 
+					}  
 				]
 			],
 			status: 200,

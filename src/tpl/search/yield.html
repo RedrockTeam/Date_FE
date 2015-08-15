@@ -1,45 +1,104 @@
-<section class="top-layout-1" ms-include-src="'tpl/widget/topBar.html'"></section>
-<section class="nav-layout" ms-include-src="'tpl/widget/navBar.html'"></section>
-<!--<div>搜索</div>-->
-
+<div ms-include-src="'tpl/widget/tipBar.html'" data-include-rendered="rendered"></div>
 <section class="search-container" ms-controller="search">
+    <ul class="nav-container clearfix tab">
+        <li ms-class-selected="ct=='all'" ms-on-tap="switchTab(0)">
+            <p>全部</p>
+            <i class="i-split"></i>
+        </li>
+        <li ms-class-selected="ct=='person'"  ms-on-tap="switchTab(1)">
+            <p>用户</p>
+            <i class="i-split"></i>
+        </li>
+        <li ms-class-selected="ct=='activity'" ms-on-tap="switchTab(2)">
+            <p>活动</p>
+        </li>
+    </ul>
+
     <div id="form-wrapper">
-        <input class="search-input" ms-duplex="content" type="search" placeholder="搜索..."/>
-        <a href="javascript:void(0)" title="搜索" ms-on-tap="finish()"  class="icon-font icon-search">&#xe650;</a>
+    <input class="search-input" ms-duplex="content" type="search" placeholder="搜索..."/>
+    <a href="javascript:void(0)" ms-on-tap="doSearch" title="搜索" ms-on-tap="finish()"  class="icon-font icon-search">&#xe643;</a>
     </div>
 
+    <div ms-if="ct=='all'" class="all">
+        <div class="hot-act">
+            <p class="hot-title">{{!search['activity'].length ? '热门活动' : '搜到的活动'}}</p>
+            <div  ms-if="!search['activity'].length">
+                <div class="act-lists" ms-on-tap="getActivityDetail(el.activity_id)" ms-repeat="hot['activity']">
+                    <span class="act-title">{{el.title}}</span>
+                    <span class="act-discount">{{el.signature}}</span>
+                </div>
+            </div>
+            <div ms-if="search['activity'].length">
+                <div class="act-lists" ms-on-tap="getActivityDetail(el.activity_id)" ms-repeat="search['activity']">
+                    <span class="act-title">{{el.title}}</span>
+                    <span class="act-discount">{{el.signature}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="hot-peo">
+            <p class="hot-title">{{!search['person'].length ? '热门用户' : '搜到的用户'}}</p>
+            <div ms-if="!search['person'].length">
+               <div class="peo-lists clearfix" ms-on-tap="getUserDetail(el.uid)" ms-repeat="hot['person']">
+                   <div class="img-wrapper" ms-css-background-image="'url('+el.head+')'">
+                   </div>
+                   <div class="right">
+                       <p class="peo-nickname">
+                           {{el.nickname}}
+                           <i ms-class-male="el.gender == 1" ms-class-female="el.gender == 2" class="icon iconfont">{{el.gender == 1 ? '&#xe61b' : '&#xe61c'}}</i>
+                           <i ms-if="el.authened" class="icon iconfont authen">&#xe624;</i>
+                       </p>
+                       <p class="signature">
+                           {{el.signature}}
+                       </p>
+                   </div>
 
-    <div class="hot-act">
-        <p class="hot-title">热门活动</p>
-        <div class="act-lists" ms-repeat="list_activity">
-            <span class="act-title">
-                {{el.title}}
-            </span>
-            <span class="act-discount">
-                {{el.signature}}
-            </span>
+               </div>
+            </div>
+            <div ms-if="search['person'].length">
+                <div class="peo-lists clearfix" ms-on-tap="getUserDetail(el.uid)" ms-repeat="search['person']">
+                    <div class="img-wrapper" ms-css-background-image="'url('+el.head+')'">
+                    </div>
+                    <div class="right">
+                        <p class="peo-nickname">
+                            {{el.nickname}}
+                            <i ms-class-male="el.gender == 1" ms-class-female="el.gender == 2" class="icon iconfont">{{el.gender == 1 ? '&#xe61b' : '&#xe61c'}}</i>
+                            <i ms-if="el.authened" class="icon iconfont authen">&#xe624;</i>
+                        </p>
+                        <p class="signature">
+                            {{el.signature}}
+                        </p>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="hot-peo">
-        <p class="hot-title">热门用户</p>
-
-        <div class="peo-lists" ms-repeat="list_people">
-            <div class="img-wrapper" ms-css-background="'url('+{{el.head}}+')">
-
+    <div ms-if="ct=='person'" class="person">
+        <div class="hot-peo">
+            <p class="hot-title">搜到的用户：</p>
+            <div class="peo-lists clearfix" ms-on-tap="getUserDetail(el.uid)" ms-repeat="search['person']">
+                <div class="img-wrapper" ms-css-background-image="'url('+el.head+')'">
+                </div>
+                <div class="right">
+                    <p class="peo-nickname">
+                        {{el.nickname}}
+                        <i ms-class-male="el.gender == 1" ms-class-female="el.gender == 2" class="icon iconfont">{{el.gender == 1 ? '&#xe61b' : '&#xe61c'}}</i>
+                        <i ms-if="el.authened" class="icon iconfont authen">&#xe624;</i>
+                    </p>
+                    <p class="signature">
+                        {{el.signature}}
+                    </p>
+                </div>
             </div>
-
-            <div class="right">
-                <p class="peo-nickname">
-                    {{el.uid}}
-                        <i class="icon-font sex" ms-class-icon-female="el.gender == 2" ms-class-icon-male="el.gender == 1"></i>
-                </p>
-
-                <p class="signature">
-                    {{el.signature}}
-                </p>
+        </div>
+    </div>
+    <div ms-if="ct=='activity'" class="activity">
+        <div class="hot-act">
+            <p class="hot-title">搜到的活动:</p>
+            <div class="act-lists" ms-on-tap="getActivityDetail(el.activity_id)" ms-repeat="search['activity']">
+                <span class="act-title">{{el.title}}</span>
+                <span class="act-discount">{{el.signature}}</span>
             </div>
-
         </div>
     </div>
 </section>
