@@ -3,7 +3,8 @@ define(['avalon', 'userCenter'], function(avalon, userCenter){
     var data_cpy = null;
     var vm = avalon.define({
         $id: 'userCheck',
-        isRoot: true,
+        isHome: true,
+        isOwn: true,   //是否是本人
         data: {},
         go: function(type){
             var url = '/user/'+ vm['data'].uid + '/'+ type;
@@ -15,11 +16,18 @@ define(['avalon', 'userCenter'], function(avalon, userCenter){
         vm['data'] = data;
     });
 
-    vm.$watch('userCheckIsRootChanged', function(is){
-        vm['isRoot'] = is;
-        if(is){   //恢复为自己原来的数据
-            vm['data'] = data_cpy;
-        }
+    vm.$watch('moduleState', function(s){    //检测是否查看到自己的信息
+        vm['isHome'] = vm['isOwn'] = s == 'userCheck';
+        vm['isHome'] && (vm['data'] = data_cpy);
+    });
+
+    vm.$watch('userCheckPageToSingle', function(){
+        vm['isHome'] = false;
+    });
+
+    vm.$watch('userCheckIdentifyChanged', function(isOwn){
+        log(isOwn);
+        vm['isOwn'] = isOwn;
     });
 
     //复制 自己的data

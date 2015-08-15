@@ -125,7 +125,7 @@
 [data-dpr="3"] .nav-container p {
   font-size: 48px;
 }
-.nav-container .z-active p {
+.nav-container .selected p {
   color: #ffd35c;
   box-shadow: inset 0 -0.07407407rem 0 #ffd35c;
 }

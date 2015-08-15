@@ -1,5 +1,5 @@
 <div class="user-check" ms-controller="userCheck">
-    <div ms-if="!isRoot" ms-include-src="'tpl/widget/tipBar.html'"></div>
+    <div ms-if="!isHome" ms-include-src="'tpl/widget/tipBar.html'"></div>
     <header>
         <div class="person clearfix">
             <i class="head" ms-css-background-image="'url('+data.head+')'"></i>
@@ -13,7 +13,7 @@
             </aside>
         </div>
         <footer>
-            <a href="">关注：{{data.followers}}</a><a href="">粉丝：{{data.fans}}</a><a href="">魅力值：{{data.charm}}</a>
+            <a href="#!/user/data.uid/follows">关注：{{data.followers}}</a><a href="#!/user/data.uid/fans">粉丝：{{data.fans}}</a><a href="javascript:void(0)">魅力值：{{data.charm}}</a>
         </footer>
     </header>
     <ul class="info">
@@ -28,12 +28,12 @@
     <footer class="more">
         <a href="javascript:void(0)" ms-on-tap="go('collection')">
             <i class="icon iconfont collect">&#xe623;</i>
-            <span>{{isRoot ? '我' : (data.gender == 1 ? '他' : '她')}}收藏的</span>
+            <span>{{isOwn ? '我' : (data.gender == 1 ? '他' : '她')}}收藏的</span>
         </a>
         <a href="javascript:void(0)" ms-on-tap="go('recorded')">
             <i class="icon iconfont record">&#xe8d4;</i>
-            <span>{{isRoot ? '我' : (data.gender == 1 ? '他' : '她')}}参与的</span>
+            <span>{{isOwn ? '我' : (data.gender == 1 ? '他' : '她')}}参与的</span>
         </a>
-        <a href="#!/user/authen" ms-if="isRoot"><i class="icon iconfont authen">&#xe610;</i><span>实名认证</span></a>
+        <a href="#!/user/authen" ms-if="isHome && !data.authened"><i class="icon iconfont authen">&#xe610;</i><span>实名认证</span></a>
     </footer>
 </div>

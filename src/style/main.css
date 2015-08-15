@@ -455,6 +455,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 html,
 body {
+  width: 100%;
+  overflow-x: hidden;
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
   background-color: #efefef;
@@ -473,6 +475,12 @@ li {
 }
 body {
   position: relative;
+}
+input {
+  background: none;
+}
+input:focus {
+  outline: none;
 }
 /*layout 整体布局*/
 .box-icon .icon .iconfont {
@@ -729,7 +737,7 @@ body {
 [data-dpr="3"] .nav-container p {
   font-size: 48px;
 }
-.nav-container .z-active p {
+.nav-container .selected p {
   color: #ffd35c;
   box-shadow: inset 0 -0.07407407rem 0 #ffd35c;
 }
@@ -978,9 +986,6 @@ body {
 }
 .slider-layout .swiper-container {
   height: 3.7962963rem;
-}
-#tab-container {
-  overflow: visible;
 }
 .search-container {
   padding-top: 2.77777778rem;

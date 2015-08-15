@@ -91,10 +91,10 @@ define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon
                 $.Dialog.fail("没有填学校噢!!!");
                 return;
             }
-            if(!vd['academy']){
-                $.Dialog.fail("没有填学院噢!!!");
-                return;
-            }
+            //if(!vd['academy']){
+            //    $.Dialog.fail("没有填学院噢!!!");
+            //    return;
+            //}
             var temp = {};
             filter$(temp, vm['data']);
             var data = avalon.mix({

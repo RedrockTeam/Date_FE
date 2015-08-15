@@ -29,8 +29,11 @@ require([
     'require',
     'avalon',
     'mmState',
+    'jquery',
+    'dialog',
     'vms/main'   //作为其他所有 vm 事件代理
 ], function(require,avalon) {
+    $.Dialog.loading();
     require([
         //注册状态
         'states/home',       //主页
@@ -82,6 +85,7 @@ require([
         'vms/userAlter'
 
     ], function(){
+        $.Dialog.close();
         avalon.history.start({
             basepath: "/"
         });

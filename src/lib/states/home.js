@@ -13,7 +13,6 @@ define(
             url: "/",
             templateUrl: "tpl/home/yield.html",
             onEnter: function(){
-                vmMain.$fire('all!sliderModCoutChanged', 0);
                 var user = userCenter.info();
                 if(!user.state){
                     setTimeout(function(){avalon.router.navigate('/user/login')}, 0);
@@ -41,6 +40,7 @@ define(
                         {'uid': user.uid, 'token': user.token}
                     )
                 ).done(function(slider, dl, al, um, uc){
+                        //vmMain.$fire('all!sliderModCoutInit', true);//todo
                         vmMain.$fire('all!sliderItemsChanged', slider.data);
                         vmMain.$fire('all!dateItemsChanged', dl.data);
                         vmMain.$fire('all!activityItemsChanged', al.data);

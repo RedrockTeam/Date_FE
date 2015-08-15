@@ -1,17 +1,11 @@
 
-define(
-    [
-        'avalon', 'jquery',
-        'dialog', 'avaFilters',
-        'mmState'
-    ],
+define([
+        'avalon', 'jquery', 'dialog', 'avaFilters', 'mmState'],
     function (avalon, $) {
         var vm = avalon.define({
             $id: "main",
             state: "",
-            getParams: function(ct){
-
-            }
+            ct: "user"     //保存当前页 state
         });
 
         /**

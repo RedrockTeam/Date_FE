@@ -1,18 +1,18 @@
 <ul class="nav-container clearfix tab" ms-controller="navBar" >
-    <li class="z-active">
+    <li ms-class-selected="ct=='dateList'"e  ms-on-tap="switchTab(0)">
         <p>首页</p>
         <i class="i-split"></i>
     </li>
-    <li>
+    <li ms-class-selected="ct=='activityList'" ms-on-tap="switchTab(1)">
         <p>发现</p>
         <i class="i-split"></i>
     </li>
-    <li>
+    <li ms-class-selected="ct=='userMessage'" ms-on-tap="switchTab(2)">
         <p>消息</p>
         <i class="i-split"></i>
         <i ms-if="attention && ct !=='userMessage'" class="i-message"></i>
     </li>
-    <li>
+    <li ms-class-selected="ct=='userCheck'" ms-on-tap="switchTab(3)">
         <p>我</p>
     </li>
 </ul>

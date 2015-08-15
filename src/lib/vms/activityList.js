@@ -30,7 +30,7 @@ define('vms/activityList', ['avalon', 'request', 'userCenter', 'filter$'], funct
                     $('.activity-list .load-more').text('木有更多了');
                     return setTimeout(function(){vm['loadingFlag'] = false}, 2500);
                 }else{
-                    $.Dialog.success("加载更多");
+                    $('.date-list .load-more').text('加载更多');
                 }
                 vm['items'].pushArray(res.data);
                 vm['page'] = vm['page'] + 1;
@@ -49,7 +49,6 @@ define('vms/activityList', ['avalon', 'request', 'userCenter', 'filter$'], funct
     });
 
     vm.$watch('activityItemsChanged', function(data){
-        console.log('activityItemsChanged', data);
         vm['items'] = data;
     });
 

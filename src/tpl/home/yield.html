@@ -4,13 +4,19 @@
     <section class="filter-layout" ms-include-src="'tpl/widget/filter.html'"></section>
     <section class="slider-layout" ms-include-src="'tpl/widget/slider.html'" ms-controller="slider" data-include-rendered="bannerLoadCb" ms-if="show"></section>
 
-    <section id="tab-container" class="swiper-container module-layout" ms-controller="slider">
-        <div class="swiper-wrapper clearfix">
-            <section  class="tab1 swiper-slide" ms-include-src="'tpl/date/list.html'" data-include-rendered="moduleLoadCb"></section>
-            <section  class="tab2 swiper-slide" ms-include-src="'tpl/activity/list.html'" data-include-rendered="moduleLoadCb"></section>
-            <section  class="tab3 swiper-slide" ms-include-src="'tpl/user/message.html'" data-include-rendered="moduleLoadCb"></section>
-            <section  class="tab4 swiper-slide" ms-include-src="'tpl/user/check.html'" data-include-rendered="moduleLoadCb"></section>
-        </div>
+    <!--<section id="tab-container" class="swiper-container module-layout" ms-controller="slider">-->
+        <!--<div class="swiper-wrapper clearfix">-->
+            <!--<section  class="tab1 swiper-slide" ms-include-src="'tpl/date/list.html'" data-include-rendered="moduleLoadCb"></section>-->
+            <!--<section  class="tab2 swiper-slide" ms-include-src="'tpl/activity/list.html'" data-include-rendered="moduleLoadCb"></section>-->
+            <!--<section  class="tab3 swiper-slide" ms-include-src="'tpl/user/message.html'" data-include-rendered="moduleLoadCb"></section>-->
+            <!--<section  class="tab4 swiper-slide" ms-include-src="'tpl/user/check.html'" data-include-rendered="moduleLoadCb"></section>-->
+        <!--</div>-->
+    <!--</section>-->
+    <section class="module-layout" ms-controller="navBar">
+        <section  ms-if="ct=='dateList'" ms-include-src="'tpl/date/list.html'"></section>
+        <section  ms-if="ct=='activityList'" ms-include-src="'tpl/activity/list.html'"></section>
+        <section  ms-if="ct=='userMessage'" ms-include-src="'tpl/user/message.html'"></section>
+        <section  ms-if="ct=='userCheck'" ms-include-src="'tpl/user/check.html'"></section>
     </section>
 </div>
 

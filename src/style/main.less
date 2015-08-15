@@ -7,23 +7,29 @@
   url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 html, body{
+  width: 100%;
+  overflow-x: hidden;
   min-height: 100%; //防止高度小于viewpoint
   -webkit-font-smoothing: antialiased;
   background-color: @bodyColor;
   font-family: 'iconfont', 'Microsoft YaHei', "WenQuanYi MicroHei", sans-serif;
 }
-
 a, a:hover, a:active, a:visited{
   text-decoration: none;
   outline: none;
 } //全局局部reset a标签默认样式
 ul,li{list-style: none;} //全局局部reset list-style
 body{position: relative;} //使得body下面的绝对定位元素有父级定位元素
+input{
+  background: none;
+}
+input:focus{
+  outline: none;
+}
 
 .wrapper{
   //padding-top: 310rem / @psdWidth;
 }
-
 //import
 @import "jquery.datetimepicker.css";
 @import "layout";

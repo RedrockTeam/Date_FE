@@ -11,13 +11,17 @@ define(['avalon', 'userCenter', 'request','mmState'], function(avalon, userCente
                 setTimeout(function(){avalon.router.navigate('/user/login')}, 0);
                 return;
             }//认证处理
+
             vmMain['state'] = 'loading';
             var get_uid = this.params.id;
             request('userCheck', {'check_uid': get_uid || user.uid, 'uid': user.uid, 'token': user.token}).done(function(res){
                 vmMain.$fire('all!userCheckDataChanged', res.data);
-                if(get_uid || get_uid != user.uid) {
-                    vmMain.$fire('all!userCheckIsRootChanged', false);
+                if(get_uid && get_uid != user.uid) {
+                    vmMain.$fire('all!userCheckPageToSingle', false);
+                    vmMain.$fire('all!userCheckIdentifyChanged', false);
                     vmMain.$fire('all!tipBarStateChanged', 'userCheck');
+                }else{
+                    vmMain.$fire('all!userCheckIdentifyChanged', true);
                 }
                 avalon.scan();
                 vmMain['state'] = 'ok';
