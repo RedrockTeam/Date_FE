@@ -15,5 +15,5 @@ define('vms/userMessage',['avalon', 'request', 'userCenter', 'jquery', 'dialog']
         vm['notice'] = vm['notice'].concat(data.notice);
         vm['news'] = vm['news'].concat(data.news);
     });
-    
+
 });
