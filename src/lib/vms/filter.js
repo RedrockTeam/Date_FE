@@ -84,6 +84,7 @@ define(
                  } else {
                      vm['activityS'][filed] = index
                  }
+                vm.toggleExpand(vm['ct'], filed);
             },
             getParams: function(ct){
                 var ret;
