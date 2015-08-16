@@ -41,7 +41,8 @@
     </div>
 
     <div class="commented">
-        <h3 class="tab-tip">评论:{{data.commented.length}}</h3>
+        <div class="part-title">评论：<span>{{data.commented.length}}</span></div>
+        <!--<h3 class="tab-tip">评论:{{data.commented.length}}</h3>-->
         <ul>
             <li class="item" ms-repeat="data.commented" ms-on-tap="getUserDetail(el.uid)">
                 <i ms-css-background-image="'url('+el.head+')'"></i>
