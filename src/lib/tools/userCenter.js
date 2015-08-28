@@ -127,7 +127,7 @@ define('userCenter', ['request', 'jquery', 'avalon'], function(request, $, avalo
      * userCenter
      */
     var isLogin = false; //closure
-    var uid, name, token, head, completed = false;
+    var uid, nickname, token, avatar/*head*/, completed = false, signature, gender, role_id/*用户身份*/;
 
     /**
      * 登陆 回调写法
@@ -138,18 +138,22 @@ define('userCenter', ['request', 'jquery', 'avalon'], function(request, $, avalo
         if(isLogin) return cb && cb(null, info());
         request('login', {username: username, password: password})
             .done(function(res){
-                data = res.data;
+                var data = res.data || res;
+                //兼容后端给过来的数据不一致问题
+                console.log(data);
+                //data = res.data;
                 isLogin = true;
                 uid = data.uid;
                 token = data.token;
-                name = data.nickname;
-                head = data.head;
+                nickname = data.nickname;
+                avatar/*head*/ = data.avatar/*head*/;
+                
                 completed = data.completed;
                 _storage.set({
                     uid: uid,
                     token: token,
-                    name: name,
-                    head: head,
+                    nickname: nickname,
+                    avatar/*head*/: avatar/*head*/,
                     completed : completed
                 });
                 cb && cb(null, info());
@@ -166,7 +170,7 @@ define('userCenter', ['request', 'jquery', 'avalon'], function(request, $, avalo
     function logout(){
         if(!isLogin)return info();
         isLogin = false;
-        uid = name = token = head = undefined;
+        uid = nickname = token = avatar/*head*/ = undefined;
         _storage.clear();
         return info();
     }
@@ -179,10 +183,10 @@ define('userCenter', ['request', 'jquery', 'avalon'], function(request, $, avalo
         if(!isLogin){return {state: false}}
         return {
             state: true,
-            name: name,
+            nickname: nickname,
             uid: uid,
             token: token,
-            head: head,
+            avatar/*head*/: avatar/*head*/,
             completed: completed
         }
     }
@@ -242,9 +246,9 @@ define('userCenter', ['request', 'jquery', 'avalon'], function(request, $, avalo
         var user = sto.get();
         if(user){
             uid = user.uid;
-            name = user.name;
+            nickname = user.nickname;
             token = user.token;
-            head = user.head;
+            avatar/*head*/ = user.avatar/*head*/;
             isLogin = true;
             completed = user.completed;
         }

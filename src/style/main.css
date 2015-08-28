@@ -2705,9 +2705,6 @@ input:focus {
   border-radius: 0.09259259rem;
   outline: none;
 }
-.login-container {
-  border-top: 1px solid #cccccc;
-}
 .login-container .logo-wrapper {
   width: 2.22222222rem;
   height: 2.22222222rem;

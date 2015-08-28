@@ -4,7 +4,7 @@
 define('urls', function(){
     var urls = {
         //"login": "../mock.php?type=login",
-        "login": "http://127.0.0.1:8080/user/login",
+        "login": "http://123.56.225.103/api/index.php?s=/api/public/login/",
         //"slider": "../mock.php?type=pics",
         "slider": "http://127.0.0.1:8080/banner",
         "dateList": "http://127.0.0.1:8080/date/list",

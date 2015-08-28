@@ -92,9 +92,6 @@
 .test-bor-green {
   border: 1px solid green;
 }
-.login-container {
-  border-top: 1px solid #cccccc;
-}
 .login-container .logo-wrapper {
   width: 2.22222222rem;
   height: 2.22222222rem;
