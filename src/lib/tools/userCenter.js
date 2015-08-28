@@ -136,11 +136,9 @@ define('userCenter', ['request', 'jquery', 'avalon'], function(request, $, avalo
      */
     function login(username, password, cb){
         if(isLogin) return cb && cb(null, info());
-        request('login', {username: username, password: password})
+        request('login', {/*username*/loginUser: username, password: password})
             .done(function(res){
-                var data = res.data || res;
-                //兼容后端给过来的数据不一致问题
-                console.log(data);
+                var data = res.data;
                 //data = res.data;
                 isLogin = true;
                 uid = data.uid;

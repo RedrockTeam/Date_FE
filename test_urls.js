@@ -7,7 +7,7 @@ var datas = {
             "head": "imgs/test.png",
             "completed": true
         },
-        "status": 200,
+        "status": 0,
         "info": "登录成功"
     },
 
@@ -55,7 +55,7 @@ var datas = {
                 "tags": ["吃饭", "睡觉"]        //用户标签
             }
         ],
-        "status": 200,
+        "status": 0,
         "info": "获取成功"
     },
 
@@ -88,7 +88,7 @@ var datas = {
                 "praised": 20                  //多少人已点赞
             }
         ],
-        "status": 200,
+        "status": 0,
         "info": "获取成功"
     },
 
@@ -114,7 +114,7 @@ var datas = {
                 "weibo": "weibo"   //微博
             }
         },
-        status: 200,
+        status: 0,
         info: "成功"
     },
 
@@ -152,13 +152,13 @@ var datas = {
                 }
             ]
         },
-        "status": 200,
+        "status": 0,
         "info": "成功"
     },
 
     "/banner": {
         "data": [{"href": "http://www.baodu.com", "img": "imgs/1.jpg"}, {"href":"http://ww.baidu.com", "img": "imgs/bg.jpg"}, {"href": "http://www.baidu.com", "img":"imgs/test.png"}],
-        "status":200,
+        "status":0,
         info: "ok"
     },
 
@@ -225,7 +225,7 @@ var datas = {
                 }
             ]
         },
-        status: 200,
+        status: 0,
         info: "成功"
     },
     "/activity/detail":{
@@ -274,19 +274,19 @@ var datas = {
                 }
             ]
         },
-        status: 200,
+        status: 0,
         info: "成功"
     },
 
 
     "/user/tags": {
         "data": ["游泳", "篮球", "足球", "乒乓球", "保龄球"],
-        "status": 200,
+        "status": 0,
         info: "获取成功"
     },
 
     "/user/complete": {
-        "status": 200,
+        "status": 0,
         "info": "ok"
     },
     "/search/hot": {
@@ -324,7 +324,7 @@ var datas = {
                 }
             ]
         },
-        status: 200,
+        status: 0,
         info: "成功"
     },
 
@@ -363,7 +363,7 @@ var datas = {
                 }
             ]
         },
-        status: 200,
+        status: 0,
         info: "成功"
     },
 
@@ -382,12 +382,12 @@ var datas = {
                 "signature": "今天晚上我请客!"    //个性签名
             }
         ],
-        "status": 200,
+        "status": 0,
         "info": "成功"
     },
 
     "/school": {
-        status:200,
+        status:0,
         info:"成功",
         data:[
             {
@@ -405,51 +405,51 @@ var datas = {
         ]
     },
     "/user/register/veri_code": {
-        "status": 200,
+        "status": 0,
         "info": "成功"
     },
     "/user/register": {
-        "status": 200,
+        "status": 0,
         "info": "成功"
     },
     "/date/comment": {
-        "status": 200,
+        "status": 0,
         "info": "成功"
     },
 
     "/date/collect": {
-        "status": "200",
+        "status": "0",
         "info": "成功"
     },
     "/date/delCollect": {
-        "status": "200",
+        "status": "0",
         "info": "成功"
     },
     "/activity/collect": {
-        "status": "200",
+        "status": "0",
         "info": "成功"
     },
     "/activity/delCollect": {
-        "status": "200",
+        "status": "0",
         "info": "成功"
     },
     "/activity/comment": {
-        "status": 200,
+        "status": 0,
         "info": "成功"
     },
     "/user/findPasswd/veri_code": {    //发送短信
-        "status": 200,
+        "status": 0,
         "info": "成功"
     },
     "/user/findPasswd/verify": {     //验证短信
         "data":{
             "token": "qwaert"             //验证确认过后发送的token时效检测
         },
-        "status": 200,
+        "status": 0,
         "info": "验证成功"
     },
     "/user/findPasswd/reset": {       //修改
-        "status": 200,
+        "status": 0,
         "info": "成功"
     },
     "/user/collection":{
@@ -529,7 +529,7 @@ var datas = {
                 }
             ]
         },
-        "status": 200,
+        "status": 0,
         "info": "成功"
     },
     "/user/recorded":{
@@ -609,7 +609,7 @@ var datas = {
                 }
             ]
         },
-        "status": 200,
+        "status": 0,
         "info": "成功"
     },
 
@@ -637,7 +637,7 @@ var datas = {
                 "signature": "后天晚上晚上他请客!"    //个性签名
             }
         ],
-        "status": 200,
+        "status": 0,
         "info": "获取成功"
     },
 
@@ -665,7 +665,7 @@ var datas = {
                 "signature": "后天晚上晚上他请客!"    //个性签名
             }
         ],
-        "status": 200,
+        "status": 0,
         "info": "获取成功"
     },
 

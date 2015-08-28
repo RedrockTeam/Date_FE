@@ -49,7 +49,7 @@ define(
                         vmMain.$fire('all!userCheckDataCpy', uc.data);   //第一次通知复制自己的数据
                         vmMain.$fire('all!sliderDaLoaded', true);
                         vmMain['state'] = 'ok';
-                        poller();  //开始轮询
+                        //poller();  //开始轮询
                         avalon.scan();
                     }
                 );

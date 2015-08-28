@@ -10,7 +10,8 @@ define('avaFilters', ['avalon'], function(){
     avalon.filters.createdTime = function(ts){
         var _now = parseInt(new Date / 1000),
             interval = _now - ts;
-        if(interval < 60){
+        if(interval < 0) return "数据有问题";
+        else if(interval < 60){
             return '刚刚';
         }else if(interval < 60 * 60){
             return parseInt(interval / 60) + "分钟前";
@@ -119,7 +120,6 @@ define('avaFilters', ['avalon'], function(){
 
     avalon.filters.limitLength = function(s, n){
         s = ''+s;
-        console.log(s);
         if(s.length > n){
             s = s.slice(0, n-3) + '..';
         }

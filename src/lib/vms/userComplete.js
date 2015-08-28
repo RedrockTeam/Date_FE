@@ -2,24 +2,7 @@ define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon
     var vm = avalon.define({
         $id: 'userComplete',
         cantprev: false,
-        data: {
-            "uid": '',          //uid
-            "nickname": "",   //昵称
-            "realname": "", //真实姓名
-            "head": "",    //头像
-            "signature": "",     //签名 (约会宣言)
-            "school": "",       //学校
-            "academy": "",        //学院
-            "hobbies": [],  //爱好
-            "gender" : 1,            //性别  `1`男 `2`女
-            "authened": 0,          //是否认证过 `1`已认证 `2`未认证
-            "contact": {            //联系方式 固定
-                "weixin": "",   //微信号
-                "tel": '',   //手机号
-                "qq": '', //qq
-                "weibo": ""   //微博
-            }
-        },
+        data: {},
         tags: [],     //展示的标签
         toggleHobbyCb: function(hobby){
             var data = vm['data'];
@@ -106,6 +89,10 @@ define(['avalon', 'jquery', 'userCenter', 'request', 'filter$'], function(avalon
                 setTimeout(function(){avalon.router.navigate('')}, 2000);
             });
         }
+    });
+
+    vm.$watch('userComleteDataChanged', function(data){
+        vm['data'] = data;
     });
 
     vm.$watch('userComleteTagsChanged', function(tags){

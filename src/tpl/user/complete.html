@@ -2,7 +2,7 @@
 <div class="user-complete" ms-controller="userComplete">
     <div class="upload clearfix">
         <div class="preview upImgWrapper">
-            <div class="item preview-img" ms-css-background-image="'url('+ (data.head ? data.head : 'imgs/upload-preview.png') +')'">
+            <div class="item preview-img" ms-css-background-image="'url('+ (data.avatar ? data.avatar : 'imgs/upload-preview.png') +')'">
                 <span ms-if="cantprev">您的浏览器不支持预览功能!</span>
                 <input type="file" ms-on-change="preview"/>
             </div>
@@ -26,17 +26,17 @@
 
     <ul class="other inputs">
         <li><span class="filed-tip">约会宣言</span><input type="text" ms-duplex="data.signature"/></li>
-        <li><span class="filed-tip">手机号</span><input type="text" ms-duplex="data.contact.tel"/></li>
-        <li><span class="filed-tip">微信</span><input type="text" ms-duplex="data.contact.weixin"/></li>
-        <li><span class="filed-tip">微博</span><input type="text" ms-duplex="data.contact.weibo"/></li>
-        <li><span class="filed-tip">QQ</span><input type="text" ms-duplex="data.contact.qq"/></li>
+        <li><span class="filed-tip">手机号</span><input type="text" ms-duplex="data.phone"/></li>
+        <li><span class="filed-tip">微信</span><input type="text" ms-duplex="data.weixin"/></li>
+        <li><span class="filed-tip">微博</span><input type="text" ms-duplex="data.weibo"/></li>
+        <li><span class="filed-tip">QQ</span><input type="text" ms-duplex="data.qq"/></li>
         <li ms-on-tap="getMoreTags"><span class="filed-tip">兴趣爱好</span><span class="selected-show">{{data.hobbies}}</span></li>
     </ul>
 
     <div class="tags clearfix">
         <h4 class="tab-tip">热门标签</h4>
         <div class="item" ms-repeat="tags" ms-on-tap="toggleHobbyCb(el)">{{el}}<i class="selected" ms-if="data.hobbies.indexOf(el) != -1">*</i></div>
-        <div class="item" ms-on-tap="getMoreTags">{{data.hobbies.length > 4 ? '...': '+'}}</div>
+        <!--<div class="item" ms-on-tap="getMoreTags">{{data.hobbies.length > 4 ? '...': '+'}}</div>-->
     </div>
 
     <div class="authen">

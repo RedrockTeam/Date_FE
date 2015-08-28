@@ -18,7 +18,7 @@ define('request', ['jquery', 'urls', 'avalon', 'dialog'], function ($, urls, ava
         };
         $.post(url, paramsObj)
             .success(function(res){
-                if(res && res.status == 200){
+                if(res && res.status == /*200*/0){
                     _dtd.resolve(res);
                 }else{
                     _dtd.reject(res);

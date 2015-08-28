@@ -12,7 +12,7 @@ define(['avalon', 'userCenter', 'jquery', 'dialog', 'mmState'], function (avalon
             userCenter.clear();
             var _username = avalon.vmodels.login.username;
             var _password = avalon.vmodels.login.password;
-
+            //测试账号: 15683384295 zxcvbnm
             if(!_username){return $.Dialog.fail("请输入学号");}
             if(!_password){return $.Dialog.fail("请输入密码");}
 

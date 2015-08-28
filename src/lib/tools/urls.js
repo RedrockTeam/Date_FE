@@ -4,15 +4,20 @@
 define('urls', function(){
     var urls = {
         //"login": "../mock.php?type=login",
-        "login": "http://123.56.225.103/api/index.php?s=/api/public/login/",
+        //"login": "http://127.0.0.1:8080/user/login",
+        "login": "http://123.56.225.103/api/index.php?s=/api/public/login/", /*登陆*/
         //"slider": "../mock.php?type=pics",
-        "slider": "http://127.0.0.1:8080/banner",
-        "dateList": "http://127.0.0.1:8080/date/list",
-        "dateDetail": "http://127.0.0.1:8080/date/detail",
-        "activityList": "http://127.0.0.1:8080/activity/list",
+        //"slider": "http://127.0.0.1:8080/banner",
+        "slider": "http://123.56.225.103/api/index.php?s=/api/public/banner",  /*banner*/
+        //"dateList": "http://127.0.0.1:8080/date/list",
+        "dateList": "http://123.56.225.103/api/index.php?s=/api/date/datelist",  /*约会列表*/
+        "dateDetail": "http://127.0.0.1:8080/date/detail",          //约会详情
+        //"activityList": "http://127.0.0.1:8080/activity/list",
+        "activityList": "http://123.56.225.103/api/index.php?s=/api/discover/discoverlist",
         "activityDetail": "http://127.0.0.1:8080/activity/detail",
         "userComplete": "http://127.0.0.1:8080/user/complete",
-        "userCheck": "http://127.0.0.1:8080/user/check",
+        //"userCheck": "http://127.0.0.1:8080/user/check",
+        "userCheck": "http://123.56.225.103/api/index.php?s=/api/user/info",
         "schoolHash": "http://127.0.0.1:8080/school",
         "getRegisterAuth": "http://127.0.0.1:8080/user/register/veri_code",      //注册短信验证码获取
         "userRegister": "http://127.0.0.1:8080/user/register",

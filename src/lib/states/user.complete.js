@@ -14,7 +14,7 @@ define(['avalon', 'userCenter', 'request','mmState'], function(avalon, userCente
             }//认证处理
             vmMain['state'] = 'loading';
             $.when(
-                request('userCheck', { uid: user.uid, token: user.token }),
+                request('userCheck', { uid: user.uid, token: user.token, get_uid: user.uid }),
                 request('userTags', {uid: user.uid, token: user.token})
             ).done(function(info, tags){
                     vmMain.$fire('all!tipBarStateChanged', 'userComplete');

@@ -10,6 +10,7 @@ define('avaFilters', ['avalon'], function(){
     avalon.filters.createdTime = function(ts){
         var _now = parseInt(new Date / 1000),
             interval = _now - ts;
+        log(interval);
         if(interval < 60){
             return '刚刚';
         }else if(interval < 60 * 60){
