@@ -1,5 +1,5 @@
 //约会列表
-define('vms/dateList', ['avalon', 'userCenter', 'request', 'filter$'], function(avalon, userCenter, request, filter$){
+define('vms/dateList', ['avalon', 'userCenter', 'request', 'filter$', 'typeSwitch'], function(avalon, userCenter, request, filter$, typeSwitch){
     var vm = avalon.define({
         $id: 'dateList',
         items: [],
@@ -33,6 +33,7 @@ define('vms/dateList', ['avalon', 'userCenter', 'request', 'filter$'], function(
                 }else{
                     $('.date-list .load-more').text('加载更多');
                 }
+                typeSwitch(res.data, 'type_id');
                 vm['items'].pushArray(res.data);
                 vm['page'] = vm['page'] + 1;
                 setTimeout(function(){
@@ -49,12 +50,11 @@ define('vms/dateList', ['avalon', 'userCenter', 'request', 'filter$'], function(
     });
 
     vm.$watch('dateItemsChanged', function(data){
+        typeSwitch(data, 'type_id');
         vm['items'] = data;
-        //log(data);
     });
 
     vm.$watch('dateRuleChanged', function(rule){
         vm['filterRule'] = rule;
     });
-    return vm;
 });

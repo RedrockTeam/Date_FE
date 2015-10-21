@@ -15,7 +15,9 @@ require.config({
         score: "tools/jq.score",
         navState: "tools/tipState",
         request: "tools/request",
-        filter$: "tools/filter$"
+        filter$: "tools/filter$",
+        getDateType: 'tools/getDateType',
+        typeSwitch: 'tools/typeSwitch'
 
         //vms
     }
@@ -35,6 +37,8 @@ require([
 ], function(require,avalon) {
     $.Dialog.loading();
     require([
+        'getDateType',   //将所有的约会类型加载进来
+
         //注册状态
         'states/home',       //主页
         'states/date.detail', //约会详细页
@@ -87,11 +91,14 @@ require([
         'vms/userAlter'
 
 
-    ], function(){
-        $.Dialog.close();
-        avalon.history.start({
-            basepath: "/"
+    ], function(getDateType){
+        getDateType(function(types){    //首先将多个页面依赖的类型hash加载
+            $$['dateTypes'] = types;
+            $.Dialog.close();
+            avalon.history.start({
+                basepath: "/"
+            });
+            avalon.router.navigate(avalon.history.fragment);
         });
-        avalon.router.navigate(avalon.history.fragment);
     });
 });

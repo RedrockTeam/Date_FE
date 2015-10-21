@@ -11,7 +11,10 @@ define('urls', function(){
         "slider": "http://123.56.225.103/api/index.php?s=/api/public/banner",  /*banner*/
         //"dateList": "http://127.0.0.1:8080/date/list",
         "dateList": "http://123.56.225.103/api/index.php?s=/api/date/datelist",  /*约会列表*/
-        "dateDetail": "http://127.0.0.1:8080/date/detail",          //约会详情
+        "dateType": "http://123.56.225.103/api/index.php?s=/api/public/datetype",   /*约会类型*/
+        //"dateDetail": "http://127.0.0.1:8080/date/detail",          //约会详情
+        "dateDetail": "http://123.56.225.103/api/index.php?s=/api/date/detaildate", //约会详情
+        "dateCreate": "http://123.56.225.103/api/index.php?s=/api/date/createdate",    //发布约会
         //"activityList": "http://127.0.0.1:8080/activity/list",
         "activityList": "http://123.56.225.103/api/index.php?s=/api/discover/discoverlist",
         "activityDetail": "http://127.0.0.1:8080/activity/detail",

@@ -2,7 +2,7 @@
     <div ms-if="!isHome" ms-include-src="'tpl/widget/tipBar.html'"></div>
     <header>
         <div class="person clearfix">
-            <i class="head" ms-css-background-image="'url('+data.head+')'"></i>
+            <i class="head" ms-css-background-image="'url('+data.avatar+')'"></i>
             <aside class="detail">
                 <p class="username">
                     <span>{{data.nickname}}</span>
@@ -23,7 +23,7 @@
         <li ms-if="data.contact.weixin">微信号: {{data.contact.weixin}}</li>
         <li ms-if="data.contact.tel">电话: {{data.contact.tel}}</li>
         <li ms-if="data.contact.qq">QQ: {{data.contact.qq}}</li>
-        <li>兴趣：{{data.hobbies}}</li>
+        <li>兴趣：{{data.hobby}}</li>
     </ul>
     <footer class="more">
         <a href="javascript:void(0)" ms-on-tap="go('collection')">

@@ -104,7 +104,11 @@ define('avaFilters', ['avalon'], function(){
             case 2: return "受理中";
         }
         return "未知";
-    }
+    };
+
+    avalon.filters.dateTypeFilter = function(type_id){
+
+    };
 
     avalon.filters.myStatusFilter = function(n){
         n = parseInt(n);

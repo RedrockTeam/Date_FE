@@ -11,6 +11,7 @@ define(['request', 'userCenter', 'vms/dateCreate', 'mmState'], function(request,
 
             //检测登陆
             var user = userCenter.info();
+            log(user);
             if(!user.state){
                 setTimeout(avalon.router.navigate.bind(avalon.router, "login"), 0);
                 return;

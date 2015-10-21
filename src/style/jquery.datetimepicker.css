@@ -108,7 +108,7 @@
   overflow: hidden;
   background: rgba(0, 0, 0, 0.2);
   font-size: 70%;
-  font-size: 4.66666667px;
+  font-size: 14px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -117,16 +117,16 @@
   user-select: none;
 }
 [data-dpr="2"] .dtpicker-overlay {
-  font-size: 7px;
+  font-size: 21px;
 }
 [data-dpr="3"] .dtpicker-overlay {
-  font-size: 14px;
+  font-size: 42px;
 }
 [data-dpr="2"] .dtpicker-overlay {
-  font-size: 7px;
+  font-size: 21px;
 }
 [data-dpr="3"] .dtpicker-overlay {
-  font-size: 14px;
+  font-size: 42px;
 }
 .dtpicker-mobile {
   position: fixed;

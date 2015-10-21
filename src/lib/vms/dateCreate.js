@@ -13,6 +13,7 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'userCenter', 'di
          * 发布约会
          */
         finish: function () {
+            log('finish');
             vmMain['state'] = 'loading';
             var _vm = vm;
 
@@ -304,6 +305,9 @@ define(['avalon', 'jquery', 'moment', 'eventproxy', 'request', 'userCenter', 'di
     vm.$watch('dateCreateTypeChanged', function(data){
         vm['schoolHash'] = data;
         console.log( vm['schoolHash'] );
+    });
+    vm.$watch('dateCreateFinish', function(){
+        vm['finish']();
     });
 
     return vm;

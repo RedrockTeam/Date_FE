@@ -3,10 +3,11 @@ define(
     [
         'avalon', 'userCenter',
         'request',
+        'getDateType',
         'mmState'
     ],
 
-    function(avalon, userCenter, request){
+    function(avalon, userCenter, request, getDateType){
         var vmMain = avalon.vmodels['main'];
         avalon.state('home', {
             controller: "main",
@@ -42,12 +43,13 @@ define(
                 ).done(function(slider, dl, al, um, uc){
                         //vmMain.$fire('all!sliderModCoutInit', true);//todo
                         vmMain.$fire('all!sliderItemsChanged', slider.data);
-                        vmMain.$fire('all!dateItemsChanged', dl.data);
                         vmMain.$fire('all!activityItemsChanged', al.data);
+                        vmMain.$fire('all!dateItemsChanged', dl.data);
                         vmMain.$fire('all!userMessageItemsChanged', um.data);
                         vmMain.$fire('all!userCheckDataChanged', uc.data);
                         vmMain.$fire('all!userCheckDataCpy', uc.data);   //第一次通知复制自己的数据
                         vmMain.$fire('all!sliderDaLoaded', true);
+
                         vmMain['state'] = 'ok';
                         //poller();  //开始轮询
                         avalon.scan();
